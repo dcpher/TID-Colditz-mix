@@ -1,0 +1,90 @@
+// _autocomplete.sass
+
+// Country Panel [not namespaced]
+#countryPanel
+  font-family: $qqc-font-family-body
+  font-size: $um-font-size-body
+  background: $um-color-background
+  border-radius: $um-border-radius
+  box-shadow: $um-box-shadow
+  padding: $qqc-gutter
+  z-index: 100
+  +qqc-popout-caret
+  .closePanel
+    +qqc-close-button
+  h3
+    +qqc-popout-header
+  dl
+    margin: 0
+    margin-bottom: $qqc-blh
+  dd
+    margin-left: 0
+    a
+      padding: 4px 8px
+      line-height: 26px
+    a:hover
+      background: $qqc-color-heading
+      border-radius: 2px
+      color: $qqc-color-text
+      cursor: pointer
+  dt
+    color: $um-color-link
+    font-family: $qqc-font-family-heading
+    font-weight: bold
+    font-size: $um-font-size-subheading
+    margin-bottom: $qqc-blh
+    padding-left: 6px
+  .region
+    float: left
+    margin-left: $qqc-gutter
+    border-left: 1px solid $um-border-color-medium
+    padding-left: $qqc-gutter / 2
+    &:first-child
+      margin-left: 0
+  .note
+    clear: both
+    border: 1px solid $qqc-color-background
+    border-radius: 3px
+    background-color: lighten($qqc-color-background, 50%)
+    display: block
+    padding: 10px $qqc-blh
+  @media all and (max-width: $qqc-mq-mobile-landscape)
+    .note, .regions, .closePanel
+      display: none
+    h3
+      margin: 0
+      padding: 0
+      border: none
+  @media all and (max-width: $qqc-mq-mobile)
+    h3
+      font-size: $um-font-size-heading-mobile
+
+// Autocompleter [not namespaced][uses $um- vars]
+.autocomplete
+  background: $um-color-background
+  font-family: $qqc-font-family-body
+  font-size: $um-font-size-body
+  background: $um-color-background
+  border-radius: $um-border-radius
+  box-shadow: $um-box-shadow
+  z-index: 100
+  list-style-type: none
+  padding: $qqc-gutter
+  +qqc-popout-caret
+  li
+    line-height: 20px
+    padding: 2px 8px
+    float: left
+    clear: left
+    border-radius: 3px
+    em  
+      font-weight: bold
+      font-style: normal
+    &:hover
+      cursor: pointer
+  li.selected
+    background: $qqc-color-heading
+    color: $um-color-background
+  @media all and (max-width: $qqc-mq-mobile-landscape)
+    li
+      padding: 6px 12px

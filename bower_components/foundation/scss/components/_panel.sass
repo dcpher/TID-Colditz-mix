@@ -1,0 +1,56 @@
+// extend Panels
+  
+.blue-panel
+  @include panel($bg: $color-blue, $adjust: true)  
+  //+panel($bg: $color-blue, $adjust: true)
+
+.pink-panel
+  +panel($bg: $color-pink, $adjust: true)
+
+.purple-panel
+  +panel($bg: $color-purple, $adjust: true)
+  
+.teal-panel
+  +panel($bg: $color-teal, $adjust: true)
+  
+.red-panel
+  +panel($bg: $color-red, $adjust: true)
+  
+.yellow-panel
+  +panel($bg: $color-yellow, $adjust: true)
+  
+
+// Dark panels 
+
+.dark-blue-panel
+  +panel($bg: $color-dark-blue, $adjust: true)
+
+.dark-pink-panel
+  +panel($bg: $color-dark-pink, $adjust: true)
+
+.dark-purple-panel
+  +panel($bg: $color-dark-purple, $adjust: true)
+  
+.dark-teal-panel
+  +panel($bg: $color-dark-teal, $adjust: true)
+  
+.dark-red-panel
+  +panel($bg: $color-dark-red, $adjust: true)
+  
+.dark-yellow-panel
+  +panel($bg: $color-dark-yellow, $adjust: true)
+  
+  
+// Additional Panel colours
+
+.grey-panel
+  +panel($bg: $color-light-grey, $adjust: true)
+  //@include grid-row($behavior: nest)
+
+.dark-grey-panel
+  +panel($bg: $color-dark-grey, $adjust: true)
+  
+.panel, .blue-panel, .grey-panel
+  @media #{$small-only}
+    padding: rem-calc(16) 0
+    border: none

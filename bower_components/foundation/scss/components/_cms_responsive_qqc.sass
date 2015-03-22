@@ -1,0 +1,81 @@
+// ***
+// Special QQC Only SASS for Shortterm TIDAU Responsive
+// ***
+
+//$qqc-gutter: rem-calc(24)
+
+@import _base/variables
+//@import _base/fonts
+@import _base/_methods/styles
+
+//@import _widgets/quick-quote-calculator
+//@import _widgets/date-picker
+@import _widgets/autocomplete
+
+ 
+
+// Datepicker [not namespaced]
+.datepicker
+  background: $dp-color-background
+  padding: $qqc-gutter
+  border-radius: $dp-border-radius
+  box-shadow: $dp-box-shadow
+  font-family: $qqc-font-family-heading
+  +qqc-popout-caret
+  .closePanel
+    +qqc-close-button
+  h3
+    +qqc-popout-header
+  .datepicker-calendars
+    overflow: auto
+    position: relative
+  .datepicker-show-past-month,
+  .datepicker-show-next-month
+    position: absolute
+    left: 0
+    top: -3px
+    color: $dp-color-link
+    font-size: 20px
+    &:hover
+      cursor: pointer
+  .datepicker-show-next-month
+    right: 0
+    left: auto
+  .datepicker-calendar
+    float: left
+    display: block
+    &:last-child
+      margin-left: $qqc-gutter
+  .datepicker-calendar-title
+    text-align: center
+    font-size: $dp-font-size-subheading
+    margin-bottom: $qqc-blh
+  td a
+    font-size: $dp-font-size-date
+    padding: 2px 4px
+    color: $dp-color-link
+    display: block
+    border-radius: 3px
+    text-align: center
+    line-height: 16px
+    margin-left: 2px
+    &:hover
+      color: $dp-color-link-hover
+      text-decoration: underline
+      cursor: pointer
+  td.selected a
+    background: $dp-color-link
+    color: $qqc-text-color-inverted
+  td.disabled a
+    color: $dp-color-link-disabled
+    &:hover
+      text-decoration: none
+  td.inSelectionRange a,
+  td.selectedCompanion a
+    background: $dp-background-date-in-range
+  @media all and (max-width: $qqc-mq-datepicker-collapse)
+    .datepicker-calendar, h3, .closePanel
+      display: none
+    .datepicker-calendar:nth-child(3)
+      display: block
+

@@ -1,0 +1,22 @@
+// content-panel
+
+.content-panel
+  padding-top: rem-calc(24)
+  .row
+    padding: rem-calc(16) 0
+    
+    @media #{$large-up}
+      .middle
+        position: relative
+        //top: 50%
+        -webkit-transform: translateY(40%)
+        -ms-transform: translateY(40%)
+        transform: translateY(40%)
+      
+    ul
+      li
+        a
+          color: $color-dark-grey
+          
+        a:hover
+          color: $color-blue

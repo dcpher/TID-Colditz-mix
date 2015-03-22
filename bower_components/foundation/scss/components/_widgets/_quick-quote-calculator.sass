@@ -1,0 +1,126 @@
+// _quick-quote-calculator.sass
+
+// NOTE:
+// This hits with the specificity of an ID.
+// Replace with a class if you want more control outside.
+
+
+#quick-quote
+  overflow: auto
+  background: $qqc-color-background
+  color: $qqc-color-text
+  font-family: $qqc-font-family-body
+  font-size: $qqc-font-size-body
+  line-height: $qqc-font-size-body + 4px
+  padding: $qqc-blh $qqc-gutter 0
+  h3
+    color: $qqc-color-heading
+    font-size: $qqc-font-size-heading
+    line-height: $qqc-font-size-heading + 4px
+    font-weight: bold
+    font-family: $qqc-font-family-heading
+    margin-top: 0
+    margin-bottom: $qqc-blh * 2
+    border-bottom: 1px solid $qqc-border-color
+    padding-bottom: $qqc-blh / 2
+
+  input[type='text']
+    border-top: 1px solid #0084aa
+    border-left: 1px solid #0084aa
+    border-bottom: 1px solid #34d2ff
+    border-right: 1px solid #34d2ff
+    padding: $qqc-gutter
+    border-radius: 3px
+    box-shadow: #ccc 0px 1px 1px 0px inset
+    box-sizing: border-box
+  label
+    display: block
+    margin-bottom: $qqc-blh / 2
+  .input-group
+    overflow: auto
+    margin-bottom: $qqc-blh
+
+  // Three main splits.
+  .destination, .travel-dates, .travelling-as
+    float: left
+  .destination
+    width: 40%
+    margin-right: 4%
+    input[type='text']
+      width: 100%
+  .travel-dates
+    width: 22%
+    margin-right: 4%
+    input[type='text']
+      width: 100%
+  .travelling-as
+    width: 30%
+    input[type='text']
+      max-width: 90px
+      margin-right: $qqc-gutter
+    .sub-group
+      float: left
+    .children-go-free
+      float: left
+      clear: left
+      margin-bottom: $qqc-blh / 2
+      color: $qqc-color-text
+    .collapse
+      display: none
+      float: left
+      clear: both
+  @media all and (max-width: $qqc-mq-tablet)
+    .destination
+      width: 30%
+      margin-right: 4%
+    .travel-dates
+      width: 30%
+      margin-right: 4%
+    .travelling-as
+      width: 32%
+  @media all and (max-width: $qqc-mq-mobile-landscape)
+    .destination, .travel-dates, .travelling-as
+      margin-bottom: $qqc-blh / 2
+    .destination
+      width: 100%
+      margin-right: 0
+    .travel-dates
+      width: 100%
+      margin-right: 0
+    .travelling-as
+      width: 100%
+      input[type='text']
+        max-width: none
+        width: 100%
+        margin-right: 0
+      .sub-group
+        width: 48%
+        &:last-child
+          float: right
+
+  // Button
+  // NOTE: Feel free to rip these out and put them in your library.
+  input[type='submit']
+    margin-top: $qqc-blh * 5
+    margin-bottom: $qqc-blh
+    box-sizing: border-box
+    clear: both
+    float: left
+    width: 100%
+    padding: 10px 16px
+    font-family: $qqc-font-family-heading
+    font-size: 22px
+    letter-spacing: -0.1px
+    text-align: left
+    color: $qqc-color-text
+    background: linear-gradient(to top, #00375c 0%, #005187 3%, #0067ab 97%, #007fd3 100%)
+    border: 1px solid #002740
+    border-top-color: #005187
+    border-radius: 5px
+    outline: none
+    @media all and (max-width: $qqc-mq-mobile-landscape)
+      margin-top: $qqc-blh
+
+  // Selected destinations
+  #destinations
+    margin: 0

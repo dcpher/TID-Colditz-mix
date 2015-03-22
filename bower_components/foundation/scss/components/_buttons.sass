@@ -1,0 +1,134 @@
+// Extentd Button Styles
+.button, button
+  +border-radius(4px)
+  font-size: rem-calc(20)
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1)
+  cursor: pointer
+  position: relative
+  padding: rem-calc(8) rem-calc(16)
+  padding-right: rem-calc(44)
+  text-align: left
+  
+  &.expand
+    padding: rem-calc(8) rem-calc(16)
+    
+  @media #{$small-only}
+    &.small-expand
+      width: 100%
+  
+  &:after
+    content: '\203A'
+    font-weight: bold
+    font-size: 24px
+    position: absolute
+    top: 4px
+    right: 16px
+  
+  &:hover
+    text-decoration: none
+  
+
+  // TID Button colours
+  
+  // Light
+ 
+  &.red
+    +gradient-button(darken($color-red, 10%))
+    border: 1px solid darken($color-red, 20%)
+    &:hover 
+      +gradient-button(darken($color-red, 20%))
+        
+  &.blue
+    +gradient-button($color-blue)
+    border: 1px solid darken($color-blue, 10%)
+    &:hover 
+      +gradient-button(darken($color-blue, 10%))
+         
+  &.purple
+    +gradient-button($color-purple)
+    border: 1px solid darken($color-purple, 10%)
+    &:hover 
+      +gradient-button(darken($color-purple, 10%))
+         
+  &.teal
+    +gradient-button($color-teal)
+    border: 1px solid darken($color-teal, 10%)
+    &:hover 
+      +gradient-button(darken($color-teal, 10%))
+      
+  &.pink
+    +gradient-button($color-pink)
+    border: 1px solid darken($color-pink, 10%)
+    &:hover 
+      +gradient-button(darken($color-pink, 10%))
+      
+  &.yellow
+    +gradient-button($color-yellow)
+    border: 1px solid darken($color-yellow, 10%)
+    &:hover 
+      +gradient-button(darken($color-yellow, 10%))
+      
+      
+  // Dark
+ 
+  &.dark-red
+    +gradient-button(darken($color-dark-red, 10%))
+    border: 1px solid darken($color-dark-red, 20%)
+    &:hover 
+      +gradient-button(darken($color-dark-red, 20%))
+        
+  &.dark-blue
+    +gradient-button($color-dark-blue)
+    border: 1px solid darken($color-dark-blue, 10%)
+    &:hover 
+      +gradient-button(darken($color-dark-blue, 10%))
+         
+  &.dark-purple
+    +gradient-button($color-dark-purple)
+    border: 1px solid darken($color-dark-purple, 10%)
+    &:hover 
+      +gradient-button(darken($color-dark-purple, 10%))
+         
+  &.dark-teal
+    +gradient-button($color-dark-teal)
+    border: 1px solid darken($color-dark-teal, 10%)
+    &:hover 
+      +gradient-button(darken($color-dark-teal, 10%))
+      
+  &.dark-pink
+    +gradient-button($color-dark-pink)
+    border: 1px solid darken($color-dark-pink, 10%)
+    &:hover 
+      +gradient-button(darken($color-dark-pink, 10%))
+      
+  &.dark-yellow
+    +gradient-button($color-dark-yellow)
+    border: 1px solid darken($color-dark-yellow, 10%)
+    &:hover 
+      +gradient-button(darken($color-dark-yellow, 10%))
+      
+  // Additional Button Colours   
+      
+  &.green
+    +gradient-button($color-green)
+    border: 1px solid darken($color-green, 10%)
+    &:hover 
+      +gradient-button(darken($color-green, 10%))
+        
+  &.grey
+    +gradient-button($color-dark-grey)
+    border: 1px solid darken($color-dark-grey, 10%)
+    &:hover 
+      +gradient-button(darken($color-dark-grey, 10%))
+        
+  &.light-grey
+    +gradient-button($color-light-grey)
+    border: 1px solid darken($color-light-grey, 10%)
+    color: $color-dark-grey
+    &:hover 
+      +gradient-button(darken($color-light-grey, 10%))
+      
+a
+  &.button:hover
+    text-decoration: none
+    

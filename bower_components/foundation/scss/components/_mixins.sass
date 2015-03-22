@@ -1,0 +1,26 @@
+
+
+//Simple Button Radius Mixin
+=border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius:    $radius
+  -ms-border-radius:     $radius
+  border-radius:         $radius
+  
+  
+//Simple Button Gradient Colour Mixin
+=gradient-button($color)
+  
+  $color-darken: darken($color, 3%)
+  $color-lighten: lighten($color, 3%)
+    
+  background: $color      
+  background: -moz-linear-gradient(top,  $color-lighten 0%, $color-darken 100%)
+  background: -webkit-linear-gradient(top,  $color-lighten 0%,$color-darken 100%)
+  background: -o-linear-gradient(top,  $color-lighten 0%,$color-darken 100%)
+  background: -ms-linear-gradient(top,  $color-lighten 0%,$color-darken 100%)      
+  background: linear-gradient(to bottom,  $color-lighten 0%,$color-darken 100%)   
+  
+  
+
+    

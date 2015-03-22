@@ -1,0 +1,23 @@
+// nav-bar
+
+nav
+  .logo
+    height: 40px
+    width: 154px
+    
+  
+  .top-bar-section 
+    ul 
+      li
+        &.sign-in
+          a
+            font-weight: 500
+            color: $color-blue
+            
+        @media #{$small-only}
+          background-color: $color-dark-grey
+          border-bottom: 1px solid darken($color-dark-grey, 5)
+          a
+            color: $color-white
+        
+    

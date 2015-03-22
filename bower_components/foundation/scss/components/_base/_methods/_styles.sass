@@ -1,0 +1,38 @@
+// _methods/_styles.sass
+
+=qqc-popout-caret
+  $caret-size: 10px
+  margin-top: $caret-size
+  &:before
+    content: ""
+    z-index: 101
+    position: absolute
+    left: 16px
+    top: -18px
+    display: block
+    height: 8px
+    width: 0px
+    border-left: $caret-size solid transparent
+    border-right: $caret-size solid transparent
+    border-bottom: $caret-size solid $um-color-background
+
+=qqc-popout-header
+  font-family: $qqc-font-family-heading
+  font-weight: normal
+  font-size: $um-font-size-heading
+  margin: 0
+  margin-bottom: $qqc-blh
+  padding-bottom: $qqc-blh / 2
+  border-bottom: 1px solid $um-border-color-dark
+  strong
+    font-weight: bold
+
+=qqc-close-button
+  position: absolute
+  top: $qqc-blh
+  right: $qqc-blh
+  color: $um-color-link
+  font-size: $um-font-size-body
+  &:hover
+    cursor: pointer
+

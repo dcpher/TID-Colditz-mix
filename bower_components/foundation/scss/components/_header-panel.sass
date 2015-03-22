@@ -1,0 +1,41 @@
+// header-panel
+
+#header, #homepage-header
+  margin-bottom: 0
+  
+  &.header-panel
+    padding-top: rem-calc(50)
+    padding-bottom: rem-calc(60)
+    padding-left: 0
+    padding-right: 0
+    
+    p
+      font-size: rem-calc(32)
+      line-height: 1.1
+      letter-spacing: rem-calc(-1)
+      
+      
+#homepage-header      
+  @media #{$small-only}
+    &.header-panel
+      padding-top: rem-calc(0)
+      padding-bottom: rem-calc(32)
+      
+      .title:first-child
+        background-color: $color-dark-blue
+        margin: 0
+        padding: 5% 2.5%
+        width: 100%
+        margin-bottom: rem-calc(32)
+      
+      h1
+        font-size: rem-calc(28)
+        letter-spacing: -1px
+        margin-bottom: 0
+      
+      h1:after
+        content: "Get a quote"
+        color: $color-blue
+        display: block
+        
+      

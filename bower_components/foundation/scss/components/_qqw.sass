@@ -1,0 +1,151 @@
+// Quick Quote Widget
+ 
+    
+// Full Width QQWidget
+.qqw-full-width
+  #quick-quote
+    .destination.alpha
+      @include grid-column(5)
+      @media #{$medium-only} 
+        @include grid-column(4)
+      @media #{$small-only} 
+        @include grid-column(12)
+
+    .travel-dates
+      @include grid-column(3)
+      @media #{$medium-only} 
+        @include grid-column(4)
+      @media #{$small-only} 
+        @include grid-column(12)
+
+    .travelling-as.beta
+      @include grid-column(4)
+      @media #{$small-only} 
+        @include grid-column(12)
+
+      // target age boxes
+      #quote-traveller-ages
+        @include grid-row($behavior: nest)
+        .sub-group
+          @include grid-column(6)
+
+        @media #{$medium-up}
+          .sub-group:first-child
+            padding-right: rem-calc(8)
+          .sub-group:last-child
+            padding-left: rem-calc(8)
+          .chikdren-go-free
+            margin-bottom: rem-calc(16)
+            
+
+      
+            
+            
+          
+// Contained QQWidget
+.qqw-contained  
+  #quick-quote
+    .destination.alpha
+      @include grid-column(4)
+      @media #{$small-only} 
+        @include grid-column(12)
+
+    .travel-dates
+      @include grid-column(4)
+      @media #{$small-only} 
+        @include grid-column(12)
+
+    .travelling-as.beta
+      @include grid-column(4)
+      @media #{$small-only} 
+        @include grid-column(12)
+
+      // target age boxes
+      #quote-traveller-ages
+        @include grid-row($behavior: nest)
+        .sub-group
+          @include grid-column(6)
+          @media #{$medium-only}
+            @include grid-column(12)
+        @media #{$large-up}
+          .sub-group:first-child
+            padding-right: rem-calc(8)
+          .sub-group:last-child
+            padding-left: rem-calc(8)
+          .chikdren-go-free
+            margin-bottom: rem-calc(16) 
+            
+//          
+          
+#quick-quote
+  overflow: auto
+  @include grid-row($behavior: nest)
+  
+  // destinations ul
+  #destinations
+    margin: 0
+    padding-left: 0
+    li
+      font-weight: 500
+      &:last-child
+        margin-bottom: rem-calc(16)
+  
+  h3
+    @extend h4
+    color: $color-dark-blue !important
+    padding-bottom: rem-calc(8)
+    border-bottom: 1px solid $color-white
+    
+  label
+    font-weight: 500
+    color: $color-white
+    margin-bottom: rem-calc(4)
+    
+  input[type='text']
+    border-top: 1px solid #0084aa
+    border-left: 1px solid #0084aa
+    border-bottom: 1px solid #34d2ff
+    border-right: 1px solid #34d2ff
+    border-radius: 3px
+    box-shadow: #ccc 0px 1px 1px 0px inset
+    box-sizing: border-box
+    height: rem-calc(44)
+  
+  .travelling-as
+    //width: 30%
+    input[type='text']
+      margin-bottom: 4px
+    .sub-group
+      float: left
+    
+    .children-go-free
+      float: left
+      clear: left
+      color: $color-white
+      &:hover
+        text-decoration: underline
+    .collapse
+      display: none
+      
+  @media #{$small-only}
+    h3
+      padding-bottom: rem-calc(0)
+      border-bottom: none
+
+    
+    
+  // submit button
+  
+  .continue
+    @extend .button
+    +gradient-button($color-dark-blue)
+    border: 1px solid darken($color-dark-blue, 10%)
+    width: 100%
+    margin-top: rem-calc(16)
+    margin-bottom: 0 //rem-calc(16)
+    &:hover 
+      +gradient-button(darken($color-dark-blue, 10%))
+      
+    @media #{$medium-up}
+      //margin-top: rem-calc(48)
+

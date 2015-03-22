@@ -1,0 +1,114 @@
+/*
+Error: Invalid CSS after "margin-right:": expected pseudoclass or pseudoelement, was "$qqc-gutter"
+        on line 59 of /Users/CPotter/Documents/Source/TID-Colditz/static/css/components/_widgets/_quick-quote-calculator.sass
+        from line 11 of /Users/CPotter/Documents/Source/TID-Colditz/static/css/components/cms_responsive_qqc.sass
+
+54:     font-size: $dp-font-size-date
+55:     padding: 2px 4px
+56:     color: $dp-color-link
+57:     display: block
+58:     border-radius: 3px
+59:     text-align: center
+60:     line-height: 16px
+61:     margin-left: 2px
+62:     &:hover
+63:       color: $dp-color-link-hover
+64:       text-decoration: underline
+
+Backtrace:
+/Users/CPotter/Documents/Source/TID-Colditz/static/css/components/_widgets/_quick-quote-calculator.sass:59
+/Users/CPotter/Documents/Source/TID-Colditz/static/css/components/cms_responsive_qqc.sass:11
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/scss/parser.rb:1165:in `expected'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/scss/parser.rb:1101:in `expected'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/scss/parser.rb:1096:in `tok!'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/scss/static_parser.rb:277:in `pseudo'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/scss/static_parser.rb:160:in `simple_selector_sequence'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/scss/static_parser.rb:112:in `selector'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/scss/static_parser.rb:86:in `selector_comma_sequence'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/scss/parser.rb:1079:in `expr!'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/scss/static_parser.rb:20:in `parse_selector'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:414:in `visit_rule'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `with_base'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `block (2 levels) in visit_rule'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `map'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `block in visit_rule'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `with_base'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `block (2 levels) in visit_rule'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `map'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `block in visit_rule'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `with_base'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `block (2 levels) in visit_rule'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `map'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `block in visit_rule'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `with_base'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:315:in `block (2 levels) in visit_import'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:315:in `map'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:315:in `block in visit_import'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/stack.rb:88:in `block in with_import'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/stack.rb:88:in `with_import'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:312:in `visit_import'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `with_base'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `map'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/engine.rb:285:in `render_with_sourcemap'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:209:in `each'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/plugin.rb:82:in `update_stylesheets'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:350:in `watch_or_update'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:50:in `process_result'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/exec/base.rb:52:in `parse'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/lib/sass/exec/base.rb:19:in `parse!'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/gems/sass-3.4.9/bin/scss:13:in `<top (required)>'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/bin/scss:23:in `load'
+/Applications/Cactus.app/Contents/Resources/Vendor/ruby/gems/bin/scss:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"margin-right:\": expected pseudoclass or pseudoelement, was \"$qqc-gutter\"\A         on line 59 of /Users/CPotter/Documents/Source/TID-Colditz/static/css/components/_widgets/_quick-quote-calculator.sass\A         from line 11 of /Users/CPotter/Documents/Source/TID-Colditz/static/css/components/cms_responsive_qqc.sass\A \A 54:     font-size: $dp-font-size-date\A 55:     padding: 2px 4px\A 56:     color: $dp-color-link\A 57:     display: block\A 58:     border-radius: 3px\A 59:     text-align: center\A 60:     line-height: 16px\A 61:     margin-left: 2px\A 62:     &:hover\A 63:       color: $dp-color-link-hover\A 64:       text-decoration: underline"; }

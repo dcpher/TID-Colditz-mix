@@ -1,0 +1,57 @@
+// benefits-bar
+
+.benefits-bar
+  padding-top: rem-calc(24)
+  padding-bottom: rem-calc(24)
+  margin-top: 0
+  
+  &.blue
+    background-color: darken($color-blue, 3%)
+    
+  .columns, .column
+    color: $color-white
+    
+  ul
+    li
+      background-repeat: no-repeat
+      background-size: 40px 40px
+      padding-left: rem-calc(56)
+      padding-right: rem-calc(40)
+      padding-bottom: 0
+      line-height: 1.1
+      min-height: 44px
+      
+      &.trusted
+        background-image: url('/Media/Default/main/icons/icon_trust_1mil.png')
+      &.award
+        background-image: url('/Media/Default/main/icons/icon_trust_awards.png')
+      &.owned
+        background-image: url('/Media/Default/main/icons/icon_trust_ozzie.png')
+      &.secure
+        background-image: url('/Media/Default/main/icons/icon_trust_secure.png')
+        
+        
+      &.lloyds
+        background-size: contain
+        background-position: right
+        padding-left: 0
+        background-image: url('/Media/Default/main/icons/icon_trust_lloyds.png')
+        
+      @media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5)
+        &.trusted
+          background-image: url('/Media/Default/main/icons/icon_trust_1mil@x2.png')
+        &.award
+          background-image: url('/Media/Default/main/icons/icon_trust_awards@x2.png')
+        &.owned
+          background-image: url('/Media/Default/main/icons/icon_trust_ozzie@x2.png')
+        &.secure
+          background-image: url('/Media/Default/main/icons/icon_trust_secure@x2.png')
+        &.lloyds
+          background-image: url('/Media/Default/main/icons/icon_trust_lloyds@x2.png')
+          
+    @media #{$small-only}
+      li
+        padding-bottom: rem-calc(8)
+      li:last-child
+        padding-bottom: 0
+  
