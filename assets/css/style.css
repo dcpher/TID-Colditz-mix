@@ -3254,21 +3254,21 @@ h1.white, h2.white, h3.white, h4.white, #quick-quote h3.white, h5.white, div.whi
       background: -ms-linear-gradient(top, #2e2e2e 0%, #1f1f1f 100%);
       background: linear-gradient(to bottom, #2e2e2e 0%, #1f1f1f 100%); }
   .button.light-grey, #quick-quote .light-grey.continue, button.light-grey {
-    background: #EEE;
-    background: -moz-linear-gradient(top, #f6f6f6 0%, #e6e6e6 100%);
-    background: -webkit-linear-gradient(top, #f6f6f6 0%, #e6e6e6 100%);
-    background: -o-linear-gradient(top, #f6f6f6 0%, #e6e6e6 100%);
-    background: -ms-linear-gradient(top, #f6f6f6 0%, #e6e6e6 100%);
-    background: linear-gradient(to bottom, #f6f6f6 0%, #e6e6e6 100%);
-    border: 1px solid #d4d4d4;
+    background: #f8f8f8;
+    background: -moz-linear-gradient(top, #ffffff 0%, #f0f0f0 100%);
+    background: -webkit-linear-gradient(top, #ffffff 0%, #f0f0f0 100%);
+    background: -o-linear-gradient(top, #ffffff 0%, #f0f0f0 100%);
+    background: -ms-linear-gradient(top, #ffffff 0%, #f0f0f0 100%);
+    background: linear-gradient(to bottom, #ffffff 0%, #f0f0f0 100%);
+    border: 1px solid #dfdfdf;
     color: #404040; }
     .button.light-grey:hover, #quick-quote .light-grey.continue:hover, button.light-grey:hover {
-      background: #d4d4d4;
-      background: -moz-linear-gradient(top, #dcdcdc 0%, #cdcdcd 100%);
-      background: -webkit-linear-gradient(top, #dcdcdc 0%, #cdcdcd 100%);
-      background: -o-linear-gradient(top, #dcdcdc 0%, #cdcdcd 100%);
-      background: -ms-linear-gradient(top, #dcdcdc 0%, #cdcdcd 100%);
-      background: linear-gradient(to bottom, #dcdcdc 0%, #cdcdcd 100%); }
+      background: #dfdfdf;
+      background: -moz-linear-gradient(top, #e6e6e6 0%, #d7d7d7 100%);
+      background: -webkit-linear-gradient(top, #e6e6e6 0%, #d7d7d7 100%);
+      background: -o-linear-gradient(top, #e6e6e6 0%, #d7d7d7 100%);
+      background: -ms-linear-gradient(top, #e6e6e6 0%, #d7d7d7 100%);
+      background: linear-gradient(to bottom, #e6e6e6 0%, #d7d7d7 100%); }
 
 a.button:hover, #quick-quote a.continue:hover {
   text-decoration: none; }
@@ -3482,12 +3482,6 @@ a.button:hover, #quick-quote a.continue:hover {
     margin-top: 0; }
   .blue-panel > :last-child {
     margin-bottom: 0; }
-  .blue-panel h1, .blue-panel h2, .blue-panel h3, .blue-panel h4, .blue-panel #quick-quote h3, #quick-quote .blue-panel h3, .blue-panel h5, .blue-panel h6, .blue-panel p, .blue-panel li, .blue-panel dl {
-    color: #FFFFFF; }
-  .blue-panel h1, .blue-panel h2, .blue-panel h3, .blue-panel h4, .blue-panel #quick-quote h3, #quick-quote .blue-panel h3, .blue-panel h5, .blue-panel h6 {
-    line-height: 1; }
-    .blue-panel h1.subheader, .blue-panel h2.subheader, .blue-panel h3.subheader, .blue-panel h4.subheader, .blue-panel #quick-quote h3.subheader, #quick-quote .blue-panel h3.subheader, .blue-panel h5.subheader, .blue-panel h6.subheader {
-      line-height: 1.4; }
 
 .pink-panel {
   border-style: solid;
@@ -3701,10 +3695,10 @@ a.button:hover, #quick-quote a.continue:hover {
 .grey-panel {
   border-style: solid;
   border-width: 1px;
-  border-color: #d4d4d4;
+  border-color: #dddddd;
   margin-bottom: 0;
   padding: 1.25rem;
-  background: #EEE;
+  background: #f8f8f8;
   color: #333333; }
   .grey-panel > :first-child {
     margin-top: 0; }
@@ -3811,8 +3805,8 @@ nav .top-bar-section ul li.sign-in a {
       color: #FFF; } }
 
 .benefits-bar {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   margin-top: 0; }
   .benefits-bar.blue {
     background-color: #00aed5; }
@@ -3822,10 +3816,12 @@ nav .top-bar-section ul li.sign-in a {
     background-repeat: no-repeat;
     background-size: 40px 40px;
     padding-left: 3.5rem;
-    padding-right: 2.5rem;
+    padding-right: 2.75rem;
+    padding-top: 0.25rem;
     padding-bottom: 0;
     line-height: 1.1;
-    min-height: 44px; }
+    min-height: 44px;
+    font-size: 1rem; }
     .benefits-bar ul li.trusted {
       background-image: url('/Media/Default/main/icons/icon_trust_1mil.png'); }
     .benefits-bar ul li.award {
@@ -3907,7 +3903,7 @@ nav .top-bar-section ul li.sign-in a {
     ul[class*=block-grid-] li.text-with-img {
       margin-bottom: 1rem;
       background-image: url();
-      border-top: 1px solid #e1e1e1;
+      border-top: 1px solid #ebebeb;
       padding-top: 0.625rem;
       padding-bottom: 0.625rem;
       padding-left: 0;
@@ -3919,7 +3915,7 @@ nav .top-bar-section ul li.sign-in a {
       ul[class*=block-grid-] li.text-with-img p {
         margin-bottom: 0.25rem; }
     ul[class*=block-grid-] li.text-with-img:last-child {
-      border-bottom: 1px solid #e1e1e1;
+      border-bottom: 1px solid #ebebeb;
       margin-bottom: 2rem; }
       ul[class*=block-grid-] li.text-with-img:last-child.cancellation, ul[class*=block-grid-] li.text-with-img:last-child.luggage, ul[class*=block-grid-] li.text-with-img:last-child.evacuation, ul[class*=block-grid-] li.text-with-img:last-child.medical-help, ul[class*=block-grid-] li.text-with-img:last-child.accident, ul[class*=block-grid-] li.text-with-img:last-child.passport-lost, ul[class*=block-grid-] li.text-with-img:last-child.amt-medical, ul[class*=block-grid-] li.text-with-img:last-child.amt-cover, ul[class*=block-grid-] li.text-with-img:last-child.amt-flexible {
         background: none; } }
@@ -3953,7 +3949,7 @@ nav .top-bar-section ul li.sign-in a {
           width: 2.5rem;
           height: 2.5rem;
           text-align: center;
-          background-color: #7b7b7b;
+          background-color: #858585;
           color: #404040;
           padding-top: 0.5rem;
           font-size: 1.5rem; }
@@ -3973,13 +3969,23 @@ nav .top-bar-section ul li.sign-in a {
         font-size: 1.375rem;
         padding-bottom: 0.5rem; }
       #footer .footer-links ul li a {
-        color: #EEE; }
+        color: #919191; }
         #footer .footer-links ul li a:hover {
-          text-decoration: underline; }
+          text-decoration: none;
+          color: #f8f8f8; }
   #footer .legal {
     font-size: 0.75rem;
     font-weight: 500;
     color: #999999; }
+
+hr {
+  margin-top: 3.75rem;
+  margin-bottom: 1.25rem;
+  height: 1px; }
+  hr.dark-blue {
+    border: 1px solid ligten(#005581, 10); }
+  hr.blue {
+    border: 0px solid #0090b1; }
 
 #countryPanel {
   font-family: 'Lucida Grande', 'Lucida Sans', Helvetica, Arial, sans-serif;
