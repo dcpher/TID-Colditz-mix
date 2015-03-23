@@ -19,18 +19,21 @@
     margin-bottom: $qqc-blh
   dd
     margin-left: 0
+    margin-bottom: rem-calc(4)
+    font-size: rem-calc(16)
     a
-      padding: 4px 8px
-      line-height: 26px
+      padding: rem-calc(6) rem-calc(10)
+      //line-height: 1.6
+      color: $color-blue
     a:hover
       background: $qqc-color-heading
-      border-radius: 2px
+      border-radius: 1px
       color: $qqc-color-text
       cursor: pointer
   dt
-    color: $um-color-link
+    color: $color-dark-grey
     font-family: $qqc-font-family-heading
-    font-weight: 500
+    font-weight: 300
     font-size: $um-font-size-subheading
     margin-bottom: $qqc-blh
     padding-left: 6px
@@ -43,11 +46,12 @@
       margin-left: 0
   .note
     clear: both
-    border: 1px solid $qqc-color-background
-    border-radius: 3px
-    background-color: lighten($qqc-color-background, 50%)
+    border: none
+    border-radius: 2px
+    background-color: $color-light-grey
     display: block
     padding: 10px $qqc-blh
+    font-size: rem-calc(14)
   @media all and (max-width: $qqc-mq-mobile-landscape)
     .note, .regions, .closePanel
       display: none
@@ -63,28 +67,29 @@
 .autocomplete
   background: $um-color-background
   font-family: $qqc-font-family-body
-  font-size: $um-font-size-body
+  font-size: rem-calc(16)
   background: $um-color-background
-  border-radius: $um-border-radius
+  border-radius: 1px
   box-shadow: $um-box-shadow
   z-index: 100
   list-style-type: none
   padding: $qqc-gutter
   +qqc-popout-caret
   li
-    line-height: 20px
-    padding: 2px 8px
+    //line-height: 1.1
+    padding: rem-calc(4) rem-calc(10)
     float: left
     clear: left
-    border-radius: 3px
+    border-radius: 2px
     em  
-      font-weight: bold
+      font-weight: 500
       font-style: normal
     &:hover
       cursor: pointer
   li.selected
     background: $qqc-color-heading
     color: $um-color-background
+
   @media all and (max-width: $qqc-mq-mobile-landscape)
     li
       padding: 6px 12px

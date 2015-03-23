@@ -133,9 +133,22 @@
       border-bottom: none
 
     
-    
-  // submit button
+  // destinations tags
+  #destinations
+    li
+      background-color: $color-dark-blue
+      display: inline-block
+      padding: rem-calc(4) rem-calc(10)
+      font-weight: 300
+      font-size: rem-calc(16)
+      +border-radius(2px)
+      margin-right: rem-calc(8)
+      a
+        font-size: rem-calc(16)
+        font-weight: 500
+        margin-left: 4px
   
+  // submit button
   .continue
     @extend .button
     +gradient-button($color-dark-blue)

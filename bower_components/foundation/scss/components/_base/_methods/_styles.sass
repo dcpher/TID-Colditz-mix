@@ -8,13 +8,13 @@
     z-index: 101
     position: absolute
     left: 16px
-    top: -18px
+    top: -10px
     display: block
     height: 8px
     width: 0px
     border-left: $caret-size solid transparent
     border-right: $caret-size solid transparent
-    border-bottom: $caret-size solid $um-color-background
+    border-bottom: $caret-size solid $color-white
 
 =qqc-popout-header
   font-family: $qqc-font-family-heading
@@ -23,7 +23,7 @@
   margin: 0
   margin-bottom: $qqc-blh
   padding-bottom: $qqc-blh / 2
-  border-bottom: 1px solid $um-border-color-dark
+  border-bottom: 1px solid darken($color-light-grey, 20)
   strong
     font-weight: 500
 
@@ -32,7 +32,7 @@
   top: $qqc-blh
   right: $qqc-blh
   color: $um-color-link
-  font-size: $um-font-size-body
+  font-size: rem-calc(14)
   &:hover
     cursor: pointer
 

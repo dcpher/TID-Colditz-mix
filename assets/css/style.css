@@ -3026,7 +3026,7 @@ h1.white, h2.white, h3.white, h4.white, #quick-quote h3.white, h5.white, div.whi
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   position: relative;
-  padding: 0.5rem 1rem;
+  padding: 0.8125rem 1rem;
   padding-right: 2.75rem;
   text-align: left; }
   .button.expand, #quick-quote .expand.continue, button.expand {
@@ -3451,6 +3451,21 @@ a.button:hover, #quick-quote a.continue:hover {
     #quick-quote h3 {
       padding-bottom: 0;
       border-bottom: none; } }
+  #quick-quote #destinations li {
+    background-color: #005581;
+    display: inline-block;
+    padding: 0.25rem 0.625rem;
+    font-weight: 300;
+    font-size: 1rem;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+    margin-right: 0.5rem; }
+    #quick-quote #destinations li a {
+      font-size: 1rem;
+      font-weight: 500;
+      margin-left: 4px; }
   #quick-quote .continue {
     background: #005581;
     background: -moz-linear-gradient(top, #005f90 0%, #004b72 100%);
@@ -3704,12 +3719,6 @@ a.button:hover, #quick-quote a.continue:hover {
     margin-top: 0; }
   .grey-panel > :last-child {
     margin-bottom: 0; }
-  .grey-panel h1, .grey-panel h2, .grey-panel h3, .grey-panel h4, .grey-panel #quick-quote h3, #quick-quote .grey-panel h3, .grey-panel h5, .grey-panel h6, .grey-panel p, .grey-panel li, .grey-panel dl {
-    color: #333333; }
-  .grey-panel h1, .grey-panel h2, .grey-panel h3, .grey-panel h4, .grey-panel #quick-quote h3, #quick-quote .grey-panel h3, .grey-panel h5, .grey-panel h6 {
-    line-height: 1; }
-    .grey-panel h1.subheader, .grey-panel h2.subheader, .grey-panel h3.subheader, .grey-panel h4.subheader, .grey-panel #quick-quote h3.subheader, #quick-quote .grey-panel h3.subheader, .grey-panel h5.subheader, .grey-panel h6.subheader {
-      line-height: 1.4; }
 
 .dark-grey-panel {
   border-style: solid;
@@ -3756,6 +3765,11 @@ a.button:hover, #quick-quote a.continue:hover {
       font-size: 2rem;
       line-height: 1.1;
       letter-spacing: -0.0625rem; }
+    #header.header-panel h1, #homepage-header.header-panel h1 {
+      color: white; }
+
+#homepage-header h1 {
+  text-align: center; }
 
 @media only screen and (max-width: 40em) {
   #homepage-header.header-panel {
@@ -3770,7 +3784,8 @@ a.button:hover, #quick-quote a.continue:hover {
     #homepage-header.header-panel h1 {
       font-size: 1.75rem;
       letter-spacing: -1px;
-      margin-bottom: 0; }
+      margin-bottom: 0;
+      text-align: left; }
     #homepage-header.header-panel h1:after {
       content: "Get a quote";
       color: #00bae4;
@@ -3787,7 +3802,7 @@ a.button:hover, #quick-quote a.continue:hover {
         -ms-transform: translateY(40%);
         transform: translateY(40%); } }
     .content-panel .row ul li a {
-      color: #404040; }
+      color: #777; }
     .content-panel .row ul li a:hover {
       color: #00bae4; }
 
@@ -3993,7 +4008,7 @@ hr {
 .datepicker {
   background: #fff;
   padding: 16px;
-  border-radius: 5px;
+  border-radius: 3px;
   box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.2);
   font-family: "Museo Sans", Helvetica, Arial, sans-serif;
   margin-top: 10px; }
@@ -4002,29 +4017,29 @@ hr {
     z-index: 101;
     position: absolute;
     left: 16px;
-    top: -18px;
+    top: -10px;
     display: block;
     height: 8px;
     width: 0px;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-bottom: 10px solid #fff; }
+    border-bottom: 10px solid #FFF; }
   .datepicker .closePanel {
     position: absolute;
     top: 16px;
     right: 16px;
     color: #00bae4;
-    font-size: 12px; }
+    font-size: 0.875rem; }
     .datepicker .closePanel:hover {
       cursor: pointer; }
   .datepicker h3 {
     font-family: "Museo Sans", Helvetica, Arial, sans-serif;
     font-weight: 300;
-    font-size: 24px;
+    font-size: 18px;
     margin: 0;
     margin-bottom: 16px;
     padding-bottom: 8px;
-    border-bottom: 1px solid #000; }
+    border-bottom: 1px solid #c5c5c5; }
     .datepicker h3 strong {
       font-weight: 500; }
   .datepicker .datepicker-calendars {
@@ -4033,9 +4048,9 @@ hr {
   .datepicker .datepicker-show-past-month, .datepicker .datepicker-show-next-month {
     position: absolute;
     left: 0;
-    top: -3px;
+    top: -10px;
     color: #00bae4;
-    font-size: 20px; }
+    font-size: 2.25rem; }
     .datepicker .datepicker-show-past-month:hover, .datepicker .datepicker-show-next-month:hover {
       cursor: pointer; }
   .datepicker .datepicker-show-next-month {
@@ -4048,30 +4063,41 @@ hr {
       margin-left: 16px; }
   .datepicker .datepicker-calendar-title {
     text-align: center;
-    font-size: 18px;
+    font-size: 24px;
     margin-bottom: 16px; }
-  .datepicker td a {
-    font-size: 12px;
-    padding: 2px 4px;
-    color: #00bae4;
-    display: block;
-    border-radius: 3px;
-    text-align: center;
-    line-height: 16px;
-    margin-left: 2px; }
-    .datepicker td a:hover {
-      color: #005386;
-      text-decoration: underline;
-      cursor: pointer; }
-  .datepicker td.selected a {
-    background: #00bae4;
-    color: #fff; }
-  .datepicker td.disabled a {
-    color: #eee; }
-    .datepicker td.disabled a:hover {
-      text-decoration: none; }
+  .datepicker table {
+    border: none;
+    margin-bottom: 0; }
+    .datepicker table tr td, .datepicker table tr th {
+      padding: 0;
+      font-size: 1rem;
+      margin-left: 2px; }
+      .datepicker table tr td a, .datepicker table tr th a {
+        font-size: 1rem;
+        padding: 0.625rem 0.625rem;
+        color: #00bae4;
+        display: block;
+        text-align: center;
+        line-height: 16px; }
+        .datepicker table tr td a:hover, .datepicker table tr th a:hover {
+          color: #FFF;
+          text-decoration: none;
+          cursor: pointer;
+          background-color: #00bae4; }
+    .datepicker table tr td.selected {
+      background: #00bae4; }
+      .datepicker table tr td.selected a {
+        color: #FFF; }
+    .datepicker table tr td.disabled {
+      color: #eee; }
+      .datepicker table tr td.disabled:hover {
+        text-decoration: none; }
+    .datepicker table tr th {
+      font-weight: 300;
+      text-align: center; }
   .datepicker td.inSelectionRange a, .datepicker td.selectedCompanion a {
-    background: #f5f5f5; }
+    background: #005581;
+    color: #FFF; }
   @media all and (max-width: 855px) {
     .datepicker .datepicker-calendar, .datepicker h3, .datepicker .closePanel {
       display: none; }
@@ -4092,49 +4118,51 @@ hr {
     z-index: 101;
     position: absolute;
     left: 16px;
-    top: -18px;
+    top: -10px;
     display: block;
     height: 8px;
     width: 0px;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-bottom: 10px solid #fff; }
+    border-bottom: 10px solid #FFF; }
   #countryPanel .closePanel {
     position: absolute;
     top: 16px;
     right: 16px;
     color: #00bae4;
-    font-size: 12px; }
+    font-size: 0.875rem; }
     #countryPanel .closePanel:hover {
       cursor: pointer; }
   #countryPanel h3 {
     font-family: "Museo Sans", Helvetica, Arial, sans-serif;
     font-weight: 300;
-    font-size: 24px;
+    font-size: 18px;
     margin: 0;
     margin-bottom: 16px;
     padding-bottom: 8px;
-    border-bottom: 1px solid #000; }
+    border-bottom: 1px solid #c5c5c5; }
     #countryPanel h3 strong {
       font-weight: 500; }
   #countryPanel dl {
     margin: 0;
     margin-bottom: 16px; }
   #countryPanel dd {
-    margin-left: 0; }
+    margin-left: 0;
+    margin-bottom: 0.25rem;
+    font-size: 1rem; }
     #countryPanel dd a {
-      padding: 4px 8px;
-      line-height: 26px; }
+      padding: 0.375rem 0.625rem;
+      color: #00bae4; }
     #countryPanel dd a:hover {
-      background: #005386;
-      border-radius: 2px;
+      background: #00bae4;
+      border-radius: 1px;
       color: #fff;
       cursor: pointer; }
   #countryPanel dt {
-    color: #00bae4;
+    color: #404040;
     font-family: "Museo Sans", Helvetica, Arial, sans-serif;
-    font-weight: 500;
-    font-size: 15px;
+    font-weight: 300;
+    font-size: 24px;
     margin-bottom: 16px;
     padding-left: 6px; }
   #countryPanel .region {
@@ -4146,11 +4174,12 @@ hr {
       margin-left: 0; }
   #countryPanel .note {
     clear: both;
-    border: 1px solid #00bae4;
-    border-radius: 3px;
-    background-color: #e4faff;
+    border: none;
+    border-radius: 2px;
+    background-color: #f8f8f8;
     display: block;
-    padding: 10px 16px; }
+    padding: 10px 16px;
+    font-size: 0.875rem; }
   @media all and (max-width: 745px) {
     #countryPanel .note, #countryPanel .regions, #countryPanel .closePanel {
       display: none; }
@@ -4165,9 +4194,9 @@ hr {
 .autocomplete {
   background: #fff;
   font-family: "Museo Sans", Helvetica, Arial, sans-serif;
-  font-size: 12px;
+  font-size: 1rem;
   background: #fff;
-  border-radius: 3px;
+  border-radius: 1px;
   box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.2);
   z-index: 100;
   list-style-type: none;
@@ -4178,26 +4207,25 @@ hr {
     z-index: 101;
     position: absolute;
     left: 16px;
-    top: -18px;
+    top: -10px;
     display: block;
     height: 8px;
     width: 0px;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-bottom: 10px solid #fff; }
+    border-bottom: 10px solid #FFF; }
   .autocomplete li {
-    line-height: 20px;
-    padding: 2px 8px;
+    padding: 0.25rem 0.625rem;
     float: left;
     clear: left;
-    border-radius: 3px; }
+    border-radius: 2px; }
     .autocomplete li em {
-      font-weight: bold;
+      font-weight: 500;
       font-style: normal; }
     .autocomplete li:hover {
       cursor: pointer; }
   .autocomplete li.selected {
-    background: #005386;
+    background: #00bae4;
     color: #fff; }
   @media all and (max-width: 745px) {
     .autocomplete li {

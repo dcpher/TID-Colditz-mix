@@ -5,7 +5,7 @@
 .datepicker
   background: $dp-color-background
   padding: $qqc-gutter
-  border-radius: $dp-border-radius
+  border-radius: 3px
   box-shadow: $dp-box-shadow
   font-family: $qqc-font-family-heading
   +qqc-popout-caret
@@ -20,9 +20,9 @@
   .datepicker-show-next-month
     position: absolute
     left: 0
-    top: -3px
-    color: $dp-color-link
-    font-size: 20px
+    top: -10px
+    color: $color-blue
+    font-size: rem-calc(36)
     &:hover
       cursor: pointer
   .datepicker-show-next-month
@@ -37,29 +37,45 @@
     text-align: center
     font-size: $dp-font-size-subheading
     margin-bottom: $qqc-blh
-  td a
-    font-size: $dp-font-size-date
-    padding: 2px 4px
-    color: $dp-color-link
-    display: block
-    border-radius: 3px
-    text-align: center
-    line-height: 16px
-    margin-left: 2px
-    &:hover
-      color: $dp-color-link-hover
-      text-decoration: underline
-      cursor: pointer
-  td.selected a
-    background: $dp-color-link
-    color: $qqc-text-color-inverted
-  td.disabled a
-    color: $dp-color-link-disabled
-    &:hover
-      text-decoration: none
+  
+  table
+    border: none
+    margin-bottom: 0 
+    tr 
+      td, th
+        padding: rem-calc(0)
+        font-size: rem-calc(16)
+        margin-left: 2px
+        a
+          font-size: rem-calc(16)
+          padding: rem-calc(10) rem-calc(10)
+          color: $color-blue
+          display: block
+          text-align: center
+          line-height: 16px
+          
+          &:hover
+            color: $color-white
+            text-decoration: none
+            cursor: pointer
+            background-color: $color-blue
+        
+      td.selected
+        background: $color-blue
+        a
+          color: $color-white
+      td.disabled
+        color: $dp-color-link-disabled
+        &:hover
+          text-decoration: none
+      th
+        font-weight: 300
+        text-align: center
+    
   td.inSelectionRange a,
   td.selectedCompanion a
-    background: $dp-background-date-in-range
+    background: $color-dark-blue
+    color: $color-white
   @media all and (max-width: $qqc-mq-datepicker-collapse)
     .datepicker-calendar, h3, .closePanel
       display: none
