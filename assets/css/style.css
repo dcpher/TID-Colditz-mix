@@ -3983,44 +3983,48 @@ hr {
     border: 1px solid #00a5cb;
     border-bottom: 0px; }
 
-.text-with-img.cancellation, .text-with-img.luggage, .text-with-img.evacuation, .text-with-img.medical-help, .text-with-img.accident, .text-with-img.passport-lost {
+.benefits-panel .text-with-img.cancellation, .benefits-panel .text-with-img.luggage, .benefits-panel .text-with-img.evacuation, .benefits-panel .text-with-img.medical-help, .benefits-panel .text-with-img.accident, .benefits-panel .text-with-img.passport-lost {
   background-size: 66px 82px; }
-.text-with-img.cancellation {
+.benefits-panel .text-with-img.cancellation {
   background-image: url('/Media/Default/main/icons/benefits_1_b.png'); }
-.text-with-img.luggage {
+.benefits-panel .text-with-img.luggage {
   background-image: url('/Media/Default/main/icons/benefits_2_b.png'); }
-.text-with-img.evacuation {
+.benefits-panel .text-with-img.evacuation {
   background-image: url('/Media/Default/main/icons/benefits_3_b.png'); }
-.text-with-img.medical-help {
+.benefits-panel .text-with-img.medical-help {
   background-image: url('/Media/Default/main/icons/benefits_4_b.png'); }
-.text-with-img.accident {
+.benefits-panel .text-with-img.accident {
   background-image: url('/Media/Default/main/icons/benefits_5_b.png'); }
-.text-with-img.passport-lost {
+.benefits-panel .text-with-img.passport-lost {
   background-image: url('/Media/Default/main/icons/benefits_6_b.png'); }
-.text-with-img.amt-medical, .text-with-img.amt-cover, .text-with-img.amt-flexible {
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
+  .benefits-panel .text-with-img.cancellation {
+    background-image: url('/Media/Default/main/icons/benefits_1_b@x2.png'); }
+  .benefits-panel .text-with-img.luggage {
+    background-image: url('/Media/Default/main/icons/benefits_2_b@x2.png'); }
+  .benefits-panel .text-with-img.evacuation {
+    background-image: url('/Media/Default/main/icons/benefits_3_b@x2.png'); } }
+@media only screen and (max-width: 40em) {
+  .benefits-panel .text-with-img.cancellation, .benefits-panel .text-with-img.luggage, .benefits-panel .text-with-img.evacuation, .benefits-panel .text-with-img.medical-help, .benefits-panel .text-with-img.accident, .benefits-panel .text-with-img.passport-lost {
+    background: none; } }
+
+.amt-panel .text-with-img.amt-medical, .amt-panel .text-with-img.amt-cover, .amt-panel .text-with-img.amt-flexible {
   background-size: 65px 65px; }
-.text-with-img.amt-medical {
+.amt-panel .text-with-img.amt-medical {
   background-image: url('//www.travelinsurancedirect.com.au/Media/Default/images/amt_benefit_1.png'); }
-.text-with-img.amt-cover {
+.amt-panel .text-with-img.amt-cover {
   background-image: url('//www.travelinsurancedirect.com.au/Media/Default/images/amt_benefit_2.png'); }
-.text-with-img.amt-flexible {
+.amt-panel .text-with-img.amt-flexible {
   background-image: url('//www.travelinsurancedirect.com.au/Media/Default/images/amt_benefit_3.png'); }
 @media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
-  .text-with-img.cancellation {
-    background-image: url('/Media/Default/main/icons/benefits_1_b@x2.png'); }
-  .text-with-img.luggage {
-    background-image: url('/Media/Default/main/icons/benefits_2_b@x2.png'); }
-  .text-with-img.evacuation {
-    background-image: url('/Media/Default/main/icons/benefits_3_b@x2.png'); }
-  .text-with-img.medical-help {
+  .amt-panel .text-with-img.medical-help {
     background-image: url('/Media/Default/main/icons/benefits_4_b@x2.png'); }
-  .text-with-img.accident {
+  .amt-panel .text-with-img.accident {
     background-image: url('/Media/Default/main/icons/benefits_5_b@x2.png'); }
-  .text-with-img.passport-lost {
+  .amt-panel .text-with-img.passport-lost {
     background-image: url('/Media/Default/main/icons/benefits_6_b@x2.png'); } }
-
 @media only screen and (max-width: 40em) {
-  .text-with-img.cancellation, .text-with-img.luggage, .text-with-img.evacuation, .text-with-img.medical-help, .text-with-img.accident, .text-with-img.passport-lost, .text-with-img.amt-medical, .text-with-img.amt-cover, .text-with-img.amt-flexible {
+  .amt-panel .text-with-img.amt-medical, .amt-panel .text-with-img.amt-cover, .amt-panel .text-with-img.amt-flexible {
     background: none; } }
 
 .datepicker {
