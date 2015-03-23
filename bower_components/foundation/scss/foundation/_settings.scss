@@ -635,7 +635,7 @@ $form-spacing: rem-calc(16);
 // $form-label-small-transform: capitalize;
 // $form-label-bottom-margin: 0;
 // $input-font-family: inherit;
-// $input-font-color: rgba(0,0,0,0.75);
+ $input-font-color: $tuatara;
  $input-font-size: rem-calc(16);
  $input-bg-color: $white;
  $input-focus-bg-color: scale-color($white, $lightness: -2%);
