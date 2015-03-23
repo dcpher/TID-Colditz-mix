@@ -4,6 +4,130 @@
 {{ "/assets/js/foundation/foundation.topbar.js" | asset_url | script_tag }}
 {{ "/assets/js/foundation/foundation.equalizer.js" | asset_url | script_tag }}
 
+
+<!--  Main Site Scripts  -->
+    <script src="/Scripts/custom/wng.js"></script>
+    <script src="/Scripts/custom/wng.googleAnalytics.js"></script>
+    <script src="/Scripts/compatibility/jquery.placeholder.js"></script>
+    <script src="/Scripts/jquery/jquery.cookie.js"></script>
+    <script src="/Scripts/jquery/autocomplete/jquery.autocomplete.js"></script>
+    <script src="/Scripts/jquery/autocomplete/jquery.autocompleteWithPanel.js"></script>
+    <script src="/Scripts/jquery/datepicker/jquery.datePicker.js"></script>
+    <script src="/Scripts/jquery/datepicker/jquery.datePickerForSelects.js"></script>
+    <script src="/Scripts/jquery/dropdownPicker/jquery.dropdownPicker.js"></script>
+    <script src="/Scripts/jquery/placeholderPlus/jquery.placeholderPlus.js"></script>
+    <script src="/Scripts/jquery/jquery.contentAjax.js"></script>
+    <script src="/Scripts/jquery/jquery.popup.js"></script>
+    <script src="/Scripts/jquery/jquery.countryPicker.js"></script>
+    <script src="/Scripts/jquery/jquery.quotePanel.js"></script>
+    <script src="/Scripts/jquery/jquery.tooltip.js"></script>
+    <script src="/Scripts/jquery/jquery.toggleSwitch.js"></script>
+    <script src="/Scripts/jquery/jquery.benefitsPanel.js"></script>
+    <script src="/Scripts/jquery/jquery.donationPanel.js"></script>
+    <script src="/Scripts/jquery/jquery.slideable.js"></script>
+    <script src="/Scripts/jquery/jquery.carousel.js"></script>
+    <script src="/Scripts/jquery/scrollTracking/jquery.scrollTracking.js"></script>
+    <script src="/Scripts/custom/wng.utils.js"></script>
+    <script src="/Scripts/custom/wng.capitalize.js"></script>
+    <script src="/Scripts/custom/wng.animations.js"></script>
+    <script src="/Scripts/custom/wng.googleAnalytics.tracking.js"></script>
+      <!--[if (lt IE 9) & (!IEMobile)]>
+        <script src="/Scripts/compatibility/jquery-extra-selectors.js"></script>
+<script src="/Scripts/compatibility/selectivizr.js"></script>
+
+      <![endif]--> 
+    <script type="text/javascript" charset="utf-8">
+      $(function () {
+        $("#quoteForm").quotePanel(
+          $("#quick-quote #quote-destination select"),          // destinationSelect
+          $("[name=AddDestinationCountry]"),                       // destinationAdd
+          $("#quick-quote #countryIDs"),                                        // hiddenSelectedCountriesInput
+          [
+            {
+              "name" : "Americas",
+              "countries" : [
+              'United States',
+              'Canada'
+              ]
+            },
+            {
+              "name" : "Asia",
+              "countries" : [
+              'Thailand',
+              'Bali',
+              'Vietnam',
+              'Indonesia',
+              'Malaysia',
+              'Singapore',
+              'Hong Kong',
+              'Japan'
+              ]
+            },
+            {
+              "name" : "Europe",
+              "countries" : [
+              'United Kingdom',
+              'France',
+              'Germany',
+              'Italy',
+              'Spain',
+              'Netherlands',
+              'Switzerland'
+              ]
+            },
+            {
+              "name" : "Pacific",
+              "countries" : [
+              'Australia',
+              'New Zealand',
+              'Fiji',
+              'Vanuatu'
+              ]
+            },
+            {
+              "name" : "Africa",
+              "countries" : [
+              'South Africa'
+              ]
+            }
+          ], // panelCountryGroups
+          $("#quick-quote #quote-departure-date select").eq(0),  // departureDateDay
+          $("#quick-quote #quote-departure-date select").eq(1),  // departureDateMonth
+          $("#quick-quote #quote-departure-date select").eq(2),  // departureDateYear
+          $("#quick-quote #quote-return-date select").eq(0),     // returnDateDay
+          $("#quick-quote #quote-return-date select").eq(1),     // returnDateMonth
+          $("#quick-quote #quote-return-date select").eq(2),     // returnDateYear
+          $("#quick-quote #destinations"),                                      // selectedCountriesElement
+          $("#quote-traveller-ages input"),                                     // travellerAges
+          $(".children-go-free"),                                               // collapseButtons
+          { years: 1 },                                                         // maxTimeUntilPolicyStart
+          { 'Sportscover': { days: 365 } },                                     // maxPolicyDurations
+          {                                                                     // departingDatePickerOptionsOverride
+            dateFormat: 'ddd mmmm yyyy',
+            headerText: "<strong>Select</strong> your <strong>departing</strong> date"
+          },
+          {                                                                     // returningDatePickerOptionsOverride
+            dateFormat: 'ddd mmmm yyyy',
+            headerText: "<strong>Select</strong> your <strong>returning</strong> date"
+          });
+      
+        $('#quick-quote').contentAjax({
+          submitSelector: ".continue",
+          modifyUrl: function(url) {
+            var promoParam = wng.utils.getPromoParamFromUrl();
+            return wng.utils.addParamToUrl(url, promoParam);
+          }
+        })
+        .on('afterGetFormData.contentAjax', function(e, $caller, formData) {
+          // If continuing from restricted countries modal, then clear countries after generating post data.
+          // So that CMS still knows the countries we're submitting...
+          if ($caller.is($('#do-not-travel-modal-wrapper .continue'))) {
+            $("#destinations").find("a").trigger("click");
+          }
+        });
+      });
+    </script>
+
 <script>
 $(document).foundation();
 </script>
