@@ -3981,11 +3981,15 @@ nav .top-bar-section ul li.sign-in a {
 hr {
   margin-top: 3.75rem;
   margin-bottom: 1.25rem;
-  height: 1px; }
+  height: 0px;
+  font-size: 1px;
+  display: block; }
   hr.dark-blue {
-    border: 1px solid ligten(#005581, 10); }
+    border: 1px solid ligten(#005581, 10);
+    border-bottom: 0px; }
   hr.blue {
-    border: 0px solid #0090b1; }
+    border: 1px solid #00a5cb;
+    border-bottom: 0px; }
 
 #countryPanel {
   font-family: 'Lucida Grande', 'Lucida Sans', Helvetica, Arial, sans-serif;
