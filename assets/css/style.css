@@ -3471,7 +3471,8 @@ a.button:hover, #quick-quote a.continue:hover {
     -moz-border-radius: 2px;
     -ms-border-radius: 2px;
     border-radius: 2px;
-    margin-right: 0.5rem; }
+    margin-right: 0.5rem;
+    margin-top: 0.5rem; }
     #quick-quote #destinations li a {
       font-size: 1rem;
       font-weight: 500;
@@ -3877,50 +3878,19 @@ nav .top-bar-section ul li.sign-in a {
     .benefits-bar ul li:last-child {
       padding-bottom: 0; } }
 
-.text-with-img {
-  margin-bottom: 1.5rem;
-  background-repeat: no-repeat;
-  background-size: 66px 82px; }
-  .text-with-img h4, .text-with-img #quick-quote h3, #quick-quote .text-with-img h3, .text-with-img h5, .text-with-img p, .text-with-img span {
-    padding-left: 80px;
-    padding-right: 1rem; }
-  .text-with-img p {
-    margin-bottom: 0.25rem; }
-  .text-with-img a.white {
-    color: #FFF; }
-  .text-with-img.cancellation {
-    background-image: url('/Media/Default/main/icons/benefits_1_b.png'); }
-  .text-with-img.luggage {
-    background-image: url('/Media/Default/main/icons/benefits_2_b.png'); }
-  .text-with-img.evacuation {
-    background-image: url('/Media/Default/main/icons/benefits_3_b.png'); }
-  .text-with-img.medical-help {
-    background-image: url('/Media/Default/main/icons/benefits_4_b.png'); }
-  .text-with-img.accident {
-    background-image: url('/Media/Default/main/icons/benefits_5_b.png'); }
-  .text-with-img.passport-lost {
-    background-image: url('/Media/Default/main/icons/benefits_6_b.png'); }
-  .text-with-img.amt-medical, .text-with-img.amt-cover, .text-with-img.amt-flexible {
-    background-size: 65px 65px; }
-  .text-with-img.amt-medical {
-    background-image: url('//www.travelinsurancedirect.com.au/Media/Default/images/amt_benefit_1.png'); }
-  .text-with-img.amt-cover {
-    background-image: url('//www.travelinsurancedirect.com.au/Media/Default/images/amt_benefit_2.png'); }
-  .text-with-img.amt-flexible {
-    background-image: url('//www.travelinsurancedirect.com.au/Media/Default/images/amt_benefit_3.png'); }
-  @media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
-    .text-with-img.cancellation {
-      background-image: url('/Media/Default/main/icons/benefits_1_b@x2.png'); }
-    .text-with-img.luggage {
-      background-image: url('/Media/Default/main/icons/benefits_2_b@x2.png'); }
-    .text-with-img.evacuation {
-      background-image: url('/Media/Default/main/icons/benefits_3_b@x2.png'); }
-    .text-with-img.medical-help {
-      background-image: url('/Media/Default/main/icons/benefits_4_b@x2.png'); }
-    .text-with-img.accident {
-      background-image: url('/Media/Default/main/icons/benefits_5_b@x2.png'); }
-    .text-with-img.passport-lost {
-      background-image: url('/Media/Default/main/icons/benefits_6_b@x2.png'); } }
+@media only screen and (min-width:40.063em) {
+  ul[class*=block-grid-] {
+    margin: 0; }
+    ul[class*=block-grid-] li.text-with-img {
+      margin-bottom: 1.5rem;
+      background-repeat: no-repeat; }
+      ul[class*=block-grid-] li.text-with-img h4, ul[class*=block-grid-] li.text-with-img #quick-quote h3, #quick-quote ul[class*=block-grid-] li.text-with-img h3, ul[class*=block-grid-] li.text-with-img h5, ul[class*=block-grid-] li.text-with-img p, ul[class*=block-grid-] li.text-with-img span {
+        padding-left: 80px;
+        padding-right: 1rem; }
+      ul[class*=block-grid-] li.text-with-img p {
+        margin-bottom: 0.25rem; }
+      ul[class*=block-grid-] li.text-with-img a.white {
+        color: #FFF; } }
 
 @media only screen and (max-width: 40em) {
   ul[class*=block-grid-] {
@@ -3941,9 +3911,7 @@ nav .top-bar-section ul li.sign-in a {
         margin-bottom: 0.25rem; }
     ul[class*=block-grid-] li.text-with-img:last-child {
       border-bottom: 1px solid #ebebeb;
-      margin-bottom: 2rem; }
-      ul[class*=block-grid-] li.text-with-img:last-child.cancellation, ul[class*=block-grid-] li.text-with-img:last-child.luggage, ul[class*=block-grid-] li.text-with-img:last-child.evacuation, ul[class*=block-grid-] li.text-with-img:last-child.medical-help, ul[class*=block-grid-] li.text-with-img:last-child.accident, ul[class*=block-grid-] li.text-with-img:last-child.passport-lost, ul[class*=block-grid-] li.text-with-img:last-child.amt-medical, ul[class*=block-grid-] li.text-with-img:last-child.amt-cover, ul[class*=block-grid-] li.text-with-img:last-child.amt-flexible {
-        background: none; } }
+      margin-bottom: 2rem; } }
 
 @media only screen and (max-width: 40em) {
   .blue-panel ul[class*=block-grid-] {
@@ -4014,6 +3982,46 @@ hr {
   hr.blue {
     border: 1px solid #00a5cb;
     border-bottom: 0px; }
+
+.text-with-img.cancellation, .text-with-img.luggage, .text-with-img.evacuation, .text-with-img.medical-help, .text-with-img.accident, .text-with-img.passport-lost {
+  background-size: 66px 82px; }
+.text-with-img.cancellation {
+  background-image: url('/Media/Default/main/icons/benefits_1_b.png'); }
+.text-with-img.luggage {
+  background-image: url('/Media/Default/main/icons/benefits_2_b.png'); }
+.text-with-img.evacuation {
+  background-image: url('/Media/Default/main/icons/benefits_3_b.png'); }
+.text-with-img.medical-help {
+  background-image: url('/Media/Default/main/icons/benefits_4_b.png'); }
+.text-with-img.accident {
+  background-image: url('/Media/Default/main/icons/benefits_5_b.png'); }
+.text-with-img.passport-lost {
+  background-image: url('/Media/Default/main/icons/benefits_6_b.png'); }
+.text-with-img.amt-medical, .text-with-img.amt-cover, .text-with-img.amt-flexible {
+  background-size: 65px 65px; }
+.text-with-img.amt-medical {
+  background-image: url('//www.travelinsurancedirect.com.au/Media/Default/images/amt_benefit_1.png'); }
+.text-with-img.amt-cover {
+  background-image: url('//www.travelinsurancedirect.com.au/Media/Default/images/amt_benefit_2.png'); }
+.text-with-img.amt-flexible {
+  background-image: url('//www.travelinsurancedirect.com.au/Media/Default/images/amt_benefit_3.png'); }
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
+  .text-with-img.cancellation {
+    background-image: url('/Media/Default/main/icons/benefits_1_b@x2.png'); }
+  .text-with-img.luggage {
+    background-image: url('/Media/Default/main/icons/benefits_2_b@x2.png'); }
+  .text-with-img.evacuation {
+    background-image: url('/Media/Default/main/icons/benefits_3_b@x2.png'); }
+  .text-with-img.medical-help {
+    background-image: url('/Media/Default/main/icons/benefits_4_b@x2.png'); }
+  .text-with-img.accident {
+    background-image: url('/Media/Default/main/icons/benefits_5_b@x2.png'); }
+  .text-with-img.passport-lost {
+    background-image: url('/Media/Default/main/icons/benefits_6_b@x2.png'); } }
+
+@media only screen and (max-width: 40em) {
+  .text-with-img.cancellation, .text-with-img.luggage, .text-with-img.evacuation, .text-with-img.medical-help, .text-with-img.accident, .text-with-img.passport-lost, .text-with-img.amt-medical, .text-with-img.amt-cover, .text-with-img.amt-flexible {
+    background: none; } }
 
 .datepicker {
   background: #fff;
