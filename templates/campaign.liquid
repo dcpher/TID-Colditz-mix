@@ -1,8 +1,31 @@
 {% block title %}Travel Insurance to Bali: From $22{% endblock %}
 {% block content %}
+<style>
 
-<article class="content-item tid-au-destinations">
-<div class="header-panel panel" id="header" style="background-image: url('/static/images/hero-images/destination_usa.jpg')">
+  
+  @media all and (min-width: 860px) {
+.tid-au-destinations #header {
+    background-image: url('/Media/Default/main/hero-images/destination_usa.jpg')
+    background-position: top center
+  }
+
+}
+@media all and (max-width: 860px) {
+body.learn .hero-content-panel.photo.scholarship {
+    background-image: url('/Media/Default/main/hero-images/destination_usa.jpg')
+  }
+
+}
+@media all and (max-width: 500px) {
+body.learn .hero-content-panel.photo.scholarship {
+    background-image: url('/Media/Default/main/hero-images/destination_usa.jpg')
+  }
+
+}
+
+</style>
+<article class="content-item">
+<div class="header-panel panel" id="header">
   <div class="row">
     <div class="small-12 medium-8 column">
       <h1 class="dark-blue">Just a TID bit</h1>
@@ -12,34 +35,9 @@
   </div>
 </div>
   
-<style>
 
-.hero-content-panel h2, .hero-content-panel h1{
-max-width: 350px;
-}
-
-@media all and (min-width: 860px) {
-body.learn .hero-content-panel.photo.scholarship {
-    background-image: url('/Media/Default/LearnImages/hero_filmscholarship_full.jpg');
-    background-position: top center;
-  }
-
-}
-@media all and (max-width: 860px) {
-body.learn .hero-content-panel.photo.scholarship {
-    background-image: url('/Media/Default/LearnImages/hero_filmscholarship_tablet.jpg');
-  }
-
-}
-@media all and (max-width: 500px) {
-body.learn .hero-content-panel.photo.scholarship {
-    background-image: url('/Media/Default/LearnImages/hero_filmscholarship_mobile.jpg');
-  }
-
-}
-</style>
   
-<div class="content-panel content">
+<div class="content-panel content" id="campaign-destinations-qqw">
   <div class="row header">
     
     
