@@ -4036,6 +4036,20 @@ hr {
   padding-bottom: 0;
   margin-top: 1.25rem; }
 
+#campaign-header {
+  margin-bottom: 0; }
+  #campaign-header.header-panel {
+    padding-top: 4.375rem;
+    padding-bottom: 4.375rem;
+    padding-left: 0;
+    padding-right: 0; }
+    #campaign-header.header-panel p {
+      font-size: 2rem;
+      line-height: 1.1;
+      letter-spacing: -0.0625rem; }
+    #campaign-header.header-panel h1 {
+      font-size: 5.75rem; }
+
 .datepicker {
   background: #fff;
   padding: 16px;
