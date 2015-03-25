@@ -1,0 +1,225 @@
+{% layout "desk" %}
+{% block title %}Customer Service Information from TID{% endblock %}
+{% block content %}
+
+
+<!--begin:page_index-->
+
+
+<div id='main' role='main'>  
+
+<section id='header-content'>   
+  <div class="csc-header-panel">
+    <div class="csc-title">
+    <h2>
+      Customer Service
+    </h2>
+
+    <p class='intro'>
+      While we'd be delighted to talk to you, there are many answers to commonly asked questions already here that will save you time.
+    </p>  
+    </div>
+    <div class='search-bar'>
+      <form action='/customer/portal/articles/search' method='get'>
+        <input id='q' name='q' placeholder='Have a question? Ask or enter a search term here.' type='text' class='search-terms' />
+        <input type='hidden' name='t' value='545425'/> <input type='hidden' name='b_id' value='755'/>
+        <input class='search-submit' type='submit' value='Search' />
+      </form>
+      <script type='text/javascript'>
+      //<![CDATA[
+      jQuery(document).ready(function() {
+        $("#q").bind("autocompleteopen", function(event, ui) {
+          $('.ui-autocomplete').css({'margin-left':' 1px', 'width':'800px'});  
+        }); 
+      });
+      //]]>
+      </script>
+    </div>
+
+  </div>
+</section> 
+
+
+<!--begin:question_show-->
+
+<section id='main-content'>
+
+  <nav class='breadcrumbs'>
+    <a href="/" rel="index up">Customer Service</a> &raquo;
+    <a href="/customer/portal/topics/277035-medical-conditions/questions?b_id=755" rel="up up">Medical Conditions</a> &raquo;
+    Pre existing medical condition
+  </nav>
+
+  <article class='question'>
+    <div class='question-details'>
+      <h2 class='subject'>
+        Pre existing medical condition
+      </h2>
+    
+      <div class='body'>
+        Will this policy cover me for everything else NOT related to my pre existing medical condition. Eg If I break a leg etc.but if I get Pneumonia then that would be related to my lung condition, so I would just take the risk on that. Will you still cover me knowing I have a pre existing condition?Thank you.
+      </div>
+    
+      <aside>
+        Asked on <time class='created-at'>Jan 19, 2015</time> by <span class='name'>Patricia O&#x27;Sullivan</span>
+      </aside>
+    </div>
+  
+    
+      <div class='question-answers'>
+        
+        
+        
+          <section class='all-answers'>
+            <h3>
+              Answers
+            </h3>
+            <ul class='answers'>
+              
+                <li class='answer'>            
+                  
+                    <div class='answer-rating rating-false'>
+                      <a id='increment-10627450' class='rate increment' data-remote='true' data-method='post' rel='nofollow' href='/customer/portal/questions/10627450/rate?rating=1'>Up</a>
+                      <span class='score ' id='score-10627450'>0</span>
+                      <span class='dialog'>Rated</span>
+                      <a id='decrement-10627450' class='rate decrement' data-remote='true' data-method='post' rel='nofollow' href='/customer/portal/questions/10627450/rate?rating=0'>Down</a>
+                      </div>
+                  
+
+                  <div class='body'>
+                    <p>Hi Patricia,</p>
+<p>Thanks for getting in touch.</p>
+<p>If we are unable to provide you coverage for your pre-existing medical condition, or you do not want coverage for your condition, you are welcome to take out a standard policy with us.</p>
+<p>If you decide to take out the standard policy with us, yes, you will still be covered for medical expenses incurred overseas, however, your pre-existing medical condition will not be coverage under this policy.</p>
+<p>To get a quote, please visit our website; <a href="http://www.travelinsurancedirect.com.au/" title="website">www.tid.com.au</a>.</p>
+<p>I hope this has helped. Please let me know if I can be of further assistance to you.</p>
+                  </div>
+              
+                  <aside>
+                    <span class='gravatar'><img class="gravatar" alt="" width="50" height="50" src="https://secure.gravatar.com/avatar/aca2ab44dc87ff7c055a6b26209e8676?rating=PG&amp;size=50&amp;default=https%3A%2F%2Fd218iqt4mo6adh.cloudfront.net%2Fassets%2Funknown_user_50-521aae04e00222d7dd814e72d7d869d0.png" /></span>
+
+                    
+                  
+                    Answered on 
+                    <time class='updated-at'>Jan 21, 2015</time> 
+                    by
+                    
+                      <span class='answered-by-agent'>
+                        <img height='16' width='16' src='http://www.travelinsurancedirect.co.nz/Images/favicon.png' /> TID Australia  
+                        (<span class='name'>Taryn</span>)
+                      </span>
+                    
+                
+                  </aside>
+                </li>
+              
+            </ul>
+          </section>
+        
+      </div>
+    
+  
+    
+  </article>
+</section>
+
+<script>
+  // Function to wrap text links in anchors
+  (function() {
+    var URLRegex = /(?:\b|(?:http(?:s)?:\/\/))(?:[a-z0-9\-@]+\.)+(?:ly|eu|us|jp|uk|nz|aero|asia|biz|cat|com|coop|edu|gov|info|int|jobs|mil|mobi|museum|name|net|org|pro|travel|cz|ar|it)(?:\.[a-z]{2,3})*(?:\/(?:\.?[:#@a-z0-9\-_A-Z%&+]+)*)*(?:\?[a-zA-Z:=&_%+\';0-9\*\.\,\-]*)?/gi;
+
+    window.linkifyElement = function(jQueryElement) {
+      // Don't search iframes or it will bug out, and obviously don't match the contents of existing anchors!
+      var textNodes = jQueryElement.find(":not(iframe, a)").andSelf().contents().filter(function() {
+        return this.nodeType == 3;
+      });
+
+      textNodes.each(function(i, textNode) {
+
+        var wrappedNode = $(textNode);
+        var currentText = wrappedNode.text();
+        var replacedText = currentText.replace(URLRegex, function(captured) {
+          if (captured.indexOf('http') == 0) {
+            var url = captured
+          } else {
+            var url = 'http://' + captured;
+          }
+
+          return "<a href='" + url + "'>" + captured + "</a>";
+        });
+
+        if (replacedText != currentText) {
+          var span = $('<span/>').html(replacedText);
+          wrappedNode.after(span).remove();  
+        }
+      });
+    }
+  })();
+  
+  $(function() {
+    linkifyElement($('.answer .body'));
+    linkifyElement($('.question .body'));
+  });
+</script><!--end:question_show-->
+
+  
+
+<aside class='aside'>
+              
+  <section class='talk-to-us'>
+    <h4>
+      Talk to us
+    </h4>
+    <dl class='contact-number'>
+      <dt>From Australia</dt>
+      <dd>1300 843 843 &nbsp; (1300 TID TID)</dd>
+
+      <dt>From Overseas</dt>
+      <dd>+61 2 8263 0483</dd>
+    </dl>
+  
+    <dl class="open-hrs">
+      <dt>
+        Monday to Friday
+      </dt>
+      <dd>
+        8:00am - 8:00pm
+      </dd>
+      <dt>
+        Saturday and Sunday
+      </dt>
+      <dd>
+        10:00am - 2:00pm
+      </dd>
+    </dl>
+  </section>
+
+  <section class='emergencies'>
+    <h4>Emergencies</h4>
+    <p>Call +61 2 9234 3123</p>
+    <a href="http://www.travelinsurancedirect.com.au/in-an-emergency">more details</a> 
+  </section>
+  
+  <section class='contact-us'>
+    <h4>Contact us</h4>
+    
+    <ul class="desk-contact-list">
+      
+        <li><a href="/customer/portal/emails/new" data-tooltip aria-haspopup="true" class="has-tip [tip-bottom] [radius round]" title="Our customer service team will respond to you privately."><span class="fa fa-envelope"></span>Email us</a></li>
+      
+        <li><a href="/customer/portal/questions/new" data-tooltip aria-haspopup="true" class="has-tip [tip-bottom] [radius round]" title="This will be visible on the public forum for the benefit of everyone."><span class="fa  fa-comment"></span>Post a question</a></li>
+      
+        <li><a href="https://www.facebook.com/TIDaustralia"><span class="fa fa-facebook"></span>Facebook</a></li>
+
+        <li><a href="https://twitter.com/TIDaustralia"><span class="fa fa-twitter"></span>Twitter</a></li>
+
+        <li><a href="https://plus.google.com/+travelinsurancedirect"><span class="fa fa-google-plus"></span>Google+</a></li>
+
+      </ul>
+  </section>
+  
+  
+</aside>
+</div>
+
+{% endblock %}

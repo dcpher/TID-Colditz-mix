@@ -1,22 +1,21 @@
 // desk styles
 
-// Full Width QQWidget
 #main
   @include grid-row()
   
+    
+  // header style blue panel with search box
   #header-content
     @include panel($bg: $color-blue, $adjust: true)
     margin-bottom: rem-calc(32)
     margin-top: rem-calc(32)
       
-    // header style overrides to make them lovely and blue
     .csc-header-panel
       @include grid-row($behavior: nest)
         
       .csc-title  
         @include grid-column(9)
       
-        
       .search-bar
         @include grid-row($behavior:nest-collapse)
         padding: 0 rem-calc(12)
@@ -46,7 +45,8 @@
     
   #main-content
     @include grid-column(9)      
-      
+     
+    // Alert Box For Current events
     .current-events
       @include panel($bg: lighten($color-red, 20), $adjust: true)
       margin-bottom: rem-calc(32)
@@ -59,7 +59,8 @@
         .article
           a
             color: $color-white
-        
+     
+    // Index page Topic List
     .browse-by-topic
       .topics
         @include block-grid( $per-row: 2, $spacing: $block-grid-default-spacing, $base-style: true )
@@ -69,6 +70,7 @@
           margin-bottom: rem-calc(16)
           h5
             font-size: rem-calc(20)
+            // added small style for number of articles or questions
             small
               background-color: $color-light-grey
               padding: rem-calc(4) rem-calc(6)
@@ -88,7 +90,8 @@
                 color: $color-mid-grey
                 margin-right: rem-calc(8)
                 margin-left: rem-calc(-20)
-          
+  
+  // Right hand column contact info styles
   .aside
     @include grid-column(3)
       
@@ -104,7 +107,8 @@
           font-weight: 300
         dd
           color: $color-mid-grey
-          
+    
+    // desk contact icon list 
     ul.desk-contact-list
       margin-top: rem-calc(10)
       margin-left: 0
