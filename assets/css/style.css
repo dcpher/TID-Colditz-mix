@@ -2100,8 +2100,8 @@ meta.foundation-mq-topbar {
         .top-bar-section ul li > button.warning:hover, .top-bar-section ul li > button.warning:focus {
           color: #FFFFFF; }
     .top-bar-section ul li:hover:not(.has-form) > a {
-      background-color: #005581;
-      background: #005581;
+      background-color: #404040;
+      background: #404040;
       color: #FFFFFF; }
     .top-bar-section ul li.active > a {
       background: #00bae4;
@@ -2221,16 +2221,16 @@ meta.foundation-mq-topbar {
         .top-bar-section ul li .js-generated {
           display: none; }
     .top-bar-section li.hover > a:not(.button) {
-      background-color: #005581;
-      background: #005581;
+      background-color: #404040;
+      background: #404040;
       color: #FFFFFF; }
     .top-bar-section li:not(.has-form) a:not(.button) {
       padding: 0 1.35417rem;
       line-height: 4.0625rem;
       background: #FFFFFF; }
       .top-bar-section li:not(.has-form) a:not(.button):hover {
-        background-color: #005581;
-        background: #005581; }
+        background-color: #404040;
+        background: #404040; }
     .top-bar-section li.active:not(.has-form) a:not(.button) {
       padding: 0 1.35417rem;
       line-height: 4.0625rem;
@@ -2299,7 +2299,7 @@ meta.foundation-mq-topbar {
         background: #333333; }
       .top-bar-section .dropdown li:not(.has-form):not(.active):hover > a:not(.button) {
         color: #FFFFFF;
-        background-color: #005581;
+        background-color: #404040;
         background: #333333; }
       .top-bar-section .dropdown li label {
         white-space: nowrap;
@@ -2329,8 +2329,8 @@ meta.foundation-mq-topbar {
       .top-bar-section .left li .dropdown li .dropdown {
         left: 100%; }
   .no-js .top-bar-section ul li:hover > a {
-    background-color: #005581;
-    background: #005581;
+    background-color: #404040;
+    background: #404040;
     color: #FFFFFF; }
   .no-js .top-bar-section ul li:active > a {
     background: #00bae4;
@@ -3058,7 +3058,7 @@ th.hide-for-touch {
   font-style: normal; }
 
 h1, h2 {
-  letter-spacing: -0.1875rem;
+  letter-spacing: -0.25rem;
   margin-bottom: 2rem; }
 
 h3, h4, #quick-quote h3 {
@@ -3117,7 +3117,7 @@ h1.white, h2.white, h3.white, h4.white, #quick-quote h3.white, h5.white, div.whi
     font-weight: bold;
     font-size: 24px;
     position: absolute;
-    top: 4px;
+    top: 8px;
     right: 16px; }
   .button:hover, button:hover {
     text-decoration: none; }
@@ -3348,6 +3348,12 @@ h1.white, h2.white, h3.white, h4.white, #quick-quote h3.white, h5.white, div.whi
       background: -ms-linear-gradient(top, #e6e6e6 0%, #d7d7d7 100%);
       background: linear-gradient(to bottom, #e6e6e6 0%, #d7d7d7 100%); }
 
+a.button {
+  -webkit-transition: background 0.2s linear;
+  -moz-transition: background 0.2s linear;
+  -ms-transition: background 0.2s linear;
+  -o-transition: background 0.2s linear;
+  transition: background 0.2s linear; }
 a.button:hover {
   text-decoration: none; }
 
@@ -3878,19 +3884,17 @@ a.button:hover {
   img.small-full-width {
     width: 100%; } }
 
-#header, #homepage-header {
+#homepage-header {
   margin-bottom: 0; }
-  #header.header-panel, #homepage-header.header-panel {
+  #homepage-header.header-panel {
     padding-top: 3.125rem;
     padding-bottom: 3.75rem;
     padding-left: 0;
     padding-right: 0; }
-    #header.header-panel p, #homepage-header.header-panel p {
+    #homepage-header.header-panel p {
       font-size: 2rem;
       line-height: 1.1;
       letter-spacing: -0.0625rem; }
-    #header.header-panel h1, #homepage-header.header-panel h1 {
-      color: white; }
 
 #homepage-header h1 {
   text-align: center; }
@@ -3907,7 +3911,7 @@ a.button:hover {
       margin-bottom: 2rem; }
     #homepage-header.header-panel h1 {
       font-size: 1.75rem;
-      letter-spacing: -1px;
+      letter-spacing: -2px;
       margin-bottom: 0;
       text-align: left; }
     #homepage-header.header-panel h1:after {
@@ -3936,6 +3940,18 @@ nav .logo {
 nav .top-bar-section ul li.sign-in a {
   font-weight: 500;
   color: #00bae4; }
+  nav .top-bar-section ul li.sign-in a:not(.button):hover {
+    color: #FFF;
+    background-color: #00bae4; }
+nav .top-bar-section ul li a {
+  -webkit-transition: background 0.2s linear;
+  -moz-transition: background 0.2s linear;
+  -ms-transition: background 0.2s linear;
+  -o-transition: background 0.2s linear;
+  transition: background 0.2s linear; }
+nav .top-bar-section ul li a:hover {
+  background-color: #404040;
+  color: #FFF; }
 @media only screen and (max-width: 40em) {
   nav .top-bar-section ul li {
     background-color: #404040;
@@ -4058,7 +4074,12 @@ nav .top-bar-section ul li.sign-in a {
           background-color: #858585;
           color: #404040;
           padding-top: 0.5rem;
-          font-size: 1.5rem; }
+          font-size: 1.5rem;
+          -webkit-transition: background 0.2s linear;
+          -moz-transition: background 0.2s linear;
+          -ms-transition: background 0.2s linear;
+          -o-transition: background 0.2s linear;
+          transition: background 0.2s linear; }
           #footer .footer-header .follow-us-on li a:hover {
             background-color: #FFF; }
       @media only screen and (max-width: 40em) {
@@ -4082,7 +4103,7 @@ nav .top-bar-section ul li.sign-in a {
   #footer .legal {
     font-size: 0.75rem;
     font-weight: 500;
-    color: #999999; }
+    color: #5e5e5e; }
 
 hr {
   margin-top: 3.75rem;
@@ -4151,17 +4172,56 @@ hr {
 
 #campaign-header {
   margin-bottom: 0; }
-  #campaign-header.header-panel {
-    padding-top: 4.375rem;
-    padding-bottom: 4.375rem;
-    padding-left: 0;
-    padding-right: 0; }
-    #campaign-header.header-panel p {
-      font-size: 2rem;
-      line-height: 1.1;
-      letter-spacing: -0.0625rem; }
-    #campaign-header.header-panel h1 {
-      font-size: 5.75rem; }
+
+.header-panel {
+  padding-top: 3.125rem;
+  padding-bottom: 3.75rem;
+  padding-left: 0;
+  padding-right: 0; }
+  .header-panel p {
+    font-size: 2rem;
+    line-height: 1.0;
+    letter-spacing: -0.0625rem; }
+
+.campaign-destinations h1 {
+  font-size: 6.125rem;
+  text-shadow: 1px 1px 1px rgba(64, 64, 64, 0.3);
+  font-weight: 300;
+  line-height: 1.0; }
+
+@media only screen and (max-width: 40em) {
+  .campaign-destinations h1 {
+    font-size: 3.5rem; }
+  .content-panel {
+    margin-top: -2.625rem; }
+  #header.header-panel {
+    padding-top: 1.5625rem;
+    padding-bottom: 10rem; }
+  .campaign-destinations p {
+    font-size: 1.375rem;
+    line-height: 1.0;
+    letter-spacing: -0.0625rem; } }
+
+@media only screen and (min-width:40.063em) and (max-width:64em) {
+  .campaign-destinations h1 {
+    font-size: 4.375rem; }
+  #header.header-panel {
+    padding-top: 5rem;
+    padding-bottom: 5rem; } }
+
+@media only screen and (min-width:64.063em) and (max-width:90em) {
+  .campaign-destinations h1 {
+    font-size: 5.75rem; }
+  #header.header-panel {
+    padding-top: 5.625rem;
+    padding-bottom: 5.625rem; } }
+
+@media only screen and (min-width:90.063em) {
+  .campaign-destinations h1 {
+    font-size: 6.875rem; }
+  #header.header-panel {
+    padding-top: 6.25rem;
+    padding-bottom: 6.25rem; } }
 
 #main {
   width: 95%;
@@ -4277,7 +4337,12 @@ hr {
             background: -webkit-linear-gradient(top, #003d5d 0%, #00293f 100%);
             background: -o-linear-gradient(top, #003d5d 0%, #00293f 100%);
             background: -ms-linear-gradient(top, #003d5d 0%, #00293f 100%);
-            background: linear-gradient(to bottom, #003d5d 0%, #00293f 100%); }
+            background: linear-gradient(to bottom, #003d5d 0%, #00293f 100%);
+            -webkit-transition: background 0.2s linear;
+            -moz-transition: background 0.2s linear;
+            -ms-transition: background 0.2s linear;
+            -o-transition: background 0.2s linear;
+            transition: background 0.2s linear; }
   #main #main-content {
     padding-left: 0.75rem;
     padding-right: 0.75rem;

@@ -1404,8 +1404,8 @@ $topbar-title-font-size: rem-calc(16);
  $topbar-link-font-size: rem-calc(16);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
 $topbar-link-bg: $topbar-bg;
-$topbar-link-bg-hover: $tid-dark-blue;
-$topbar-link-bg-color-hover: $tid-dark-blue;
+$topbar-link-bg-hover: $tuatara;
+$topbar-link-bg-color-hover: $tuatara;
 //$topbar-link-bg-active: $primary-color;
 //$topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
 // $topbar-link-font-family: $body-font-family;
@@ -1444,7 +1444,7 @@ $topbar-link-bg-color-hover: $tid-dark-blue;
 // $topbar-menu-icon-position: $opposite-direction; // Change to $default-float for a left menu icon
 
 // Transitions and breakpoint styles
-// $topbar-transition-speed: 300ms;
+ $topbar-transition-speed: 300ms;
 // Using rem-calc for the below breakpoint causes issues with top bar
 // $topbar-breakpoint: #{lower-bound($medium-range)}; // Change to 9999px for always mobile layout
 // $topbar-media-query: "#{$screen} and (min-width:#{lower-bound($topbar-breakpoint)})";
