@@ -4,7 +4,11 @@ nav
   .logo
     height: 40px
     width: 154px
-    
+  
+    // TODO: Chris look at the mouse-overstate!
+
+  .top-bar-section li:not(.has-form) a:not(.button):hover
+    background: $color-dark-grey  
   
   .top-bar-section 
     ul 
@@ -19,5 +23,11 @@ nav
           border-bottom: 1px solid darken($color-dark-grey, 5)
           a
             color: $color-white
+
+// TODO: fix on top-nav stacking on resize 
+
+.top-bar
+  overflow: hidden
+
         
     

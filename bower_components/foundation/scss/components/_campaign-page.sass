@@ -14,16 +14,57 @@
 #campaign-header
   margin-bottom: 0
 
-  &.header-panel
-    padding-top: rem-calc(70)
-    padding-bottom: rem-calc(70)
-    padding-left: 0
-    padding-right: 0
+  
 
-    p
-      font-size: rem-calc(32)
-      line-height: 1.1
-      letter-spacing: rem-calc(-1)
+&.header-panel
+  padding-top: rem-calc(50)
+  padding-bottom: rem-calc(60)
+  padding-left: 0
+  padding-right: 0
 
-    h1
-      font-size: rem-calc(92)
+  p
+    font-size: rem-calc(32)
+    line-height: 1.0
+    letter-spacing: rem-calc(-1)
+
+.campaign-destinations h1
+  font-size: rem-calc(98)
+  text-shadow: 1px 1px 1px rgba($color-dark-grey, .3)
+  font-weight: 300
+  line-height: 1.0
+  
+@media #{$small-only}  
+  .campaign-destinations h1
+    font-size: rem-calc(56)
+  .content-panel 
+    margin-top: rem-calc(-42)
+  &#header.header-panel
+    padding-top: rem-calc(25)
+    padding-bottom: rem-calc(160)
+  .campaign-destinations p
+    font-size: rem-calc(22)
+    line-height: 1.0
+    letter-spacing: rem-calc(-1)
+
+@media #{$medium-only}  
+  .campaign-destinations h1
+    font-size: rem-calc(70)
+  &#header.header-panel
+    padding-top: rem-calc(80)
+    padding-bottom: rem-calc(80)
+  
+@media #{$large-only}  
+  .campaign-destinations h1
+    font-size: rem-calc(92)
+  &#header.header-panel
+    padding-top: rem-calc(90)
+    padding-bottom: rem-calc(90)
+
+@media #{$xlarge-up}
+  .campaign-destinations h1
+    font-size: rem-calc(110)
+  &#header.header-panel
+    padding-top: rem-calc(100)
+    padding-bottom: rem-calc(100)
+
+  
