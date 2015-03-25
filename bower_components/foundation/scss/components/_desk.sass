@@ -20,8 +20,7 @@
       .search-bar
         @include grid-row($behavior:nest-collapse)
         padding: 0 rem-calc(12)
-        //margin: rem-calc(12)
-          
+        
         .search-terms
           @include grid-column(7)
           min-height: 52px
@@ -44,7 +43,6 @@
           &:hover 
             +gradient-button(darken($color-dark-blue, 10%))
             
-        
     
   #main-content
     @include grid-column(9)      
@@ -137,8 +135,7 @@
   @media #{$small-only}
 
     #header-content
-      //margin-bottom: rem-calc(32)
-      //margin-top: rem-calc(0)
+      // Adding -10 to make the panel go full-width
       margin: 0 rem-calc(-10)
       .csc-header-panel
         .csc-title  
@@ -157,6 +154,7 @@
       @include grid-column(12)
         
       .current-events
+        // Adding -22 to make the panel go full-width
         margin: 0 rem-calc(-22)
 
       .browse-by-topic
