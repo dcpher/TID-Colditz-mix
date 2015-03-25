@@ -1,0 +1,171 @@
+// desk styles
+
+// Full Width QQWidget
+#main
+  @include grid-row()
+  
+  #header-content
+    @include panel($bg: $color-blue, $adjust: true)
+    margin-bottom: rem-calc(32)
+    margin-top: rem-calc(32)
+      
+    // header style overrides to make them lovely and blue
+    .csc-header-panel
+      @include grid-row($behavior: nest)
+        
+      .csc-title  
+        @include grid-column(9)
+      
+        
+      .search-bar
+        @include grid-row($behavior:nest-collapse)
+        padding: 0 rem-calc(12)
+        //margin: rem-calc(12)
+          
+        .search-terms
+          @include grid-column(7)
+          min-height: 52px
+          margin-bottom: 0
+          
+        .search-submit
+          @include grid-column(2)
+          @include button()
+          +gradient-button($color-dark-blue)
+          +border-radius(4px)
+          border: 1px solid darken($color-dark-blue, 10%)
+          font-size: rem-calc(20)
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1)
+          cursor: pointer
+          position: relative
+          margin-bottom: 0
+          padding: rem-calc(13) rem-calc(16)
+          padding-right: rem-calc(44)
+          text-align: left
+          &:hover 
+            +gradient-button(darken($color-dark-blue, 10%))
+            
+        
+    
+  #main-content
+    @include grid-column(9)      
+      
+    .current-events
+      @include panel($bg: lighten($color-red, 20), $adjust: true)
+      margin-bottom: rem-calc(32)
+      h6
+        color: $color-dark-red
+        font-weight: 500
+      .articles
+        list-style-type: none
+        margin-left: 0
+        .article
+          a
+            color: $color-white
+        
+    .browse-by-topic
+      .topics
+        @include block-grid( $per-row: 2, $spacing: $block-grid-default-spacing, $base-style: true )
+        h4
+          margin: rem-calc(16) 0
+        .list-articles, .list-questions
+          margin-bottom: rem-calc(16)
+          h5
+            font-size: rem-calc(20)
+            small
+              background-color: $color-light-grey
+              padding: rem-calc(4) rem-calc(6)
+              margin-left: rem-calc(8)
+              position: relative
+              top: -4px
+          .articles, .questions
+            list-style-type: none
+            list-style-position: outside
+            margin-bottom: rem-calc(8)
+            margin-left: rem-calc(24)
+            .article, .question
+              margin-left: 0
+              padding-left: 0
+              &:before
+                content: "• "
+                color: $color-mid-grey
+                margin-right: rem-calc(8)
+                margin-left: rem-calc(-20)
+          
+  .aside
+    @include grid-column(3)
+      
+    .talk-to-us, .emergencies, .contact-us
+      margin-bottom: rem-calc(32)
+      
+    p
+      margin-bottom: rem-calc(4)
+    .talk-to-us
+      dl
+        margin-bottom: rem-calc(20)
+        dt
+          font-weight: 300
+        dd
+          color: $color-mid-grey
+          
+    ul.desk-contact-list
+      margin-top: rem-calc(10)
+      margin-left: 0
+      padding-left: 0
+      list-style: none
+
+      li
+        margin-left: rem-calc(0)
+        margin-bottom: rem-calc(6)
+        a
+        .fa          
+          color: $color-white
+          font-size: rem-calc(16)
+          padding-top: rem-calc(7)
+          text-align: center
+          +border-radius(15px)
+          width: rem-calc(30)
+          height: rem-calc(30)
+          background-color: $color-blue
+          margin-right: 8px
+          
+        &:hover
+          .fa 
+            background-color: $color-dark-blue
+   
+      
+  // small view
+  @media #{$small-only}
+
+    #header-content
+      //margin-bottom: rem-calc(32)
+      //margin-top: rem-calc(0)
+      margin: 0 rem-calc(-10)
+      .csc-header-panel
+        .csc-title  
+          @include grid-column(12)
+        .search-bar
+          
+          .search-terms
+            @include grid-column(12)
+            min-height: 52px
+            margin-bottom: rem-calc(12)
+
+          .search-submit
+            @include grid-column(12)
+
+    #main-content
+      @include grid-column(12)
+        
+      .current-events
+        margin: 0 rem-calc(-22)
+
+      .browse-by-topic
+        .topics
+          @include block-grid( $per-row: 1, $spacing: $block-grid-default-spacing, $base-style: true )
+
+    .aside
+        @include grid-column(12)
+
+  
+  
+    
