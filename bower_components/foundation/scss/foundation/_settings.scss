@@ -971,7 +971,7 @@ $fieldset-padding: rem-calc(20);
 
 // We use these to control the background and border styles
 // $panel-bg: scale-color($white, $lightness: -5%);
-// $panel-border-style: solid;
+$panel-border-style: none;
 // $panel-border-size: 1px;
 // $callout-panel-bg: scale-color($primary-color, $lightness: 94%);
 
