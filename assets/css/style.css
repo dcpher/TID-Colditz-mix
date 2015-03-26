@@ -3381,6 +3381,15 @@ a.button {
 a.button:hover {
   text-decoration: none; }
 
+span.submit-arw {
+  position: relative; }
+span.submit-arw:before {
+  content: '\f061';
+  font: normal normal normal 14px/1 FontAwesome;
+  position: absolute;
+  right: 1.25rem;
+  top: 0.125rem; }
+
 .qqw-full-width #quick-quote .destination.alpha {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -4282,7 +4291,8 @@ hr {
 #main {
   width: 95%;
   margin: 0 auto;
-  max-width: 71.875rem; }
+  max-width: 71.875rem;
+  margin-top: 2rem; }
   #main:before, #main:after {
     content: " ";
     display: table; }
@@ -4296,8 +4306,7 @@ hr {
     padding: 1.25rem;
     background: #00bae4;
     color: #FFFFFF;
-    margin-bottom: 2rem;
-    margin-top: 2rem; }
+    margin-bottom: 2rem; }
     #main #header-content > :first-child {
       margin-top: 0; }
     #main #header-content > :last-child {
@@ -4320,7 +4329,7 @@ hr {
       #main #header-content .csc-header-panel .csc-title {
         padding-left: 0.75rem;
         padding-right: 0.75rem;
-        width: 75%;
+        width: 100%;
         float: left; }
       #main #header-content .csc-header-panel .search-bar {
         width: auto;
@@ -4393,12 +4402,7 @@ hr {
             background: -webkit-linear-gradient(top, #003d5d 0%, #00293f 100%);
             background: -o-linear-gradient(top, #003d5d 0%, #00293f 100%);
             background: -ms-linear-gradient(top, #003d5d 0%, #00293f 100%);
-            background: linear-gradient(to bottom, #003d5d 0%, #00293f 100%);
-            -webkit-transition: background 0.2s linear;
-            -moz-transition: background 0.2s linear;
-            -ms-transition: background 0.2s linear;
-            -o-transition: background 0.2s linear;
-            transition: background 0.2s linear; }
+            background: linear-gradient(to bottom, #003d5d 0%, #00293f 100%); }
   #main #main-content {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
@@ -4483,6 +4487,76 @@ hr {
     padding-right: 0.75rem;
     width: 25%;
     float: left; }
+    #main .aside .small-search-bar {
+      border-style: none;
+      border-width: 1px;
+      border-color: #00a6cb;
+      margin-bottom: 0;
+      padding: 1.25rem;
+      background: #00bae4;
+      color: #FFFFFF;
+      margin-bottom: 2rem; }
+      #main .aside .small-search-bar > :first-child {
+        margin-top: 0; }
+      #main .aside .small-search-bar > :last-child {
+        margin-bottom: 0; }
+      #main .aside .small-search-bar h1, #main .aside .small-search-bar h2, #main .aside .small-search-bar h3, #main .aside .small-search-bar h4, #main .aside .small-search-bar #quick-quote h3, #quick-quote #main .aside .small-search-bar h3, #main .aside .small-search-bar h5, #main .aside .small-search-bar h6, #main .aside .small-search-bar p, #main .aside .small-search-bar li, #main .aside .small-search-bar dl {
+        color: #FFFFFF; }
+      #main .aside .small-search-bar h1, #main .aside .small-search-bar h2, #main .aside .small-search-bar h3, #main .aside .small-search-bar h4, #main .aside .small-search-bar #quick-quote h3, #quick-quote #main .aside .small-search-bar h3, #main .aside .small-search-bar h5, #main .aside .small-search-bar h6 {
+        line-height: 1; }
+        #main .aside .small-search-bar h1.subheader, #main .aside .small-search-bar h2.subheader, #main .aside .small-search-bar h3.subheader, #main .aside .small-search-bar h4.subheader, #main .aside .small-search-bar #quick-quote h3.subheader, #quick-quote #main .aside .small-search-bar h3.subheader, #main .aside .small-search-bar h5.subheader, #main .aside .small-search-bar h6.subheader {
+          line-height: 1.4; }
+      #main .aside .small-search-bar .small-search-submit {
+        border-style: solid;
+        border-width: 0;
+        cursor: pointer;
+        font-family: "Museo Sans", Helvetica, Arial, sans-serif;
+        font-weight: 300;
+        line-height: normal;
+        margin: 0 0 1.25rem;
+        position: relative;
+        text-decoration: none;
+        text-align: center;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        border-radius: 0;
+        display: inline-block;
+        padding: 0.625rem 1.25rem 0.6875rem 1.25rem;
+        font-size: 0.6875rem;
+        padding-top: 0.625rem;
+        padding-bottom: 0.6875rem;
+        padding-right: 0;
+        padding-left: 0;
+        width: 100%;
+        background-color: #005581;
+        border-color: #004467;
+        color: #FFFFFF;
+        border-radius: 4px;
+        transition: background-color 300ms ease-out;
+        background: #005581;
+        background: -moz-linear-gradient(top, #005f90 0%, #004b72 100%);
+        background: -webkit-linear-gradient(top, #005f90 0%, #004b72 100%);
+        background: -o-linear-gradient(top, #005f90 0%, #004b72 100%);
+        background: -ms-linear-gradient(top, #005f90 0%, #004b72 100%);
+        background: linear-gradient(to bottom, #005f90 0%, #004b72 100%);
+        border: 1px solid #00334e;
+        font-size: 1rem;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        margin-bottom: 0;
+        text-align: left;
+        padding-left: 1.25rem; }
+        #main .aside .small-search-bar .small-search-submit:hover, #main .aside .small-search-bar .small-search-submit:focus {
+          background-color: #004467; }
+        #main .aside .small-search-bar .small-search-submit:hover, #main .aside .small-search-bar .small-search-submit:focus {
+          color: #FFFFFF; }
+        #main .aside .small-search-bar .small-search-submit:hover {
+          background: #00334e;
+          background: -moz-linear-gradient(top, #003d5d 0%, #00293f 100%);
+          background: -webkit-linear-gradient(top, #003d5d 0%, #00293f 100%);
+          background: -o-linear-gradient(top, #003d5d 0%, #00293f 100%);
+          background: -ms-linear-gradient(top, #003d5d 0%, #00293f 100%);
+          background: linear-gradient(to bottom, #003d5d 0%, #00293f 100%); }
     #main .aside .talk-to-us, #main .aside .emergencies, #main .aside .contact-us {
       margin-bottom: 2rem; }
     #main .aside p {
@@ -4518,40 +4592,53 @@ hr {
           background-color: #005581; }
   #main .question-details, #main .question-answers {
     margin-bottom: 2rem; }
+    #main .question-details .all-answers h3:before, #main .question-answers .all-answers h3:before {
+      content: '\f0e6';
+      font: normal normal normal 44px/1 FontAwesome;
+      color: #777; }
     #main .question-details .body, #main .question-answers .body {
       margin-bottom: 1rem; }
     #main .question-details aside, #main .question-answers aside {
       color: #777; }
-    #main .question-details ul.answers li.answer, #main .question-answers ul.answers li.answer {
-      margin-top: 1rem;
-      margin-left: 50px;
-      position: relative;
-      list-style: none; }
-      #main .question-details ul.answers li.answer .answer-rating, #main .question-answers ul.answers li.answer .answer-rating {
-        background-color: #f8f8f8;
-        padding: 0.5rem;
-        display: inline-block;
-        width: 40px;
-        left: -60px;
-        position: absolute; }
-        #main .question-details ul.answers li.answer .answer-rating .increment, #main .question-details ul.answers li.answer .answer-rating .decrement, #main .question-answers ul.answers li.answer .answer-rating .increment, #main .question-answers ul.answers li.answer .answer-rating .decrement {
-          visibility: hidden;
-          line-height: 0;
-          display: block; }
-        #main .question-details ul.answers li.answer .answer-rating .dialog, #main .question-answers ul.answers li.answer .answer-rating .dialog {
-          display: none; }
-        #main .question-details ul.answers li.answer .answer-rating .score, #main .question-answers ul.answers li.answer .answer-rating .score {
-          padding-top: 3px; }
-        #main .question-details ul.answers li.answer .answer-rating .score, #main .question-details ul.answers li.answer .answer-rating .increment:before, #main .question-details ul.answers li.answer .answer-rating .decrement:before, #main .question-answers ul.answers li.answer .answer-rating .score, #main .question-answers ul.answers li.answer .answer-rating .increment:before, #main .question-answers ul.answers li.answer .answer-rating .decrement:before {
-          text-align: center;
-          display: block; }
-        #main .question-details ul.answers li.answer .answer-rating .increment:before, #main .question-details ul.answers li.answer .answer-rating .decrement:before, #main .question-answers ul.answers li.answer .answer-rating .increment:before, #main .question-answers ul.answers li.answer .answer-rating .decrement:before {
-          visibility: visible;
-          font: normal normal normal 14px/1 FontAwesome; }
-        #main .question-details ul.answers li.answer .answer-rating .increment:before, #main .question-answers ul.answers li.answer .answer-rating .increment:before {
-          content: '\f077'; }
-        #main .question-details ul.answers li.answer .answer-rating .decrement:before, #main .question-answers ul.answers li.answer .answer-rating .decrement:before {
-          content: '\f078'; }
+    #main .question-details ul.answers, #main .question-answers ul.answers {
+      margin-left: 0.5rem; }
+      #main .question-details ul.answers li.answer, #main .question-answers ul.answers li.answer {
+        margin-top: 1rem;
+        margin-left: 50px;
+        position: relative;
+        list-style: none; }
+        #main .question-details ul.answers li.answer .answer-rating, #main .question-answers ul.answers li.answer .answer-rating {
+          background-color: #f8f8f8;
+          padding: 0.5rem;
+          display: inline-block;
+          width: 40px;
+          left: -60px;
+          position: absolute; }
+          #main .question-details ul.answers li.answer .answer-rating .increment, #main .question-details ul.answers li.answer .answer-rating .decrement, #main .question-answers ul.answers li.answer .answer-rating .increment, #main .question-answers ul.answers li.answer .answer-rating .decrement {
+            visibility: hidden;
+            line-height: 0;
+            display: block; }
+          #main .question-details ul.answers li.answer .answer-rating .dialog, #main .question-answers ul.answers li.answer .answer-rating .dialog {
+            display: none; }
+          #main .question-details ul.answers li.answer .answer-rating .score, #main .question-answers ul.answers li.answer .answer-rating .score {
+            padding-top: 3px; }
+          #main .question-details ul.answers li.answer .answer-rating .score, #main .question-details ul.answers li.answer .answer-rating .increment:before, #main .question-details ul.answers li.answer .answer-rating .decrement:before, #main .question-answers ul.answers li.answer .answer-rating .score, #main .question-answers ul.answers li.answer .answer-rating .increment:before, #main .question-answers ul.answers li.answer .answer-rating .decrement:before {
+            text-align: center;
+            display: block; }
+          #main .question-details ul.answers li.answer .answer-rating .increment:before, #main .question-details ul.answers li.answer .answer-rating .decrement:before, #main .question-answers ul.answers li.answer .answer-rating .increment:before, #main .question-answers ul.answers li.answer .answer-rating .decrement:before {
+            visibility: visible;
+            font: normal normal normal 14px/1 FontAwesome; }
+          #main .question-details ul.answers li.answer .answer-rating .increment:before, #main .question-answers ul.answers li.answer .answer-rating .increment:before {
+            content: '\f077'; }
+          #main .question-details ul.answers li.answer .answer-rating .decrement:before, #main .question-answers ul.answers li.answer .answer-rating .decrement:before {
+            content: '\f078'; }
+        #main .question-details ul.answers li.answer ul, #main .question-answers ul.answers li.answer ul {
+          list-style: disc;
+          margin-bottom: 1rem;
+          margin-left: 2.75rem;
+          margin-right: 2.75rem; }
+          #main .question-details ul.answers li.answer ul li, #main .question-answers ul.answers li.answer ul li {
+            margin-bottom: 0.5rem; }
   @media only screen and (max-width: 40em) {
     #main #header-content {
       margin: 0 -0.625rem; }

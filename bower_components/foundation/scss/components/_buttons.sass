@@ -149,3 +149,17 @@ a
     +transition
   &.button:hover
     text-decoration: none
+
+// TODO: this is my hack to get icon on a submit button
+span
+  &.submit-arw
+    position: relative
+  &.submit-arw:before
+    content: '\f061'
+    font: normal normal normal 14px/1 FontAwesome
+    position: absolute
+    right: rem-calc(20)
+    top: rem-calc(2)
+
+    
+  
