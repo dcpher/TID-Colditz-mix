@@ -2,7 +2,7 @@
 .button, button
   +border-radius(4px)
   font-size: rem-calc(20)
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1)
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2)
   cursor: pointer
   position: relative
   padding: rem-calc(13) rem-calc(16)
@@ -33,100 +33,116 @@
   // Light
  
   &.red
-    +gradient-button(darken($color-red, 10%))
+    +gradient-button(darken($color-red, 5%))
     border: 1px solid darken($color-red, 20%)
     &:hover 
-      +gradient-button(darken($color-red, 20%))
+      +gradient-button(darken($color-red, 5%))
+      text-shadow: 1px 1px 10px rgba(225, 225, 225, 0.8)
         
   &.blue
     +gradient-button($color-blue)
-    border: 1px solid darken($color-blue, 10%)
+    border: 1px solid darken($color-blue, 5%)
     &:hover 
-      +gradient-button(darken($color-blue, 10%))
+      +gradient-button(darken($color-blue, 5%))
+      border: 1px solid darken($color-blue, 10%)
+      text-shadow: 1px 1px 10px rgba(225, 225, 225, 0.8)
       
   &.purple
     +gradient-button($color-purple)
-    border: 1px solid darken($color-purple, 10%)
+    border: 1px solid darken($color-purple, 5%)
     &:hover 
       +gradient-button(darken($color-purple, 10%))
+      text-shadow: 1px 1px 10px rgba(225, 225, 225, 0.8)
          
   &.teal
     +gradient-button($color-teal)
-    border: 1px solid darken($color-teal, 10%)
+    border: 1px solid darken($color-teal, 5%)
     &:hover 
       +gradient-button(darken($color-teal, 10%))
+      text-shadow: 1px 1px 10px rgba(225, 225, 225, 0.3)
       
   &.pink
     +gradient-button($color-pink)
-    border: 1px solid darken($color-pink, 10%)
+    border: 1px solid darken($color-pink, 5%)
     &:hover 
       +gradient-button(darken($color-pink, 10%))
+      text-shadow: 1px 1px 10px rgba(225, 225, 225, 0.3)
       
   &.yellow
     +gradient-button($color-yellow)
-    border: 1px solid darken($color-yellow, 10%)
+    border: 1px solid darken($color-yellow, 5%)
     &:hover 
       +gradient-button(darken($color-yellow, 10%))
+      text-shadow: 1px 1px 10px rgba(225, 225, 225, 0.3)
       
       
   // Dark
  
   &.dark-red
-    +gradient-button(darken($color-dark-red, 10%))
-    border: 1px solid darken($color-dark-red, 20%)
+    +gradient-button(darken($color-dark-red, 5%))
+    border: 1px solid darken($color-dark-red, 10%)
     &:hover 
-      +gradient-button(darken($color-dark-red, 20%))
+      +gradient-button(darken($color-dark-red, 10%))
+      text-shadow: 1px 1px 10px rgba(225, 225, 225, 0.3)
         
   &.dark-blue
     +gradient-button($color-dark-blue)
-    border: 1px solid darken($color-dark-blue, 10%)
+    border: 1px solid darken($color-dark-blue, 5%)
     &:hover 
       +gradient-button(darken($color-dark-blue, 10%))
+      text-shadow: 1px 1px 10px rgba(225, 225, 225, 0.3)
       
   &.dark-purple
     +gradient-button($color-dark-purple)
-    border: 1px solid darken($color-dark-purple, 10%)
+    border: 1px solid darken($color-dark-purple, 5%)
     &:hover 
       +gradient-button(darken($color-dark-purple, 10%))
+      text-shadow: 1px 1px 10px rgba(225, 225, 225, 0.3)
          
   &.dark-teal
     +gradient-button($color-dark-teal)
-    border: 1px solid darken($color-dark-teal, 10%)
+    border: 1px solid darken($color-dark-teal, 5%)
     &:hover 
       +gradient-button(darken($color-dark-teal, 10%))
+      text-shadow: 1px 1px 10px rgba(225, 225, 225, 0.3)
       
   &.dark-pink
     +gradient-button($color-dark-pink)
-    border: 1px solid darken($color-dark-pink, 10%)
+    border: 1px solid darken($color-dark-pink, 5%)
     &:hover 
       +gradient-button(darken($color-dark-pink, 10%))
+      text-shadow: 1px 1px 10px rgba(225, 225, 225, 0.3)
       
   &.dark-yellow
     +gradient-button($color-dark-yellow)
-    border: 1px solid darken($color-dark-yellow, 10%)
+    border: 1px solid darken($color-dark-yellow, 5%)
     &:hover 
       +gradient-button(darken($color-dark-yellow, 10%))
+      text-shadow: 1px 1px 10px rgba(225, 225, 225, 0.3)
       
   // Additional Button Colours   
       
   &.green
     +gradient-button($color-green)
-    border: 1px solid darken($color-green, 10%)
+    border: 1px solid darken($color-green, 5%)
     &:hover 
       +gradient-button(darken($color-green, 10%))
+      text-shadow: 1px 1px 10px rgba(225, 225, 225, 0.3)
         
   &.grey
     +gradient-button($color-dark-grey)
-    border: 1px solid darken($color-dark-grey, 10%)
+    border: 1px solid darken($color-dark-grey, 5%)
     &:hover 
       +gradient-button(darken($color-dark-grey, 10%))
+      text-shadow: 1px 1px 10px rgba(225, 225, 225, 0.3)
         
   &.light-grey
     +gradient-button($color-light-grey)
-    border: 1px solid darken($color-light-grey, 10%)
+    border: 1px solid darken($color-light-grey, 5%)
     color: $color-dark-grey
     &:hover 
       +gradient-button(darken($color-light-grey, 10%))
+      text-shadow: 1px 1px 10px rgba(225, 225, 225, 0.3)
       
 a
   &.button
