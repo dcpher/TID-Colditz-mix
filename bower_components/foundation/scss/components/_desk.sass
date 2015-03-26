@@ -134,7 +134,51 @@
           .fa 
             background-color: $color-dark-blue
    
-      
+  
+  // Question & Answer Styles
+  .question-details, .question-answers
+    margin-bottom: rem-calc(32)
+    .body
+      margin-bottom: rem-calc(16)
+    aside
+      color: $color-mid-grey
+    ul.answers
+      li.answer
+        margin-top: rem-calc(16)
+        margin-left: 50px
+        position: relative
+        list-style: none
+        .answer-rating
+          background-color: $color-light-grey
+          padding: rem-calc(8)
+          display: inline-block
+          width: 40px
+          left: -60px
+          position: absolute
+          .increment, .decrement
+            visibility: hidden
+            line-height: 0
+            display: block
+          .dialog
+            display: none
+          .score
+            padding-top: 3px
+          .score, .increment:before, .decrement:before
+            text-align: center
+            display: block
+            
+          .increment:before, .decrement:before
+            visibility: visible
+            font: normal normal normal 14px/1 FontAwesome
+            //position: absolute
+            //top: 8px
+            //right: 16px
+            
+          .increment:before 
+            content: '\f077'
+          .decrement:before
+            content: '\f078'
+          
   // small view
   @media #{$small-only}
 

@@ -4460,6 +4460,42 @@ hr {
           margin-right: 8px; }
         #main .aside ul.desk-contact-list li:hover .fa {
           background-color: #005581; }
+  #main .question-details, #main .question-answers {
+    margin-bottom: 2rem; }
+    #main .question-details .body, #main .question-answers .body {
+      margin-bottom: 1rem; }
+    #main .question-details aside, #main .question-answers aside {
+      color: #777; }
+    #main .question-details ul.answers li.answer, #main .question-answers ul.answers li.answer {
+      margin-top: 1rem;
+      margin-left: 50px;
+      position: relative;
+      list-style: none; }
+      #main .question-details ul.answers li.answer .answer-rating, #main .question-answers ul.answers li.answer .answer-rating {
+        background-color: #f8f8f8;
+        padding: 0.5rem;
+        display: inline-block;
+        width: 40px;
+        left: -60px;
+        position: absolute; }
+        #main .question-details ul.answers li.answer .answer-rating .increment, #main .question-details ul.answers li.answer .answer-rating .decrement, #main .question-answers ul.answers li.answer .answer-rating .increment, #main .question-answers ul.answers li.answer .answer-rating .decrement {
+          visibility: hidden;
+          line-height: 0;
+          display: block; }
+        #main .question-details ul.answers li.answer .answer-rating .dialog, #main .question-answers ul.answers li.answer .answer-rating .dialog {
+          display: none; }
+        #main .question-details ul.answers li.answer .answer-rating .score, #main .question-answers ul.answers li.answer .answer-rating .score {
+          padding-top: 3px; }
+        #main .question-details ul.answers li.answer .answer-rating .score, #main .question-details ul.answers li.answer .answer-rating .increment:before, #main .question-details ul.answers li.answer .answer-rating .decrement:before, #main .question-answers ul.answers li.answer .answer-rating .score, #main .question-answers ul.answers li.answer .answer-rating .increment:before, #main .question-answers ul.answers li.answer .answer-rating .decrement:before {
+          text-align: center;
+          display: block; }
+        #main .question-details ul.answers li.answer .answer-rating .increment:before, #main .question-details ul.answers li.answer .answer-rating .decrement:before, #main .question-answers ul.answers li.answer .answer-rating .increment:before, #main .question-answers ul.answers li.answer .answer-rating .decrement:before {
+          visibility: visible;
+          font: normal normal normal 14px/1 FontAwesome; }
+        #main .question-details ul.answers li.answer .answer-rating .increment:before, #main .question-answers ul.answers li.answer .answer-rating .increment:before {
+          content: '\f077'; }
+        #main .question-details ul.answers li.answer .answer-rating .decrement:before, #main .question-answers ul.answers li.answer .answer-rating .decrement:before {
+          content: '\f078'; }
   @media only screen and (max-width: 40em) {
     #main #header-content {
       margin: 0 -0.625rem; }
