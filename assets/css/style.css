@@ -3095,6 +3095,14 @@ h1.dark-yellow, h2.dark-yellow, h3.dark-yellow, h4.dark-yellow, #quick-quote h3.
 h1.white, h2.white, h3.white, h4.white, #quick-quote h3.white, h5.white, div.white, p.white, span.white {
   color: #FFF; }
 
+::-moz-selection {
+  color: #FFF;
+  background: #00bae4; }
+
+::selection {
+  color: #FFF;
+  background: #00bae4; }
+
 .button, button {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
