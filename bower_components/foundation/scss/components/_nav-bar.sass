@@ -5,11 +5,6 @@ nav
     height: 40px
     width: 154px
   
-    // TODO: Chris look at the mouse-overstate!
-
-  .top-bar-section li:not(.has-form) a:not(.button):hover
-    background: $color-dark-grey  
-  
   .top-bar-section 
     ul 
       li
@@ -17,6 +12,21 @@ nav
           a
             font-weight: 500
             color: $color-blue
+            
+            // set the sign in hover color to blue
+            &:not(.button):hover
+              color: $color-white
+              background-color: $color-blue
+              
+              
+        //transition effect for nav buttons
+        a
+          +transition
+
+        a:hover 
+          background-color: $color-dark-grey 
+          color: $color-white
+      
         
         // Menu backgroud colour override
         @media #{$small-only}
@@ -28,7 +38,7 @@ nav
 // TODO: fix on top-nav stacking on resize 
 
 .top-bar
-  overflow: hidden
+  //overflow: hidden
 
         
     
