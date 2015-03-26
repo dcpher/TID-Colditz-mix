@@ -1,6 +1,6 @@
 // campaign-page
 
-#campaign-destinations-qqw
+#campaign-qqw
   #quick-quote
     margin: 0.55rem 0.55rem
 
@@ -11,8 +11,6 @@
     padding-bottom: 0
     margin-top: rem-calc(20)
 
-#campaign-header
-  margin-bottom: 0
 
   
 
@@ -27,44 +25,72 @@
     line-height: 1.0
     letter-spacing: rem-calc(-1)
 
-.campaign-destinations h1
+.campaign-header 
+  h1
   font-size: rem-calc(98)
   text-shadow: 1px 1px 1px rgba($color-dark-grey, .3)
   font-weight: 300
   line-height: 1.0
   
 @media #{$small-only}  
-  .campaign-destinations h1
-    font-size: rem-calc(56)
+  .campaign-header 
+    h1
+      font-size: rem-calc(56)
+      letter-spacing: rem-calc(-2)
+      margin-bottom: rem-calc(12)
+    &#header.header-panel
+      padding-top: rem-calc(25)
+      padding-bottom: rem-calc(120)
+    p
+      font-size: rem-calc(24)
+      line-height: 1.3
+      letter-spacing: rem-calc(-0.5)
   .content-panel 
     margin-top: rem-calc(-42)
-  &#header.header-panel
-    padding-top: rem-calc(25)
-    padding-bottom: rem-calc(160)
-  .campaign-destinations p
-    font-size: rem-calc(22)
-    line-height: 1.0
-    letter-spacing: rem-calc(-1)
 
 @media #{$medium-only}  
-  .campaign-destinations h1
-    font-size: rem-calc(70)
-  &#header.header-panel
-    padding-top: rem-calc(80)
-    padding-bottom: rem-calc(80)
+  .campaign-header 
+    h1
+      font-size: rem-calc(70)
+      line-height: 1.0
+      letter-spacing: rem-calc(-4)
+      margin-bottom: rem-calc(18)
+    &#header.header-panel
+      padding-top: rem-calc(80)
+      padding-bottom: rem-calc(80)
+    p
+      font-size: rem-calc(26)
+      line-height: 1.3
+      letter-spacing: rem-calc(-0.5)
   
 @media #{$large-only}  
-  .campaign-destinations h1
-    font-size: rem-calc(92)
-  &#header.header-panel
-    padding-top: rem-calc(90)
-    padding-bottom: rem-calc(90)
+  .campaign-header 
+    h1
+      font-size: rem-calc(92)
+      line-height: 1.0
+      letter-spacing: rem-calc(-5)
+      margin-bottom: rem-calc(18)
+    &#header.header-panel
+      padding-top: rem-calc(90)
+      padding-bottom: rem-calc(90)
+    p
+      font-size: rem-calc(30)
+      line-height: 1.5
+      letter-spacing: rem-calc(-1)
 
 @media #{$xlarge-up}
-  .campaign-destinations h1
-    font-size: rem-calc(110)
-  &#header.header-panel
-    padding-top: rem-calc(100)
-    padding-bottom: rem-calc(100)
+  .campaign-header 
+    h1
+      font-size: rem-calc(110)
+      line-height: 1.0
+      letter-spacing: rem-calc(-5)
+      margin-bottom: rem-calc(18)
+    &#header.header-panel
+      padding-top: rem-calc(100)
+      padding-bottom: rem-calc(100)
+    p
+      font-size: rem-calc(34)
+      line-height: 1.6
+      letter-spacing: rem-calc(-1)
 
   
