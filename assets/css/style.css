@@ -4161,17 +4161,14 @@ hr {
   .amt-panel .text-with-img.amt-medical, .amt-panel .text-with-img.amt-cover, .amt-panel .text-with-img.amt-flexible {
     background: none; } }
 
-#campaign-destinations-qqw #quick-quote {
+#campaign-qqw #quick-quote {
   margin: 0.55rem 0.55rem; }
-#campaign-destinations-qqw .benefits-bar.blue {
+#campaign-qqw .benefits-bar.blue {
   background-color: #00bae4;
   padding: 0.5rem 2.9375rem;
   border-top: 1px solid #00a5cb;
   padding-bottom: 0;
   margin-top: 1.25rem; }
-
-#campaign-header {
-  margin-bottom: 0; }
 
 .header-panel {
   padding-top: 3.125rem;
@@ -4183,45 +4180,68 @@ hr {
     line-height: 1.0;
     letter-spacing: -0.0625rem; }
 
-.campaign-destinations h1 {
+.campaign-header {
   font-size: 6.125rem;
   text-shadow: 1px 1px 1px rgba(64, 64, 64, 0.3);
   font-weight: 300;
   line-height: 1.0; }
 
 @media only screen and (max-width: 40em) {
-  .campaign-destinations h1 {
-    font-size: 3.5rem; }
-  .content-panel {
-    margin-top: -2.625rem; }
-  #header.header-panel {
+  .campaign-header h1 {
+    font-size: 3.5rem;
+    letter-spacing: -0.125rem;
+    margin-bottom: 0.75rem; }
+  .campaign-header#header.header-panel {
     padding-top: 1.5625rem;
-    padding-bottom: 10rem; }
-  .campaign-destinations p {
-    font-size: 1.375rem;
-    line-height: 1.0;
-    letter-spacing: -0.0625rem; } }
+    padding-bottom: 7.5rem; }
+  .campaign-header p {
+    font-size: 1.5rem;
+    line-height: 1.3;
+    letter-spacing: -0.03125rem; }
+  .content-panel {
+    margin-top: -2.625rem; } }
 
 @media only screen and (min-width:40.063em) and (max-width:64em) {
-  .campaign-destinations h1 {
-    font-size: 4.375rem; }
-  #header.header-panel {
+  .campaign-header h1 {
+    font-size: 4.375rem;
+    line-height: 1.0;
+    letter-spacing: -0.25rem;
+    margin-bottom: 1.125rem; }
+  .campaign-header#header.header-panel {
     padding-top: 5rem;
-    padding-bottom: 5rem; } }
+    padding-bottom: 5rem; }
+  .campaign-header p {
+    font-size: 1.625rem;
+    line-height: 1.3;
+    letter-spacing: -0.03125rem; } }
 
 @media only screen and (min-width:64.063em) and (max-width:90em) {
-  .campaign-destinations h1 {
-    font-size: 5.75rem; }
-  #header.header-panel {
+  .campaign-header h1 {
+    font-size: 5.75rem;
+    line-height: 1.0;
+    letter-spacing: -0.3125rem;
+    margin-bottom: 1.125rem; }
+  .campaign-header#header.header-panel {
     padding-top: 5.625rem;
-    padding-bottom: 5.625rem; } }
+    padding-bottom: 5.625rem; }
+  .campaign-header p {
+    font-size: 1.875rem;
+    line-height: 1.5;
+    letter-spacing: -0.0625rem; } }
 
 @media only screen and (min-width:90.063em) {
-  .campaign-destinations h1 {
-    font-size: 6.875rem; }
-  #header.header-panel {
+  .campaign-header h1 {
+    font-size: 6.875rem;
+    line-height: 1.0;
+    letter-spacing: -0.3125rem;
+    margin-bottom: 1.125rem; }
+  .campaign-header#header.header-panel {
     padding-top: 6.25rem;
-    padding-bottom: 6.25rem; } }
+    padding-bottom: 6.25rem; }
+  .campaign-header p {
+    font-size: 2.125rem;
+    line-height: 1.6;
+    letter-spacing: -0.0625rem; } }
 
 #main {
   width: 95%;
