@@ -3662,6 +3662,12 @@ span.submit-arw:before {
     margin-top: 0; }
   .blue-panel > :last-child {
     margin-bottom: 0; }
+  .blue-panel h1, .blue-panel h2, .blue-panel h3, .blue-panel h4, .blue-panel #quick-quote h3, #quick-quote .blue-panel h3, .blue-panel h5, .blue-panel h6, .blue-panel p, .blue-panel li, .blue-panel dl {
+    color: #FFFFFF; }
+  .blue-panel h1, .blue-panel h2, .blue-panel h3, .blue-panel h4, .blue-panel #quick-quote h3, #quick-quote .blue-panel h3, .blue-panel h5, .blue-panel h6 {
+    line-height: 1; }
+    .blue-panel h1.subheader, .blue-panel h2.subheader, .blue-panel h3.subheader, .blue-panel h4.subheader, .blue-panel #quick-quote h3.subheader, #quick-quote .blue-panel h3.subheader, .blue-panel h5.subheader, .blue-panel h6.subheader {
+      line-height: 1.4; }
 
 .pink-panel {
   border-style: none;
