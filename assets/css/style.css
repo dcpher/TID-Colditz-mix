@@ -3430,32 +3430,34 @@ h3, h4 {
 h5 {
   font-weight: 300; }
 
-h1.blue, h2.blue, h3.blue, h4.blue, h5.blue, div.blue, p.blue, span.blue {
-  color: #00bae4; }
-h1.dark-blue, h2.dark-blue, h3.dark-blue, h4.dark-blue, h5.dark-blue, div.dark-blue, p.dark-blue, span.dark-blue {
-  color: #005581; }
-h1.pink, h2.pink, h3.pink, h4.pink, h5.pink, div.pink, p.pink, span.pink {
-  color: #ea3091; }
-h1.dark-pink, h2.dark-pink, h3.dark-pink, h4.dark-pink, h5.dark-pink, div.dark-pink, p.dark-pink, span.dark-pink {
-  color: #88166b; }
-h1.red, h2.red, h3.red, h4.red, h5.red, div.red, p.red, span.red {
-  color: #ed4338; }
-h1.dark-red, h2.dark-red, h3.dark-red, h4.dark-red, h5.dark-red, div.dark-red, p.dark-red, span.dark-red {
-  color: #89160e; }
-h1.purple, h2.purple, h3.purple, h4.purple, h5.purple, div.purple, p.purple, span.purple {
-  color: #7961ab; }
-h1.dark-purple, h2.dark-purple, h3.dark-purple, h4.dark-purple, h5.dark-purple, div.dark-purple, p.dark-purple, span.dark-purple {
-  color: #3c1c64; }
-h1.teal, h2.teal, h3.teal, h4.teal, h5.teal, div.teal, p.teal, span.teal {
-  color: #7ccccc; }
-h1.dark-teal, h2.dark-teal, h3.dark-teal, h4.dark-teal, h5.dark-teal, div.dark-teal, p.dark-teal, span.dark-teal {
-  color: #007889; }
-h1.yellow, h2.yellow, h3.yellow, h4.yellow, h5.yellow, div.yellow, p.yellow, span.yellow {
-  color: #ffcf2f; }
-h1.dark-yellow, h2.dark-yellow, h3.dark-yellow, h4.dark-yellow, h5.dark-yellow, div.dark-yellow, p.dark-yellow, span.dark-yellow {
-  color: #d17e29; }
-h1.white, h2.white, h3.white, h4.white, h5.white, div.white, p.white, span.white {
-  color: #FFF; }
+h1, h2, h3, h4, h5, div, p, b, span {
+  color: #404040; }
+  h1.blue, h2.blue, h3.blue, h4.blue, h5.blue, div.blue, p.blue, b.blue, span.blue {
+    color: #00bae4; }
+  h1.dark-blue, h2.dark-blue, h3.dark-blue, h4.dark-blue, h5.dark-blue, div.dark-blue, p.dark-blue, b.dark-blue, span.dark-blue {
+    color: #005581; }
+  h1.pink, h2.pink, h3.pink, h4.pink, h5.pink, div.pink, p.pink, b.pink, span.pink {
+    color: #ea3091; }
+  h1.dark-pink, h2.dark-pink, h3.dark-pink, h4.dark-pink, h5.dark-pink, div.dark-pink, p.dark-pink, b.dark-pink, span.dark-pink {
+    color: #88166b; }
+  h1.red, h2.red, h3.red, h4.red, h5.red, div.red, p.red, b.red, span.red {
+    color: #ed4338; }
+  h1.dark-red, h2.dark-red, h3.dark-red, h4.dark-red, h5.dark-red, div.dark-red, p.dark-red, b.dark-red, span.dark-red {
+    color: #89160e; }
+  h1.purple, h2.purple, h3.purple, h4.purple, h5.purple, div.purple, p.purple, b.purple, span.purple {
+    color: #7961ab; }
+  h1.dark-purple, h2.dark-purple, h3.dark-purple, h4.dark-purple, h5.dark-purple, div.dark-purple, p.dark-purple, b.dark-purple, span.dark-purple {
+    color: #3c1c64; }
+  h1.teal, h2.teal, h3.teal, h4.teal, h5.teal, div.teal, p.teal, b.teal, span.teal {
+    color: #7ccccc; }
+  h1.dark-teal, h2.dark-teal, h3.dark-teal, h4.dark-teal, h5.dark-teal, div.dark-teal, p.dark-teal, b.dark-teal, span.dark-teal {
+    color: #007889; }
+  h1.yellow, h2.yellow, h3.yellow, h4.yellow, h5.yellow, div.yellow, p.yellow, b.yellow, span.yellow {
+    color: #ffcf2f; }
+  h1.dark-yellow, h2.dark-yellow, h3.dark-yellow, h4.dark-yellow, h5.dark-yellow, div.dark-yellow, p.dark-yellow, b.dark-yellow, span.dark-yellow {
+    color: #d17e29; }
+  h1.white, h2.white, h3.white, h4.white, h5.white, div.white, p.white, b.white, span.white {
+    color: #FFF; }
 
 ::-moz-selection {
   color: #FFF;
