@@ -4289,6 +4289,16 @@ hr {
     line-height: 1.6;
     letter-spacing: -0.0625rem; } }
 
+.content-item h3 {
+  font-size: 2.125rem; }
+.content-item h5 {
+  line-height: 1.5; }
+.content-item p {
+  line-height: 1.8;
+  font-size: 1.25rem; }
+.content-item .qqw-contained .blue-panel {
+  margin-top: 1.25rem; }
+
 #main {
   width: 95%;
   margin: 0 auto;
