@@ -2291,11 +2291,11 @@ meta.foundation-mq-topbar {
     height: 4.0625rem;
     margin: 0;
     font-size: 16px; }
-    .top-bar .name h1, .top-bar .name h2, .top-bar .name h3, .top-bar .name h4, .top-bar .name #quick-quote h3, #quick-quote .top-bar .name h3, .top-bar .name p, .top-bar .name span {
+    .top-bar .name h1, .top-bar .name h2, .top-bar .name h3, .top-bar .name h4, .top-bar .name p, .top-bar .name span {
       line-height: 4.0625rem;
       font-size: 1rem;
       margin: 0; }
-      .top-bar .name h1 a, .top-bar .name h2 a, .top-bar .name h3 a, .top-bar .name h4 a, .top-bar .name #quick-quote h3 a, #quick-quote .top-bar .name h3 a, .top-bar .name p a, .top-bar .name span a {
+      .top-bar .name h1 a, .top-bar .name h2 a, .top-bar .name h3 a, .top-bar .name h4 a, .top-bar .name p a, .top-bar .name span a {
         font-weight: 100;
         color: #404040;
         width: 75%;
@@ -2558,7 +2558,7 @@ meta.foundation-mq-topbar {
       display: none; }
     .top-bar .title-area {
       float: left; }
-    .top-bar .name h1 a, .top-bar .name h2 a, .top-bar .name h3 a, .top-bar .name h4 a, .top-bar .name #quick-quote h3 a, #quick-quote .top-bar .name h3 a, .top-bar .name h5 a, .top-bar .name h6 a {
+    .top-bar .name h1 a, .top-bar .name h2 a, .top-bar .name h3 a, .top-bar .name h4 a, .top-bar .name h5 a, .top-bar .name h6 a {
       width: auto; }
     .top-bar input, .top-bar .button, .top-bar button {
       font-size: 0.875rem;
@@ -2843,7 +2843,7 @@ meta.foundation-mq-topbar {
     text-align: justify !important; } }
 
 /* Typography resets */
-div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, #quick-quote h3, h5, h6, pre, form, p, blockquote, th, td {
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
   margin: 0;
   padding: 0; }
 
@@ -2874,7 +2874,7 @@ p {
     font-style: italic; }
 
 /* Default header styles */
-h1, h2, h3, h4, #quick-quote h3, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: "Museo Sans", Helvetica, Arial, sans-serif;
   font-weight: 100;
   font-style: normal;
@@ -2883,7 +2883,7 @@ h1, h2, h3, h4, #quick-quote h3, h5, h6 {
   margin-top: 0.2rem;
   margin-bottom: 0.5rem;
   line-height: 1.1; }
-  h1 small, h2 small, h3 small, h4 small, #quick-quote h3 small, h5 small, h6 small {
+  h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
     font-size: 60%;
     color: #6f6f6f;
     line-height: 0; }
@@ -2895,10 +2895,10 @@ h2 {
   font-size: 2.5rem; }
 
 h3 {
-  font-size: 1.8125rem; }
+  font-size: 1.0625rem; }
 
-h4, #quick-quote h3 {
-  font-size: 1.375rem; }
+h4 {
+  font-size: 1.125rem; }
 
 h5 {
   font-size: 1.1875rem; }
@@ -3045,16 +3045,16 @@ blockquote, blockquote p {
   padding: 0 0.0625rem; }
 
 @media only screen and (min-width:40.063em) {
-  h1, h2, h3, h4, #quick-quote h3, h5, h6 {
+  h1, h2, h3, h4, h5, h6 {
     line-height: 1.1; }
   h1 {
     font-size: 5rem; }
   h2 {
     font-size: 3.75rem; }
   h3 {
-    font-size: 2.75rem; }
-  h4, #quick-quote h3 {
     font-size: 2rem; }
+  h4 {
+    font-size: 1.75rem; }
   h5 {
     font-size: 1.5rem; }
   h6 {
@@ -3423,38 +3423,38 @@ h1, h2 {
   letter-spacing: -0.25rem;
   margin-bottom: 2rem; }
 
-h3, h4, #quick-quote h3 {
+h3, h4 {
   letter-spacing: -0.0625rem;
   margin-bottom: 0.5rem; }
 
 h5 {
   font-weight: 300; }
 
-h1.blue, h2.blue, h3.blue, h4.blue, #quick-quote h3.blue, h5.blue, div.blue, p.blue, span.blue {
+h1.blue, h2.blue, h3.blue, h4.blue, h5.blue, div.blue, p.blue, span.blue {
   color: #00bae4; }
-h1.dark-blue, h2.dark-blue, h3.dark-blue, h4.dark-blue, #quick-quote h3.dark-blue, h5.dark-blue, div.dark-blue, p.dark-blue, span.dark-blue {
+h1.dark-blue, h2.dark-blue, h3.dark-blue, h4.dark-blue, h5.dark-blue, div.dark-blue, p.dark-blue, span.dark-blue {
   color: #005581; }
-h1.pink, h2.pink, h3.pink, h4.pink, #quick-quote h3.pink, h5.pink, div.pink, p.pink, span.pink {
+h1.pink, h2.pink, h3.pink, h4.pink, h5.pink, div.pink, p.pink, span.pink {
   color: #ea3091; }
-h1.dark-pink, h2.dark-pink, h3.dark-pink, h4.dark-pink, #quick-quote h3.dark-pink, h5.dark-pink, div.dark-pink, p.dark-pink, span.dark-pink {
+h1.dark-pink, h2.dark-pink, h3.dark-pink, h4.dark-pink, h5.dark-pink, div.dark-pink, p.dark-pink, span.dark-pink {
   color: #88166b; }
-h1.red, h2.red, h3.red, h4.red, #quick-quote h3.red, h5.red, div.red, p.red, span.red {
+h1.red, h2.red, h3.red, h4.red, h5.red, div.red, p.red, span.red {
   color: #ed4338; }
-h1.dark-red, h2.dark-red, h3.dark-red, h4.dark-red, #quick-quote h3.dark-red, h5.dark-red, div.dark-red, p.dark-red, span.dark-red {
+h1.dark-red, h2.dark-red, h3.dark-red, h4.dark-red, h5.dark-red, div.dark-red, p.dark-red, span.dark-red {
   color: #89160e; }
-h1.purple, h2.purple, h3.purple, h4.purple, #quick-quote h3.purple, h5.purple, div.purple, p.purple, span.purple {
+h1.purple, h2.purple, h3.purple, h4.purple, h5.purple, div.purple, p.purple, span.purple {
   color: #7961ab; }
-h1.dark-purple, h2.dark-purple, h3.dark-purple, h4.dark-purple, #quick-quote h3.dark-purple, h5.dark-purple, div.dark-purple, p.dark-purple, span.dark-purple {
+h1.dark-purple, h2.dark-purple, h3.dark-purple, h4.dark-purple, h5.dark-purple, div.dark-purple, p.dark-purple, span.dark-purple {
   color: #3c1c64; }
-h1.teal, h2.teal, h3.teal, h4.teal, #quick-quote h3.teal, h5.teal, div.teal, p.teal, span.teal {
+h1.teal, h2.teal, h3.teal, h4.teal, h5.teal, div.teal, p.teal, span.teal {
   color: #7ccccc; }
-h1.dark-teal, h2.dark-teal, h3.dark-teal, h4.dark-teal, #quick-quote h3.dark-teal, h5.dark-teal, div.dark-teal, p.dark-teal, span.dark-teal {
+h1.dark-teal, h2.dark-teal, h3.dark-teal, h4.dark-teal, h5.dark-teal, div.dark-teal, p.dark-teal, span.dark-teal {
   color: #007889; }
-h1.yellow, h2.yellow, h3.yellow, h4.yellow, #quick-quote h3.yellow, h5.yellow, div.yellow, p.yellow, span.yellow {
+h1.yellow, h2.yellow, h3.yellow, h4.yellow, h5.yellow, div.yellow, p.yellow, span.yellow {
   color: #ffcf2f; }
-h1.dark-yellow, h2.dark-yellow, h3.dark-yellow, h4.dark-yellow, #quick-quote h3.dark-yellow, h5.dark-yellow, div.dark-yellow, p.dark-yellow, span.dark-yellow {
+h1.dark-yellow, h2.dark-yellow, h3.dark-yellow, h4.dark-yellow, h5.dark-yellow, div.dark-yellow, p.dark-yellow, span.dark-yellow {
   color: #d17e29; }
-h1.white, h2.white, h3.white, h4.white, #quick-quote h3.white, h5.white, div.white, p.white, span.white {
+h1.white, h2.white, h3.white, h4.white, h5.white, div.white, p.white, span.white {
   color: #FFF; }
 
 ::-moz-selection {
@@ -4030,11 +4030,11 @@ span.submit-arw:before {
     margin-top: 0; }
   .blue-panel > :last-child {
     margin-bottom: 0; }
-  .blue-panel h1, .blue-panel h2, .blue-panel h3, .blue-panel h4, .blue-panel #quick-quote h3, #quick-quote .blue-panel h3, .blue-panel h5, .blue-panel h6, .blue-panel p, .blue-panel li, .blue-panel dl {
+  .blue-panel h1, .blue-panel h2, .blue-panel h3, .blue-panel h4, .blue-panel h5, .blue-panel h6, .blue-panel p, .blue-panel li, .blue-panel dl {
     color: #FFFFFF; }
-  .blue-panel h1, .blue-panel h2, .blue-panel h3, .blue-panel h4, .blue-panel #quick-quote h3, #quick-quote .blue-panel h3, .blue-panel h5, .blue-panel h6 {
+  .blue-panel h1, .blue-panel h2, .blue-panel h3, .blue-panel h4, .blue-panel h5, .blue-panel h6 {
     line-height: 1; }
-    .blue-panel h1.subheader, .blue-panel h2.subheader, .blue-panel h3.subheader, .blue-panel h4.subheader, .blue-panel #quick-quote h3.subheader, #quick-quote .blue-panel h3.subheader, .blue-panel h5.subheader, .blue-panel h6.subheader {
+    .blue-panel h1.subheader, .blue-panel h2.subheader, .blue-panel h3.subheader, .blue-panel h4.subheader, .blue-panel h5.subheader, .blue-panel h6.subheader {
       line-height: 1.4; }
 
 .pink-panel {
@@ -4049,11 +4049,11 @@ span.submit-arw:before {
     margin-top: 0; }
   .pink-panel > :last-child {
     margin-bottom: 0; }
-  .pink-panel h1, .pink-panel h2, .pink-panel h3, .pink-panel h4, .pink-panel #quick-quote h3, #quick-quote .pink-panel h3, .pink-panel h5, .pink-panel h6, .pink-panel p, .pink-panel li, .pink-panel dl {
+  .pink-panel h1, .pink-panel h2, .pink-panel h3, .pink-panel h4, .pink-panel h5, .pink-panel h6, .pink-panel p, .pink-panel li, .pink-panel dl {
     color: #333333; }
-  .pink-panel h1, .pink-panel h2, .pink-panel h3, .pink-panel h4, .pink-panel #quick-quote h3, #quick-quote .pink-panel h3, .pink-panel h5, .pink-panel h6 {
+  .pink-panel h1, .pink-panel h2, .pink-panel h3, .pink-panel h4, .pink-panel h5, .pink-panel h6 {
     line-height: 1; }
-    .pink-panel h1.subheader, .pink-panel h2.subheader, .pink-panel h3.subheader, .pink-panel h4.subheader, .pink-panel #quick-quote h3.subheader, #quick-quote .pink-panel h3.subheader, .pink-panel h5.subheader, .pink-panel h6.subheader {
+    .pink-panel h1.subheader, .pink-panel h2.subheader, .pink-panel h3.subheader, .pink-panel h4.subheader, .pink-panel h5.subheader, .pink-panel h6.subheader {
       line-height: 1.4; }
 
 .purple-panel {
@@ -4068,11 +4068,11 @@ span.submit-arw:before {
     margin-top: 0; }
   .purple-panel > :last-child {
     margin-bottom: 0; }
-  .purple-panel h1, .purple-panel h2, .purple-panel h3, .purple-panel h4, .purple-panel #quick-quote h3, #quick-quote .purple-panel h3, .purple-panel h5, .purple-panel h6, .purple-panel p, .purple-panel li, .purple-panel dl {
+  .purple-panel h1, .purple-panel h2, .purple-panel h3, .purple-panel h4, .purple-panel h5, .purple-panel h6, .purple-panel p, .purple-panel li, .purple-panel dl {
     color: #333333; }
-  .purple-panel h1, .purple-panel h2, .purple-panel h3, .purple-panel h4, .purple-panel #quick-quote h3, #quick-quote .purple-panel h3, .purple-panel h5, .purple-panel h6 {
+  .purple-panel h1, .purple-panel h2, .purple-panel h3, .purple-panel h4, .purple-panel h5, .purple-panel h6 {
     line-height: 1; }
-    .purple-panel h1.subheader, .purple-panel h2.subheader, .purple-panel h3.subheader, .purple-panel h4.subheader, .purple-panel #quick-quote h3.subheader, #quick-quote .purple-panel h3.subheader, .purple-panel h5.subheader, .purple-panel h6.subheader {
+    .purple-panel h1.subheader, .purple-panel h2.subheader, .purple-panel h3.subheader, .purple-panel h4.subheader, .purple-panel h5.subheader, .purple-panel h6.subheader {
       line-height: 1.4; }
 
 .teal-panel {
@@ -4087,11 +4087,11 @@ span.submit-arw:before {
     margin-top: 0; }
   .teal-panel > :last-child {
     margin-bottom: 0; }
-  .teal-panel h1, .teal-panel h2, .teal-panel h3, .teal-panel h4, .teal-panel #quick-quote h3, #quick-quote .teal-panel h3, .teal-panel h5, .teal-panel h6, .teal-panel p, .teal-panel li, .teal-panel dl {
+  .teal-panel h1, .teal-panel h2, .teal-panel h3, .teal-panel h4, .teal-panel h5, .teal-panel h6, .teal-panel p, .teal-panel li, .teal-panel dl {
     color: #333333; }
-  .teal-panel h1, .teal-panel h2, .teal-panel h3, .teal-panel h4, .teal-panel #quick-quote h3, #quick-quote .teal-panel h3, .teal-panel h5, .teal-panel h6 {
+  .teal-panel h1, .teal-panel h2, .teal-panel h3, .teal-panel h4, .teal-panel h5, .teal-panel h6 {
     line-height: 1; }
-    .teal-panel h1.subheader, .teal-panel h2.subheader, .teal-panel h3.subheader, .teal-panel h4.subheader, .teal-panel #quick-quote h3.subheader, #quick-quote .teal-panel h3.subheader, .teal-panel h5.subheader, .teal-panel h6.subheader {
+    .teal-panel h1.subheader, .teal-panel h2.subheader, .teal-panel h3.subheader, .teal-panel h4.subheader, .teal-panel h5.subheader, .teal-panel h6.subheader {
       line-height: 1.4; }
 
 .red-panel {
@@ -4106,11 +4106,11 @@ span.submit-arw:before {
     margin-top: 0; }
   .red-panel > :last-child {
     margin-bottom: 0; }
-  .red-panel h1, .red-panel h2, .red-panel h3, .red-panel h4, .red-panel #quick-quote h3, #quick-quote .red-panel h3, .red-panel h5, .red-panel h6, .red-panel p, .red-panel li, .red-panel dl {
+  .red-panel h1, .red-panel h2, .red-panel h3, .red-panel h4, .red-panel h5, .red-panel h6, .red-panel p, .red-panel li, .red-panel dl {
     color: #333333; }
-  .red-panel h1, .red-panel h2, .red-panel h3, .red-panel h4, .red-panel #quick-quote h3, #quick-quote .red-panel h3, .red-panel h5, .red-panel h6 {
+  .red-panel h1, .red-panel h2, .red-panel h3, .red-panel h4, .red-panel h5, .red-panel h6 {
     line-height: 1; }
-    .red-panel h1.subheader, .red-panel h2.subheader, .red-panel h3.subheader, .red-panel h4.subheader, .red-panel #quick-quote h3.subheader, #quick-quote .red-panel h3.subheader, .red-panel h5.subheader, .red-panel h6.subheader {
+    .red-panel h1.subheader, .red-panel h2.subheader, .red-panel h3.subheader, .red-panel h4.subheader, .red-panel h5.subheader, .red-panel h6.subheader {
       line-height: 1.4; }
 
 .yellow-panel {
@@ -4125,11 +4125,11 @@ span.submit-arw:before {
     margin-top: 0; }
   .yellow-panel > :last-child {
     margin-bottom: 0; }
-  .yellow-panel h1, .yellow-panel h2, .yellow-panel h3, .yellow-panel h4, .yellow-panel #quick-quote h3, #quick-quote .yellow-panel h3, .yellow-panel h5, .yellow-panel h6, .yellow-panel p, .yellow-panel li, .yellow-panel dl {
+  .yellow-panel h1, .yellow-panel h2, .yellow-panel h3, .yellow-panel h4, .yellow-panel h5, .yellow-panel h6, .yellow-panel p, .yellow-panel li, .yellow-panel dl {
     color: #333333; }
-  .yellow-panel h1, .yellow-panel h2, .yellow-panel h3, .yellow-panel h4, .yellow-panel #quick-quote h3, #quick-quote .yellow-panel h3, .yellow-panel h5, .yellow-panel h6 {
+  .yellow-panel h1, .yellow-panel h2, .yellow-panel h3, .yellow-panel h4, .yellow-panel h5, .yellow-panel h6 {
     line-height: 1; }
-    .yellow-panel h1.subheader, .yellow-panel h2.subheader, .yellow-panel h3.subheader, .yellow-panel h4.subheader, .yellow-panel #quick-quote h3.subheader, #quick-quote .yellow-panel h3.subheader, .yellow-panel h5.subheader, .yellow-panel h6.subheader {
+    .yellow-panel h1.subheader, .yellow-panel h2.subheader, .yellow-panel h3.subheader, .yellow-panel h4.subheader, .yellow-panel h5.subheader, .yellow-panel h6.subheader {
       line-height: 1.4; }
 
 .dark-blue-panel {
@@ -4144,11 +4144,11 @@ span.submit-arw:before {
     margin-top: 0; }
   .dark-blue-panel > :last-child {
     margin-bottom: 0; }
-  .dark-blue-panel h1, .dark-blue-panel h2, .dark-blue-panel h3, .dark-blue-panel h4, .dark-blue-panel #quick-quote h3, #quick-quote .dark-blue-panel h3, .dark-blue-panel h5, .dark-blue-panel h6, .dark-blue-panel p, .dark-blue-panel li, .dark-blue-panel dl {
+  .dark-blue-panel h1, .dark-blue-panel h2, .dark-blue-panel h3, .dark-blue-panel h4, .dark-blue-panel h5, .dark-blue-panel h6, .dark-blue-panel p, .dark-blue-panel li, .dark-blue-panel dl {
     color: #FFFFFF; }
-  .dark-blue-panel h1, .dark-blue-panel h2, .dark-blue-panel h3, .dark-blue-panel h4, .dark-blue-panel #quick-quote h3, #quick-quote .dark-blue-panel h3, .dark-blue-panel h5, .dark-blue-panel h6 {
+  .dark-blue-panel h1, .dark-blue-panel h2, .dark-blue-panel h3, .dark-blue-panel h4, .dark-blue-panel h5, .dark-blue-panel h6 {
     line-height: 1; }
-    .dark-blue-panel h1.subheader, .dark-blue-panel h2.subheader, .dark-blue-panel h3.subheader, .dark-blue-panel h4.subheader, .dark-blue-panel #quick-quote h3.subheader, #quick-quote .dark-blue-panel h3.subheader, .dark-blue-panel h5.subheader, .dark-blue-panel h6.subheader {
+    .dark-blue-panel h1.subheader, .dark-blue-panel h2.subheader, .dark-blue-panel h3.subheader, .dark-blue-panel h4.subheader, .dark-blue-panel h5.subheader, .dark-blue-panel h6.subheader {
       line-height: 1.4; }
 
 .dark-pink-panel {
@@ -4163,11 +4163,11 @@ span.submit-arw:before {
     margin-top: 0; }
   .dark-pink-panel > :last-child {
     margin-bottom: 0; }
-  .dark-pink-panel h1, .dark-pink-panel h2, .dark-pink-panel h3, .dark-pink-panel h4, .dark-pink-panel #quick-quote h3, #quick-quote .dark-pink-panel h3, .dark-pink-panel h5, .dark-pink-panel h6, .dark-pink-panel p, .dark-pink-panel li, .dark-pink-panel dl {
+  .dark-pink-panel h1, .dark-pink-panel h2, .dark-pink-panel h3, .dark-pink-panel h4, .dark-pink-panel h5, .dark-pink-panel h6, .dark-pink-panel p, .dark-pink-panel li, .dark-pink-panel dl {
     color: #FFFFFF; }
-  .dark-pink-panel h1, .dark-pink-panel h2, .dark-pink-panel h3, .dark-pink-panel h4, .dark-pink-panel #quick-quote h3, #quick-quote .dark-pink-panel h3, .dark-pink-panel h5, .dark-pink-panel h6 {
+  .dark-pink-panel h1, .dark-pink-panel h2, .dark-pink-panel h3, .dark-pink-panel h4, .dark-pink-panel h5, .dark-pink-panel h6 {
     line-height: 1; }
-    .dark-pink-panel h1.subheader, .dark-pink-panel h2.subheader, .dark-pink-panel h3.subheader, .dark-pink-panel h4.subheader, .dark-pink-panel #quick-quote h3.subheader, #quick-quote .dark-pink-panel h3.subheader, .dark-pink-panel h5.subheader, .dark-pink-panel h6.subheader {
+    .dark-pink-panel h1.subheader, .dark-pink-panel h2.subheader, .dark-pink-panel h3.subheader, .dark-pink-panel h4.subheader, .dark-pink-panel h5.subheader, .dark-pink-panel h6.subheader {
       line-height: 1.4; }
 
 .dark-purple-panel {
@@ -4182,11 +4182,11 @@ span.submit-arw:before {
     margin-top: 0; }
   .dark-purple-panel > :last-child {
     margin-bottom: 0; }
-  .dark-purple-panel h1, .dark-purple-panel h2, .dark-purple-panel h3, .dark-purple-panel h4, .dark-purple-panel #quick-quote h3, #quick-quote .dark-purple-panel h3, .dark-purple-panel h5, .dark-purple-panel h6, .dark-purple-panel p, .dark-purple-panel li, .dark-purple-panel dl {
+  .dark-purple-panel h1, .dark-purple-panel h2, .dark-purple-panel h3, .dark-purple-panel h4, .dark-purple-panel h5, .dark-purple-panel h6, .dark-purple-panel p, .dark-purple-panel li, .dark-purple-panel dl {
     color: #FFFFFF; }
-  .dark-purple-panel h1, .dark-purple-panel h2, .dark-purple-panel h3, .dark-purple-panel h4, .dark-purple-panel #quick-quote h3, #quick-quote .dark-purple-panel h3, .dark-purple-panel h5, .dark-purple-panel h6 {
+  .dark-purple-panel h1, .dark-purple-panel h2, .dark-purple-panel h3, .dark-purple-panel h4, .dark-purple-panel h5, .dark-purple-panel h6 {
     line-height: 1; }
-    .dark-purple-panel h1.subheader, .dark-purple-panel h2.subheader, .dark-purple-panel h3.subheader, .dark-purple-panel h4.subheader, .dark-purple-panel #quick-quote h3.subheader, #quick-quote .dark-purple-panel h3.subheader, .dark-purple-panel h5.subheader, .dark-purple-panel h6.subheader {
+    .dark-purple-panel h1.subheader, .dark-purple-panel h2.subheader, .dark-purple-panel h3.subheader, .dark-purple-panel h4.subheader, .dark-purple-panel h5.subheader, .dark-purple-panel h6.subheader {
       line-height: 1.4; }
 
 .dark-teal-panel {
@@ -4201,11 +4201,11 @@ span.submit-arw:before {
     margin-top: 0; }
   .dark-teal-panel > :last-child {
     margin-bottom: 0; }
-  .dark-teal-panel h1, .dark-teal-panel h2, .dark-teal-panel h3, .dark-teal-panel h4, .dark-teal-panel #quick-quote h3, #quick-quote .dark-teal-panel h3, .dark-teal-panel h5, .dark-teal-panel h6, .dark-teal-panel p, .dark-teal-panel li, .dark-teal-panel dl {
+  .dark-teal-panel h1, .dark-teal-panel h2, .dark-teal-panel h3, .dark-teal-panel h4, .dark-teal-panel h5, .dark-teal-panel h6, .dark-teal-panel p, .dark-teal-panel li, .dark-teal-panel dl {
     color: #FFFFFF; }
-  .dark-teal-panel h1, .dark-teal-panel h2, .dark-teal-panel h3, .dark-teal-panel h4, .dark-teal-panel #quick-quote h3, #quick-quote .dark-teal-panel h3, .dark-teal-panel h5, .dark-teal-panel h6 {
+  .dark-teal-panel h1, .dark-teal-panel h2, .dark-teal-panel h3, .dark-teal-panel h4, .dark-teal-panel h5, .dark-teal-panel h6 {
     line-height: 1; }
-    .dark-teal-panel h1.subheader, .dark-teal-panel h2.subheader, .dark-teal-panel h3.subheader, .dark-teal-panel h4.subheader, .dark-teal-panel #quick-quote h3.subheader, #quick-quote .dark-teal-panel h3.subheader, .dark-teal-panel h5.subheader, .dark-teal-panel h6.subheader {
+    .dark-teal-panel h1.subheader, .dark-teal-panel h2.subheader, .dark-teal-panel h3.subheader, .dark-teal-panel h4.subheader, .dark-teal-panel h5.subheader, .dark-teal-panel h6.subheader {
       line-height: 1.4; }
 
 .dark-red-panel {
@@ -4220,11 +4220,11 @@ span.submit-arw:before {
     margin-top: 0; }
   .dark-red-panel > :last-child {
     margin-bottom: 0; }
-  .dark-red-panel h1, .dark-red-panel h2, .dark-red-panel h3, .dark-red-panel h4, .dark-red-panel #quick-quote h3, #quick-quote .dark-red-panel h3, .dark-red-panel h5, .dark-red-panel h6, .dark-red-panel p, .dark-red-panel li, .dark-red-panel dl {
+  .dark-red-panel h1, .dark-red-panel h2, .dark-red-panel h3, .dark-red-panel h4, .dark-red-panel h5, .dark-red-panel h6, .dark-red-panel p, .dark-red-panel li, .dark-red-panel dl {
     color: #FFFFFF; }
-  .dark-red-panel h1, .dark-red-panel h2, .dark-red-panel h3, .dark-red-panel h4, .dark-red-panel #quick-quote h3, #quick-quote .dark-red-panel h3, .dark-red-panel h5, .dark-red-panel h6 {
+  .dark-red-panel h1, .dark-red-panel h2, .dark-red-panel h3, .dark-red-panel h4, .dark-red-panel h5, .dark-red-panel h6 {
     line-height: 1; }
-    .dark-red-panel h1.subheader, .dark-red-panel h2.subheader, .dark-red-panel h3.subheader, .dark-red-panel h4.subheader, .dark-red-panel #quick-quote h3.subheader, #quick-quote .dark-red-panel h3.subheader, .dark-red-panel h5.subheader, .dark-red-panel h6.subheader {
+    .dark-red-panel h1.subheader, .dark-red-panel h2.subheader, .dark-red-panel h3.subheader, .dark-red-panel h4.subheader, .dark-red-panel h5.subheader, .dark-red-panel h6.subheader {
       line-height: 1.4; }
 
 .dark-yellow-panel {
@@ -4239,11 +4239,11 @@ span.submit-arw:before {
     margin-top: 0; }
   .dark-yellow-panel > :last-child {
     margin-bottom: 0; }
-  .dark-yellow-panel h1, .dark-yellow-panel h2, .dark-yellow-panel h3, .dark-yellow-panel h4, .dark-yellow-panel #quick-quote h3, #quick-quote .dark-yellow-panel h3, .dark-yellow-panel h5, .dark-yellow-panel h6, .dark-yellow-panel p, .dark-yellow-panel li, .dark-yellow-panel dl {
+  .dark-yellow-panel h1, .dark-yellow-panel h2, .dark-yellow-panel h3, .dark-yellow-panel h4, .dark-yellow-panel h5, .dark-yellow-panel h6, .dark-yellow-panel p, .dark-yellow-panel li, .dark-yellow-panel dl {
     color: #FFFFFF; }
-  .dark-yellow-panel h1, .dark-yellow-panel h2, .dark-yellow-panel h3, .dark-yellow-panel h4, .dark-yellow-panel #quick-quote h3, #quick-quote .dark-yellow-panel h3, .dark-yellow-panel h5, .dark-yellow-panel h6 {
+  .dark-yellow-panel h1, .dark-yellow-panel h2, .dark-yellow-panel h3, .dark-yellow-panel h4, .dark-yellow-panel h5, .dark-yellow-panel h6 {
     line-height: 1; }
-    .dark-yellow-panel h1.subheader, .dark-yellow-panel h2.subheader, .dark-yellow-panel h3.subheader, .dark-yellow-panel h4.subheader, .dark-yellow-panel #quick-quote h3.subheader, #quick-quote .dark-yellow-panel h3.subheader, .dark-yellow-panel h5.subheader, .dark-yellow-panel h6.subheader {
+    .dark-yellow-panel h1.subheader, .dark-yellow-panel h2.subheader, .dark-yellow-panel h3.subheader, .dark-yellow-panel h4.subheader, .dark-yellow-panel h5.subheader, .dark-yellow-panel h6.subheader {
       line-height: 1.4; }
 
 .grey-panel {
@@ -4271,11 +4271,11 @@ span.submit-arw:before {
     margin-top: 0; }
   .dark-grey-panel > :last-child {
     margin-bottom: 0; }
-  .dark-grey-panel h1, .dark-grey-panel h2, .dark-grey-panel h3, .dark-grey-panel h4, .dark-grey-panel #quick-quote h3, #quick-quote .dark-grey-panel h3, .dark-grey-panel h5, .dark-grey-panel h6, .dark-grey-panel p, .dark-grey-panel li, .dark-grey-panel dl {
+  .dark-grey-panel h1, .dark-grey-panel h2, .dark-grey-panel h3, .dark-grey-panel h4, .dark-grey-panel h5, .dark-grey-panel h6, .dark-grey-panel p, .dark-grey-panel li, .dark-grey-panel dl {
     color: #FFFFFF; }
-  .dark-grey-panel h1, .dark-grey-panel h2, .dark-grey-panel h3, .dark-grey-panel h4, .dark-grey-panel #quick-quote h3, #quick-quote .dark-grey-panel h3, .dark-grey-panel h5, .dark-grey-panel h6 {
+  .dark-grey-panel h1, .dark-grey-panel h2, .dark-grey-panel h3, .dark-grey-panel h4, .dark-grey-panel h5, .dark-grey-panel h6 {
     line-height: 1; }
-    .dark-grey-panel h1.subheader, .dark-grey-panel h2.subheader, .dark-grey-panel h3.subheader, .dark-grey-panel h4.subheader, .dark-grey-panel #quick-quote h3.subheader, #quick-quote .dark-grey-panel h3.subheader, .dark-grey-panel h5.subheader, .dark-grey-panel h6.subheader {
+    .dark-grey-panel h1.subheader, .dark-grey-panel h2.subheader, .dark-grey-panel h3.subheader, .dark-grey-panel h4.subheader, .dark-grey-panel h5.subheader, .dark-grey-panel h6.subheader {
       line-height: 1.4; }
 
 @media only screen and (min-width:64.063em) and (max-width:90em) {
@@ -4328,7 +4328,7 @@ span.submit-arw:before {
     letter-spacing: -0.0625rem; } }
 @media only screen and (max-width: 40em) {
   .header-panel p {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     line-height: 1.1;
     letter-spacing: 0; } }
 
@@ -4426,7 +4426,7 @@ nav .top-bar-section ul li a:hover {
     ul[class*=block-grid-] li.text-with-img {
       margin-bottom: 1.5rem;
       background-repeat: no-repeat; }
-      ul[class*=block-grid-] li.text-with-img h4, ul[class*=block-grid-] li.text-with-img #quick-quote h3, #quick-quote ul[class*=block-grid-] li.text-with-img h3, ul[class*=block-grid-] li.text-with-img h5, ul[class*=block-grid-] li.text-with-img p, ul[class*=block-grid-] li.text-with-img span {
+      ul[class*=block-grid-] li.text-with-img h4, ul[class*=block-grid-] li.text-with-img h5, ul[class*=block-grid-] li.text-with-img p, ul[class*=block-grid-] li.text-with-img span {
         padding-left: 80px;
         padding-right: 1rem; }
       ul[class*=block-grid-] li.text-with-img p {
@@ -4446,7 +4446,7 @@ nav .top-bar-section ul li a:hover {
       padding-left: 0;
       padding-right: 0;
       margin-bottom: 0; }
-      ul[class*=block-grid-] li.text-with-img h4, ul[class*=block-grid-] li.text-with-img #quick-quote h3, #quick-quote ul[class*=block-grid-] li.text-with-img h3, ul[class*=block-grid-] li.text-with-img h5, ul[class*=block-grid-] li.text-with-img p, ul[class*=block-grid-] li.text-with-img span {
+      ul[class*=block-grid-] li.text-with-img h4, ul[class*=block-grid-] li.text-with-img h5, ul[class*=block-grid-] li.text-with-img p, ul[class*=block-grid-] li.text-with-img span {
         padding-left: 0;
         padding-right: 0; }
       ul[class*=block-grid-] li.text-with-img p {
@@ -4663,8 +4663,6 @@ hr {
     line-height: 1.6;
     letter-spacing: -0.0625rem; } }
 
-.content-item h3 {
-  font-size: 2.125rem; }
 .content-item h5 {
   line-height: 1.5; }
 .content-item .qqw-contained .blue-panel {
@@ -4693,11 +4691,11 @@ hr {
       margin-top: 0; }
     #main #header-content > :last-child {
       margin-bottom: 0; }
-    #main #header-content h1, #main #header-content h2, #main #header-content h3, #main #header-content h4, #main #header-content #quick-quote h3, #quick-quote #main #header-content h3, #main #header-content h5, #main #header-content h6, #main #header-content p, #main #header-content li, #main #header-content dl {
+    #main #header-content h1, #main #header-content h2, #main #header-content h3, #main #header-content h4, #main #header-content h5, #main #header-content h6, #main #header-content p, #main #header-content li, #main #header-content dl {
       color: #FFFFFF; }
-    #main #header-content h1, #main #header-content h2, #main #header-content h3, #main #header-content h4, #main #header-content #quick-quote h3, #quick-quote #main #header-content h3, #main #header-content h5, #main #header-content h6 {
+    #main #header-content h1, #main #header-content h2, #main #header-content h3, #main #header-content h4, #main #header-content h5, #main #header-content h6 {
       line-height: 1; }
-      #main #header-content h1.subheader, #main #header-content h2.subheader, #main #header-content h3.subheader, #main #header-content h4.subheader, #main #header-content #quick-quote h3.subheader, #quick-quote #main #header-content h3.subheader, #main #header-content h5.subheader, #main #header-content h6.subheader {
+      #main #header-content h1.subheader, #main #header-content h2.subheader, #main #header-content h3.subheader, #main #header-content h4.subheader, #main #header-content h5.subheader, #main #header-content h6.subheader {
         line-height: 1.4; }
     #main #header-content .csc-header-panel {
       width: auto;
@@ -4803,11 +4801,11 @@ hr {
         margin-top: 0; }
       #main #main-content .current-events > :last-child {
         margin-bottom: 0; }
-      #main #main-content .current-events h1, #main #main-content .current-events h2, #main #main-content .current-events h3, #main #main-content .current-events h4, #main #main-content .current-events #quick-quote h3, #quick-quote #main #main-content .current-events h3, #main #main-content .current-events h5, #main #main-content .current-events h6, #main #main-content .current-events p, #main #main-content .current-events li, #main #main-content .current-events dl {
+      #main #main-content .current-events h1, #main #main-content .current-events h2, #main #main-content .current-events h3, #main #main-content .current-events h4, #main #main-content .current-events h5, #main #main-content .current-events h6, #main #main-content .current-events p, #main #main-content .current-events li, #main #main-content .current-events dl {
         color: #333333; }
-      #main #main-content .current-events h1, #main #main-content .current-events h2, #main #main-content .current-events h3, #main #main-content .current-events h4, #main #main-content .current-events #quick-quote h3, #quick-quote #main #main-content .current-events h3, #main #main-content .current-events h5, #main #main-content .current-events h6 {
+      #main #main-content .current-events h1, #main #main-content .current-events h2, #main #main-content .current-events h3, #main #main-content .current-events h4, #main #main-content .current-events h5, #main #main-content .current-events h6 {
         line-height: 1; }
-        #main #main-content .current-events h1.subheader, #main #main-content .current-events h2.subheader, #main #main-content .current-events h3.subheader, #main #main-content .current-events h4.subheader, #main #main-content .current-events #quick-quote h3.subheader, #quick-quote #main #main-content .current-events h3.subheader, #main #main-content .current-events h5.subheader, #main #main-content .current-events h6.subheader {
+        #main #main-content .current-events h1.subheader, #main #main-content .current-events h2.subheader, #main #main-content .current-events h3.subheader, #main #main-content .current-events h4.subheader, #main #main-content .current-events h5.subheader, #main #main-content .current-events h6.subheader {
           line-height: 1.4; }
       #main #main-content .current-events h6 {
         color: #89160e;
@@ -4839,7 +4837,7 @@ hr {
           clear: none; }
         #main #main-content .browse-by-topic .topics > li:nth-of-type(2n+1) {
           clear: both; }
-      #main #main-content .browse-by-topic .topics h4, #main #main-content .browse-by-topic .topics #quick-quote h3, #quick-quote #main #main-content .browse-by-topic .topics h3 {
+      #main #main-content .browse-by-topic .topics h4 {
         margin: 1rem 0; }
       #main #main-content .browse-by-topic .topics .list-articles, #main #main-content .browse-by-topic .topics .list-questions {
         margin-bottom: 1rem; }
@@ -4882,11 +4880,11 @@ hr {
         margin-top: 0; }
       #main .aside .small-search-bar > :last-child {
         margin-bottom: 0; }
-      #main .aside .small-search-bar h1, #main .aside .small-search-bar h2, #main .aside .small-search-bar h3, #main .aside .small-search-bar h4, #main .aside .small-search-bar #quick-quote h3, #quick-quote #main .aside .small-search-bar h3, #main .aside .small-search-bar h5, #main .aside .small-search-bar h6, #main .aside .small-search-bar p, #main .aside .small-search-bar li, #main .aside .small-search-bar dl {
+      #main .aside .small-search-bar h1, #main .aside .small-search-bar h2, #main .aside .small-search-bar h3, #main .aside .small-search-bar h4, #main .aside .small-search-bar h5, #main .aside .small-search-bar h6, #main .aside .small-search-bar p, #main .aside .small-search-bar li, #main .aside .small-search-bar dl {
         color: #FFFFFF; }
-      #main .aside .small-search-bar h1, #main .aside .small-search-bar h2, #main .aside .small-search-bar h3, #main .aside .small-search-bar h4, #main .aside .small-search-bar #quick-quote h3, #quick-quote #main .aside .small-search-bar h3, #main .aside .small-search-bar h5, #main .aside .small-search-bar h6 {
+      #main .aside .small-search-bar h1, #main .aside .small-search-bar h2, #main .aside .small-search-bar h3, #main .aside .small-search-bar h4, #main .aside .small-search-bar h5, #main .aside .small-search-bar h6 {
         line-height: 1; }
-        #main .aside .small-search-bar h1.subheader, #main .aside .small-search-bar h2.subheader, #main .aside .small-search-bar h3.subheader, #main .aside .small-search-bar h4.subheader, #main .aside .small-search-bar #quick-quote h3.subheader, #quick-quote #main .aside .small-search-bar h3.subheader, #main .aside .small-search-bar h5.subheader, #main .aside .small-search-bar h6.subheader {
+        #main .aside .small-search-bar h1.subheader, #main .aside .small-search-bar h2.subheader, #main .aside .small-search-bar h3.subheader, #main .aside .small-search-bar h4.subheader, #main .aside .small-search-bar h5.subheader, #main .aside .small-search-bar h6.subheader {
           line-height: 1.4; }
       #main .aside .small-search-bar .small-search-submit {
         border-style: solid;
