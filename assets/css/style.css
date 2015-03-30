@@ -3467,7 +3467,7 @@ h1, h2, h3, h4, h5, div, p, b, span {
   color: #FFF;
   background: #00bae4; }
 
-@media only screen and (min-width:90.063em) {
+@media only screen and (min-width:120.063em) {
   h1 {
     font-size: 6.875rem;
     line-height: 1.0;
