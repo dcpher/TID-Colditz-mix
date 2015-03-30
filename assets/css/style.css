@@ -4190,11 +4190,11 @@ hr {
   .homepage .amt-panel .text-with-img.amt-medical, .homepage .amt-panel .text-with-img.amt-cover, .homepage .amt-panel .text-with-img.amt-flexible {
     background-size: 65px 65px; }
   .homepage .amt-panel .text-with-img.amt-medical {
-    background-image: url('//www.travelinsurancedirect.com.au/Media/Default/images/amt_benefit_1.png'); }
+    background-image: url('/Media/Default/images/amt_benefit_1.png'); }
   .homepage .amt-panel .text-with-img.amt-cover {
-    background-image: url('//www.travelinsurancedirect.com.au/Media/Default/images/amt_benefit_2.png'); }
+    background-image: url('/Media/Default/images/amt_benefit_2.png'); }
   .homepage .amt-panel .text-with-img.amt-flexible {
-    background-image: url('//www.travelinsurancedirect.com.au/Media/Default/images/amt_benefit_3.png'); }
+    background-image: url('/Media/Default/images/amt_benefit_3.png'); }
   @media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
     .homepage .amt-panel .text-with-img.medical-help {
       background-image: url('/Media/Default/main/icons/benefits_4_b@x2.png'); }
