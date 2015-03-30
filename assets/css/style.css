@@ -2499,12 +2499,12 @@ a {
 p {
   font-family: inherit;
   font-weight: 300;
-  font-size: 1.125rem;
-  line-height: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.25rem;
   margin-bottom: 1.25rem;
   text-rendering: optimizeLegibility; }
   p.lead {
-    font-size: 1.34375rem;
+    font-size: 1.21875rem;
     line-height: 1.6; }
   p aside {
     font-size: 0.875rem;
@@ -2583,8 +2583,8 @@ code {
 
 /* Lists */
 ul, ol, dl {
-  font-size: 1.125rem;
-  line-height: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.25rem;
   margin-bottom: 1.25rem;
   list-style-position: outside;
   font-family: inherit; }
@@ -2657,7 +2657,7 @@ blockquote {
       color: #555555; }
 
 blockquote, blockquote p {
-  line-height: 1.5rem;
+  line-height: 1.25rem;
   color: #6f6f6f; }
 
 /* Microformats */
