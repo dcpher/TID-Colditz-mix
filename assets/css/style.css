@@ -60,7 +60,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Museo Sans", Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-weight: 100;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -1533,7 +1533,7 @@ button, .button {
   border-width: 0;
   cursor: pointer;
   font-family: "Museo Sans", Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-weight: 100;
   line-height: normal;
   margin: 0 0 1.25rem;
   position: relative;
@@ -1730,7 +1730,7 @@ label {
   color: #4d4d4d;
   cursor: pointer;
   display: block;
-  font-weight: 300;
+  font-weight: 100;
   line-height: 1.5;
   margin-bottom: 0;
   /* Styles for required inputs */ }
@@ -1981,7 +1981,7 @@ fieldset {
   margin-top: -1px;
   margin-bottom: 1rem;
   font-size: 0.75rem;
-  font-weight: 300;
+  font-weight: 100;
   font-style: italic;
   background: #f04124;
   color: #FFFFFF; }
@@ -1994,7 +1994,7 @@ span.error, small.error {
   margin-top: -1px;
   margin-bottom: 1rem;
   font-size: 0.75rem;
-  font-weight: 300;
+  font-weight: 100;
   font-style: italic;
   background: #f04124;
   color: #FFFFFF; }
@@ -2011,7 +2011,7 @@ span.error, small.error {
   margin-top: -1px;
   margin-bottom: 1rem;
   font-size: 0.75rem;
-  font-weight: 300;
+  font-weight: 100;
   font-style: italic;
   background: #f04124;
   color: #FFFFFF; }
@@ -2049,7 +2049,7 @@ label.error {
       display: block; }
 
 .label {
-  font-weight: 300;
+  font-weight: 100;
   font-family: "Museo Sans", Helvetica, Arial, sans-serif;
   text-align: center;
   text-decoration: none;
@@ -2153,7 +2153,7 @@ table {
 .has-tip {
   border-bottom: none;
   cursor: help;
-  font-weight: 300;
+  font-weight: 100;
   color: #00bae4; }
   .has-tip:hover, .has-tip:focus {
     border-bottom: none;
@@ -2165,7 +2165,7 @@ table {
   display: none;
   position: absolute;
   z-index: 1006;
-  font-weight: 300;
+  font-weight: 100;
   font-size: 0.875rem;
   line-height: 1.3;
   padding: 0.75rem;
@@ -2201,7 +2201,7 @@ table {
   display: block;
   font-size: 0.625rem;
   color: #777777;
-  font-weight: 300; }
+  font-weight: 100; }
 
 @media only screen and (min-width:40.063em) {
   .tooltip > .nub {
@@ -2296,7 +2296,7 @@ meta.foundation-mq-topbar {
       font-size: 1rem;
       margin: 0; }
       .top-bar .name h1 a, .top-bar .name h2 a, .top-bar .name h3 a, .top-bar .name h4 a, .top-bar .name #quick-quote h3 a, #quick-quote .top-bar .name h3 a, .top-bar .name p a, .top-bar .name span a {
-        font-weight: 300;
+        font-weight: 100;
         color: #404040;
         width: 75%;
         display: block;
@@ -2373,7 +2373,7 @@ meta.foundation-mq-topbar {
       padding-left: 1.35417rem;
       font-family: "Museo Sans", Helvetica, Arial, sans-serif;
       font-size: 1rem;
-      font-weight: 300;
+      font-weight: 100;
       text-transform: none; }
       .top-bar-section ul li > a.button {
         font-size: 1rem;
@@ -2517,10 +2517,10 @@ meta.foundation-mq-topbar {
       width: 100%;
       height: auto; }
       .top-bar-section .dropdown li a {
-        font-weight: 300;
+        font-weight: 100;
         padding: 8px 1.35417rem; }
         .top-bar-section .dropdown li a.parent-link {
-          font-weight: 300; }
+          font-weight: 100; }
       .top-bar-section .dropdown li.title h5, .top-bar-section .dropdown li.parent-link {
         margin-bottom: 0;
         margin-top: 0;
@@ -2860,7 +2860,7 @@ a {
 /* Default paragraph styles */
 p {
   font-family: inherit;
-  font-weight: 300;
+  font-weight: 100;
   font-size: 1.125rem;
   line-height: 1.5rem;
   margin-bottom: 1.25rem;
@@ -2876,7 +2876,7 @@ p {
 /* Default header styles */
 h1, h2, h3, h4, #quick-quote h3, h5, h6 {
   font-family: "Museo Sans", Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-weight: 100;
   font-style: normal;
   color: #222222;
   text-rendering: optimizeLegibility;
@@ -2909,7 +2909,7 @@ h6 {
 .subheader {
   line-height: 1.4;
   color: #6f6f6f;
-  font-weight: 300;
+  font-weight: 100;
   margin-top: 0.2rem;
   margin-bottom: 0.5rem; }
 
@@ -2935,7 +2935,7 @@ small {
 
 code {
   font-family: Consolas, "Liberation Mono", Courier, monospace;
-  font-weight: 300;
+  font-weight: 100;
   color: #333333;
   background-color: #f8f8f8;
   border-width: 1px;
@@ -3400,6 +3400,13 @@ th.hide-for-touch {
 
 @font-face {
   font-family: 'Museo Sans';
+  src: url('/Content/styles/fonts/MuseoSans_100-webfont.eot');
+  src: url('/Content/styles/fonts/MuseoSans_100-webfont.eot?#iefix') format('embedded-opentype'), url('/Content/styles/fonts/MuseoSans_100-webfont.woff2') format('woff2'), url('/Content/styles/fonts/MuseoSans_100-webfont.woff') format('woff'), url('/Content/styles/fonts/MuseoSans_100-webfont.ttf') format('truetype'), url('/Content/styles/fonts/MuseoSans_100-webfont.svg#museo_sans100') format('svg');
+  font-weight: 100;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Museo Sans';
   src: url('/Content/styles/fonts/MuseoSans_300-webfont.eot');
   src: url('/Content/styles/fonts/MuseoSans_300-webfont.eot?#iefix') format('embedded-opentype'), url('/Content/styles/fonts/MuseoSans_300-webfont.woff2') format('woff2'), url('/Content/styles/fonts/MuseoSans_300-webfont.woff') format('woff'), url('/Content/styles/fonts/MuseoSans_300-webfont.ttf') format('truetype'), url('/Content/styles/fonts/MuseoSans_300-webfont.svg#museo_sans300') format('svg');
   font-weight: 300;
@@ -3410,13 +3417,6 @@ th.hide-for-touch {
   src: url('/Content/styles/fonts/MuseoSans_500-webfont.eot');
   src: url('/Content/styles/fonts/MuseoSans_500-webfont.eot?#iefix') format('embedded-opentype'), url('/Content/styles/fonts/MuseoSans_500-webfont.woff2') format('woff2'), url('/Content/styles/fonts/MuseoSans_500-webfont.woff') format('woff'), url('/Content/styles/fonts/MuseoSans_500-webfont.ttf') format('truetype'), url('/Content/styles/fonts/MuseoSans_500-webfont.svg#museo_sans500') format('svg');
   font-weight: 500;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Museo Sans';
-  src: url('/Content/styles/fonts/MuseoSans_700-webfont.eot');
-  src: url('/Content/styles/fonts/MuseoSans_700-webfont.eot?#iefix') format('embedded-opentype'), url('/Content/styles/fonts/MuseoSans_700-webfont.woff2') format('woff2'), url('/Content/styles/fonts/MuseoSans_700-webfont.woff') format('woff'), url('/Content/styles/fonts/MuseoSans_700-webfont.ttf') format('truetype'), url('/Content/styles/fonts/MuseoSans_700-webfont.svg#museo_sans700') format('svg');
-  font-weight: 700;
   font-style: normal; }
 
 h1, h2 {
@@ -3967,7 +3967,7 @@ span.submit-arw:before {
     border-width: 0;
     cursor: pointer;
     font-family: "Museo Sans", Helvetica, Arial, sans-serif;
-    font-weight: 300;
+    font-weight: 100;
     line-height: normal;
     margin: 0 0 1.25rem;
     position: relative;
@@ -4732,7 +4732,7 @@ hr {
           border-width: 0;
           cursor: pointer;
           font-family: "Museo Sans", Helvetica, Arial, sans-serif;
-          font-weight: 300;
+          font-weight: 100;
           line-height: normal;
           margin: 0 0 1.25rem;
           position: relative;
@@ -4886,7 +4886,7 @@ hr {
         border-width: 0;
         cursor: pointer;
         font-family: "Museo Sans", Helvetica, Arial, sans-serif;
-        font-weight: 300;
+        font-weight: 100;
         line-height: normal;
         margin: 0 0 1.25rem;
         position: relative;
