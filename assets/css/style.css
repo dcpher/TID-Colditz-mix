@@ -4383,29 +4383,29 @@ nav .top-bar-section ul li a:hover {
     min-height: 44px;
     font-size: 1rem; }
     .benefits-bar ul li.trusted {
-      background-image: url('/Media/Default/main/icons/icon_trust_1mil.png'); }
+      background-image: url('i/icons/icon_trust_1mil.png'); }
     .benefits-bar ul li.award {
-      background-image: url('/Media/Default/main/icons/icon_trust_awards.png'); }
+      background-image: url('i/icons/icon_trust_awards.png'); }
     .benefits-bar ul li.owned {
-      background-image: url('/Media/Default/main/icons/icon_trust_ozzie.png'); }
+      background-image: url('i/icons/icon_trust_ozzie.png'); }
     .benefits-bar ul li.secure {
-      background-image: url('/Media/Default/main/icons/icon_trust_secure.png'); }
+      background-image: url('i/icons/icon_trust_secure.png'); }
     .benefits-bar ul li.lloyds {
       background-size: contain;
       background-position: right;
       padding-left: 0;
-      background-image: url('/Media/Default/main/icons/icon_trust_lloyds.png'); }
+      background-image: url('i/icons/icon_trust_lloyds.png'); }
     @media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
       .benefits-bar ul li.trusted {
-        background-image: url('/Media/Default/main/icons/icon_trust_1mil@x2.png'); }
+        background-image: url('i/icons/icon_trust_1mil@x2.png'); }
       .benefits-bar ul li.award {
-        background-image: url('/Media/Default/main/icons/icon_trust_awards@x2.png'); }
+        background-image: url('i/icons/icon_trust_awards@x2.png'); }
       .benefits-bar ul li.owned {
-        background-image: url('/Media/Default/main/icons/icon_trust_ozzie@x2.png'); }
+        background-image: url('i/icons/icon_trust_ozzie@x2.png'); }
       .benefits-bar ul li.secure {
-        background-image: url('/Media/Default/main/icons/icon_trust_secure@x2.png'); }
+        background-image: url('i/icons/icon_trust_secure@x2.png'); }
       .benefits-bar ul li.lloyds {
-        background-image: url('/Media/Default/main/icons/icon_trust_lloyds@x2.png'); } }
+        background-image: url('i/icons/icon_trust_lloyds@x2.png'); } }
   @media only screen and (max-width: 40em) {
     .benefits-bar ul li {
       padding-bottom: 0.5rem; }
@@ -4532,24 +4532,24 @@ hr {
 .benefits-panel .text-with-img.cancellation, .benefits-panel .text-with-img.luggage, .benefits-panel .text-with-img.evacuation, .benefits-panel .text-with-img.medical-help, .benefits-panel .text-with-img.accident, .benefits-panel .text-with-img.passport-lost {
   background-size: 66px 82px; }
 .benefits-panel .text-with-img.cancellation {
-  background-image: url('/Media/Default/main/icons/benefits_1_b.png'); }
+  background-image: url('i/icons/benefits_1_b.png'); }
 .benefits-panel .text-with-img.luggage {
-  background-image: url('/Media/Default/main/icons/benefits_2_b.png'); }
+  background-image: url('i/icons/benefits_2_b.png'); }
 .benefits-panel .text-with-img.evacuation {
-  background-image: url('/Media/Default/main/icons/benefits_3_b.png'); }
+  background-image: url('i/icons/benefits_3_b.png'); }
 .benefits-panel .text-with-img.medical-help {
-  background-image: url('/Media/Default/main/icons/benefits_4_b.png'); }
+  background-image: url('i/icons/benefits_4_b.png'); }
 .benefits-panel .text-with-img.accident {
-  background-image: url('/Media/Default/main/icons/benefits_5_b.png'); }
+  background-image: url('i/icons/benefits_5_b.png'); }
 .benefits-panel .text-with-img.passport-lost {
-  background-image: url('/Media/Default/main/icons/benefits_6_b.png'); }
+  background-image: url('i/icons/benefits_6_b.png'); }
 @media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
   .benefits-panel .text-with-img.cancellation {
-    background-image: url('/Media/Default/main/icons/benefits_1_b@x2.png'); }
+    background-image: url('i/icons/benefits_1_b@x2.png'); }
   .benefits-panel .text-with-img.luggage {
-    background-image: url('/Media/Default/main/icons/benefits_2_b@x2.png'); }
+    background-image: url('i/icons/benefits_2_b@x2.png'); }
   .benefits-panel .text-with-img.evacuation {
-    background-image: url('/Media/Default/main/icons/benefits_3_b@x2.png'); } }
+    background-image: url('i/icons/benefits_3_b@x2.png'); } }
 @media only screen and (max-width: 40em) {
   .benefits-panel .text-with-img.cancellation, .benefits-panel .text-with-img.luggage, .benefits-panel .text-with-img.evacuation, .benefits-panel .text-with-img.medical-help, .benefits-panel .text-with-img.accident, .benefits-panel .text-with-img.passport-lost {
     background: none; } }
@@ -4559,18 +4559,18 @@ hr {
   .homepage .amt-panel .text-with-img.amt-medical, .homepage .amt-panel .text-with-img.amt-cover, .homepage .amt-panel .text-with-img.amt-flexible {
     background-size: 65px 65px; }
   .homepage .amt-panel .text-with-img.amt-medical {
-    background-image: url('/Media/Default/main/icons/amt_benefit_1.png'); }
+    background-image: url('i/icons/amt_benefit_1.png'); }
   .homepage .amt-panel .text-with-img.amt-cover {
-    background-image: url('/Media/Default/main/icons/amt_benefit_2.png'); }
+    background-image: url('i/icons/amt_benefit_2.png'); }
   .homepage .amt-panel .text-with-img.amt-flexible {
-    background-image: url('/Media/Default/main/icons/amt_benefit_3.png'); }
+    background-image: url('i/icons/amt_benefit_3.png'); }
   @media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
     .homepage .amt-panel .text-with-img.medical-help {
-      background-image: url('/Media/Default/main/icons/benefits_4_b@x2.png'); }
+      background-image: url('i/icons/benefits_4_b@x2.png'); }
     .homepage .amt-panel .text-with-img.accident {
-      background-image: url('/Media/Default/main/icons/benefits_5_b@x2.png'); }
+      background-image: url('i/icons/benefits_5_b@x2.png'); }
     .homepage .amt-panel .text-with-img.passport-lost {
-      background-image: url('/Media/Default/main/icons/benefits_6_b@x2.png'); } }
+      background-image: url('i/icons/benefits_6_b@x2.png'); } }
   @media only screen and (max-width: 40em) {
     .homepage .amt-panel .text-with-img.amt-medical, .homepage .amt-panel .text-with-img.amt-cover, .homepage .amt-panel .text-with-img.amt-flexible {
       background: none; } }
