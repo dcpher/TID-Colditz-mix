@@ -4297,8 +4297,9 @@ span.submit-arw:before {
     padding-right: 0; }
     #homepage-header.header-panel p {
       font-size: 2rem;
-      line-height: 1.4;
-      letter-spacing: -0.0625rem; }
+      line-height: 1.3;
+      letter-spacing: -0.0625rem;
+      margin-top: -0.9375rem; }
 
 #homepage-header h1 {
   text-align: center; }
