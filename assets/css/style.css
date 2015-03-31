@@ -4627,11 +4627,12 @@ hr {
     margin-top: -0.9375rem; }
 
 .campaign-header {
-  border-bottom: 1px solid rgba(64, 64, 64, 0.09);
-  font-size: 6.125rem;
-  text-shadow: 1px 1px 1px rgba(64, 64, 64, 0.3);
-  font-weight: 300;
-  line-height: 1.0; }
+  border-bottom: 1px solid rgba(64, 64, 64, 0.09); }
+  .campaign-header h1 {
+    font-size: 6.125rem;
+    text-shadow: 1px 1px 1px rgba(64, 64, 64, 0.3);
+    font-weight: 300;
+    line-height: 1.0; }
 
 @media only screen and (max-width: 40em) {
   #campaign-qqw {
