@@ -128,7 +128,6 @@
     color: $color-dark-grey
 
     
-  
   .travelling-as
     //width: 30%
     input[type='text']
@@ -190,4 +189,23 @@
       
     @media #{$medium-up}
       //margin-top: rem-calc(48)
+  
+  // QQW icon styles
+  .input-group
+    position: relative
+    .icon-tid-menu:before
+      content: '\f03a'
+      font: normal normal normal 16px/1 FontAwesome
+      position: absolute
+      right: rem-calc(20)
+      bottom: rem-calc(16)
+      color: $color-blue
+      
+    .icon-tid-calendar:before
+      content: '\f073'
+      font: normal normal normal 16px/1 FontAwesome
+      position: absolute
+      right: rem-calc(20)
+      bottom: rem-calc(16)
+      color: $color-blue
 

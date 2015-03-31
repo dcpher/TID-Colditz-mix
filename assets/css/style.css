@@ -3758,7 +3758,8 @@ span.submit-arw:before {
   font: normal normal normal 14px/1 FontAwesome;
   position: absolute;
   right: 1.25rem;
-  top: 0.125rem; }
+  top: 0.125rem;
+  color: #FFF; }
 
 .qqw-full-width #quick-quote .destination.alpha {
   padding-left: 0.75rem;
@@ -4019,6 +4020,22 @@ span.submit-arw:before {
       background: linear-gradient(to bottom, #004e77 0%, #003a58 100%);
       border: 1px solid black;
       text-shadow: 1px 1px 10px rgba(0, 184, 226, 0.5); }
+  #quick-quote .input-group {
+    position: relative; }
+    #quick-quote .input-group .icon-tid-menu:before {
+      content: '\f03a';
+      font: normal normal normal 16px/1 FontAwesome;
+      position: absolute;
+      right: 1.25rem;
+      bottom: 1rem;
+      color: #00bae4; }
+    #quick-quote .input-group .icon-tid-calendar:before {
+      content: '\f073';
+      font: normal normal normal 16px/1 FontAwesome;
+      position: absolute;
+      right: 1.25rem;
+      bottom: 1rem;
+      color: #00bae4; }
 
 .blue-panel {
   border-style: none;
