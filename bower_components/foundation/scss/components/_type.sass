@@ -65,3 +65,10 @@ h1, h2, h3, h4, h5, div, p, b, span
     font-size: rem-calc(110)
     line-height: 1.0
     letter-spacing: rem-calc(-5)
+  
+@media #{$small-only}
+  h1, h2
+    letter-spacing: rem-calc(-1)
+
+  h3, h4
+    letter-spacing: rem-calc(0)

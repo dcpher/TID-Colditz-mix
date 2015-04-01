@@ -3490,6 +3490,12 @@ h1, h2, h3, h4, h5, div, p, b, span {
     line-height: 1.0;
     letter-spacing: -0.3125rem; } }
 
+@media only screen and (max-width: 40em) {
+  h1, h2 {
+    letter-spacing: -0.0625rem; }
+  h3, h4 {
+    letter-spacing: 0; } }
+
 .button, button {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -4330,8 +4336,6 @@ span.submit-arw:before {
     padding-bottom: 3.75rem;
     padding-left: 0;
     padding-right: 0; }
-    #homepage-header.header-panel p {
-      margin-top: -0.9375rem; }
 
 #homepage-header h1 {
   text-align: center; }
@@ -4382,10 +4386,6 @@ span.submit-arw:before {
         -webkit-transform: translateY(40%);
         -ms-transform: translateY(40%);
         transform: translateY(40%); } }
-    .content-panel .row ul li a {
-      color: #777; }
-    .content-panel .row ul li a:hover {
-      color: #00bae4; }
 
 nav .logo {
   height: 40px;
@@ -4575,7 +4575,8 @@ hr {
   border-top: 1px solid rgba(64, 64, 64, 0.09); }
 
 .homepage .benefits-panel {
-  border-top: 1px solid rgba(64, 64, 64, 0.09); }
+  border-top: 1px solid rgba(64, 64, 64, 0.09);
+  padding: inherit; }
 
 .benefits-panel .text-with-img.cancellation, .benefits-panel .text-with-img.luggage, .benefits-panel .text-with-img.evacuation, .benefits-panel .text-with-img.medical-help, .benefits-panel .text-with-img.accident, .benefits-panel .text-with-img.passport-lost {
   background-size: 66px 82px; }
@@ -4603,7 +4604,8 @@ hr {
     background: none; } }
 
 .homepage .amt-panel {
-  border-top: 1px solid rgba(64, 64, 64, 0.09); }
+  border-top: 1px solid rgba(64, 64, 64, 0.09);
+  padding: inherit; }
   .homepage .amt-panel .text-with-img.amt-medical, .homepage .amt-panel .text-with-img.amt-cover, .homepage .amt-panel .text-with-img.amt-flexible {
     background-size: 65px 65px; }
   .homepage .amt-panel .text-with-img.amt-medical {
