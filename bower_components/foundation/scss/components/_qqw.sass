@@ -3,6 +3,7 @@
     
 // Full Width QQWidget
 .qqw-full-width
+  
   #quick-quote
     .destination.alpha
       @include grid-column(5)
@@ -36,9 +37,6 @@
             padding-left: rem-calc(8)
           .chikdren-go-free
             margin-bottom: rem-calc(16)
-            
-
-      
             
             
           
@@ -129,14 +127,12 @@
 
     
   .travelling-as
-    //width: 30%
     input[type='text']
       margin-bottom: 4px
     .sub-group
       float: left
     
     .children-go-free
-      float: left
       clear: left
       color: $color-white
       &:hover
@@ -161,10 +157,14 @@
       +border-radius(2px)
       margin-right: rem-calc(8)
       margin-top: rem-calc(8)
+      @media #{$small-only}
+        padding: rem-calc(8) rem-calc(14)
       a
         font-size: rem-calc(16)
         font-weight: 500
         margin-left: 4px
+        @media #{$small-only}
+          font-size: rem-calc(22)
   
   // submit button
   .continue
