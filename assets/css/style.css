@@ -4329,37 +4329,6 @@ span.submit-arw:before {
   img.small-full-width {
     width: 100%; } }
 
-#homepage-header {
-  margin-bottom: 0; }
-  #homepage-header.header-panel {
-    padding-top: 3.125rem;
-    padding-bottom: 3.75rem;
-    padding-left: 0;
-    padding-right: 0; }
-
-#homepage-header h1 {
-  text-align: center; }
-
-@media only screen and (max-width: 40em) {
-  #homepage-header.header-panel {
-    padding-top: 0;
-    padding-bottom: 2rem; }
-    #homepage-header.header-panel .title:first-child {
-      background-color: #005581;
-      margin: 0;
-      padding: 5% 2.5%;
-      width: 100%;
-      margin-bottom: 2rem; }
-    #homepage-header.header-panel h1 {
-      font-size: 1.75rem;
-      letter-spacing: -2px;
-      margin-bottom: 0;
-      text-align: left; }
-    #homepage-header.header-panel h1:after {
-      content: "Get a quote";
-      color: #00bae4;
-      display: block; } }
-
 @media only screen and (min-width:40.063em) {
   #header.header-panel {
     padding-top: 5rem;
@@ -4369,7 +4338,8 @@ span.submit-arw:before {
     #header.header-panel p {
       font-size: 2rem;
       line-height: 1.3;
-      letter-spacing: -0.0625rem; } }
+      letter-spacing: -0.0625rem;
+      font-weight: 100; } }
 @media only screen and (max-width: 40em) {
   #header.header-panel p {
     font-size: 1.5rem;
@@ -4574,12 +4544,42 @@ hr {
     border: 1px solid #00a5cb;
     border-bottom: 0px; }
 
+#homepage-header {
+  margin-bottom: 0; }
+  #homepage-header.header-panel {
+    padding-top: 3.125rem;
+    padding-bottom: 3.75rem;
+    padding-left: 0;
+    padding-right: 0; }
+
+#homepage-header h1 {
+  text-align: center; }
+
+@media only screen and (max-width: 40em) {
+  #homepage-header.header-panel {
+    padding-top: 0;
+    padding-bottom: 2rem; }
+    #homepage-header.header-panel .title:first-child {
+      background-color: #005581;
+      margin: 0;
+      padding: 5% 2.5%;
+      width: 100%;
+      margin-bottom: 2rem; }
+    #homepage-header.header-panel h1 {
+      font-size: 1.75rem;
+      letter-spacing: -2px;
+      margin-bottom: 0;
+      text-align: left; }
+    #homepage-header.header-panel h1:after {
+      content: "Get a quote";
+      color: #00bae4;
+      display: block; } }
+
 .homepage .benefits-bar {
   border-top: 1px solid rgba(64, 64, 64, 0.09); }
 
 .homepage .benefits-panel {
-  border-top: 1px solid rgba(64, 64, 64, 0.09);
-  padding: inherit; }
+  border-top: 1px solid rgba(64, 64, 64, 0.09); }
 
 .benefits-panel .text-with-img.cancellation, .benefits-panel .text-with-img.luggage, .benefits-panel .text-with-img.evacuation, .benefits-panel .text-with-img.medical-help, .benefits-panel .text-with-img.accident, .benefits-panel .text-with-img.passport-lost {
   background-size: 66px 82px; }
@@ -4607,8 +4607,7 @@ hr {
     background: none; } }
 
 .homepage .amt-panel {
-  border-top: 1px solid rgba(64, 64, 64, 0.09);
-  padding: inherit; }
+  border-top: 1px solid rgba(64, 64, 64, 0.09); }
   .homepage .amt-panel .text-with-img.amt-medical, .homepage .amt-panel .text-with-img.amt-cover, .homepage .amt-panel .text-with-img.amt-flexible {
     background-size: 65px 65px; }
   .homepage .amt-panel .text-with-img.amt-medical {
