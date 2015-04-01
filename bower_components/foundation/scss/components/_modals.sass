@@ -1,0 +1,35 @@
+// modals
+
+.javascript-popup,
+#do-not-travel-modal
+  z-index: 50
+  position: fixed
+  left: 50%
+  top: 10px
+  $width: 500px
+  width: $width
+  height: auto
+  margin-left: $width * -0.5
+  background: #fff
+  padding: 20px
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5)
+  h2, h3
+    font-size: rem-calc(32)
+    margin-bottom: rem-calc(8)
+  p
+    color: $color-black
+    margin-top: 0
+  #popup-content
+    input[type='submit']
+      @extend .button
+    .forgotten-password
+      display: block
+      border-bottom: 1px solid $color-light-grey
+      padding-bottom: rem-calc(8)
+      margin-bottom: rem-calc(16)
+  .close
+    float: right
+  @media #{$small-only}
+    $width: 95%
+    width: $width
+    margin-left: $width * -0.5

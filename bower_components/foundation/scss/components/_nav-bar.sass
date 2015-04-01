@@ -19,7 +19,6 @@ nav
               color: $color-white
               background-color: $color-blue
               
-              
         //transition effect for nav buttons
         a
           +transition
@@ -28,7 +27,6 @@ nav
           background-color: $color-dark-grey 
           color: $color-white
       
-        
         // Menu backgroud colour override
         @media #{$small-only}
           background-color: $color-dark-grey
@@ -36,6 +34,7 @@ nav
           a
             color: $color-white
 
-
-        
-    
+    // TODO: Do this in the way Foundation would like us to
+  @media all and (max-width: 780px) and (min-width: 642px)
+    &.top-bar section.top-bar-section ul.right li a
+      padding: 0 rem-calc(8)
