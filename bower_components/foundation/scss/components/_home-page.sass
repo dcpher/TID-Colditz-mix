@@ -43,21 +43,35 @@
 
 // Target explicit panels for custom styles
 
-// tripwise-panel
+// benefits-bar
 .homepage .benefits-bar
   border-top: 1px solid rgba($color-dark-grey, 0.09)
 
 // tripwise-panel
 .homepage .tripwise-panel
+  li
+    a 
+      p, .learn-more
+        color: $color-mid-grey
+    a
+      h4:hover, p:hover, .learn-more:hover
+        color: $color-blue
  
 // benefits-panel
 .homepage .benefits-panel  
   border-top: 1px solid rgba($color-dark-grey, 0.09)
+  padding: inherit
   
 .benefits-panel  
   
   //text with image list
   .text-with-img
+    a 
+      p, .learn-more
+        color: $color-mid-grey
+    a
+      h4:hover, p:hover, .learn-more:hover
+        color: $color-blue
   
     // benefits icons
     &.cancellation, &.luggage, &.evacuation, &.medical-help, &.accident, &.passport-lost
@@ -96,6 +110,7 @@
 // amt-panel
 .homepage .amt-panel
   border-top: 1px solid rgba($color-dark-grey, 0.09)
+  padding: inherit
   
   //text with image list
   .text-with-img

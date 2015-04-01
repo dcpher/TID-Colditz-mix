@@ -4578,9 +4578,19 @@ hr {
 .homepage .benefits-bar {
   border-top: 1px solid rgba(64, 64, 64, 0.09); }
 
-.homepage .benefits-panel {
-  border-top: 1px solid rgba(64, 64, 64, 0.09); }
+.homepage .tripwise-panel li a p, .homepage .tripwise-panel li a .learn-more {
+  color: #777; }
+.homepage .tripwise-panel li a h4:hover, .homepage .tripwise-panel li a p:hover, .homepage .tripwise-panel li a .learn-more:hover {
+  color: #00bae4; }
 
+.homepage .benefits-panel {
+  border-top: 1px solid rgba(64, 64, 64, 0.09);
+  padding: inherit; }
+
+.benefits-panel .text-with-img a p, .benefits-panel .text-with-img a .learn-more {
+  color: #777; }
+.benefits-panel .text-with-img a h4:hover, .benefits-panel .text-with-img a p:hover, .benefits-panel .text-with-img a .learn-more:hover {
+  color: #00bae4; }
 .benefits-panel .text-with-img.cancellation, .benefits-panel .text-with-img.luggage, .benefits-panel .text-with-img.evacuation, .benefits-panel .text-with-img.medical-help, .benefits-panel .text-with-img.accident, .benefits-panel .text-with-img.passport-lost {
   background-size: 66px 82px; }
 .benefits-panel .text-with-img.cancellation {
@@ -4607,7 +4617,8 @@ hr {
     background: none; } }
 
 .homepage .amt-panel {
-  border-top: 1px solid rgba(64, 64, 64, 0.09); }
+  border-top: 1px solid rgba(64, 64, 64, 0.09);
+  padding: inherit; }
   .homepage .amt-panel .text-with-img.amt-medical, .homepage .amt-panel .text-with-img.amt-cover, .homepage .amt-panel .text-with-img.amt-flexible {
     background-size: 65px 65px; }
   .homepage .amt-panel .text-with-img.amt-medical {
