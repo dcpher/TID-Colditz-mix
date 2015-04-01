@@ -1,50 +1,3 @@
-// header-panel
-
-#homepage-header
-  margin-bottom: 0
-  
-  &.header-panel
-    padding-top: rem-calc(50)
-    padding-bottom: rem-calc(60)
-    padding-left: 0
-    padding-right: 0
-    
-    p
-      margin-top: rem-calc(-15)
-      
-  
-
-
-#homepage-header      
-    h1
-      text-align: center
-    
-#homepage-header      
-  @media #{$small-only}
-    &.header-panel
-      padding-top: rem-calc(0)
-      padding-bottom: rem-calc(32)
-      
-      .title:first-child
-        background-color: $color-dark-blue
-        margin: 0
-        padding: 5% 2.5%
-        width: 100%
-        margin-bottom: rem-calc(32)
-      
-      h1
-        font-size: rem-calc(28)
-        letter-spacing: -2px
-        margin-bottom: 0
-        text-align: left
-        
-      
-      h1:after
-        content: "Get a quote"
-        color: $color-blue
-        display: block
-      
-      
 // All header panel highlight paragraphs
 #header
   &.header-panel
@@ -58,6 +11,8 @@
         font-size: rem-calc(32)
         line-height: 1.3
         letter-spacing: rem-calc(-1)
+        font-weight: 100
+        
 
     @media #{$small-only}
       p
