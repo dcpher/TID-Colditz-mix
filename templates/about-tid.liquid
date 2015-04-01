@@ -1,0 +1,75 @@
+{% block title %}Travel Insurance to Bali: From $22{% endblock %}
+{% block content %}
+<style>
+
+  
+  @media all and (min-width: 40em) {
+#header {
+    background: url('/Media/Default/main/hero-images/about_desktop.jpg') no-repeat right center #00bae4;
+    background-size: cover;
+  }
+
+}
+@media all and (max-width: 64em) {
+#header {
+    background: url('/Media/Default/main/hero-images/about_tablet.jpg') no-repeat right center #00bae4;
+    background-size: cover;
+  }
+
+}
+@media all and (max-width: 40em) {
+#header {
+    background: url('/Media/Default/main/hero-images/about_phone.jpg') no-repeat right center #00bae4;
+    background-size: cover;
+  }
+
+}
+
+</style>
+<article class="content-item">
+<div class="header-panel panel campaign-header" id="header">
+  <div class="row">
+    <div class="small-10 medium-10 large-10 column">
+      <h1 class="white">About TID</h1>
+      <p class="white">Travel Insurance. It's all we do. We are experts and are proud to be there when our customers are most in need.</p>      
+    </div>
+  </div>
+</div>
+  
+
+  
+<div class="content-panel content" id="campaign-qqw">
+  <div class="row header">
+    
+    
+  <!--   TID QQWidget Container    -->
+
+    <div class="row qqw-full-width blue-panel">
+      <div class="small-12 column">
+
+        <!--  Include QQWidget  -->
+        {% include "qqw" %}
+
+      </div> 
+      <div class="benefits-bar blue left">
+
+        <!--  Include Benefits Bar  -->
+        {% include "benefits-bar" %}
+
+      </div>  
+    </div>
+
+  <!-- QQW Container END -->
+    
+    
+  </div>
+</div>
+  
+<div class="content-panel content benefits-panel">  
+  <!-- Include Benefits Panel Widget -->
+  {% include "benefits-panel" %}  
+</div>  
+  
+</article>
+
+{% endblock %}

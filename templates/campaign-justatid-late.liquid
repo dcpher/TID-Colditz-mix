@@ -1,0 +1,79 @@
+{% block title %}Travel Insurance to Bali: From $22{% endblock %}
+{% block content %}
+<style>
+  .campaign-header {
+    border-bottom: 0;
+  }
+  
+  @media all and (min-width: 40em) {
+#header {
+    background: url('/Media/Default/main/hero-images/campaign_justatid_late_desktop.gif') no-repeat center bottom #00bae4;
+    background-size: cover;
+  }
+
+}
+@media all and (max-width: 64em) {
+#header {
+    background: url('/Media/Default/main/hero-images/campaign_justatid_late_tablet.gif') no-repeat center bottom #00bae4;
+    background-size: cover;
+  }
+
+}
+@media all and (max-width: 40em) {
+#header {
+    background: url('/Media/Default/main/hero-images/campaign_justatid_late_phone.gif') no-repeat right bottom #00bae4;
+    background-size: cover;
+  }
+
+}
+
+</style>
+<article class="content-item">
+<div class="header-panel panel campaign-header" id="header">
+  <div class="row">
+    <div class="small-10 medium-10 large-8 column">
+      <h1 class="dark-grey">Save just a TID
+      <div class="white">before takeoff.</div></h1>
+      <p class="dark-grey">Can’t go on your trip? Flight cancelled due to a volcanic eruption? Make sure you’re just a TID prepared for the unexpected.</p>
+      
+    </div>
+  </div>
+</div>
+  
+
+  
+<div class="content-panel content" id="campaign-qqw">
+  <div class="row header">
+    
+    
+  <!--   TID QQWidget Container    -->
+
+    <div class="row qqw-full-width blue-panel">
+      <div class="small-12 column">
+
+        <!--  Include QQWidget  -->
+        {% include "qqw" %}
+
+      </div> 
+      <div class="benefits-bar blue left">
+
+        <!--  Include Benefits Bar  -->
+        {% include "benefits-bar" %}
+
+      </div>  
+    </div>
+
+  <!-- QQW Container END -->
+    
+    
+  </div>
+</div>
+  
+<div class="content-panel content benefits-panel">  
+  <!-- Include Benefits Panel Widget -->
+  {% include "benefits-panel" %}  
+</div>  
+  
+</article>
+
+{% endblock %}

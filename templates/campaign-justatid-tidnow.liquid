@@ -1,0 +1,60 @@
+{% block title %}Travel Insurance to Bali: From $22{% endblock %}
+{% block content %}
+<style>
+  
+#header {
+    background: #00bae4;
+  }
+
+
+</style>
+<article class="content-item">
+<div class="header-panel panel campaign-header" id="header">
+  <div class="row">
+    <div class="small-10 medium-10 large-8 column">
+      <h1 class="dark-grey">When things go</br> 
+just a TID wrong,
+      <div class="white">you need TID.</div></h1>
+      <p class="white">Trusted by over 1 million Aussies</p>
+      
+    </div>
+  </div>
+</div>
+  
+
+  
+<div class="content-panel content" id="campaign-qqw">
+  <div class="row header">
+    
+    
+  <!--   TID QQWidget Container    -->
+
+    <div class="row qqw-full-width blue-panel">
+      <div class="small-12 column">
+
+        <!--  Include QQWidget  -->
+        {% include "qqw" %}
+
+      </div> 
+      <div class="benefits-bar blue left">
+
+        <!--  Include Benefits Bar  -->
+        {% include "benefits-bar" %}
+
+      </div>  
+    </div>
+
+  <!-- QQW Container END -->
+    
+    
+  </div>
+</div>
+  
+<div class="content-panel content benefits-panel">  
+  <!-- Include Benefits Panel Widget -->
+  {% include "benefits-panel" %}  
+</div>  
+  
+</article>
+
+{% endblock %}
