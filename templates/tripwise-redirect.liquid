@@ -25,7 +25,7 @@
         </div>
       </div>
 
-      <div class="large-5 columns show-for-medium-up text-center">
+      <div class="large-5 columns show-for-large-up text-center">
         <a class="hero-phone" href="https://itunes.apple.com/au/app/id567334051"><img src="/Media/Default/main/tripwise/iPhone5s-on-the-road.png" class="x2" width="335" height="535"></a>
       </div>
     </div>
@@ -36,9 +36,6 @@
     background: url(/Media/Default/main/tripwise/bg-sunset-img.jpg) no-repeat center center;
     background-size: cover;
   }
-  .header-panel h1 {
-    font-size: 4rem; 
-  }
   .tripwise-logo {
     padding: 40px 0;
     display: block;
@@ -47,12 +44,78 @@
     padding-top: 60px;
     display: block;
   }
+  .feature-panel {
+    padding-top: 40px;
+    padding-bottom: 0px;
+    border-top: solid 1px #d1d0cb;
+    border-bottom: solid 1px #d1d0cb;    
+  }
+  .feature-content {
+    padding-top: 60px; 
+  }
+  .feature-block-icon {
+    width: 50px;
+    position: relative;
+    left: 0px;
+  }
+  .feature-block {
+    padding-left: 60px;
+  }
+  [data-icon] {
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+    position: absolute;
+  }
+  [data-icon="1"] {
+    background-image: url(/Media/Default/main/tripwise/phrasebook-icon.jpg);
+  }
+  [data-icon="2"] {
+    background-image: url(/Media/Default/main/tripwise/policy-icon.jpg);
+  }
+  [data-icon="3"] {
+    background-image: url(/Media/Default/main/tripwise/help-icon.jpg);
+  }
+  [data-icon="4"] {
+    background-image: url(/Media/Default/main/tripwise/alert-icon.jpg);
+  }
+  .quote, .quote p {
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.2em;
+    background-color: #F5F4F2;
+  }
+  .quote p.user {
+    font-size: 16px;
+  }
+  .quote span.stars {
+    //font-family: tripwise-icon;
+    color: #ea3091;
+  }
+  .quote-container {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    min-height: 80px;
+  }
+  .slider {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .footer-panel {
+     padding: 40px 0;
+  }
+  .footer-panel .tripwise-logo {
+     display: inline-block;
+  }
 </style>
     
 <div class="panel">
     <div class="row">
       <div class="slider large-8 large-offset-2 small-12 columns">
-        <ul data-orbit="">
+        <ul data-orbit="" class="quote-container">
           <li>
             <div class="quote">
               <p>"What a fantastic app, the stress of going to a country I've never been to has dwindled thanks to the tips and hints. Great job!"</p>
@@ -62,7 +125,7 @@
           </li>
 
           <li>
-            <div class="quote">
+            <div class="quote hide">
               <p>"Great app, full of very useful information for our forthcoming trip. Highly recommended."</p>
 
               <p class="user"><span class="stars">*****</span> - quidle Aug 2013</p>
@@ -70,7 +133,7 @@
           </li>
 
           <li>
-            <div class="quote">
+            <div class="quote hide">
               <p>"Highly recommended. Contains lots of useful travel tips and makes it easy to reference your policy if needed."</p>
 
               <p class="user"><span class="stars">*****</span> - b38st Sept 2013</p>
@@ -78,7 +141,7 @@
           </li>
 
           <li>
-            <div class="quote">
+            <div class="quote hide">
               <p>"This is perfect, all the information I ever needed for my trip in one easy to use app."</p>
 
               <p class="user"><span class="stars">*****</span> - Brett Stainlay Sept 2013</p>
@@ -86,7 +149,7 @@
           </li>
 
           <li>
-            <div class="quote">
+            <div class="quote hide">
               <p>"A very smooth &amp; comprehensive app that include lots of features, it even include a phrase book with audio of the countries languages you're visiting. I look forward to putting
               it to use in my travels."</p>
 
@@ -95,7 +158,7 @@
           </li>
 
           <li>
-            <div class="quote">
+            <div class="quote hide">
               <p>"These guys have done a lot of homework - a lot of thought put into the content and tone of advice for the modern traveller."</p>
 
               <p class="user"><span class="stars">*****</span> - Prof Paws Sept 2013</p>
@@ -106,16 +169,20 @@
     </div>
 </div>
 
-<div class="row show-for-small">
-  <div class="text-center feature-img">
-    <a class="feature-phone" href="https://itunes.apple.com/au/app/id567334051">Tripwise features</a>
+<div class="feature-panel">
+  <div class="row show-for-small">
+    <div class="text-center feature-img">
+      <a class="feature-phone" href="https://itunes.apple.com/au/app/id567334051"><img src="/Media/Default/main/tripwise/iPhone5c-first24.jpg" class="x2" width="335" height="535"></a>
+    </div>
   </div>
-</div>
 
-<div class="row feature hide-for-small">
-  <div class="medium-6 columns text-center">
-        <a class="feature-phone" href="https://itunes.apple.com/au/app/id567334051"><img src="/Media/Default/main/tripwise/iPhone5c-first24.jpg" class="x2" width="335" height="535"></a>
-  </div>
+  <div class="row feature hide-for-small">
+    
+    <div class="medium-6 columns text-center">
+        <a class="" href="https://itunes.apple.com/au/app/id567334051">
+          <img src="/Media/Default/main/tripwise/iPhone5c-first24.jpg" class="x2" width="335" height="535">
+        </a>
+    </div>
   <div class="medium-6 columns">
       <div class="feature-content">
         <h3><a class="appstore-content-link" href="https://itunes.apple.com/au/app/id567334051">Get instant street smarts for your trip</a></h3>
@@ -140,6 +207,7 @@
   </div>
 </div>
 
+
 <div class="row">
   <div class="large-10 large-offset-1 small-12 columns row-padded-top">
     <ul class="feature-blocks small-block-grid-1 large-block-grid-2">
@@ -147,7 +215,7 @@
         <hr>
 
         <div class="feature-block-icon">
-          <div data-icon="1"></div>
+          <div data-icon="1" class="phrase-books"></div>
         </div>
 
         <div class="feature-block">
@@ -204,7 +272,7 @@
   </div>
 </div>
 
-<div class="row feature show-for-small">
+<div class="row show-for-small">
   <div class="small-12 columns">
     <div class="row feature-content">
       <h3><a class="appstore-content-link" href="https://itunes.apple.com/au/app/id567334051">Get instant street smarts for your trip</a></h3>
@@ -228,10 +296,14 @@
   </div>
 </div>
 
-<div class="row row-padded-top row-padded-bottom">
-  <div class="footer-appstore-links">
-    <a class="tripwise-logo" href="https://itunes.apple.com/au/app/id567334051">Tripwise</a> <a class="appstore-link apple" href="https://itunes.apple.com/au/app/id567334051">App Store</a><a class=
-    "appstore-link google" href="https://play.google.com/store/apps/details?id=au.com.tid.tripwise">Google Play Store</a>
+<div class="row footer-panel">
+  <div class="small-12 large-centered text-center columns">
+    <a class="tripwise-logo" href="https://itunes.apple.com/au/app/id567334051"><img src="/Media/Default/main/tripwise/tripwise-logo.png" class="x2" width="316" height="80"></a>
+
+    <a class="appstore-link apple" href="https://itunes.apple.com/au/app/id567334051"><img src="/Media/Default/main/tripwise/itunes-download.png" class="x2" width="135" height="45"></a>
+    <a class=
+    "appstore-link google" href="https://play.google.com/store/apps/details?id=au.com.tid.tripwise"><img src="/Media/Default/main/tripwise/google-download.png" class="x2" width="135" height="45"></a>
+    
   </div>
 </div>
 
