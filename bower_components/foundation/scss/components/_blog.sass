@@ -1,0 +1,52 @@
+// Blog Styles
+
+.blog-description
+  h1
+    margin: rem-calc(32) rem-calc(0)
+article
+  &.blog
+    .published
+      display: none
+    .blog-posts
+      list-style: none
+      margin: 0
+
+      li
+        list-style-type: none
+        .blog-post
+          padding-bottom: rem-calc(32)
+          h1
+            font-size: rem-calc(44)
+            margin-bottom: rem-calc(0)
+            letter-spacing: rem-calc(-2)
+            line-height: 1.1
+          p
+            margin-bottom: rem-calc(8)
+            
+          .published
+            font-size: rem-calc(14)
+            color: $color-mid-grey
+            display: block
+          a
+            color: $color-blue
+
+          a:hover
+            color: $color-dark-blue
+          
+          
+    .pager
+      @include inline-list
+      
+      li
+        padding: rem-calc(2) rem-calc(8)
+        background-color: $color-light-grey
+        margin-left: rem-calc(8)
+      li:first-child
+        margin-left: rem-calc(22)
+      
+  &.blog-post
+    h2
+      font-size: rem-calc(32)
+      margin-bottom: rem-calc(8)
+      letter-spacing: rem-calc(-2)
+      line-height: 1.1
