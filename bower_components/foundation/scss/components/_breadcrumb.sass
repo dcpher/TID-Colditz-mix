@@ -1,0 +1,17 @@
+// _breadcrumb.sass
+
+nav.breadcrumb
+  @include grid-row()
+  margin-bottom: rem-calc(16)
+  ol
+    list-style-type: none
+    margin-left: 0
+  li
+    @include grid-column(3)
+    border-bottom: 4px solid $color-white
+    color: $color-white
+    em
+      font-style: normal
+    &.active
+      border-color: $color-dark-blue
+      color: $color-dark-blue
