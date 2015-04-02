@@ -42,6 +42,7 @@
             
             
           
+
 // Contained QQWidget
 .qqw-contained  
   #quick-quote
@@ -75,12 +76,22 @@
           .chikdren-go-free
             margin-bottom: rem-calc(16) 
             
-//          
-          
 #quick-quote
   overflow: auto
   @include grid-row($behavior: nest)
   
+  // TODO: Put in a better spinner.
+  .spinner
+    position: absolute
+    top: 0
+    right: 16px
+    height: 16px
+    width: 16px
+    display: block
+    background: transparent url('../i/spinner-blue.gif') no-repeat left top
+  .submit-arw:hover
+    cursor: pointer
+    
   // destinations ul
   #destinations
     margin: 0
