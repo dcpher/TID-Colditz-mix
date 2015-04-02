@@ -4807,6 +4807,11 @@ article.blog-post h2 {
       width: 95%;
       margin-left: -47.5%; } }
 
+#event-based-benefits th {
+  font-size: 2rem;
+  font-weight: 100;
+  line-height: 1.1;
+  margin-bottom: 1rem; }
 @media only screen and (max-width: 40em) {
   #event-based-benefits th {
     display: none; } }
@@ -4828,7 +4833,7 @@ article.blog-post h2 {
   #event-based-benefits .event-based-benefit td:before {
     content: attr(data-th) ": "; } }
 #event-based-benefits .event-based-benefit td:first-child {
-  background-image: url('/Media/Default/main/event-benefit-sprite.png');
+  background-image: url('i/icons/event-benefit-sprite.png');
   background-repeat: no-repeat;
   padding-left: 3.125rem; }
 #event-based-benefits .event-based-benefit.need-medical-help td:first-child {

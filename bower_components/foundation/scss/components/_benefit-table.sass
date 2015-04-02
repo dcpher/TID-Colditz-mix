@@ -2,6 +2,11 @@
 
 #event-based-benefits
   th
+    font-size: rem-calc(32)
+    font-weight: 100
+    line-height: 1.1
+    margin-bottom: rem-calc(16)
+    
     
   @media #{$small-only}
     th
@@ -30,7 +35,7 @@
         content: attr(data-th) ": "
       
     td:first-child
-      background-image: url('/Media/Default/main/event-benefit-sprite.png'); background-repeat: no-repeat
+      background-image: url('i/icons/event-benefit-sprite.png'); background-repeat: no-repeat
       padding-left: rem-calc(50)
 
     &.need-medical-help
