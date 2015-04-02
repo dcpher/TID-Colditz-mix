@@ -1,0 +1,154 @@
+{% block title %}What we cover{% endblock %}
+{% block content %}
+
+<div class="zone zone-before-main">
+
+    <div class="header-panel blue-panel" id="header">
+        <div class="row">
+            <div class="small-12 column">
+                <h1>We've got you covered</h1>
+                <p>Here at TID we love to travel too. </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+
+  
+  @media all and (min-width: 40em) {
+#header {
+    background: url('/Media/Default/main/hero-images/whatwecover_desktop.jpg') no-repeat center bottom #00bae4;
+    background-size: cover;
+    background-position: top center;
+  }
+
+}
+@media all and (max-width: 64em) {
+#header {
+    background: url('/Media/Default/main/hero-images/whatwecover_tablet.jpg') no-repeat center center #00bae4;
+    background-size: cover;
+    background-position: top center;
+  }
+
+}
+@media all and (max-width: 40em) {
+#header {
+    background: url('/Media/Default/main/hero-images/whatwecover_phone.jpg') no-repeat center center #00bae4;
+    background-size: cover;
+  }
+
+}
+
+</style>
+
+<div class="content-panel">
+        <div class="row">
+            <div class="small-12 column">
+
+<div class="zone zone-content">
+<article class="page-with-quote-panel content-item">
+    <header>
+        
+    </header>
+    <p>We want people to go, explore the world, and return home safely without ever having needed to call us. &nbsp;But TID gets to see all the unexpected things that happen to people overseas every single day so our policy is designed to cover such events, making it helpful, easy and great value.</p>
+  
+  <h2>Your quote includes the following cover</h2>
+  
+  {% include "benefits-table" %}
+  
+
+<hr>        
+
+<div class="content-panel content" id="campaign-qqw">
+  <div class="row header">
+    
+    
+  <!--   TID QQWidget Container    -->
+
+    <div class="row qqw-contained blue-panel">
+      <div class="small-12 column">
+
+        <!--  Include QQWidget  -->
+        {% include "qqw" %}
+
+      </div> 
+      <div class="benefits-bar blue left">
+
+        <!--  Include Benefits Bar  -->
+        {% include "benefits-bar" %}
+
+      </div>  
+    </div>
+
+  <!-- QQW Container END -->
+    
+    
+  </div>
+</div>
+    
+  
+
+
+
+</article></div>
+<div class="zone zone-after-content">
+<article class="widget-gfdg widget-after-content widget-raw-html-widget widget">
+    <h2><a href="/">Travel Insurance Direct</a></h2>
+
+
+<h4>Trusted by over 1 million Australian's</h4>
+<p>Trusted by over 1 million Australian's and we are recommended because of our service and value.</p>
+
+<h4>Exceptional Value</h4>
+<ul>
+<li>Unlimited medical expenses</li>
+<li>Unlimited cancellation cover</li>
+<li>Covers iPhones, Tablets &amp; cameras</li>
+<li>Up to $24,000 of baggage</li>
+</ul>
+
+<h4>Money Back Guarantee</h4>
+<p>Our 14 day money back guarantee means you can cancel your policy and we'll give you a full refund.</p>
+
+<h4>Help Change Lives</h4>
+<p>You too can <a href="http://www.footprints.org.au" target="_blank">help change lives</a> when you buy your travel insurance from TID.</p>
+
+<h4>Trusted &amp; Secure</h4>
+<p>Secured by SSL through 128 bit encryption.</p>
+
+
+<!--  Trusted  -->
+<div id="trusted-by">
+  <div class="large-12">
+    <h4>
+      <span class="fa fa-star yellow"></span> <span class="fa fa-star yellow"></span> <span class="fa fa-star yellow"></span> <span class="fa fa-star yellow"></span> <span class="fa fa-star yellow"></span>
+    </h4>
+    <h4 itemprop="summary">
+      “I have used TID several times now as I find their policies give you great cover at a very good price.”
+    </h4>
+
+    <div itemscope="" itemtype="http://data-vocabulary.org/Review">
+      <p><span itemprop="itemreviewed">Travel Insurance Direct</span> 
+        was reviewed on 
+        <span itemprop="reviewer">ProductReview.com.au</span>, 
+        <time itemprop="dtreviewed" datetime="2015-03-31">31 March 2015</time>
+        and rated 
+        <span itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating">
+          <meta itemprop="worstRating" content="0">
+          <span itemprop="ratingValue">4.2</span>
+           / 
+          <span itemprop="bestRating">5</span>
+          Stars
+        </span>
+      </p>
+    </div>
+  </div>
+</div>
+<!--  Trusted END  -->
+
+</article></div>            </div>
+        </div>
+    </div>
+
+{% endblock %}

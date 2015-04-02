@@ -10,12 +10,10 @@
     padding-bottom: rem-calc(60)
     padding-left: 0
     padding-right: 0
-
-#homepage-header      
+    
   h1
     text-align: center
     
-#homepage-header      
   @media #{$small-only}
     &.header-panel
       padding-top: rem-calc(0)
@@ -43,19 +41,23 @@
 
 // Target explicit panels for custom styles
 
-// benefits-bar
-.homepage .benefits-bar
-  border-top: 1px solid rgba($color-dark-grey, 0.09)
-
-// tripwise-panel
-.homepage .tripwise-panel
-  li
+// add hover styles to list elements
+.homepage .tripwise-panel, .benefits-panel 
+  .text-with-img, li
     a 
       p, .learn-more
         color: $color-mid-grey
     a
       h4:hover, p:hover, .learn-more:hover
         color: $color-blue
+  
+// benefits-bar
+.homepage .benefits-bar
+  border-top: 1px solid rgba($color-dark-grey, 0.09)
+
+// tripwise-panel
+.homepage .tripwise-panel
+
  
 // benefits-panel
 .homepage .benefits-panel  
@@ -66,12 +68,6 @@
   
   //text with image list
   .text-with-img
-    a 
-      p, .learn-more
-        color: $color-mid-grey
-    a
-      h4:hover, p:hover, .learn-more:hover
-        color: $color-blue
   
     // benefits icons
     &.cancellation, &.luggage, &.evacuation, &.medical-help, &.accident, &.passport-lost
