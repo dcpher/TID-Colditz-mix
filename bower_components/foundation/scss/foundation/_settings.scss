@@ -1280,15 +1280,15 @@ $panel-header-adjust: false;
 // $table-even-row-bg: $snow;
 
 // These control the table cell border style
-// $table-border-style: solid;
+$table-border-style: none;
 // $table-border-size: 1px;
 // $table-border-color: $gainsboro;
 
 // These control the table head styles
 // $table-head-bg: $white-smoke;
-// $table-head-font-size: rem-calc(14);
+$table-head-font-size: rem-calc(24);
 // $table-head-font-color: $jet;
-// $table-head-font-weight: $font-weight-bold;
+$table-head-font-weight: $font-weight-normal;
 // $table-head-padding: rem-calc(8 10 10);
 
 // These control the table foot styles
@@ -1306,9 +1306,9 @@ $panel-header-adjust: false;
 
 // These control the row padding and font styles
 // $table-row-padding: rem-calc(9 10);
-// $table-row-font-size: rem-calc(14);
+$table-row-font-size: rem-calc(16);
 // $table-row-font-color: $jet;
-// $table-line-height: rem-calc(18);
+$table-line-height: rem-calc(22);
 
 // These are for controlling the layout, display and margin of tables
 // $table-layout: auto;

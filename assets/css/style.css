@@ -2134,7 +2134,7 @@ label.error {
 table {
   background: #FFFFFF;
   margin-bottom: 1.25rem;
-  border: solid 1px #DDDDDD;
+  border: none 1px #DDDDDD;
   table-layout: auto; }
   table caption {
     background: transparent;
@@ -2145,26 +2145,26 @@ table {
     background: #F5F5F5; }
     table thead tr th, table thead tr td {
       padding: 0.5rem 0.625rem 0.625rem;
-      font-size: 0.875rem;
-      font-weight: 500;
+      font-size: 1.5rem;
+      font-weight: 300;
       color: #222222; }
   table tfoot {
     background: #F5F5F5; }
     table tfoot tr th, table tfoot tr td {
       padding: 0.5rem 0.625rem 0.625rem;
-      font-size: 0.875rem;
-      font-weight: 500;
+      font-size: 1.5rem;
+      font-weight: 300;
       color: #222222; }
   table tr th, table tr td {
     padding: 0.5625rem 0.625rem;
-    font-size: 0.875rem;
+    font-size: 1rem;
     color: #222222;
     text-align: left; }
   table tr.even, table tr.alt, table tr:nth-of-type(even) {
     background: #F9F9F9; }
   table thead tr th, table tfoot tr th, table tfoot tr td, table tbody tr th, table tbody tr td, table tr td {
     display: table-cell;
-    line-height: 1.125rem; }
+    line-height: 1.375rem; }
 
 /* Tooltips */
 .has-tip {
@@ -4806,6 +4806,73 @@ article.blog-post h2 {
     .javascript-popup, #do-not-travel-modal {
       width: 95%;
       margin-left: -47.5%; } }
+
+@media only screen and (max-width: 40em) {
+  #event-based-benefits th {
+    display: none; } }
+#event-based-benefits .event-based-benefit td {
+  vertical-align: text-top;
+  padding: 0.75rem; }
+  #event-based-benefits .event-based-benefit td .title, #event-based-benefits .event-based-benefit td .amount {
+    font-size: 1.5rem;
+    line-height: 1.1;
+    font-weight: 100;
+    margin-bottom: 0.5rem; }
+  #event-based-benefits .event-based-benefit td .description {
+    color: #777; }
+@media only screen and (max-width: 40em) {
+  #event-based-benefits .event-based-benefit td {
+    display: block; }
+  #event-based-benefits .event-based-benefit td:last-child {
+    padding-left: 3.125rem; }
+  #event-based-benefits .event-based-benefit td:before {
+    content: attr(data-th) ": "; } }
+#event-based-benefits .event-based-benefit td:first-child {
+  background-image: url('/Media/Default/main/event-benefit-sprite.png');
+  background-repeat: no-repeat;
+  padding-left: 3.125rem; }
+#event-based-benefits .event-based-benefit.need-medical-help td:first-child {
+  background-position: 8px 16px; }
+#event-based-benefits .event-based-benefit.in-an-accident td:first-child {
+  background-position: 8px -184px; }
+#event-based-benefits .event-based-benefit.medical-evacuation td:first-child {
+  background-position: 8px -384px; }
+#event-based-benefits .event-based-benefit.death td:first-child {
+  background-position: 8px -584px; }
+#event-based-benefits .event-based-benefit.luggage td:first-child {
+  background-position: 8px -784px; }
+#event-based-benefits .event-based-benefit.cancellation-or-delay td:first-child {
+  background-position: 8px -984px; }
+#event-based-benefits .event-based-benefit.return-early td:first-child {
+  background-position: 8px -1184px; }
+#event-based-benefits .event-based-benefit.unable-to-travel td:first-child {
+  background-position: 8px -1384px; }
+#event-based-benefits .event-based-benefit.special-event td:first-child {
+  background-position: 8px -1584px; }
+#event-based-benefits .event-based-benefit.work-on-time td:first-child {
+  background-position: 8px -1784px; }
+#event-based-benefits .event-based-benefit.car-rental-excess td:first-child {
+  background-position: 8px -1984px; }
+#event-based-benefits .event-based-benefit.personal-liability td:first-child {
+  background-position: 8px -2184px; }
+#event-based-benefits .event-based-benefit.bad-weather td:first-child {
+  background-position: 8px -2384px; }
+#event-based-benefits .event-based-benefit.natural-disaster td:first-child {
+  background-position: 8px -2584px; }
+#event-based-benefits .event-based-benefit.passport-stolen td:first-child {
+  background-position: 8px -2784px; }
+#event-based-benefits .event-based-benefit.credit-card-stolen td:first-child {
+  background-position: 8px -2984px; }
+#event-based-benefits .event-based-benefit.baggage-delayed td:first-child {
+  background-position: 8px -3184px; }
+#event-based-benefits .event-based-benefit.travel-delay td:first-child {
+  background-position: 8px -3384px; }
+#event-based-benefits .event-based-benefit.loss-of-income td:first-child {
+  background-position: 8px -3584px; }
+#event-based-benefits .event-based-benefit.permanent-disability td:first-child {
+  background-position: 8px -3784px; }
+#event-based-benefits .event-based-benefit.snow-sports td:first-child {
+  background-position: 8px -3984px; }
 
 .datepicker {
   background: #fff;
