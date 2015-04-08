@@ -4591,6 +4591,8 @@ hr {
 .homepage .benefits-panel {
   border-top: 1px solid rgba(64, 64, 64, 0.09);
   padding: inherit; }
+  .homepage .benefits-panel h2.white {
+    margin-top: 1rem; }
 
 .benefits-panel .text-with-img.cancellation, .benefits-panel .text-with-img.luggage, .benefits-panel .text-with-img.evacuation, .benefits-panel .text-with-img.medical-help, .benefits-panel .text-with-img.accident, .benefits-panel .text-with-img.passport-lost {
   background-size: 66px 82px; }
@@ -4620,6 +4622,12 @@ hr {
 .homepage .amt-panel {
   border-top: 1px solid rgba(64, 64, 64, 0.09);
   padding: inherit; }
+  .homepage .amt-panel h2.white {
+    margin-top: 1rem; }
+  .homepage .amt-panel .amt-p {
+    font-size: 1.375rem;
+    line-height: 2.4375rem;
+    font-weight: 100; }
   .homepage .amt-panel .text-with-img.amt-medical, .homepage .amt-panel .text-with-img.amt-cover, .homepage .amt-panel .text-with-img.amt-flexible {
     background-size: 65px 65px; }
   .homepage .amt-panel .text-with-img.amt-medical {
