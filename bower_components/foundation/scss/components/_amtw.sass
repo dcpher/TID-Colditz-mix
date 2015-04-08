@@ -31,13 +31,14 @@
     margin-bottom: rem-calc(4)
   .travel-dates .input-group
     position: relative
-    &:before
-      content: '\f073'
-      font: normal normal normal 16px/1 FontAwesome
+    .tid-icon
       position: absolute
       right: rem-calc(20)
       bottom: rem-calc(16)
-      color: $color-blue
+      &:before
+        content: '\f073'
+        font: normal normal normal 16px/1 FontAwesome
+        color: $color-blue
   #children-go-free
     color: $color-white
     &:hover

@@ -4872,13 +4872,14 @@ span.submit-arw:before {
   margin-bottom: 0.25rem; }
 #header.header-panel.amt .travel-dates .input-group {
   position: relative; }
-  #header.header-panel.amt .travel-dates .input-group:before {
-    content: "";
-    font: normal normal normal 16px/1 FontAwesome;
+  #header.header-panel.amt .travel-dates .input-group .tid-icon {
     position: absolute;
     right: 1.25rem;
-    bottom: 1rem;
-    color: #00bae4; }
+    bottom: 1rem; }
+    #header.header-panel.amt .travel-dates .input-group .tid-icon:before {
+      content: "";
+      font: normal normal normal 16px/1 FontAwesome;
+      color: #00bae4; }
 #header.header-panel.amt #children-go-free {
   color: #FFF; }
   #header.header-panel.amt #children-go-free:hover {
