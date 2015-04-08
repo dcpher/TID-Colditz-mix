@@ -3,6 +3,7 @@
 #main
   @include grid-row()
   margin-top: rem-calc(32)
+  
     
   // header style blue panel with search box
   #header-content
@@ -152,14 +153,55 @@
           .fa 
             background-color: $color-dark-blue
    
-  
-  // Question & Answer Styles
+  // Article styles
+  .article
+    ol, ul
+      margin-left: rem-calc(44)
+      margin-right: rem-calc(44)
+      margin-top: rem-calc(16)
+      li
+        margin-bottom: rem-calc(8)
+    .author
+      margin-top: rem-calc(16)
+      margin-bottom: rem-calc(32)
+      
+    .rate-article
+      margin-top: rem-calc(32)
+      div
+        display: block
+        margin-bottom: rem-calc(8)
+        a
+          font-size: 0
+          visibility: hidden
+          width: 80px
+        a:before
+          background-color: $color-light-grey
+          padding: rem-calc(8)
+          margin-right: rem-calc(8)
+          visibility: visible
+          font: normal normal normal rem-calc(20)/1 FontAwesome
+          display: inline-block
+      div span
+        color: $color-green
+      .rate-link-down span
+        color: $color-red
+      div a:before
+        content: '\f077'
+      .rate-link-down a:before
+        content: '\f078'
+  time    
+    &.last-updated
+      color: $color-mid-grey
+      display: block
+      margin: rem-calc(32) 0
+          
+  // Question Styles
   .question-details, .question-answers
     margin-bottom: rem-calc(32)
     .all-answers
       h3:before
-        content: '\f0e6'//'\f075'
-        font: normal normal normal 44px/1 FontAwesome
+        content: '\f0e6'
+        font: normal normal normal 32px/1 FontAwesome
         color: $color-mid-grey
     .body
       margin-bottom: rem-calc(16)
@@ -208,12 +250,66 @@
           margin-right: rem-calc(44)
           li
             margin-bottom: rem-calc(8)
-           
           
+          
+    
+  // All Questions or Article styles
+  .questions-or-articles, .search-results
+    nav
+      ul
+        list-style: none
+        background-color: $color-light-grey
+        border-bottom: 1px solid lighten($color-mid-grey, 40%)
+        padding: rem-calc(9)
+        margin-left: 0
+        li
+          display: inline-block
+          margin: 0 rem-calc(12)
+          a
+            color: lighten($color-dark-grey, 40%)
+            padding: rem-calc(16) rem-calc(16) rem-calc(8) rem-calc(16)
+            border-bottom: none
+            &:hover
+              border-bottom: 4px solid $color-mid-grey
+          &.active
+            a
+              color: $color-blue
+              border-bottom: 4px solid $color-blue
+
+    ul
+      &.questions, &.articles, &.questions-and-articles 
+        list-style: none
+        margin-left: 0
+        p
+          margin-bottom: rem-calc(8)
+        aside, aside span
+          color: $color-mid-grey
+        .last-updated
+          display: inline-block
+          margin-top: 0
+          margin-bottom: rem-calc(20)
+    
+  #paginate_block
+    margin-bottom: rem-calc(32)
+    .pagination
+      a, em, span
+        padding: rem-calc(4) rem-calc(8)
+        background-color: $color-light-grey
+        margin-right: rem-calc(8)
+        font-style: normal
+      a:hover
+        color: $color-white
+        background-color: $color-mid-grey
+      .disabled
+        color: darken($color-light-grey, 20%)
+      .current
+        color: $color-white
+        background-color: $color-blue
+      
           
   // small view
   @media #{$small-only}
-
+    margin-top: rem-calc(0)
     #header-content
       // Adding -10 to make the panel go full-width
       margin: 0 rem-calc(-10)
