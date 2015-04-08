@@ -1,0 +1,178 @@
+{% block title %}AMT{% endblock %}
+
+{% block content %}
+
+<div class='header-panel blue-panel amt' id='header'>
+
+  <div class='row'>
+    <div class='small-12 column'>
+      <h1>Annual Multi Trip Travel Insurance</h1>
+      <p>
+        A multi trip policy is for people who travel often.
+      </p>
+    </div>
+  </div>
+
+  <div class='row'>
+    <div class='small-12 medium-5 large-5 column'>
+      <section id="amt-quote">
+        <form action="/Home/SubmitAmtQuote" method="post">
+          <section class="travel-dates">
+            <label>Starting date</label>
+            <div class="input-group">
+              <select id="QuoteDto_DepartureDateDay" name="QuoteDto.DepartureDateDay"><option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option selected="selected" value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+              </select><select id="QuoteDto_DepartureDateMonth" name="QuoteDto.DepartureDateMonth"><option value="1">Jan</option>
+                <option value="2">Feb</option>
+                <option value="3">Mar</option>
+                <option selected="selected" value="4">Apr</option>
+                <option value="5">May</option>
+                <option value="6">Jun</option>
+                <option value="7">Jul</option>
+                <option value="8">Aug</option>
+                <option value="9">Sep</option>
+                <option value="10">Oct</option>
+                <option value="11">Nov</option>
+                <option value="12">Dec</option>
+              </select><select id="QuoteDto_DepartureDateYear" name="QuoteDto.DepartureDateYear"><option selected="selected" value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+            </select></div>
+
+          </section>
+          <section class="travelling-as">
+            <label>Age of adult traveller(s)</label>
+
+            <div class="input-group">
+              <div class="sub-group">
+                <input id="QuoteDto_TravellerAges_0__Age" name="QuoteDto.TravellerAges[0].Age" placeholder="Enter age" type="text" value="" />
+              </div>
+              <div class="sub-group">
+                <input id="QuoteDto_TravellerAges_1__Age" name="QuoteDto.TravellerAges[1].Age" placeholder="Enter age" type="text" value="" />
+              </div>
+            </div>
+
+            <a href="#"><div title="Your children under 21 go free" id="children-go-free">Your children go free</div></a>
+            <div id="children-go-free-info">This means your dependent children or grandchildren under the age of 21 at the date of policy issue who are travelling with you.</div>
+
+          </section>
+
+          <input id="QuoteDto_PromotionCode" name="QuoteDto.PromotionCode" type="hidden" value="" />    <section class="buy-now-button">
+            <button type="submit" id="getQuote">Buy Now</button>
+          </section>
+
+          <input name="SessionTokenHomeModel" type="hidden" value="e9547844-c1a5-4307-84ee-c9909dd16d36" />
+      </form></section>
+
+    </div>
+
+    <div class='small-12 medium-offset-0 large-offset-1 medium-7 large-6 column description'>
+      <p>
+      Rather than buying a single travel insurance policy every time you travel, one annual multi trip travel insurance policy can cover you for all of these,  saving you time and money but getting the same level of cover.
+      </p>
+      <p>
+      Travel as often as you like within 12 month period as long as each trip is no longer than 38 days for holiday and 90 days for business 
+      </p>
+      <p>
+      You can just travel with confidence, knowing we are there for you since you don't have to tell us each time you travel.
+      </p>
+      <ul>
+        <li>unlimited number of trips in a year</li>
+        <li>same comprehensive levels of cover</li>
+        <li>single or family cover</li>
+        <li>up to age 75</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class='row'>
+  <div class='small-12 amt-reasons'>
+    <h3>5 more reasons to choose TID</h3>
+    <dl>
+      <dt>1. Trusted by more than 1 million people</dt>
+      <dd>Passionate about extraordinary customer service, TID has been trusted by more than 1 million people. And with more than 300 excellent reviews, our customers obviously agree. </dd>
+      <dt>2. Travel with Confidence</dt>
+      <dd>TID is underwritten by certain underwriters at Lloyd's, the world's leading insurance market.</dd>
+      <dt>3. TID Money Back Guarantee</dt>
+      <dd>If you aren't satisfied with your policy purchase, our 14 day money back guarantee means you can cancel it and we'll give you a full refund (provided you're not making any claims and neither your trip or policy have started.)</dd>
+      <dt>4. Secure</dt>
+      <dd>Our e-commerce is secure and we do not see, record or store your card details in any form. Your payment transaction is secured with an SSL certificate which supports 128 bit encryption.</dd>
+      <dt>5. We care about the places you visit</dt>
+      <dd>TID proudly belongs to the <a href="http://www.footprintsnetwork.org" target="_blank">Footprints Network</a>, funding community projects around the world.</dd>
+    </dl>
+  </div>
+</div>
+
+<script>
+  // Initialise the date-picker.
+  $(function() {
+    var departureDateInput = $('<input type="text" autocomplete="off" />')
+    .addClass("departure-date")
+    .insertAfter($('.travel-dates select:nth-child(3)'));
+
+    var todaysDate = new Date();
+    var datePickerMaxDate = 
+    todaysDate.setDate(todaysDate.getDate() + 1000);
+
+    // Set up the datePickerForSelectss
+    departureDateInput.datePickerForSelects(
+      $('.travel-dates select:nth-child(1)'),     // departureDateDay
+      $('.travel-dates select:nth-child(2)'),   // departureDateMonth
+      $('.travel-dates select:nth-child(3)'),    // departureDateYear
+      {
+        headerText: '<strong>Select</strong> your <strong>starting</strong> date',
+        minDate: new Date(),
+        maxDate: new Date(datePickerMaxDate)
+      }
+    );
+  });
+
+  // Small hover script for the #children-go-free information animation
+  $(function () {
+    $("#children-go-free").click(function () {
+      var $target = $("#children-go-free-info");
+      if (!$target.hasClass("active")) {
+        $target.animate({ "height": "100px", "padding-top": "16px" }, 400, "swing", function () { });
+        $target.addClass("active");
+      } else {
+        $target.animate({ "height": "0", "padding-top": "0" }, 400, "swing", function () {
+          $target.removeClass("active");
+        });
+      }
+
+      return false;
+    });
+  });
+</script>
+
+{% endblock %}
