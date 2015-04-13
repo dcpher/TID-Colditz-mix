@@ -1,0 +1,162 @@
+// _options.sass
+
+body.options
+
+  // TODO: Is there a different more foundationish way to do container pads?
+  .row
+    margin-top: rem-calc(20)
+  ul
+    margin-left: 0
+    list-style-type: none
+  figure
+    margin: 0
+
+  // Big h1
+  .blue-panel h1
+    margin-bottom: 0
+    @media #{$small-up}
+      font-size: rem-calc(48)
+    @media #{$medium-up}
+      font-size: rem-calc(60)
+    @media #{$large-up}
+      font-size: rem-calc(80)
+
+  // Header with CTA and price.
+  .purchase-info-row
+    margin-bottom: rem-calc(30)
+    .cta-column
+      button
+        +pp-button-dark
+        padding-right: rem-calc(40)
+        width: 100%
+        text-align: left
+    strong
+      color: $color-white
+    .price-display
+      font-size: rem-calc(60)
+      line-height: rem-calc(50)
+      letter-spacing: -1px
+      span
+        color: $color-white
+    .price-value
+      margin-left: -10px
+      @media #{$small-only}
+        font-size: rem-calc(50)
+      @media #{$medium-up}
+        font-size: rem-calc(60)
+    .currency-symbol
+      font-size: rem-calc(20)
+      vertical-align: super
+    .currency
+      font-size: rem-calc(20)
+      margin-left: -10px
+    &.bottom
+      strong,
+      .price-display span
+        color: $color-blue
+      .price-display
+        line-height: rem-calc(30)
+      .cta-column,
+      .price-column
+        float: right
+      .price-value
+        font-size: rem-calc(45)
+        line-height: rem-calc(45)
+      @media #{$small-only}
+        .price-column
+          margin-bottom: rem-calc(16)
+
+  // Option row general styles
+  .description-column
+    h2
+      font-size: rem-calc(30)
+      margin-bottom: rem-calc(18)
+      letter-spacing: 0
+      font-weight: 300
+    label
+      font-size: rem-calc(18)
+      color: $color-blue
+    input[type='submit'], button
+      +pp-button-dark
+  .premium-column
+    .price-with-currency-medium
+      color: $color-blue
+      font-size: rem-calc(30)
+    .price-description
+      display: block
+    @media #{$small-only}
+      .price-with-currency-medium,
+      .price-description
+        float: right
+        clear: both
+
+  // Option row individual styles
+  .skiing-row,
+  .reduce-excess-row,
+  .specified-items-row,
+  .car-rental-row,
+  .footprints-row,
+  .promo-row
+    padding-bottom: rem-calc(18)
+    border-bottom: 1px solid $color-mid-grey
+  
+  .car-rental-row
+    select
+      width: 120px
+  .footprints-row
+    figure
+      @include grid-row($behavior: nest)
+    select
+      width: 120px
+    li
+      float: left
+      &:first-child
+        border-right: 1px solid $color-mid-grey
+        margin-right: rem-calc(16)
+        padding-right: rem-calc(16)
+      input[type='submit']
+        background: none
+        border: none
+        font-size: rem-calc(18)
+        line-height: rem-calc(18)
+        padding: 0
+        margin: 0
+        color: $color-blue
+    .donation-images img
+      width: 100%
+      height: auto
+      border: 1px solid $color-black
+  .promo-row
+    .input-group
+      label
+        display: inline
+        line-height: rem-calc(40)
+        margin-right: rem-calc(30)
+        float: left
+      input[type='text']
+        max-width: 120px
+        float: left
+        margin-right: rem-calc(30)
+      button.button-tertiary
+        padding-right: rem-calc(40)
+        padding-bottom: 7px
+        padding-top: 7px
+        float: left
+        &:after
+          bottom: rem-calc(10)
+      @media #{$small-only}
+        button.button-tertiary
+          float: right
+
+  // Aside
+  aside
+    margin-top: rem-calc(20)
+    @media #{$small-only}
+      margin-top: 0
+  .widget-email-quote
+    +clearfix
+    .email-title
+      font-size: rem-calc(30)
+      margin-bottom: rem-calc(8)
+    button
+      float: right

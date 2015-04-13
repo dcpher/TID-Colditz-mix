@@ -1,0 +1,402 @@
+{% block title %}TID Payment page{% endblock %}
+{% block body_class %}payment{% endblock %}
+{% block body_id %}payment{% endblock %}
+{% block content %}
+
+<div class="blue-panel header-panel">
+  
+  <div class='row'>
+    <div class='small-12 columns'>
+      {% include "pp-breadcrumb" %}
+      <h1>Review and pay</h1>
+    </div>
+  </div>
+
+</div>
+
+<div class='row'>
+
+  <div class='small-12 medium-12 large-9 columns main-content-column'>
+
+    <form action="/PolicyPurchase/MultiTarget" id="paymentForm" method="post">
+      <div class="session-tokens">
+        <input name="SessionTokenPolicyPurchaseModel" type="hidden" value="7de07a9c-5654-4f87-affb-e6ebc435f5c1">
+      </div>
+      <section id="main-content" role="main" data-analytics-id="payment-main-section">
+        <div class="global-messages-container"></div>
+        <div class="review-and-pay">
+          <div class="purchase-path-panel trip-summary">
+            <header class="header-with-link">
+              <h2>Your Trip</h2>
+
+              <a class="header-link link-like button-like" data-analytics-id="open-edit-trip" href="/PolicyPurchase/EditTrip?SessionTokenPolicyPurchaseModel=7de07a9c-5654-4f87-affb-e6ebc435f5c1" name="EditTrip">Edit your trip &raquo;</a></header>
+
+            <ul class="list-key-value list-horizontal">
+              <li class="review-details-group">
+              <dl>
+                <dt>
+                Going to:
+                </dt>
+                <dd>
+                Spain      </dd>
+              </dl>
+              </li>
+
+              <li class="review-details-group">
+              <dl>
+                <dt>
+                Departure Date:
+                </dt>
+                <dd>
+                10 Apr 2015
+                </dd>
+              </dl>
+              </li>
+
+              <li class="review-details-group">
+              <dl>
+                <dt>
+                Return Date:
+                </dt>
+                <dd>
+                16 Apr 2015
+                </dd>
+              </dl>
+              </li>
+
+              <li class="review-details-group">
+              <dl>
+                <dt>
+                Travellers age(s):
+                </dt>
+                <dd>
+                34      </dd>
+              </dl>
+              </li>
+            </ul>
+
+          </div>
+
+          <div class="purchase-path-panel traveller-details">
+
+            <header class="header-with-link">
+              <h2>Details</h2>
+
+              <a data-analytics-id="edit-details" href="/PolicyPurchase?enc=kLg_wPS4F7AFuDMliLqLTeWdaCBGu_rnpORsGa9M3DeSX-4THwuFy14KXP0Qwevifdu0lZN5Uq0TBIwN9N42l5n2ponEMG9Df7mTfle7sTL4B8GljY28Bj8cPK3h5AaKeNM1B-_LkFv_JvVNxhYDiicErQgMJ7SvRmDjYcJM7cCYXIe9iXxiQfllXuXutVczUw4dGos4Tl75B3TBaiBWKgELXtKLeYeuKIBPMb25oN-J12ze1n8FxTUklCB5S7G0bSxWMiqjEj5SRGrKxKi6ocFxtqHGKopZZz-Qoxc4cD0%5E">Edit your details &raquo;</a> 
+            </header>
+
+            <ul class="list-key-value list-horizontal">
+
+              <li class="review-details-group">
+              <dl>
+                <dt>Travellers
+                </dt>
+                <dd>
+                Dfas Dfasfasdf
+                </dd>
+              </dl>
+              </li>
+              <li class="review-details-group">
+              <dl>
+                <dt>Date of Birth
+                </dt>
+                <dd>
+                1 Jan 1981          </dd>
+              </dl>
+              </li>
+              <li class="review-details-group">
+              <dl>
+                <dt>Email
+                </dt>
+                <dd>
+                asfsdf@adsfasd.com
+                </dd>
+              </dl>
+              </li>
+              <li class="review-details-group">
+              <dl>
+                <dt>Mobile
+                </dt>
+                <dd>
+                0488133337
+                </dd>
+              </dl>
+              </li>
+            </ul>
+
+            <ul class="list-key-value list-horizontal">
+
+            </ul>
+
+            <ul class="list-key-value list-horizontal">
+              <li class="review-details-group address-details">
+              <dl>
+                <dt>Address
+                </dt>
+                <dd>
+                Asdfafasd, Adfasdf, Australian Capital Territory, 1234, Australia
+                </dd>
+              </dl>
+              </li>
+            </ul>
+
+          </div>
+
+          <div class="payment-panel">
+            <img src="/Content/styles/i/thawte-logo.jpg" class="thawte hide-for-small-only">
+
+            <h2 class="payment-info">
+              <img class="padlock-image" src="/Content/styles/i/lock_real.png">
+              Secure Payment 
+              <span class="encryption">This is a 128-Bit SSL encrypted payment</span>
+            </h2>
+
+            <div class="policy-price-summary">
+
+              <table class="policy-prices">
+                <thead>
+                  <tr>
+                    <th class="header-with-link" colspan='2'>
+                      Your Travel Insurance Policy
+                      <a class="header-link link-like" data-analytics-id="edit-options" href="/Quote/Options?enc=kLg_wPS4F7AFuDMliLqLTeWdaCBGu_rnpORsGa9M3DeSX-4THwuFy14KXP0Qwevifdu0lZN5Uq0TBIwN9N42l5n2ponEMG9Df7mTfle7sTL4B8GljY28Bj8cPK3h5AaKeNM1B-_LkFv_JvVNxhYDiicErQgMJ7SvRmDjYcJM7cCYXIe9iXxiQfllXuXutVczUw4dGos4Tl75B3TBaiBWKlf7yku174I7FVo7YupiWjw%5E">Edit your options &raquo;</a>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <th class="policy-price-description">Base Policy
+                  </th>
+                  <td>
+                    <div class="policy-price-value">
+                      <span class="policy-price-currency">
+                        $
+                      </span>
+                      <span class="policy-price-amount">
+                        71.00
+                      </span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="policy-price-description">Reduce Policy Excess
+                  </th>
+                  <td class="policy-price-value">
+                    <div class="policy-price-value">
+                      <span class="policy-price-currency">
+                        $
+                      </span>
+                      <span class="policy-price-amount">
+                        25.00          </span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="policy-price-description">Ski &amp; Snow Sports Activity Cover
+                  </th>
+                  <td class="policy-price-value">
+                    <div class="policy-price-value">
+                      <span class="policy-price-currency">
+                        $
+                      </span>
+                      <span class="policy-price-amount">
+                        31.95            </span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="policy-price-description">Specified Item(s)
+                    <span class="specified-item-description">
+                      iPhone, iPad
+                    </span>
+                  </th>
+                  <td class="policy-price-value">
+                    <div class="policy-price-value">
+                      <span class="policy-price-currency">
+                        $
+                      </span>
+                      <span class="policy-price-amount">
+                        92.00          </span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="policy-price-description">Rental Car Excess
+                  </th>
+                  <td class="policy-price-value">
+                    <div class="policy-price-value">
+                      <span class="policy-price-currency">
+                        $
+                      </span>
+                      <span class="policy-price-amount">
+                        75.00          </span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="policy-price-description">Footprints Donation
+                  </th>
+                  <td class="policy-price-value">
+                    <div class="policy-price-value">
+                      <span class="policy-price-currency">
+                        $
+                      </span>
+                      <span class="policy-price-amount">
+                        0.00
+                      </span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+
+                  <th class="pre-ex-cover policy-price-description">Discount (Promo Code: TIDTHANKS)
+                  </th>
+                  <td class="pre-ex-cover policy-price-value">
+                    <div class="policy-price-value">
+                      <span class="policy-price-currency">
+                        $
+                      </span>
+                      <span class="policy-price-amount">
+                        (3.55)
+                      </span>
+                    </div>
+                  </td>
+                </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <th class="policy-price-total">
+                      <strong>Total</strong>
+                    </th>
+                    <td class="policy-price-total">
+                      <div class="price-container">
+                        <span class="currency-symbol">
+                          $
+                        </span>
+                        <span class="price-value">
+                          291.40
+                        </span>
+                        <span class="currency hide-for-small-only">
+                          AUD
+                        </span>
+                      </div>
+                    </td>
+                  </tr>
+                </tfoot>
+              </table>
+
+            </div>
+
+            <div class="policy-payment">
+
+              <fieldset>
+                <div class="input-group cc-type">
+                  <label for="PaymentDto_TenderTypeId">We Accept:</label>    <div class="sub-group">
+                    <img src="/Content/styles/i/visa.png" alt="Visa">
+                  </div>
+                  <div class="sub-group">
+                    <img src="/Content/styles/i/mastercard.png" alt="MasterCard">
+                  </div>
+                  <div class="sub-group">
+                    <img src="/Content/styles/i/amex.png" alt="American Express">
+                  </div>
+                </div>
+
+                <div class="input-group cc-name">
+                  <label for="PaymentDto_NameOnCreditCard">Name on card:</label>    <span class="help">The name on the front of your card</span>
+                  <input class="name" id="PaymentDto_NameOnCreditCard" name="PaymentDto.NameOnCreditCard" tabindex="4" type="text" value="">    <input class="link-like set-name" type="submit" name="SetDefaultNameOnCard" tabindex="11" value="< Click to insert name of first traveller">
+                </div>
+                <div class="input-group cc-number">
+                  <label for="PaymentDto_CreditCardNumber">Credit Card Number:</label>    <span class="help">The digits on the front of your credit card</span>
+                  <input id="PaymentDto_CreditCardNumber" name="PaymentDto.CreditCardNumber" tabindex="5" type="text" value=""></div>
+
+                <div class="input-group cc-expiry">
+                  <label for="PaymentDto_CreditCardExpiryDateMonthId">Expiration date:</label>    <span class="help">The date your credit card expires. Find this on the front of your credit card</span>
+                  <select id="PaymentDto_CreditCardExpiryDateMonthId" name="PaymentDto.CreditCardExpiryDateMonthId" tabindex="6"><option selected="selected"></option>
+                    <option value="1">01 - Jan</option>
+                    <option value="2">02 - Feb</option>
+                    <option value="3">03 - Mar</option>
+                    <option value="4">04 - Apr</option>
+                    <option value="5">05 - May</option>
+                    <option value="6">06 - Jun</option>
+                    <option value="7">07 - Jul</option>
+                    <option value="8">08 - Aug</option>
+                    <option value="9">09 - Sep</option>
+                    <option value="10">10 - Oct</option>
+                    <option value="11">11 - Nov</option>
+                    <option value="12">12 - Dec</option>
+                  </select>/<select id="PaymentDto_CreditCardExpiryDateYearId" name="PaymentDto.CreditCardExpiryDateYearId" tabindex="7"><option selected="selected"></option>
+                    <option value="2015">2015</option>
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                    <option value="2029">2029</option>
+                    <option value="2030">2030</option>
+                    <option value="2031">2031</option>
+                    <option value="2032">2032</option>
+                    <option value="2033">2033</option>
+                    <option value="2034">2034</option>
+                    <option value="2035">2035</option>
+                </select></div>
+                <div class="input-group cc-verification">
+                  <label for="PaymentDto_VerificationNumber">Security Code:</label>    <span class="alternative">(or CCV or CVC):</span>
+                  <span class="help">Last 3 digits on the back of your Visa or Mastercard or 4 digits on the front of your AMEX card.</span>
+                  <div class="hint">
+                    <div class="other"></div>
+                    <div class="amex"></div>
+
+                    <button type="submit" name="ShowPaymentHint" class="link-like">
+                      <span aria-hidden="true" class="tid-icon icon-tid-zoom"></span> enlarge
+                    </button>
+                  </div>
+                  <input id="PaymentDto_VerificationNumber" name="PaymentDto.VerificationNumber" tabindex="8" type="text" value=""></div>
+
+                <button type="submit" name="SubmitPayment" class="buy-now button-primary">
+                  Buy Now <span aria-hidden="true" class="tid-icon icon-tid-button-arrow"></span>
+                </button>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </section>
+    </form>
+  </div>
+
+  <div class='hide-for-small-only medium-12 large-3 columns aside-content-column'>
+    <aside id="additional-content">
+
+      <div class="panel-aside">
+        <h4>Have a question?</h4>
+        <p>
+        Post a Question on the forum for the benefit of everyone.                        
+        </p>
+        <a href="http://service.travelinsurancedirect.com.au/customer/portal/questions/new?purchase_path_origin=review_and_pay" target="_blank" class="standalone-link">Ask a Question</a>
+        <p>
+        Email our customer service team we will respond to you privately.                        
+        </p>
+        <a href="http://service.travelinsurancedirect.com.au/customer/portal/emails/new?purchase_path_origin=review_and_pay" target="_blank" class="standalone-link">Send us an email</a>
+      </div>
+
+      <div class="panel-aside twitter-info">
+        <h4>
+          <span aria-hidden="true" class="tid-icon icon-tid-twitter"></span>
+          <span class="text-after-icon">Tweet to us </span>
+          <a href="https://twitter.com/tidaustralia" target="_blank" class="tid-twitter-link base-size">@tidaustralia</a>
+        </h4>
+      </div>
+
+    </aside>
+  </div>
+
+</div>
+
+{% endblock %}

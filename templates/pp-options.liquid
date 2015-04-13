@@ -1,0 +1,393 @@
+{% block title %}TID Options page{% endblock %}
+{% block body_class %}options{% endblock %}
+{% block body_id %}options{% endblock %}
+{% block content %}
+
+<div id="content" data-analytics-id="layout-content-container">
+
+  <div id="modal-container">
+  </div>
+
+  <form action="/Quote/MultiTarget" id="optionsForm" method="post">  <input type="hidden" class="nonAjaxSignOut" value="true" />
+
+    <div class="blue-panel header-panel">
+
+      <div class='row'>
+        <div class='small-12 columns'>
+          <nav class="breadcrumb">
+            <ol>
+              <li class="step1">
+              <a href="/Quote?enc=kLg_wPS4F7AFuDMliLqLTZppVFyMfhC7QRT0AN3SJwmok64h3-c7pL0w5V7zv3tiCQQlKNBIzSwI-bxOAuDqGGu6Pq13zZvnoJKz7OjLGeG9yESmd5rfM1yGpeCWpKRYRtxFvnJcD07pKmJr3Jab8wg6ZtoDMNpH0sliZDAAdDRDmJ9WCLaHI7ihxqpCVp_n" data-analytics-id="breadcrumb-goto-quote">
+                1. Quote
+              </a>
+              </li>
+              <li class="step2 active">
+              <em>
+                2. Options
+              </em>
+              </li>
+              <li class="step3">
+              <em>
+                3. Details
+              </em>
+              </li>
+              <li class="step4">
+              <em>
+                4. Review &amp; Pay
+              </em>
+              </li>
+            </ol>
+          </nav>
+
+        </div>
+      </div>
+      <div class='row'>
+        <div class='medium-6 large-9 column'>
+          <h1 class="promo-heading">Select your options</h1>
+        </div>
+        <div class='medium-6 large-3 column'>
+          <div class='row purchase-info-row'>
+            <div class='small-12 column price-column'>
+              <strong class="options-total delta-size hide-for-small-only">Total</strong>
+              <div class="price-display price-container">
+                <span class="currency-symbol">$</span>
+                <span class="price-value">
+                  710.00
+                </span>
+                <span class="currency">AUD</span>
+              </div>
+            </div>
+            <div class='small-12 column cta-column'>
+              <button type="submit" class="button-primary continue-from-options" name="ShowTermsAndConditions" data-analytics-id="option-continue-top">
+                Buy now <span aria-hidden='true' class='tid-icon icon-tid-button-arrow'></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="session-tokens">
+      <input name="SessionTokenQuoteModel" type="hidden" value="285620a3-e98b-4fe7-bc8f-96a9bec1ea3f" />
+    </div>
+
+    <div class="global-messages-container"></div>
+
+    <section id="main-content" role="main">
+
+      <div class='row'>
+
+        <div class='medium-12 large-9 columns'>
+          <!-- Snow Sports -->
+          <div class='row skiing-row manual-update-container' id='snow-sports'>
+            <div class='small-12 medium-8 large-9 column description-column'>
+              <h2>
+                <span aria-hidden="true" class="tid-icon icon-tid-snow"></span>
+                <span>Will you be skiing or doing any snow sports?</span>
+              </h2>
+              <div class="input-group">
+                <label for="snowSportsOptIn" class="label-for-single-checkbox label-prominent">
+                  <input class="manual-update-trigger" data-analytics-id="option-add-snow-sports" id="snowSportsOptIn" name="QuoteDto.PolicyOptions[1].PolicyBasicPercentageOptionDto.IsSingleValueSelected" type="checkbox" value="true" /><input name="QuoteDto.PolicyOptions[1].PolicyBasicPercentageOptionDto.IsSingleValueSelected" type="hidden" value="false" />
+                  Yes I need cover for Snow Sports.
+                </label>
+              </div>
+              <p>If you are planning to do any
+              <a href=http://service.travelinsurancedirect.com.au/customer/portal/articles/528580-cover-for-skiing-and-snowboarding target=_blank>Skiing or snow sports</a> you need this option.
+              </p>
+              <span class="manual-update">
+                <input type="submit" value="Update" name="UpdateSnowSportsOption" class="button-tertiary" />
+              </span>
+            </div>
+
+            <div class='small-12 medium-4 large-3 column premium-column'>
+              <span class="price-with-currency-medium">$0.00</span>
+              <span class="price-description">Additional premium</span>
+            </div>
+          </div>
+
+          <!-- Reduce Policy Excess -->
+          <div class='row reduce-excess-row manual-update-container' id='reduce-excess'>
+            <div class='small-12 medium-8 large-9 column description-column'>
+              <h2>
+                <span aria-hidden="true" class="tid-icon icon-tid-excess"></span>
+                <span>Would you like to reduce your policy excess?</span>
+              </h2>
+              <div class="input-group">
+                <label for="reduceExcessOptIn" class="label-for-single-checkbox label-prominent">
+                  <input class="manual-update-trigger" data-analytics-id="option-reduce-policy-excess" id="reduceExcessOptIn" name="QuoteDto.PolicyOptions[0].PolicyBasicOptionDto.IsSingleValueSelected" type="checkbox" value="true" /><input name="QuoteDto.PolicyOptions[0].PolicyBasicOptionDto.IsSingleValueSelected" type="hidden" value="false" />
+                  Yes, reduce my excess from $100 to $0
+                </label>
+              </div>
+              <p>
+              An <a href="http://service.travelinsurancedirect.com.au/customer/portal/articles/526835-policy-excess?b_id=755" 
+                target="_blank">excess</a> of $100
+              applies to many benefits. By selecting this option you can reduce your excess to 
+              $0.
+              </p>
+              <span class="manual-update">
+                <input type="submit" value="Update" name="UpdateExcessBuyoutOption" class="button-tertiary" />
+              </span>
+            </div>
+
+            <div class='small-12 medium-4 large-3 column premium-column'>
+              <span class="price-with-currency-medium">$0.00</span>
+              <span class="price-description">Additional premium</span>
+            </div>
+          </div>
+
+          <!-- Specified Items -->
+          <div class='row specified-items-row manual-update-container' id='specItems'>
+            <div class='small-12 medium-8 large-9 column description-column'>
+              <h2>
+                <span aria-hidden="true" class="tid-icon icon-tid-luggage"></span>
+                <span>Would you like extra cover for valuable items?</span>
+              </h2>
+              <table class="additional-items">
+                <tbody>
+                <tr>
+                  <th class="item-name">Item Name</th>
+                  <th class="item-serial">Serial Number</th>
+                  <th class="item-value">Value</th>
+                  <th class="item-premium">Premium</th>
+                </tr>
+                <tr data-analytics-id="specified-item-row">
+                  <td class="item-name-entry" data-analytics-id="item-name">
+                    <input id="QuoteDto_PolicyOptions_2__PolicySpecifiedItemOptionDto_SpecifiedItems_0__Name" name="QuoteDto.PolicyOptions[2].PolicySpecifiedItemOptionDto.SpecifiedItems[0].Name" type="text" value="" />
+                  </td>
+                  <td class="item-serial-entry">
+                    <input id="QuoteDto_PolicyOptions_2__PolicySpecifiedItemOptionDto_SpecifiedItems_0__SerialNumber" name="QuoteDto.PolicyOptions[2].PolicySpecifiedItemOptionDto.SpecifiedItems[0].SerialNumber" placeholder="Optional" type="text" value="" />
+                  </td>
+                  <td class="item-value-entry" data-analytics-id="item-value">
+                    <input class="manual-update-trigger" id="QuoteDto_PolicyOptions_2__PolicySpecifiedItemOptionDto_SpecifiedItems_0__ItemValueAsString" name="QuoteDto.PolicyOptions[2].PolicySpecifiedItemOptionDto.SpecifiedItems[0].ItemValueAsString" type="text" value="" />
+                  </td>
+                  <td class="item-premium-entry">
+                    -
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+              <input type="submit" value="Update" class="button-tertiary" name="UpdateSpecifiedItemOption" />
+              <p></p>
+              <p>
+              If you would like <a href="http://service.travelinsurancedirect.com.au/customer/portal/articles/526847-cover-for-laptops-cameras-and-phones" 
+                target="_blank">extra cover</a> for valuable items above our 
+              <a href="http://service.travelinsurancedirect.com.au/customer/portal/articles/500346-cover-for-luggage-and-personal-effects" 
+                target="_blank">standard</a>, please add them above. This covers you for the full cost of the item in the event of a claim and no 
+              <a href="http://service.travelinsurancedirect.com.au/customer/portal/articles/859828-depreciation" 
+                target="_blank">depreciation</a> is applied.
+              </p>
+            </div>
+
+            <div class='small-12 medium-4 large-3 column premium-column'>
+              <span class="price-with-currency-medium">$0.00</span>
+              <span class="price-description">Additional premium
+              </span>
+
+            </div>
+          </div>
+
+          <!-- Car Rental -->
+          <div class='row car-rental-row manual-update-container' id='carExcess'>
+            <div class='small-12 medium-8 large-9 column description-column'>
+              <h2>
+                <span aria-hidden="true" class="tid-icon icon-tid-car"></span>
+                <span>Would you like extra cover for Rental Vehicle Excess?</span>
+              </h2>
+              <div class="input-group" data-analytics-id="option-rental-excess">
+                <label for="donate" class="multi-select">
+                  Increase my Rental Vehicle Insurance Excess cover to:
+                  <select class="manual-update-trigger" id="QuoteDto_PolicyOptions_3__PolicyBasicOptionDto_BasicOptionNetPriceId" name="QuoteDto.PolicyOptions[3].PolicyBasicOptionDto.BasicOptionNetPriceId"><option selected="selected" value="22">$4,000</option>
+                    <option value="23">$4,500</option>
+                    <option value="24">$5,000</option>
+                    <option value="25">$5,500</option>
+                    <option value="26">$6,000</option>
+                  </select>
+                  AUD
+                </label>
+              </div>
+
+              <span class="manual-update">
+                <input type="submit" value="Update" name="UpdateRentalCarExcessOpton" class="button-tertiary" />
+              </span>
+              <p>
+              If you hire a 
+              <a href="http://service.travelinsurancedirect.com.au/customer/portal/articles/514981-rental-vehicle---definition" 
+                target="_blank">vehicle</a>
+              on your trip and have an accident our standard cover pays up to 
+              $4,000
+              of any excess you may be liable for from the hire company.
+              </p>
+            </div>
+            <div class='small-12 medium-4 large-3 column premium-column'>
+              <span class="price-with-currency-medium">$0.00</span>
+              <span class="price-description">Additional premium</span>
+            </div>
+          </div>
+
+          <!-- Footprints -->
+          <div class='row footprints-row manual-update-container' id='donation'>
+            <div class='small-12 medium-8 large-9 column description-column'>
+              <h2>
+                <span aria-hidden="true" class="tid-icon icon-tid-charity"></span>
+                <span>Small enough to change the world</span>
+                <span>
+                  <img class="logo-donation-project" alt="Fred Hollows Foundation" 
+                  src="http://build.footprints.org.au/uploadimages/fhf_small.jpg" style="position: absolute; top: 0; right: 0;" />
+                </span>
+              </h2>
+              <div class="input-group manual-update-container" data-analytics-id="option-donation">
+                <label for="donate" class="multi-select">
+                  Make a difference and give $
+                  <input id="IsDonationProjectSelected" name="IsDonationProjectSelected" type="hidden" value="True" />
+                  <select class="manual-update-trigger" id="QuoteDto_DonationAmount" name="QuoteDto.DonationAmount"><option selected="selected" value="0">0.00</option>
+                    <option value="1">1.00</option>
+                    <option value="2">2.00</option>
+                    <option value="5">5.00</option>
+                    <option value="10">10.00</option>
+                  </select>
+                  AUD
+                  to:
+                </label>
+                <span class="manual-update">
+                  <input type="submit" value="Update" name="UpdateDonation" class="button-tertiary" />
+                </span>
+              </div>
+              <figure>
+                <div class="donation-images small-12 medium-5 large-4 column">
+                  <img class="preview-donation-project" alt="Blindness prevention program" 
+                  src="http://build.footprints.org.au/uploadimages/hollows_camb_small.jpg" />
+                </div>
+
+                <figcaption class="donation-project-description small-12 medium-7 large-8 column">
+                <h2>Blindness prevention program</h2>
+                <p>
+
+                </p>
+                <ul class="list-actions list-horizontal">
+                  <li>
+                  <a href="http://build.footprints.org.au/default.aspx?c=10&amp;x1=13" class="find-out-more-link" target="_blank" data-analytics-id="option-donation-project-view">View project</a>
+                  </li>
+                  <li>
+                  <input type="submit" class="choose-another-project-link link-like" 
+                  name="OpenDonationProjects" value="Select a different project >" data-analytics-id="option-donation-project-change"/>
+                  </li>
+                </ul>
+                </figcaption>
+              </figure>
+            </div>
+            <div class='small-12 medium-4 large-3 column premium-column'>
+              <span class="price-with-currency-medium">$0.00</span>
+              <span class="price-description">Donation</span>
+            </div>
+          </div>
+
+          <!-- Promo discount -->
+          <div class='row promo-row manual-update-container' id='promotion-discount'>
+            <div class='small-12 medium-8 large-9 column description-column'>
+              <h2>
+                <span aria-hidden="true" class="tid-icon icon-tid-promo"></span>
+                <span>Have a campaign code?</span>
+              </h2>
+
+
+
+              <div class=" promotion-code-details" data-analytics-id="promo-code">
+                <div class="input-group">
+                  <label for="QuoteDto_PromotionCode">Enter code</label>
+                  <input data-analytics-id="promo-code-value" id="QuoteDto_PromotionCode" name="QuoteDto.PromotionCode" type="text" value="" />
+                  <button type="submit" name="SubmitPromotionCode" data-analytics-id="update-promo-code" class="button-tertiary">Update</button>
+                </div>
+              </div>
+            </div>
+            <div class='small-12 medium-4 large-3 column premium-column'>
+              <span class="price-with-currency-medium">($0.00)</span>
+              <span class="price-description">Discount</span>
+            </div>
+          </div>
+
+          <!-- Purchase info row footer -->
+          <div class='row purchase-info-row bottom'>
+            <div class='small-12 medium-4 large-3 column price-column'>
+              <strong class="options-total delta-size">Total</strong>
+              <div class="price-display price-container">
+                <span class="currency-symbol">$</span>
+                <span class="price-value">
+                  710.00
+                </span>
+                <span class="currency">AUD</span>
+              </div>
+            </div>
+            <div class='small-12 medium-4 small-4 column cta-column'>
+              <button type="submit" class="button-primary continue-from-options" name="ShowTermsAndConditions" data-analytics-id="option-continue-top">
+                Buy now <span aria-hidden='true' class='tid-icon icon-tid-button-arrow'></span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class='medium-12 large-3 columns'>
+          <aside id="additional-content" data-analytics-id="options-side-bar-content">
+            <div class="widget-email-quote-container panel-bg-highlight">
+
+              <form action="/Quote/MultiTarget" id="emailQuoteForm" method="post">  <div class="widget-email-quote">
+
+                  <div class="email-title">
+                    <span aria-hidden="true" class="tid-icon icon-tid-email"></span>
+                    Email your quote
+                  </div>
+
+                  <div class="input-group">
+                    <input id="QuoteDto_EmailQuoteAddress" name="QuoteDto.EmailQuoteAddress" placeholder="Enter your email" type="text" value="" /></div>
+
+                  <div class="button-wrapper">
+                    <button type="submit" class="button-secondary button-no-text" name="SubmitEmailQuote" data-analytics-id="email-quote">
+                      Send
+                      <span aria-hidden='true' class='tid-icon icon-tid-button-arrow'></span>
+                    </button>
+                  </div>
+
+                </div>
+                <div class="session-tokens">
+                  <input name="SessionTokenQuoteModel" type="hidden" value="285620a3-e98b-4fe7-bc8f-96a9bec1ea3f" />
+                </div>
+                <div class="panel-aside">
+                  <h4>Have a question?</h4>
+                  <p>
+                  Post a Question on the forum for the benefit of everyone.                        
+                  </p>
+                  <a href="http://service.travelinsurancedirect.com.au/customer/portal/questions/new?purchase_path_origin=options" target="_blank" class="standalone-link">Ask a Question</a>
+                  <p>
+                  Email our customer service team we will respond to you privately.                        
+                  </p>
+                  <a href="http://service.travelinsurancedirect.com.au/customer/portal/emails/new?purchase_path_origin=options" target="_blank" class="standalone-link">Send us an email</a>
+                </div>
+
+                <div class="panel-aside twitter-info">
+                  <h4>
+                    <span aria-hidden="true" class="tid-icon icon-tid-twitter"></span>
+                    <span class="text-after-icon">Tweet to us </span>
+                    <a href="https://twitter.com/tidaustralia" target="_blank" class="tid-twitter-link base-size">@tidaustralia</a>
+                  </h4>
+                </div>
+              </form>
+
+            </div>
+
+          </aside>
+        </div>
+      </div>
+    </section>
+
+  </form>
+
+</div>
+
+<script>
+$(function() {
+    $('.manual-update button, .manual-update input').hide();
+    });
+</script>
+
+{% endblock %}

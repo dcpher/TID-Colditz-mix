@@ -1,0 +1,137 @@
+// _details.sass
+
+body.details
+  // TODO: Is there a different more foundationish way to do container pads?
+  .row
+    margin-top: rem-calc(20)
+    @media #{$small-only}
+      margin-left: 0
+      margin-right: 0
+      width: 100%
+  ul
+    margin-left: 0
+    list-style-type: none
+  @media #{$small-only}
+    .main-content-column
+      padding-left: 0
+      padding-right: 0
+    .blue-panel
+      padding-left: 0
+      padding-right: 0
+
+  // Styles
+  h2
+    @include grid-column(12)
+    font-size: rem-calc(40)
+    line-height: rem-calc(40)
+    font-weight: 100
+    margin-bottom: rem-calc(10)
+    letter-spacing: rem-calc(-2.5)
+    @media #{$small-only}
+      font-size: rem-calc(25)
+      line-height: rem-calc(25)
+      letter-spacing: rem-calc(-1)
+  fieldset
+    margin: 0
+    border: 0
+    padding: 0
+  .input-group,
+  .login-panel-actions
+    @media #{$medium-up}
+      @include grid-column(4)
+    @media #{$small-only}
+      @include grid-column(12)
+  .dob
+    select
+      width: 30%
+      margin-right: 5%
+    select:last-child
+      margin-right: 0
+
+  // Top inline sign in panel
+  .sign-in-or-forgot-password
+    .password
+      input[type='submit']
+        background: none
+        outline: none
+        border: none
+        padding: 0
+        font-size: rem-calc(13)
+        color: $color-blue
+        font-weight: 100
+        &:hover
+          cursor: pointer 
+      label
+        display: inline
+    .button-secondary
+      padding-top: rem-calc(7)
+      padding-bottom: rem-calc(7)
+      margin-top: rem-calc(25)
+      &:after
+        bottom: rem-calc(10)
+      @media #{$small-only}
+        margin-top: 0
+
+  // Adult traveller details
+  .adult-traveller
+    p 
+      @include grid-column(12)
+
+  // Dependent details
+  .dependent-details
+    .update
+      @include grid-column(12)
+      label
+        display: inline
+        font-size: rem-calc(18)
+      select
+        width: 80px
+
+  // Address details
+  .address-details
+    .input-group.address-1,
+    .input-group.address-2
+      clear: left
+      @media #{$small-up}
+        @include grid-column(12)
+      @media #{$medium-up}
+        @include grid-column(8)
+    .input-group.town,
+    .input-group.state
+      clear: left
+      @media #{$small-up}
+        @include grid-column(12)
+      @media #{$medium-up}
+        @include grid-column(4)
+    .input-group.postcode,
+    .preselected-country
+      @media #{$small-up}
+        @include grid-column(12)
+      @media #{$medium-up}
+        @include grid-column(4)
+    .preselected-country
+      clear: left
+
+  // Choose Password
+  .join-or-sign-in-or-guest
+    .choose-password-benefits,
+    .bought-before
+      @include grid-column(12)
+    .button-primary
+      padding-top: rem-calc(7)
+      padding-bottom: rem-calc(7)
+      margin-top: rem-calc(46)
+      &:after
+        bottom: rem-calc(10)
+      @media #{$small-only}
+        margin-top: 0
+
+  // Aside content column
+  .aside-content-column
+    @media #{$medium-only}
+      > aside
+        padding: 0 rem-calc(12) rem-calc(20)
+    @media #{$small-only}
+      border-top: 1px solid $color-light-grey
+      padding-top: rem-calc(20)
+      padding-bottom: rem-calc(20)

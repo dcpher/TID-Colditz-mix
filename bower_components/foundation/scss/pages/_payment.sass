@@ -1,0 +1,180 @@
+// _payment.sass
+
+body.payment
+  // TODO: Is there a different more foundationish way to do container pads?
+  .row
+    margin-top: rem-calc(20)
+    @media #{$small-only}
+      margin-left: 0
+      margin-right: 0
+      width: 100%
+  .purchase-path-panel,
+  .payment-panel
+    @include grid-row($behavior: nest)
+    ul
+      margin-left: 0
+      margin-bottom: 0
+      list-style-type: none
+
+  // Styles
+  h2
+    @include grid-column(12)
+    font-size: rem-calc(40)
+    line-height: rem-calc(40)
+    font-weight: 100
+    margin-bottom: rem-calc(10)
+    letter-spacing: rem-calc(-2.5)
+    @media #{$small-only}
+      font-size: rem-calc(25)
+      line-height: rem-calc(25)
+      letter-spacing: rem-calc(-1)
+  fieldset
+    margin: 0
+    border: 0
+    padding: 0
+  .header-with-link
+    position: relative
+    a
+      position: absolute
+      right: rem-calc(24)
+      top: rem-calc(10)
+
+  // Panels
+  .review-details-group
+    @include grid-column(3)
+    @media #{$small-only}
+      @include grid-column(12)
+
+  .list-key-value
+    +clearfix
+
+  .purchase-path-panel,
+  .trip-summary
+    border-bottom: 1px solid $color-light-grey
+    margin-bottom: rem-calc(20)
+
+  .address-details
+    @include grid-column(6)
+    @media #{$small-only}
+      @include grid-column(12)
+
+  // Payment panel (which includes options stuff)
+  .payment-panel
+    position: relative
+    background: $color-light-grey 
+    margin-bottom: rem-calc(40)
+    th.header-with-link
+      position: static
+    table
+      width: 100%
+      border: none
+      border-spacing: 0
+      border-top: 1px solid $color-mid-grey
+      .price-container
+        display: inline
+      @media #{$small-only}
+        th
+          width: 65%
+        td
+          width: 35%
+        td.policy-price-total
+          font-size: rem-calc(18)
+          font-weight: bold
+    .header-with-link a
+      font-size: rem-calc(16)
+      position: static
+      float: right
+    .thawte
+      position: absolute
+      top: rem-calc(8)
+      right: rem-calc(8)
+    label
+      font-weight: bold
+    .help
+      font-size: rem-calc(12)
+      line-height: rem-calc(12)
+      display: block
+      margin-bottom: rem-calc(4)
+    h2
+      font-size: rem-calc(25)
+      letter-spacing: 0
+      font-weight: 300
+      padding-left: rem-calc(50)
+      position: relative
+      min-height: 67px
+      @media #{$small-only}
+        min-height: initial
+      img
+        position: absolute
+        left: rem-calc(9)
+        top: 0
+      span
+        font-size: rem-calc(18)
+        font-weight: 100
+        display: block
+        line-height: rem-calc(18)
+    .input-group
+      clear: left
+      @media #{$small-only}
+        @include grid-column(12)
+      @media #{$medium-up}
+        @include grid-column(8)
+    .cc-type
+      margin-bottom: rem-calc(12)
+      label
+        display: block
+      .sub-group
+        float: left
+        margin-right: rem-calc(12)
+    .cc-name
+      margin-bottom: rem-calc(12)
+      input
+        margin-bottom: 0
+    .link-like
+      background: none
+      border: none
+      color: $color-blue
+    .cc-expiry select
+      width: auto
+    .cc-verification
+      position: relative
+      label
+        float: left
+      .alternative
+        font-size: rem-calc(12)
+        float: left
+        line-height: rem-calc(22)
+        margin-left: rem-calc(6)
+      .help
+        float: left
+        clear: left
+      .hint
+        position: absolute
+        bottom: rem-calc(3)
+        right: rem-calc(12)
+      .other
+        background: transparent url('/Content/styles/i/cc_other_small.png') no-repeat left top
+        width: 84px
+        height: 54px
+        float: left
+      .amex
+        background: transparent url('/Content/styles/i/cc_amex_small.png') no-repeat left top
+        width: 84px
+        height: 54px
+        float: left
+      button
+        text-shadow: none
+        font-size: rem-calc(12)
+        font-weight: bold
+        padding: 0
+        &:after
+          display: none
+      input[type='text']
+        width: 50%
+        @media #{$small-only}
+          width: 65px
+    .buy-now
+      float: left
+      clear: left
+      margin-left: rem-calc(12)
+      margin-top: rem-calc(18)

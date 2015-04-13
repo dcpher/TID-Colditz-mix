@@ -1,9 +1,10 @@
 // _breadcrumb.sass
 
 nav.breadcrumb
-  @include grid-row()
-  margin-bottom: rem-calc(16)
+  +clearfix
+  margin-bottom: rem-calc(40)
   ol
+    +clearfix
     list-style-type: none
     margin-left: 0
   li
@@ -12,6 +13,10 @@ nav.breadcrumb
     color: $color-white
     em
       font-style: normal
+    a
+      color: $color-white
     &.active
       border-color: $color-dark-blue
       color: $color-dark-blue
+    &.active
+      border-color: $color-dark-blue

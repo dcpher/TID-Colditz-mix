@@ -30,5 +30,12 @@
   border: 1px solid darken($color, 10%)
   
   
-
-    
+// TODO: Where should this be? I don't really
+// get le buttons.
+=pp-button-dark
+  @include button
+  +gradient-button($color-dark-blue)
+  +border-radius(4px)
+  border: 1px solid darken($color-dark-blue, 5%)
+  font-size: rem-calc(20)
+  padding: rem-calc(13) rem-calc(16)
