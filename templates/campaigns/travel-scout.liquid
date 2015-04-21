@@ -1,0 +1,337 @@
+{% block title %}TID Travel Scout Competition{% endblock %}
+{% block content %}
+<style>
+
+@media all and (min-width: 40em) {
+#header {
+    background: url('/Media/Default/main/hero-images/campaign_travelscout_desktop.jpg') no-repeat center center;
+    background-size: cover;
+  }
+
+}
+@media all and (max-width: 64em) {
+#header {
+    background: url('/Media/Default/main/hero-images/campaign_travelscout_tablet.jpg') no-repeat center center;
+    background-size: cover;
+  }
+
+}
+@media all and (max-width: 40em) {
+#header {
+    background: url('/Media/Default/main/hero-images/campaign_travelscout_phone.jpg') no-repeat right center;
+    background-size: cover;
+  }
+
+}
+  
+.travel-scout-form label {
+  font-size: 1rem;
+}
+.travel-scout-form .checkbox-list span {
+  line-height: 1.1;
+  display: inline-block;
+  margin-left: 22px
+}
+.travel-scout-form input[type=checkbox], .travel-scout-form input[type=file], .travel-scout-form input[type=radio], .travel-scout-form select {
+  margin: 0;
+}
+  
+.travel-scout-form .row {
+  padding-top: 0;
+}
+.content-item h5 {
+  line-height: 1.3;
+  margin-bottom: 0.5rem;  
+}
+  
+ol li {
+  margin-bottom: 0.75rem; 
+}
+.travel-scout-themes {
+  padding: 1rem 0;
+}
+.travel-scout-themes img {
+  display: block;
+  padding-bottom: 0.5rem;
+}
+.right-col-component {
+  margin-bottom: 32px; 
+}
+.competition-dates-list span {
+   display: block;
+   margin-bottom: 16px;
+}
+  
+</style>
+<article class="content-item">
+<div class="header-panel campaign-header dark-blue-panel" id="header">
+  <div class="row">
+    <div class="small-12 medium-8 large-6 column">
+      <h1 class="">Join the TID Travel Scouts</h1>
+      <p>And win a Annual Multi-trip policy worth up to $1000 and an iPad mini for your next trip.</p>
+      <a href="#travel-scout-form"><button class="button blue">Apply now</button></a>
+    </div>
+  </div>
+</div>
+  
+
+  
+<div class="content-panel content">
+  <div class="row">
+    <div class="small-12 medium-8 large-8 columns">
+    
+    <h3>Are you a blogger dedicated to telling your travel stories? Or an explorer with an eye for photography? Maybe you prefer to experience the world from behind the lens of a video camera? </h3><br>
+    <h3>If we’ve just described you to a T, you could become a TID Travel Scout!</h3>
+      
+    <hr> 
+    <h3>What’s a TID Travel Scout?</h3>
+    <p>TID are recruiting customers who are frequent globetrotters and want to share their experiences with other TID travellers. As our official storytellers, TID Travel Scouts will have their content published regularly on TID’s website and social pages. </p>
+
+    
+    <hr>
+    <h3>What’s in it for you?</h3>
+    <p>In return for your submissions, you will receive an Annual Multi-trip policy to fuel your travel passion. That’s 12 months’ worth of travel insurance which covers you, your gear and your trips as you travel throughout the year.</p>
+    
+    <p>To sweeten the deal, you’ll also get an iPad mini 2 32GB with Wi-Fi (RRP $429) so you can post, tweet and ‘gram on the go.</p>
+     
+    </div>
+    
+    <!--  Countdown script  -->
+    <script type="text/javascript">
+      var year = 2015; 
+      var month = 05; 
+      var day = 25;
+      var hour= 9; 
+      var min= 0; 
+      var sec= 0;
+    </script>
+    <script type="text/javascript" src="/Media/Default/scripts/js/counter-countdown.js"></script>
+    
+    <div class="small-12 medium-4 large-3 large-push-1 columns">
+     <div class="right-col-component grey-panel">
+      <h4>Applications close in...</h4>
+      <ul id="countbox">
+      </ul>
+     </div>
+     <div class="right-col-component grey-panel">
+      <h4>Competition Dates</h4>
+      <p>
+      <ul class="competition-dates-list no-bullet">
+        <li>Closing date for entries<span><strong>25th May 2015 at 9am (AEST)</strong></span></li> 
+        <li>Winners announced<span><strong>5th June 2015 at 9am (AEST)</strong></span></li> 
+      </ul>
+     </div>
+   </div>
+</div>
+  
+  
+<div class="row">
+   <div class="small-12 columns">
+     
+    <hr>
+    <h3>Who can apply?</h3>
+
+    <p>To be considered, you’ll need to -</p>
+    
+      <ol>
+        <li>Be a TID customer</li>
+        <li>Be an amateur travel blogger, video maker or photographer</li>
+        <li>Have your own blog, YouTube/Vimeo, Flickr, Instagram and/or Pinterest accounts</li>
+        <li>Travel overseas at least 3 times in the 12 month period of your AMT policy</li>
+        <li>Be an Australian resident and agree to the T&amp;Cs of our travel insurance policy</li>
+        <li>Agree to provide a minimum of 10 pieces of content in your chosen medium over the 12 month period of your AMT policy</li>
+        <li>Be a passionate traveller who fits into one of these four themes:
+        </li>
+      </ol>  
+     
+      <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-4 travel-scout-themes">
+        <li>
+          <h5>Fun</h5>
+          <img src="{{ "300x150" | placeholder:'EEEEEE','000000' }}">
+          Whether you are at Disneyland, skiing in Niseko or diving in the Maldives, this theme is for thrill-seeking travellers who are always on the hunt for adventure.</li>
+        <li>
+          <h5>Family</h5>
+          <img src="{{ "300x150" | placeholder:'EEEEEE','000000' }}">
+          You may be celebrating an anniversary, visiting family or getting away for the school holidays.  This theme puts family at the centre of your travels.</li>
+        <li>
+          <h5>Food</h5>
+          <img src="{{ "300x150" | placeholder:'EEEEEE','000000' }}">
+          If you plan your trips around food then this is the one for you.  Booking a Michelin star restaurant months ahead or seeking out the best of the local cuisine is what you’re about.</li>
+        <li>
+          <h5>Film</h5>
+          <img src="{{ "300x150" | placeholder:'EEEEEE','000000' }}">
+          After seeing ‘The Secret Life of Walter Mitty’ you are packing your Nikon and heading to Iceland.  You are inspired by the cinematography of film and TV (plus you may just want to snap a selfie with a star).</li>
+      </ul>  
+  </div>
+</div>
+
+<div class="content-panel panel"> 
+  <div class="row" id="travel-scout-form">
+    <div class="small-12 large-10 large-centered columns"> 
+      <h3>How to enter</h3>
+
+      <p>Now for the fun part!</p>
+
+      <form class="travel-scout-form" >
+        <h5>1. Tell us a bit about you…</h5>
+        <div class="row">
+          <div class="medium-6 large-4 columns">
+            <label>First Name*
+              <input type="text" placeholder="Enter Your First Name" />
+            </label>
+          </div>
+          <div class="medium-6 large-4 columns">
+            <label>Last Name*
+              <input type="text" placeholder="Enter Your Last Name" />
+            </label>
+          </div>
+          
+          <div class="medium-6 large-4 columns end">
+            <label>Email*
+              <input type="text" placeholder="Enter your email address" />
+            </label>
+          </div>
+        </div>
+
+        <h5>2. Where do you like to be social?</h5>
+        <div class="row">
+          <div class="medium-6 large-4 columns">
+            <label>Twitter
+              <input type="text" placeholder="Enter Your Twitter url" />
+            </label>
+          </div>
+          <div class="medium-6 large-4 columns end">
+            <label>Instagram 
+              <input type="text" placeholder="Enter your Instagram url" />
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="medium-6 large-4 columns">
+            <label>Pinterest
+              <input type="text" placeholder="Enter Your Pinterest url" />
+            </label>
+          </div>
+          <div class="medium-6 large-4 columns end">
+            <label>Google+ 
+              <input type="text" placeholder="Enter your Google+ url" />
+            </label>
+          </div>
+        </div>
+
+        <h5>3. Where are you travelling in the next 12 months?</h5>
+        <div class="row">
+          <div class="medium-6 large-4 columns">
+            <label>Destination*
+              <input type="text" placeholder="Enter the country you are going to" />
+            </label>
+          </div>
+          <div class="medium-6 large-4 columns end">
+            <label>Intended Date*
+              <input type="text" placeholder="Enter date" />
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="medium-6 large-4 columns">
+            <label>Destination*
+              <input type="text" placeholder="Enter the country you are going to" />
+            </label>
+          </div>
+          <div class="medium-6 large-4 columns end">
+            <label>Intended Date*
+              <input type="text" placeholder="Enter date" />
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="medium-6 large-4 columns">
+            <label>Destination*
+              <input type="text" placeholder="Enter the country you are going to" />
+            </label>
+          </div>
+          <div class="medium-6 large-4 columns end">
+            <label>Intended Date*
+              <input type="text" placeholder="Enter date" />
+            </label>
+          </div>
+        </div>  
+
+
+        <h5>4. Show us some examples of your blog, photography or film work*</h5>      
+        <div class="row collapse">
+          <div class="small-3 medium-2 columns">
+            <span class="prefix">http://</span>
+          </div>
+          <div class="small-9 medium-10 columns">
+            <input type="text" placeholder="Enter URL Blog, YouTube, Flickr album etc...">
+          </div>
+          <div class="small-3 medium-2 columns">
+            <span class="prefix">http://</span>
+          </div>
+          <div class="small-9 medium-10 columns">
+            <input type="text" placeholder="Enter URL Blog, YouTube, Flickr album etc...">
+          </div>
+          <div class="small-3 medium-2 columns">
+            <span class="prefix">http://</span>
+          </div>
+          <div class="small-9 medium-10 columns">
+            <input type="text" placeholder="Enter URL Blog, YouTube, Flickr album etc...">
+          </div>
+        </div>
+
+        <h5>5. Which theme best describes the kind of travel you do?*</h5>
+        <div class="row">
+          <div class="large-12 columns checkbox-list">
+            <input id="checkbox1" type="checkbox"><label for="checkbox1"><strong>Fun</strong></label>
+            <span>(Thrill-seeker always on the hunt for adventure)</span>
+          </div>
+          <div class="large-12 columns checkbox-list">
+            <input id="checkbox2" type="checkbox"><label for="checkbox2"><strong>Family</strong></label>
+            <span>(Family is at the centre of your travels)</span>
+          </div>
+          <div class="large-12 columns checkbox-list">  
+            <input id="checkbox3" type="checkbox"><label for="checkbox3"><strong>Food</strong></label>
+            <span>(The best of the local cuisine is what you’re about)</span>
+          </div>
+          <div class="large-12 columns checkbox-list">
+            <input id="checkbox4" type="checkbox"><label for="checkbox4"><strong>Film</strong></label>
+            <span>(You're inspired by the cinematography of film and TV)</span>
+          </div>
+        </div>
+
+        <h5>6. Based on the theme you selected, tell us in 100 words or less what you love about travelling.*</h5>
+        <div class="row">
+          <div class="large-12 columns">
+            <textarea placeholder="" rows="5"></textarea>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="large-12 columns">
+            <input id="terms-checkbox" type="checkbox"><label for="terms-checkbox"><strong>I Agree</strong> to the <a href="">Terms &amp; Conditions</a> to this competition*</label>
+          </div>
+        </div>
+
+        <button type="submit" class="button dark-blue" name="SubmitTravelScoutForm">Enter</button>
+      </form>
+     </div>
+  </div>
+</div>
+<div class="row">
+  <div class="large-12 columns">
+    <h3>What happens now?</h3>
+      
+    <p>The 10 most creative, interesting and articulate travellers will be selected to be a TID Travel Scout.  Good luck!</p>
+    <p>Entries close 25.5.15 at 9am (AEST).</p>
+    
+   </div>
+</div>
+   
+   
+</div>
+ 
+  
+</article>
+
+{% endblock %}
