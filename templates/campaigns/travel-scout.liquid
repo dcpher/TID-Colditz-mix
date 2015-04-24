@@ -147,19 +147,19 @@ ol li {
       <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-4 travel-scout-themes">
         <li>
           <h5>Fun</h5>
-          <img src="{{ "300x150" | placeholder:'EEEEEE','000000' }}">
+          <img src="/Media/Default/main/campaigns/travel-scout/travel-scout-fun.jpg">
           Whether you are at Disneyland, skiing in Niseko or diving in the Maldives, this theme is for active travellers who are always on the hunt for adventure.</li>
         <li>
           <h5>Family</h5>
-          <img src="{{ "300x150" | placeholder:'EEEEEE','000000' }}">
+          <img src="/Media/Default/main/campaigns/travel-scout/travel-scout-family.jpg">
           You may be celebrating an anniversary, visiting family or getting away for the school holidays.  This theme puts family at the centre of your travels.</li>
         <li>
           <h5>Food</h5>
-          <img src="{{ "300x150" | placeholder:'EEEEEE','000000' }}">
+          <img src="/Media/Default/main/campaigns/travel-scout/travel-scout-food.jpg">
           If you plan your trips around food then this is the one for you.  Booking a Michelin star restaurant months ahead or seeking out the best of the local cuisine is what you’re about.</li>
         <li>
           <h5>Film</h5>
-          <img src="{{ "300x150" | placeholder:'EEEEEE','000000' }}">
+          <img src="/Media/Default/main/campaigns/travel-scout/travel-scout-film.jpg">
           After seeing ‘The Secret Life of Walter Mitty’ you are packing your Nikon and heading to Iceland.  You are inspired by the cinematography of film and TV (plus you may just want to snap a selfie with a star).</li>
       </ul>  
   </div>
@@ -235,9 +235,30 @@ ol li {
               <input type="text" placeholder="Enter the country you are going to" />
             </label>
           </div>
-          <div class="medium-6 large-4 columns end">
-            <label>Intended Date*
-              <input type="text" placeholder="Enter date" />
+          <div class="medium-2 large-2 columns end">
+            <label>Intended Month*
+              <select id="DepartureDateMonth1" name="DepartureDateMonth1">
+                <option value="1">Jan</option>
+                <option value="2">Feb</option>
+                <option value="3">Mar</option>
+                <option selected="selected" value="4">Apr</option>
+                <option value="5">May</option>
+                <option value="6">Jun</option>
+                <option value="7">Jul</option>
+                <option value="8">Aug</option>
+                <option value="9">Sep</option>
+                <option value="10">Oct</option>
+                <option value="11">Nov</option>
+                <option value="12">Dec</option>
+              </select>
+            </label>
+          </div>
+          <div class="medium-2 large-2 columns end">
+            <label>Intended year*
+              <select id="DepartureDateYear1" name="DepartureDateYear1">
+                <option selected="selected" value="2015">2015</option>
+                <option value="2016">2016</option>
+              </select>
             </label>
           </div>
         </div>
