@@ -1,0 +1,1201 @@
+{% block title %}Dfat{% endblock %}
+
+{% block content %}
+
+<div class='header-panel blue-panel amt' id='header'>
+
+  <div class='row'>
+    <div class='small-12 medium-6 large-6 column'>
+		<h1>Travel Advice for <span>Côte d'Ivoire</span></h1>
+	</div>
+	
+	<div class='small-12 medium-6 large-6 column'>
+
+	
+<nav class="location-picker">
+<form>
+  <label for="destination">Travel advice by country</label>
+<form action="/Safety/SubmitTravelAdviceCountry" method="post"><select id="SelectedCountryCode" name="SelectedCountryCode"><option value="">-- Please select --</option>
+<option value="afghanistan">Afghanistan</option>
+<option value="albania">Albania</option>
+<option value="algeria">Algeria</option>
+<option value="american-samoa">American Samoa</option>
+<option value="andorra">Andorra</option>
+<option value="angola">Angola</option>
+<option value="antigua-and-barbuda">Antigua and Barbuda</option>
+<option value="argentina">Argentina</option>
+<option value="armenia">Armenia</option>
+<option value="aruba">Aruba</option>
+<option value="austria">Austria</option>
+<option value="azerbaijan">Azerbaijan</option>
+<option value="bahamas">The Bahamas</option>
+<option value="bahrain">Bahrain</option>
+<option value="bangladesh">Bangladesh</option>
+<option value="barbados">Barbados</option>
+<option value="belarus">Belarus</option>
+<option value="belgium">Belgium</option>
+<option value="belize">Belize</option>
+<option value="benin">Benin</option>
+<option value="bhutan">Bhutan</option>
+<option value="bolivia">Bolivia</option>
+<option value="bosnia-and-herzegovina">Bosnia and Herzegovina</option>
+<option value="botswana">Botswana</option>
+<option value="brazil">Brazil</option>
+<option value="brunei-darussalam">Brunei Darussalam</option>
+<option value="bulgaria">Bulgaria</option>
+<option value="burkina-faso">Burkina Faso</option>
+<option value="burma">Burma</option>
+<option value="burundi">Burundi</option>
+<option value="cambodia">Cambodia</option>
+<option value="cameroon">Cameroon</option>
+<option value="canada">Canada</option>
+<option value="cape-verde">Cape Verde</option>
+<option value="central-african-republic">Central African Republic</option>
+<option value="chad">Chad</option>
+<option value="chile">Chile</option>
+<option value="china">China</option>
+<option value="colombia">Colombia</option>
+<option value="comoros">Comoros</option>
+<option value="cook-islands">Cook Islands</option>
+<option value="costa-rica">Costa Rica</option>
+<option value="croatia">Croatia</option>
+<option value="cuba">Cuba</option>
+<option value="cyprus">Cyprus</option>
+<option value="czech-republic">Czech Republic</option>
+<option selected="selected" value="ivory-coast">Côte d'Ivoire</option>
+<option value="democratic-republic-of-the-congo">Democratic Republic of the Congo</option>
+<option value="denmark">Denmark</option>
+<option value="djibouti">Djibouti</option>
+<option value="dominica">Dominica</option>
+<option value="dominican-republic">Dominican Republic</option>
+<option value="east-timor">East Timor</option>
+<option value="ecuador">Ecuador</option>
+<option value="egypt">Egypt</option>
+<option value="el-salvador">El Salvador</option>
+<option value="equatorial-guinea">Equatorial Guinea</option>
+<option value="eritrea">Eritrea</option>
+<option value="estonia">Estonia</option>
+<option value="ethiopia">Ethiopia</option>
+<option value="federated-states-of-micronesia">Federated States of Micronesia</option>
+<option value="fiji">Fiji</option>
+<option value="finland">Finland</option>
+<option value="fyrom">The former Yugoslav Republic of Macedonia</option>
+<option value="france">France</option>
+<option value="french-polynesia">French Polynesia</option>
+<option value="gabon">Gabon</option>
+<option value="gambia">The Gambia</option>
+<option value="general">General Advice to Australian Travellers</option>
+<option value="georgia">Georgia</option>
+<option value="germany">Germany</option>
+<option value="ghana">Ghana</option>
+<option value="gibraltar">Gibraltar</option>
+<option value="greece">Greece</option>
+<option value="greenland">Greenland</option>
+<option value="grenada">Grenada</option>
+<option value="guam">Guam</option>
+<option value="guatemala">Guatemala</option>
+<option value="guinea">Guinea</option>
+<option value="guinea-bissau">Guinea-Bissau</option>
+<option value="guyana">Guyana</option>
+<option value="haiti">Haiti</option>
+<option value="honduras">Honduras</option>
+<option value="hong-kong">Hong Kong</option>
+<option value="hungary">Hungary</option>
+<option value="iceland">Iceland</option>
+<option value="india">India</option>
+<option value="indonesia">Indonesia</option>
+<option value="iran">Iran</option>
+<option value="iraq">Iraq</option>
+<option value="ireland">Ireland</option>
+<option value="israel-gaza-strip-and-west-bank">Israel, the Gaza Strip and the West Bank</option>
+<option value="italy">Italy</option>
+<option value="jamaica">Jamaica</option>
+<option value="japan">Japan</option>
+<option value="jordan">Jordan</option>
+<option value="kazakhstan">Kazakhstan</option>
+<option value="kenya">Kenya</option>
+<option value="kiribati">Kiribati</option>
+<option value="kosovo">Kosovo</option>
+<option value="kuwait">Kuwait</option>
+<option value="kyrgyz-republic">Kyrgyz Republic</option>
+<option value="laos">Laos</option>
+<option value="latvia">Latvia</option>
+<option value="lebanon">Lebanon</option>
+<option value="lesotho">Lesotho</option>
+<option value="liberia">Liberia</option>
+<option value="libya">Libya</option>
+<option value="liechtenstein">Liechtenstein</option>
+<option value="lithuania">Lithuania</option>
+<option value="luxembourg">Luxembourg</option>
+<option value="macau">Macau</option>
+<option value="madagascar">Madagascar</option>
+<option value="malawi">Malawi</option>
+<option value="malaysia">Malaysia</option>
+<option value="maldives">Maldives</option>
+<option value="mali">Mali</option>
+<option value="malta">Malta</option>
+<option value="marshall-islands">Marshall Islands</option>
+<option value="mauritania">Mauritania</option>
+<option value="mauritius">Mauritius</option>
+<option value="mexico">Mexico</option>
+<option value="moldova">Moldova</option>
+<option value="monaco">Monaco</option>
+<option value="mongolia">Mongolia</option>
+<option value="montenegro">Montenegro</option>
+<option value="morocco">Morocco</option>
+<option value="mozambique">Mozambique</option>
+<option value="namibia">Namibia</option>
+<option value="nauru">Nauru</option>
+<option value="nepal">Nepal</option>
+<option value="netherlands">Netherlands</option>
+<option value="netherlands-antilles">Netherlands Antilles</option>
+<option value="new-caledonia">New Caledonia</option>
+<option value="new-zealand">New Zealand</option>
+<option value="nicaragua">Nicaragua</option>
+<option value="niger">Niger</option>
+<option value="nigeria">Nigeria</option>
+<option value="niue">Niue</option>
+<option value="north-korea">Democratic People's Republic of Korea</option>
+<option value="northern-mariana-islands">Northern Mariana Islands</option>
+<option value="norway">Norway</option>
+<option value="oman">Oman</option>
+<option value="pakistan">Pakistan</option>
+<option value="palau">Palau</option>
+<option value="panama">Panama</option>
+<option value="papua-new-guinea">Papua New Guinea</option>
+<option value="paraguay">Paraguay</option>
+<option value="peru">Peru</option>
+<option value="philippines">Philippines</option>
+<option value="poland">Poland</option>
+<option value="portugal">Portugal</option>
+<option value="puerto-rico">Puerto Rico</option>
+<option value="qatar">Qatar</option>
+<option value="congo">The Republic of the Congo</option>
+<option value="reunion">Reunion</option>
+<option value="romania">Romania</option>
+<option value="russia">Russia</option>
+<option value="rwanda">Rwanda</option>
+<option value="saint-kitts-and-nevis">Saint Kitts and Nevis</option>
+<option value="saint-lucia">Saint Lucia</option>
+<option value="saint-vincent-and-the-grenadines">Saint Vincent and the Grenadines</option>
+<option value="samoa">Samoa</option>
+<option value="san-marino">San Marino</option>
+<option value="sao-tome-and-principe">Sao Tome and Principe</option>
+<option value="saudi-arabia">Saudi Arabia</option>
+<option value="senegal">Senegal</option>
+<option value="serbia">Serbia</option>
+<option value="seychelles">Seychelles</option>
+<option value="sierra-leone">Sierra Leone</option>
+<option value="singapore">Singapore</option>
+<option value="slovakia">Slovakia</option>
+<option value="slovenia">Slovenia</option>
+<option value="solomon-islands">Solomon Islands</option>
+<option value="somalia">Somalia</option>
+<option value="south-africa">South Africa</option>
+<option value="south-korea">Republic of Korea</option>
+<option value="spain">Spain</option>
+<option value="sri-lanka">Sri Lanka</option>
+<option value="sudan">Sudan</option>
+<option value="suriname">Suriname</option>
+<option value="swaziland">Swaziland</option>
+<option value="sweden">Sweden</option>
+<option value="switzerland">Switzerland</option>
+<option value="syria">Syria</option>
+<option value="taiwan">Taiwan</option>
+<option value="tajikistan">Tajikistan</option>
+<option value="tanzania">Tanzania</option>
+<option value="thailand">Thailand</option>
+<option value="togo">Togo</option>
+<option value="tonga">Tonga</option>
+<option value="trinidad-and-tobago">Trinidad and Tobago</option>
+<option value="tunisia">Tunisia</option>
+<option value="turkey">Turkey</option>
+<option value="turkmenistan">Turkmenistan</option>
+<option value="tuvalu">Tuvalu</option>
+<option value="uganda">Uganda</option>
+<option value="ukraine">Ukraine</option>
+<option value="united-arab-emirates">United Arab Emirates</option>
+<option value="united-kingdom">United Kingdom</option>
+<option value="united-states-of-america">United States of America</option>
+<option value="uruguay">Uruguay</option>
+<option value="uzbekistan">Uzbekistan</option>
+<option value="vanuatu">Vanuatu</option>
+<option value="venezuela">Venezuela</option>
+<option value="vietnam">Vietnam</option>
+<option value="wallis-and-futuna">Wallis and Futuna</option>
+<option value="yemen">Yemen</option>
+<option value="zambia">Zambia</option>
+<option value="zimbabwe">Zimbabwe</option>
+</select>    
+<input type="submit" name="SubmitTravelAdviceCountry" value="Update" class="button dark-blue">
+<input name="SessionTokenSafetyContentModel" type="hidden" value="e024e078-8d0c-4e1e-9caa-a3295376132c">
+</form>
+
+</nav>
+
+
+
+
+</div>
+</div>
+</div>
+
+  <div class='row'>
+    <div class='small-12 column description'>
+
+
+  <article class="advice">
+    <p></p><div class="module" xmlns:d="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+	
+  <h3>Travel Advice for Côte d'Ivoire (Ivory Coast) - Australian Department of Foreign Affairs and Trade</h3>
+  
+	<br>CI<p>Friday, 09 January 2015, 16:56:21, +1100</p><a href="http://www.dfat.gov.au/copyright.html" target="_blank"><br>2015 Australian Government, Department of Foreign Affairs and Trade</a><p>While every care has been taken in preparing this travel
+information for travellers, neither the Australian Government nor its
+agents or employees including any member of Australia's consular staff
+abroad, can accept liability for injury, loss or damage arising in
+respect of any statement contained therein.</p><p><b>Travel Advice Levels</b></p><table width="90%" border="0" class="advice-level-table"><tbody><tr class="advice-level-table-header"><td><b>Location</b></td><td><b>Level</b></td></tr><tr valign="top" class="advice-level-tr"><td>Côte d'Ivoire overall</td><td>High degree of caution</td></tr><tr valign="top" class="advice-level-tr"><td>Dix-Huit Montagnes, Haut-Sassandra, Moyen-Cavally and Bas-Sassandra</td><td>Reconsider your need to travel</td></tr></tbody></table><p>
+This advice contains updated information in the Summary and under Entry and exit and Health (removal of advice about Côte dIvoire authorities banning travellers from Ebola affected countries).  The overall level of the advice has not changed.  We continue to advise Australians to exercise a high degree of caution in Côte d'Ivoire due to the unpredictable security environment and the high risk of crime.  We advise Australians to reconsider their need to travel to the regions of Dix-Huit Montagnes, Haut-Sassandra, Moyen-Cavally and Bas-Sassandra, due to the unstable security environment and presence of armed militias. 
+</p><p></p>
+  </div></article>
+
+<div class="header-panel blue-panel">
+                <div class="row qqw-full-width">
+<div id="quick-quote">
+<form action="/Safety/MultiTarget" id="quoteForm" method="post">    <div id="do-not-travel-modal-wrapper">
+    </div>    
+    <div class="destination alpha">
+      <h3>1. Where</h3>
+      <label>
+        Countries you are travelling to
+      </label>
+<div class="input-group" id="quote-destination">
+        <ul id="destinations"></ul>
+        <select name="SelectedCountryId" disabled="disabled" style="display: none;">
+          <option value="">Select a Country</option>
+            <option value="79" data-sort="200" data-aliases="Great Britain|London|GBR|UK|England|Wales|Scotland|Northern Ireland|Isle of Man">
+              United Kingdom
+            </option>
+            <option value="232" data-sort="300" data-aliases="America|USA|US|Hawaii|Los Angeles|USA">
+              United States
+            </option>
+            <option value="216" data-sort="400" data-aliases="Bangkok|Phuket">
+              Thailand
+            </option>
+            <option value="157" data-sort="500" data-aliases="Kuala Lumpur">
+              Malaysia
+            </option>
+            <option value="194" data-sort="600">
+              Singapore
+            </option>
+            <option value="40" data-sort="700">
+              Canada
+            </option>
+            <option value="75" data-sort="800" data-aliases="Lifou|Paris|Loyalty Islands|Isle of Pines">
+              France
+            </option>
+            <option value="170" data-sort="900" data-aliases="NZ|Newzealand">
+              New Zealand
+            </option>
+            <option value="96" data-sort="1000" data-aliases="HK|Hongkong">
+              Hong Kong
+            </option>
+            <option value="111" data-sort="1100">
+              Italy
+            </option>
+            <option value="73" data-sort="1200">
+              Fiji
+            </option>
+            <option value="247" data-sort="1300">
+              Bali
+            </option>
+            <option value="59" data-sort="1400">
+              Germany
+            </option>
+            <option value="239" data-sort="1500">
+              Vietnam
+            </option>
+            <option value="49" data-sort="1600" data-aliases="Rarotonga">
+              Cook Islands
+            </option>
+            <option value="104" data-sort="1700">
+              India
+            </option>
+            <option value="69" data-sort="1800" data-aliases="Ibiza">
+              Spain
+            </option>
+            <option value="176" data-sort="1900">
+              Philippines
+            </option>
+            <option value="44" data-sort="2000">
+              China
+            </option>
+            <option value="115" data-sort="2100">
+              Japan
+            </option>
+            <option value="166" data-sort="2200" data-aliases="Amsterdam|Holland|The Netherlands">
+              Netherlands
+            </option>
+            <option value="119" data-sort="2300">
+              Cambodia
+            </option>
+            <option value="244" data-sort="2400">
+              South Africa
+            </option>
+            <option value="106" data-sort="2500">
+              Ireland
+            </option>
+            <option value="54" data-sort="2600">
+              Cuba
+            </option>
+            <option value="242" data-sort="2700" data-aliases="Western Samoa">
+              Samoa
+            </option>
+            <option value="9" data-sort="2800" data-aliases="UAE|Dubai|Abu Dhabi">
+              United Arab Emirates
+            </option>
+            <option value="102" data-sort="2900">
+              Indonesia
+            </option>
+            <option value="89" data-sort="3000">
+              Greece
+            </option>
+            <option value="10" data-sort="3100">
+              Argentina
+            </option>
+            <option value="240" data-sort="3200">
+              Vanuatu
+            </option>
+            <option value="17" data-sort="3300">
+              Austria
+            </option>
+            <option value="160" data-sort="3400" data-aliases="Noumea">
+              New Caledonia
+            </option>
+            <option value="209" data-sort="3500">
+              Sweden
+            </option>
+            <option value="175" data-sort="3600">
+              Peru
+            </option>
+            <option value="33" data-sort="3700">
+              Brazil
+            </option>
+            <option value="124" data-sort="3800">
+              Laos
+            </option>
+            <option value="62" data-sort="3900">
+              Denmark
+            </option>
+            <option value="42" data-sort="4000">
+              Switzerland
+            </option>
+            <option value="43" data-sort="4100">
+              Chile
+            </option>
+            <option value="182" data-sort="4200">
+              Portugal
+            </option>
+            <option value="99" data-sort="4300">
+              Croatia
+            </option>
+            <option value="224" data-sort="4400" data-aliases="Istanbul">
+              Turkey
+            </option>
+            <option value="20" data-sort="4500">
+              Belgium
+            </option>
+            <option value="189" data-sort="4600">
+              Russia
+            </option>
+            <option value="142" data-sort="4700">
+              Mexico
+            </option>
+            <option value="35" data-sort="4800">
+              Brunei
+            </option>
+            <option value="122" data-sort="4900" data-aliases="South Korea (Republic of Korea)">
+              South Korea
+            </option>
+            <option value="117" data-sort="5000">
+              Kenya
+            </option>
+            <option value="135" data-sort="5100" data-aliases="Macau">
+              Macao
+            </option>
+            <option value="221" data-sort="5200">
+              Tonga
+            </option>
+            <option value="248" data-sort="5300">
+              Tahiti
+            </option>
+            <option value="179" data-sort="5400">
+              Poland
+            </option>
+            <option value="32" data-sort="5500">
+              Bolivia
+            </option>
+            <option value="58" data-sort="5600" data-aliases="Prague">
+              Czech Republic
+            </option>
+            <option value="207" data-sort="5700">
+              Slovakia
+            </option>
+            <option value="110" data-sort="5800">
+              Israel
+            </option>
+            <option value="130" data-sort="5900" data-aliases="SriLanka">
+              Sri Lanka
+            </option>
+            <option value="101" data-sort="6000" data-aliases="Budapest">
+              Hungary
+            </option>
+            <option value="50" data-sort="6100">
+              Colombia
+            </option>
+            <option value="227" data-sort="6200">
+              Tanzania
+            </option>
+            <option value="66" data-sort="6300">
+              Egypt
+            </option>
+            <option value="188" data-sort="6400">
+              Romania
+            </option>
+            <option value="246" data-sort="6500">
+              Zimbabwe
+            </option>
+            <option value="64" data-sort="6600">
+              Algeria
+            </option>
+            <option value="172" data-sort="6700">
+              Pakistan
+            </option>
+            <option value="226" data-sort="6800">
+              Taiwan
+            </option>
+            <option value="204" data-sort="6900">
+              Serbia
+            </option>
+            <option value="38" data-sort="7000">
+              Botswana
+            </option>
+            <option value="168" data-sort="7100">
+              Nepal
+            </option>
+            <option value="140" data-sort="7200">
+              Madagascar
+            </option>
+            <option value="162" data-sort="7300">
+              Norfolk Island
+            </option>
+            <option value="27" data-sort="7400">
+              Bosnia and Herzegovina
+            </option>
+            <option value="92" data-sort="7500">
+              Guatemala
+            </option>
+            <option value="144" data-sort="7600">
+              Macedonia
+            </option>
+            <option value="31" data-sort="7700">
+              Bermuda
+            </option>
+            <option value="24" data-sort="7800">
+              Bulgaria
+            </option>
+            <option value="137" data-sort="7900">
+              Morocco
+            </option>
+            <option value="6" data-sort="8000">
+              Albania
+            </option>
+            <option value="100" data-sort="8100">
+              Haiti
+            </option>
+            <option value="53" data-sort="8200">
+              Costa Rica
+            </option>
+            <option value="109" data-sort="8300">
+              Iceland
+            </option>
+            <option value="191" data-sort="8400">
+              Saudi Arabia
+            </option>
+            <option value="167" data-sort="8500">
+              Norway
+            </option>
+            <option value="164" data-sort="8600">
+              Nicaragua
+            </option>
+            <option value="236" data-sort="8700">
+              Venezuela
+            </option>
+            <option value="171" data-sort="8800">
+              Oman
+            </option>
+            <option value="26" data-sort="8900">
+              The Bahamas
+            </option>
+            <option value="148" data-sort="9000">
+              Montenegro
+            </option>
+            <option value="222" data-sort="9100">
+              Trinidad and Tobago
+            </option>
+            <option value="11" data-sort="9200">
+              Armenia
+            </option>
+            <option value="30" data-sort="9300">
+              Belize
+            </option>
+            <option value="2" data-sort="10000">
+              Afghanistan
+            </option>
+            <option value="254" data-sort="10000">
+              Africa
+            </option>
+            <option value="5" data-sort="10000">
+              Aland Islands
+            </option>
+            <option value="12" data-sort="10000">
+              American Samoa
+            </option>
+            <option value="7" data-sort="10000">
+              Andorra
+            </option>
+            <option value="3" data-sort="10000">
+              Angola
+            </option>
+            <option value="4" data-sort="10000">
+              Anguilla
+            </option>
+            <option value="255" data-sort="10000">
+              Antarctic Flyover
+            </option>
+            <option value="13" data-sort="10000">
+              Antarctica
+            </option>
+            <option value="15" data-sort="10000">
+              Antigua and Barbuda
+            </option>
+            <option value="1" data-sort="10000">
+              Aruba
+            </option>
+            <option value="196" data-sort="10000" data-aliases="Ascension Island|Saint Helena|Tristan da Cunha">
+              Saint Helena, Ascension and Tristan da Cunha
+            </option>
+            <option value="252" data-sort="10000" data-aliases="Borneo">
+              Asia
+            </option>
+            <option value="257" data-sort="10000">
+              Australian Waters
+            </option>
+            <option value="18" data-sort="10000">
+              Azerbaijan
+            </option>
+            <option value="25" data-sort="10000">
+              Bahrain
+            </option>
+            <option value="23" data-sort="10000">
+              Bangladesh
+            </option>
+            <option value="34" data-sort="10000">
+              Barbados
+            </option>
+            <option value="29" data-sort="10000">
+              Belarus
+            </option>
+            <option value="21" data-sort="10000">
+              Benin
+            </option>
+            <option value="36" data-sort="10000">
+              Bhutan
+            </option>
+            <option value="258" data-sort="10000" data-aliases="Bonaire|Sint Eustatius|Saba">
+              Bonaire, Sint Eustatius and Saba
+            </option>
+            <option value="37" data-sort="10000">
+              Bouvet Island
+            </option>
+            <option value="105" data-sort="10000">
+              British Indian Ocean Territory
+            </option>
+            <option value="237" data-sort="10000">
+              British Virgin Islands
+            </option>
+            <option value="22" data-sort="10000">
+              Burkina Faso
+            </option>
+            <option value="147" data-sort="10000" data-aliases="Burma">
+              Myanmar
+            </option>
+            <option value="19" data-sort="10000">
+              Burundi
+            </option>
+            <option value="46" data-sort="10000">
+              Cameroon
+            </option>
+            <option value="52" data-sort="10000">
+              Cape Verde
+            </option>
+            <option value="256" data-sort="10000">
+              Caroline Islands
+            </option>
+            <option value="56" data-sort="10000">
+              Cayman Islands
+            </option>
+            <option value="39" data-sort="10000">
+              Central African Republic
+            </option>
+            <option value="214" data-sort="10000">
+              Chad
+            </option>
+            <option value="55" data-sort="10000">
+              Christmas Island
+            </option>
+            <option value="41" data-sort="10000">
+              Cocos (Keeling) Islands
+            </option>
+            <option value="51" data-sort="10000">
+              Comoros
+            </option>
+            <option value="48" data-sort="10000">
+              Congo
+            </option>
+            <option value="45" data-sort="10000">
+              Cote d'Ivoire
+            </option>
+            <option value="259" data-sort="10000">
+              Curacao
+            </option>
+            <option value="57" data-sort="10000">
+              Cyprus
+            </option>
+            <option value="47" data-sort="10000">
+              Democratic Republic of the Congo
+            </option>
+            <option value="60" data-sort="10000">
+              Djibouti
+            </option>
+            <option value="61" data-sort="10000">
+              Dominica
+            </option>
+            <option value="63" data-sort="10000">
+              Dominican Republic
+            </option>
+            <option value="220" data-sort="10000" data-aliases="Timor-Leste">
+              East Timor
+            </option>
+            <option value="65" data-sort="10000">
+              Ecuador
+            </option>
+            <option value="200" data-sort="10000">
+              El Salvador
+            </option>
+            <option value="88" data-sort="10000">
+              Equatorial Guinea
+            </option>
+            <option value="67" data-sort="10000">
+              Eritrea
+            </option>
+            <option value="70" data-sort="10000">
+              Estonia
+            </option>
+            <option value="71" data-sort="10000">
+              Ethiopia
+            </option>
+            <option value="250" data-sort="10000">
+              Europe
+            </option>
+            <option value="74" data-sort="10000" data-aliases="Malvinas">
+              Falkland Islands 
+            </option>
+            <option value="76" data-sort="10000">
+              Faroe Islands
+            </option>
+            <option value="72" data-sort="10000">
+              Finland
+            </option>
+            <option value="93" data-sort="10000">
+              French Guiana
+            </option>
+            <option value="185" data-sort="10000">
+              French Polynesia
+            </option>
+            <option value="14" data-sort="10000">
+              French Southern Territories
+            </option>
+            <option value="78" data-sort="10000">
+              Gabon
+            </option>
+            <option value="86" data-sort="10000">
+              Gambia
+            </option>
+            <option value="80" data-sort="10000">
+              Georgia
+            </option>
+            <option value="82" data-sort="10000">
+              Ghana
+            </option>
+            <option value="83" data-sort="10000">
+              Gibraltar
+            </option>
+            <option value="91" data-sort="10000">
+              Greenland
+            </option>
+            <option value="90" data-sort="10000">
+              Grenada
+            </option>
+            <option value="85" data-sort="10000">
+              Guadeloupe
+            </option>
+            <option value="94" data-sort="10000">
+              Guam
+            </option>
+            <option value="81" data-sort="10000">
+              Guernsey
+            </option>
+            <option value="84" data-sort="10000">
+              Guinea
+            </option>
+            <option value="87" data-sort="10000">
+              Guinea-Bissau
+            </option>
+            <option value="95" data-sort="10000">
+              Guyana
+            </option>
+            <option value="97" data-sort="10000">
+              Heard Island and McDonald Islands
+            </option>
+            <option value="234" data-sort="10000">
+              Holy See (Vatican City State)
+            </option>
+            <option value="98" data-sort="10000">
+              Honduras
+            </option>
+            <option value="107" data-sort="10000">
+              Iran
+            </option>
+            <option value="108" data-sort="10000">
+              Iraq
+            </option>
+            <option value="112" data-sort="10000">
+              Jamaica
+            </option>
+            <option value="113" data-sort="10000">
+              Jersey
+            </option>
+            <option value="114" data-sort="10000">
+              Jordan
+            </option>
+            <option value="116" data-sort="10000">
+              Kazakhstan
+            </option>
+            <option value="120" data-sort="10000">
+              Kiribati
+            </option>
+            <option value="123" data-sort="10000">
+              Kuwait
+            </option>
+            <option value="118" data-sort="10000">
+              Kyrgyzstan
+            </option>
+            <option value="134" data-sort="10000">
+              Latvia
+            </option>
+            <option value="125" data-sort="10000">
+              Lebanon
+            </option>
+            <option value="131" data-sort="10000">
+              Lesotho
+            </option>
+            <option value="126" data-sort="10000">
+              Liberia
+            </option>
+            <option value="127" data-sort="10000">
+              Libya
+            </option>
+            <option value="129" data-sort="10000">
+              Liechtenstein
+            </option>
+            <option value="132" data-sort="10000">
+              Lithuania
+            </option>
+            <option value="133" data-sort="10000">
+              Luxembourg
+            </option>
+            <option value="156" data-sort="10000">
+              Malawi
+            </option>
+            <option value="141" data-sort="10000">
+              Maldives
+            </option>
+            <option value="145" data-sort="10000">
+              Mali
+            </option>
+            <option value="146" data-sort="10000">
+              Malta
+            </option>
+            <option value="143" data-sort="10000">
+              Marshall Islands
+            </option>
+            <option value="154" data-sort="10000">
+              Martinique
+            </option>
+            <option value="152" data-sort="10000">
+              Mauritania
+            </option>
+            <option value="155" data-sort="10000">
+              Mauritius
+            </option>
+            <option value="158" data-sort="10000">
+              Mayotte
+            </option>
+            <option value="77" data-sort="10000">
+              Micronesia
+            </option>
+            <option value="139" data-sort="10000">
+              Moldova
+            </option>
+            <option value="138" data-sort="10000">
+              Monaco
+            </option>
+            <option value="149" data-sort="10000">
+              Mongolia
+            </option>
+            <option value="153" data-sort="10000">
+              Montserrat
+            </option>
+            <option value="151" data-sort="10000">
+              Mozambique
+            </option>
+            <option value="159" data-sort="10000">
+              Namibia
+            </option>
+            <option value="169" data-sort="10000">
+              Nauru
+            </option>
+            <option value="161" data-sort="10000">
+              Niger
+            </option>
+            <option value="163" data-sort="10000">
+              Nigeria
+            </option>
+            <option value="165" data-sort="10000">
+              Niue
+            </option>
+            <option value="181" data-sort="10000" data-aliases="North Korea (Democratic people's Republic of Korea)">
+              North Korea
+            </option>
+            <option value="150" data-sort="10000">
+              Northern Mariana Islands
+            </option>
+            <option value="178" data-sort="10000" data-aliases="PNG">
+              Papua New Guinea
+            </option>
+            <option value="253" data-sort="10000" data-aliases="South Pacific|Pacific Islands">
+              Pacific
+            </option>
+            <option value="177" data-sort="10000">
+              Palau
+            </option>
+            <option value="184" data-sort="10000" data-aliases="Palestine">
+              Palestinian Territory, Occupied
+            </option>
+            <option value="173" data-sort="10000">
+              Panama
+            </option>
+            <option value="183" data-sort="10000">
+              Paraguay
+            </option>
+            <option value="174" data-sort="10000" data-aliases="Pitcairn Island">
+              Pitcairn
+            </option>
+            <option value="180" data-sort="10000">
+              Puerto Rico
+            </option>
+            <option value="186" data-sort="10000">
+              Qatar
+            </option>
+            <option value="187" data-sort="10000">
+              Reunion
+            </option>
+            <option value="190" data-sort="10000">
+              Rwanda
+            </option>
+            <option value="28" data-sort="10000">
+              Saint Barthelemy
+            </option>
+            <option value="121" data-sort="10000" data-aliases="St Kitts and Nevis">
+              Saint Kitts and Nevis
+            </option>
+            <option value="128" data-sort="10000">
+              Saint Lucia
+            </option>
+            <option value="136" data-sort="10000" data-aliases="Sint Maarten">
+              Saint Martin (French part)
+            </option>
+            <option value="203" data-sort="10000">
+              Saint Pierre and Miquelon
+            </option>
+            <option value="235" data-sort="10000">
+              Saint Vincent and the Grenadines
+            </option>
+            <option value="201" data-sort="10000">
+              San Marino
+            </option>
+            <option value="205" data-sort="10000">
+              Sao Tome and Principe
+            </option>
+            <option value="193" data-sort="10000">
+              Senegal
+            </option>
+            <option value="211" data-sort="10000">
+              Seychelles
+            </option>
+            <option value="199" data-sort="10000">
+              Sierra Leone
+            </option>
+            <option value="208" data-sort="10000">
+              Slovenia
+            </option>
+            <option value="198" data-sort="10000">
+              Solomon Islands
+            </option>
+            <option value="202" data-sort="10000">
+              Somalia
+            </option>
+            <option value="251" data-sort="10000">
+              South America
+            </option>
+            <option value="195" data-sort="10000">
+              South Georgia and the South Sandwich Islands
+            </option>
+            <option value="192" data-sort="10000" data-aliases="South Sudan">
+              Sudan
+            </option>
+            <option value="206" data-sort="10000">
+              Suriname
+            </option>
+            <option value="197" data-sort="10000">
+              Svalbard and Jan Mayen
+            </option>
+            <option value="210" data-sort="10000">
+              Swaziland
+            </option>
+            <option value="212" data-sort="10000">
+              Syria
+            </option>
+            <option value="217" data-sort="10000">
+              Tajikistan
+            </option>
+            <option value="215" data-sort="10000">
+              Togo
+            </option>
+            <option value="218" data-sort="10000">
+              Tokelau
+            </option>
+            <option value="223" data-sort="10000">
+              Tunisia
+            </option>
+            <option value="219" data-sort="10000">
+              Turkmenistan
+            </option>
+            <option value="213" data-sort="10000">
+              Turks and Caicos Islands
+            </option>
+            <option value="225" data-sort="10000">
+              Tuvalu
+            </option>
+            <option value="228" data-sort="10000">
+              Uganda
+            </option>
+            <option value="229" data-sort="10000">
+              Ukraine
+            </option>
+            <option value="230" data-sort="10000">
+              United States Minor Outlying Islands
+            </option>
+            <option value="231" data-sort="10000">
+              Uruguay
+            </option>
+            <option value="238" data-sort="10000">
+              US Virgin Islands
+            </option>
+            <option value="233" data-sort="10000">
+              Uzbekistan
+            </option>
+            <option value="241" data-sort="10000">
+              Wallis and Futuna
+            </option>
+            <option value="68" data-sort="10000">
+              Western Sahara
+            </option>
+            <option value="249" data-sort="10000">
+              Worldwide
+            </option>
+            <option value="243" data-sort="10000">
+              Yemen
+            </option>
+            <option value="245" data-sort="10000">
+              Zambia
+            </option>
+            <option value="16" data-sort="100" data-aliases="Melbourne|Tasmania">
+              Australia
+            </option>
+
+        </select><input type="text" class="destination-autocomplete placeholder" id="destination-autocomplete" tabindex="1" autocomplete="off"><span class="tid-icon icon-tid-menu"></span>
+        
+</div>
+
+      <input id="countryIDs" name="RawCountryIds" type="hidden" value="">
+
+      <input id="QuoteDto_PromotionCode" name="QuoteDto.PromotionCode" type="hidden" value="">
+
+      
+    </div>
+    <div class="travel-dates">
+      <h3>2. When</h3>
+<div class="input-group" id="quote-departure-date">
+<label for="QuoteDto_DepartureDateDay">Departure Date</label><select id="QuoteDto_DepartureDateDay" name="QuoteDto.DepartureDateDay" style="display: none;"><option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option selected="selected" value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+</select><select id="QuoteDto_DepartureDateMonth" name="QuoteDto.DepartureDateMonth" style="display: none;"><option value="1">Jan</option>
+<option value="2">Feb</option>
+<option value="3">Mar</option>
+<option selected="selected" value="4">Apr</option>
+<option value="5">May</option>
+<option value="6">Jun</option>
+<option value="7">Jul</option>
+<option value="8">Aug</option>
+<option value="9">Sep</option>
+<option value="10">Oct</option>
+<option value="11">Nov</option>
+<option value="12">Dec</option>
+</select><select id="QuoteDto_DepartureDateYear" name="QuoteDto.DepartureDateYear" style="display: none;"><option selected="selected" value="2015">2015</option>
+<option value="2016">2016</option>
+<option value="2017">2017</option>
+</select><input type="text" class="departure-date" id="departure-date" autocomplete="off"><span class="tid-icon icon-tid-calendar"></span></div>
+      
+
+<div class="input-group" id="quote-return-date">
+<label for="QuoteDto_ReturnDateDay">Return Date</label><select id="QuoteDto_ReturnDateDay" name="QuoteDto.ReturnDateDay" style="display: none;"><option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option selected="selected" value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+</select><select id="QuoteDto_ReturnDateMonth" name="QuoteDto.ReturnDateMonth" style="display: none;"><option value="1">Jan</option>
+<option value="2">Feb</option>
+<option value="3">Mar</option>
+<option selected="selected" value="4">Apr</option>
+<option value="5">May</option>
+<option value="6">Jun</option>
+<option value="7">Jul</option>
+<option value="8">Aug</option>
+<option value="9">Sep</option>
+<option value="10">Oct</option>
+<option value="11">Nov</option>
+<option value="12">Dec</option>
+</select><select id="QuoteDto_ReturnDateYear" name="QuoteDto.ReturnDateYear" style="display: none;"><option selected="selected" value="2015">2015</option>
+<option value="2016">2016</option>
+<option value="2017">2017</option>
+</select><input type="text" class="return-date" id="return-date" autocomplete="off"><span class="tid-icon icon-tid-calendar"></span></div>
+      
+    </div>
+    <div class="travelling-as beta">
+      <h3>3. Who</h3>
+      <label>Age of adult traveller(s)</label>
+
+
+<div class="input-group" id="quote-traveller-ages">
+        <div class="sub-group">
+          <input id="QuoteDto_TravellerAges_0__Age" maxlength="2" name="QuoteDto.TravellerAges[0].Age" placeholder="Enter age" type="text" value="">
+        </div>
+        <div class="sub-group">
+          <input id="QuoteDto_TravellerAges_1__Age" maxlength="2" name="QuoteDto.TravellerAges[1].Age" placeholder="Enter age" type="text" value="">
+        </div>
+</div>
+      
+
+      <a class="children-go-free" title="Your children under 21 go free" href="#">Your children go free »</a>
+      <div class="collapse">
+        This means your dependent children or grandchildren under the 
+        age of 21 at the date of policy issue who are travelling with you.
+      </div>
+
+      <input type="submit" class="continue" data-quote-initialise-type="cookie" name="SubmitQuickQuote" value="Get a Quote">
+    </div>
+    <div class="session-tokens">
+      
+
+<input name="SessionTokenSafetyContentModel" type="hidden" value="e024e078-8d0c-4e1e-9caa-a3295376132c">
+    </div>
+</form></div>
+
+</div>
+</div>
+
+
+
+<div>  <article class="summary">   
+    <p></p><h3>Summary</h3><ul><li><p> We advise you to exercise a high degree of caution in Côte d’Ivoire due to the unpredictable security environment and the high risk of crime. You should pay close attention to your personal security at all times and monitor the media for possible new safety or security risks.</p></li><li><p> We advise you to reconsider your need to travel to the regions of Dix-Huit Montagnes, Haut-Sassandra, Moyen-Cavally and Bas-Sassandra.  The security situation in these regions remains unstable because of inter-communal tensions and the presence of armed militias in the proximity of the Liberian border.  </p></li><li><p> The outbreak of Ebola Virus Disease (EVD) in west Africa is the most serious in recorded history.  For information on the outbreak and regional travel restrictions and preventative measures, see the <a href="http://smartraveller.gov.au/zw-cgi/view/TravelBulletins/Ebola" target="_blank">Ebola outbreak in west Africa</a> travel bulletin.  </p></li><li><p> There is a high risk of violent crime throughout Côte d’Ivoire, including in the major city of Abidjan. </p></li><li><p> Australia does not have an embassy or consulate in Côte d’Ivoire. The <a href="http://www.canadainternational.gc.ca/cotedivoire/index.aspx" target="_blank">Canadian Embassy</a> located in Abidjan, provides consular assistance to Australians in Côte d’Ivoire. This service includes the issuance of <a href="https://www.passports.gov.au/web/travelrelateddocuments.aspx#link2" target="_blank">Provisional Travel Documents</a>. The <a href="http://www.ghana.highcommission.gov.au" target="_blank">Australian High Commission</a> in Accra, Ghana, can also assist Australians in Côte d’Ivoire.</p></li><li><p> See <a href="http://www.smartraveller.gov.au/tips/travel-smart.html" target="_blank">Travel Smart</a> for general advice for all travellers.</p></li><li><p> Be a smart traveller.  Before heading overseas:</p><ul><li><p> organise comprehensive <a href="http://www.smarttraveller.gov.au/tips/insurance.html" target="_blank">travel insurance</a> and check what circumstances and activities are not covered by your policy</p></li><li><p><a href="http://www.orao.dfat.gov.au" target="_blank">register your travel and contact details</a>, so we can contact you in an emergency</p></li><li><p><a href="http://www.smarttraveller.gov.au/accounts" target="_blank">subscribe to this travel advice</a> to receive free email updates each time it's reissued.</p></li><li><p> follow us on <a href="http://www.facebook.com/smartraveller.gov.au" target="_blank">Facebook</a> and <a href="http://www.twitter.com/smartraveller" target="_blank">Twitter</a>.</p></li></ul></li></ul><h3>Entry and exit</h3><p>Visa and other entry and exit conditions (such as currency, customs and quarantine regulations) can change at short notice.  Contact the nearest Embassy or Consulate of Côte d’Ivoire for the most up to date information.  There is no Embassy of Côte d’Ivoire in Australia.  Contact details for the Embassy of Côte d’Ivoire in Japan are:</p>2-19-12 Uehara <br>Shibuya-Ku, Tokyo <br>Phone: (3) 5454-1401 <br>Email: ambacijn@yahoo.fr.<br><hr><p>An exit permit is required for all art objects being removed from Côte d’Ivoire. The National Museum issues these permits.</p><p>Cote d’Ivoire is listed by the World Health Organization (WHO) as endemic for yellow fever.  Yellow fever is a serious and potentially fatal disease preventable by vaccination.   A valid Yellow Fever Vaccination Certificate is required for entry into Côte d’Ivoire.  For more information about yellow fever, including Australian re-entry requirements, see the <a href="http://www.health.gov.au/yellowfever" target="_blank">Department of Health website</a>.</p><p>Make sure your passport has at least six months’ validity from your planned date of return to Australia.  You should carry copies of a recent passport photo with you in case you need a replacement passport while overseas.</p><h3>Safety and security</h3><h4>Civil unrest/political tension</h4><p>Although the political and security situation in Côte d’Ivoire has stabilised since 2011, you should pay close attention to your personal security at all times and monitor the media for information about possible new safety or security risks.</p><p>Avoid protests and demonstrations throughout Côte d’Ivoire as they may become violent without warning. </p><p>Dix-Huit Montagnes, Haut-Sassandra, Moyen-Cavally and Bas-Sassandra:  We advise you to reconsider your need to travel to these regions, as the security situation remains unstable due to inter-communal tensions and the presence of armed militias in the proximity of the Liberian border.</p><p>There have been cross border attacks in areas bordering Liberia and Ghana since June 2012.  Some militia attacks in border areas have killed UN peacekeepers and Ivorian military forces.  Attacks occurred most recently in February and May 2014.  Australians in Côte d’Ivoire should reconsider their need to travel to the Liberian border and exercise a high degree of caution in areas near the Ghanaian border.  Monitor local media for developments.</p><h4>Crime</h4><p>Violent crime occurs throughout Côte d’Ivoire.  You should avoid confrontations with police and security forces.  Armed robbery is common, including of businesses and restaurants. Some robbers reportedly wear military uniforms.</p><p>Attacks by armed highway robbers (known as “coupeurs de route”) have occurred on the main road from Yamoussoukro to Korogho and the Adibjan to Yamoussoukro highway.  Attacks have also been reported in the west of the country during daylight hours as well as at night.  Plan road journeys carefully and take security precautions.  When driving, ensure that doors are locked, windows are up and valuables kept out of sight.</p><p>Australians should be aware of high rates of violent crime in Abidjan.  We advise you not to walk across the De Gaulle and Houphouet-Boigny bridges to and from the Le Plateau areas in Abidjan, as pedestrians have been attacked and robbed even during the day.  You should maintain a high level of security awareness, particularly in the districts of Treichville, Adjame, Abobo and Yopougon.  The risk of being a victim of crime increases at night. Snatch-and-run robberies and pickpocketing occur, especially in crowded areas.</p><p>Due to the high prevalence of HIV/AIDS, victims of violent crime, especially rape, are strongly encouraged to seek immediate medical assistance.</p><p>Commercial and internet fraud: Commercial and internet fraud often originates in West African countries.  Victims have been defrauded and those who travel to the originating country have had their lives endangered.  Some victims have been killed.  Criminals have been known to seek details of 'safe' bank accounts overseas in which to transfer large sums of money (as a donation or for a percentage of the amount involved).  They may also provide fake cashier cheques for 'urgent' shipments of large quantities of goods, request sizeable fees for a fake government contract and extort money from individuals they have convinced to travel to Africa for a business opportunity.  If you are a victim of a financial scam, we advise you to get legal advice and not to travel to Africa to seek restitution as there is a risk of physical harm from the perpetrators.   Our <a href="http://www.smartraveller.gov.au/tips/scams.html" target="_blank">international scams</a> page provides more detail on these types of scams.</p><p>Bogus internet friendship, dating and marriage schemes are operating from some African countries.  These scams typically result from connections made through internet dating schemes or chat rooms.  Once a virtual friendship develops, the Australian citizen may be asked by their friend or prospective marriage partner to send money to enable travel to Australia.  In some cases the relationship is terminated with very little chance that any funds can be recovered.  In other cases, foreigners may be lured to Africa to meet their friend or prospective marriage partner and can become victims of crime including kidnapping, assault and robbery.</p><h4>Terrorism</h4><p>Terrorism is a threat throughout the world. See our <a href="http://www.smartraveller.gov.au/zw-cgi/view/travelbulletins/Terrorist_Threat" target="_blank">Terrorist Threat Overseas bulletin</a> for more information.</p><h4>Money and valuables</h4><p>Access to cash through banks and ATMs is not always reliable. </p><p>Credit card fraud is common, be sure to keep your card in sight when making purchases.</p><p>Your passport is a valuable document that is attractive to criminals who may try to use your identity to commit crimes.  It should always be kept in a safe place. You are required by Australian law to report a lost or stolen passport.  If your <a href="http://www.passports.gov.au" target="_blank">passport</a> is lost or stolen overseas, report it <a href="https://www.passports.gov.au/Web/Renewal/LostStolen.aspx" target="_blank">online</a> or contact the nearest <a href="http://www.dfat.gov.au/missions/index.html" target="_blank">Australian Embassy, High Commission or Consulate</a> as soon as possible. </p><p>Review the <a href="http://www.smartraveller.gov.au/TravelBulletins/General" target="_blank">general advice to Australian travellers</a> for further information on being safe and prepared abroad.</p><h3>Local travel</h3><p>The road system is generally good but road conditions deteriorate outside of Abidjan.  Roads may become impassable during the rainy season. Unskilled drivers, poorly maintained and overloaded vehicles, and inadequate lighting make driving conditions hazardous.  Driving at night should be avoided.  For further advice on road safety, see our <a href="http://www.smarttraveller.gov.au/tips/road-travel.html" target="_blank">road travel</a> page.</p><p>Armed robbers (“coupeurs de route”) have conducted attacks on highways. Plan road journeys carefully and take security precautions.  See the <a href="#safety_and_security">Safety and security</a> section.</p><p>Piracy occurs in coastal waters off west Africa.  See our travel advice on <a href="http://www.smarttraveller.gov.au/travelbulletins/piracy" target="_blank">piracy</a> for further information.  The International Maritime Bureau issues <a href="http://www.icc-ccs.org/piracy-reporting-centre" target="_blank">piracy reports</a> on its website. </p><p>Strong coastal currents make swimming dangerous.</p><h4>Airline safety</h4><p>The Australian Government does not provide information on the safety of individual commercial airlines or flight paths. See instead the <a href="http://aviation-safety.net/database/country/country.php?id=TU" target="_blank"> Aviation Safety Network website</a> for information on aviation safety in Côte d’Ivoire.</p><p>Please also refer to our general <a href="http://www.smarttraveller.gov.au/tips/air-travel.html" target="_blank">air travel</a> page for information on aviation safety and security.</p><h3>Laws</h3><p>When you are in Côte d’Ivoire, be aware that local laws and penalties, including ones that appear harsh by Australian standards, do apply to you.  If you are arrested or jailed, the Australian Government will do what it can to help you but we can't get you out of trouble or out of jail.  Research local laws before travelling.</p><p>Information on what Australian consular officers can and cannot do to help Australians in trouble overseas is available from the <a href="http://www.smarttraveller.gov.au/services/consular-services-charter.html" target="_blank">Consular Services Charter</a>.</p><p>Penalties for the use of illegal drugs include imprisonment.</p><p>Homosexuality is not illegal, however public displays of affection between members of the same sex can be considered an 'offence against public decency'.  Penalties for this include fines and imprisonment for up to two years.  See our <a href="http://www.smartraveller.gov.au/tips/lgbti.html" target="_blank"> LGBTI travellers page</a>.</p><p>It is prohibited to take photographs near sensitive installations, including military sites, government buildings such as the radio and television stations, the Presidency building, the airport and the De Gaulle and Houphouet-Boigny bridges in Abidjan.</p><p>Some Australian criminal laws, such as those relating to money laundering, bribery of foreign public officials, terrorism, forced marriage, female genital mutilation, child pornography, and child sex tourism, apply to Australians overseas. Australians who commit these offences while overseas may be prosecuted in Australia.</p><p>Australian authorities are committed to combating sexual exploitation of children by Australians overseas. Australians may be prosecuted at home under Australian child sex tourism and child pornography laws. These laws provide severe penalties of up to 25 years’ imprisonment for Australians who engage in child sexual exploitation while outside of Australia.</p><h4>Local customs</h4><p>There are conservative standards of dress and behaviour in Côte d’Ivoire and you should take care not to offend.</p><h4>Information for dual nationals</h4><p>Ivorians by birth who have acquired Australian citizenship will be regarded as Ivorian by local authorities.  This may limit the ability of the Australian Government to provide consular assistance to Australian/Ivorian dual nationals who are arrested or detained.  We recommend you travel on your Australian passport at all times.</p><p>Our <a href="http://www.smarttraveller.gov.au/tips/dual-nationals.html" target="_blank">Dual nationals</a> page provides further information. </p><h3>Health</h3><p>We strongly recommend that you take out comprehensive <a href="http://www.smarttraveller.gov.au/tips/insurance.html" target="_blank">travel insurance</a> that will cover any overseas medical costs, including medical evacuation, before you depart.  Confirm that your insurance covers you for the whole time you'll be away and check what circumstances and activities are not included in your policy.  Remember, regardless of how healthy and fit you are, if you can't afford travel insurance, you can't afford to travel.  The Australian Government will not pay for a traveller's medical expenses overseas or medical evacuation costs.</p><p>It is important to consider your physical and mental health before travelling overseas. We encourage you to consider having vaccinations before you travel. At least eight weeks before you depart, make an appointment with your doctor or travel clinic for a basic health check-up, and to discuss your travel plans and any implications for your health, particularly if you have an existing medical condition. The <a href="http://www.who.int/ith/" target="_blank">World Health Organization (WHO)</a> provides information for travellers and our <a href="http://www.smarttraveller.gov.au/tips/health.html" target="_blank">health</a> page also provides useful information for travellers on staying healthy.</p><p>Outside Abidjan, medical facilities are very limited.  Serious medical conditions would require a medical evacuation to Australia or another suitable location.  Medical evacuation costs could exceed $A100,000.</p><p>The rate of HIV/AIDS infection in Côte d’Ivoire is high.  You should exercise appropriate precautions if engaging in activities that expose you to risk of infection.</p><p>Côte d’Ivoire is listed by the World Health Organization (WHO) as endemic for yellow fever.  Yellow fever is a potentially fatal viral disease transmitted by mosquitoes, which is preventable by vaccination.  We strongly recommend that you are vaccinated against yellow fever before travelling to Côte d’Ivoire.  See the Entry and Exit section for important information about vaccination certificate requirements.  For more information about yellow fever, see the <a href="http://www.health.gov.au/yellowfever" target="_blank">Department of Health website</a>.</p><p>Malaria and other tropical diseases are common in west African countries, including Côte d’Ivoire.  We encourage you to consider taking prophylaxis against malaria and to take precautions against insect bites including using an insect repellent, wearing long, loose-fitting, light coloured clothing and ensuring your accommodation is mosquito proof.  </p><p>Water-borne, food-borne and other infectious diseases (including measles, cholera, hepatitis, meningitis and tuberculosis) are common, with more serious outbreaks occurring from time to time.  It is advisable to boil all drinking water or drink bottled water, and avoid ice cubes and raw and undercooked food.  Do not swim in fresh water to avoid exposure to certain water-borne diseases such as bilharzia (schistosomiasis).  Seek medical advice if you have a fever and/or are suffering from diarrhoea.</p><p>The outbreak of Ebola Virus Disease (EVD) in west Africa is the most serious in recorded history.  For information on the outbreak and regional travel restrictions and preventative measures, see the <a href="http://smartraveller.gov.au/zw-cgi/view/TravelBulletins/Ebola" target="_blank">Ebola outbreak in west Africa</a> travel bulletin.  </p><h3>Where to get help</h3><p>Depending on the nature of your enquiry, your best option may be to contact your family, friends, airline, travel agent, tour operator, employer or travel insurance provider in the first instance. </p><p>If the matter relates to criminal issues, contact the local police.  In Abidjan, the  Police Prefecture /Emergency Number is +225- 20- 25-87-88.  The National Police General Command Post numbers are +225-20-22-16-33 and +225-20-22-16-87.</p><p>If the matter relates to complaints about tourism services or products, contact the service provider directly.</p><p>The <a href="http://www.smarttraveller.gov.au/services/consular-services-charter.html" target="_blank">Consular Services Charter</a> explains what the Australian Government can and can’t do to assist Australians overseas.  Australia does not have an embassy or consulate in Côte d’Ivoire.  By agreement between the Canadian and Australian governments, the <a href="http://www.canadainternational.gc.ca/cotedivoire/index.aspx" target="_blank">Canadian Embassy</a> in Abidjan provides consular assistance to Australians in Cote d’Ivoire.  This service includes the issuance of <a href="https://www.passports.gov.au/web/travelrelateddocuments.aspx#link2" target="_blank">Provisional Travel Documents</a>. The address is:</p><h4></h4><h5>Canadian Embassy, Abidjan</h5>Immeuble Trade Centre<br>23 Avenue Nogues<br>Le Plateau<br>Abidjan, Côte d’Ivoire<br>Telephone: (225 20) 300 700<br>Facsimile: (225 20) 300 720<br>Email:  abdjn@international.gc.ca<br>Website: <a href="http://www.canadainternational.gc.ca/cotedivoire/index.aspx" target="_blank">www.canadainternational.gc.ca/cotedivoire/index.aspx</a><br><hr><p>You can contact the Australian Government at the Australian High Commission in Accra, Ghana for consular assistance. See contact details below:</p><h5>Australian High Commission, Ghana</h5>2, Second Rangoon Close<br>(cnr Josef Broz Tito Ave)<br>Cantonments<br>Accra, Ghana<br>Telephone: (+233) 302 216400<br>Facsimile: (+233) 302 216410<br>Email:  AccraHC.Enquiries@dfat.gov.au<br>Website:<a href="http://www.ghana.highcommission.gov.au/acra/home.html" target="_blank">www.ghana.highcommission.gov.au</a><br><hr><p>See the High Commission <a href="http://www.ghana.highcommission.gov.au/acra/home.html" target="_blank">website</a> for information about opening hours and temporary closures that may affect service provision.</p><p>If you are travelling to Côte d’Ivoire, whatever the reason and however long you'll be there, we strongly recommend you register with the Department of Foreign Affairs and Trade.  You can register <a href="http://www.orao.dfat.gov.au" target="_blank">online</a> or in person at any Australian Embassy, High Commission or Consulate.  The information you provide will help us to contact you in an emergency - whether it is a natural disaster, civil disturbance or a family issue.</p><p>In a consular emergency, if you are unable to contact the above missions you can contact the 24-hour Consular Emergency Centre on +61 2 6261 3305 or 1300 555 135 within Australia.</p><p>In Australia, the Department of Foreign Affairs and Trade in Canberra may be contacted on (02) 6261 3305.</p><h3>Additional information</h3><h4>Natural disasters, severe weather and climate</h4><p>Flooding can occur during the rainy seasons.  Roads may become impassable during these periods.  In southern coastal regions, the rainy season occurs from May to August and October to November.  In the central and north-central region, heavy rain can occur during July to October and March to May.  In the north, the rainy season is from July to November.</p><h4>Additional Resources</h4>For additional general and economic information to assist travelling in this country, see the following links:<br><hr><ul><li><p><a href="http://dfat.gov.au/geo/cote_ivoire/" target="_blank">DFAT country information</a> web page</p></li><li><p><a href="http://smartraveller.gov.au/business/" target="_blank">Smartraveller advice to business travellers</a></p></li></ul> </article></div><p></p>
+  
+
+</div>
+</div>
+
+{% endblock %}
