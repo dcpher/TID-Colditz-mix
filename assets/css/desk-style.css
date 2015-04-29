@@ -4022,6 +4022,11 @@ th.hide-for-touch {
   src: url("/Content/styles/fonts/MuseoSans_500-webfont.eot?#iefix") format("embedded-opentype"), url("/Content/styles/fonts/MuseoSans_500-webfont.woff2") format("woff2"), url("/Content/styles/fonts/MuseoSans_500-webfont.woff") format("woff"), url("/Content/styles/fonts/MuseoSans_500-webfont.ttf") format("truetype"), url("/Content/styles/fonts/MuseoSans_500-webfont.svg#museo_sans500") format("svg");
   font-weight: 500;
   font-style: normal; }
+@font-face {
+  font-family: "tid-icon";
+  src: url("/Content/styles/fonts/tid-icon.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
 h1, h2 {
   letter-spacing: -0.25rem;
   margin-bottom: 2rem; }
@@ -4666,6 +4671,16 @@ nav .top-bar-section ul li a:hover {
 @media all and (max-width: 780px) and (min-width: 642px) {
   nav.top-bar section.top-bar-section ul.right li a {
     padding: 0 0.5rem; } }
+body.quote nav .right > li:nth-child(1),
+body.quote nav .right > li:nth-child(2),
+body.quote nav .right > li:nth-child(3), body.options nav .right > li:nth-child(1),
+body.options nav .right > li:nth-child(2),
+body.options nav .right > li:nth-child(3), body.details nav .right > li:nth-child(1),
+body.details nav .right > li:nth-child(2),
+body.details nav .right > li:nth-child(3), body.payment nav .right > li:nth-child(1),
+body.payment nav .right > li:nth-child(2),
+body.payment nav .right > li:nth-child(3) {
+  display: none !important; }
 
 #footer {
   margin-bottom: 0;

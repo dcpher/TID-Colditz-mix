@@ -1,0 +1,27 @@
+// _mobile-toggle.sass
+
+.mobile-toggle
+  @include grid-column(12)
+  +benefits-bar-style
+  margin-bottom: 0
+  padding-top: rem-calc(8)
+  padding-bottom: rem-calc(8)
+  position: relative
+  span
+    color: $color-white
+  &:after
+    content: ""
+    position: absolute
+    top: rem-calc(12)
+    right: rem-calc(20)
+    display: block
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 7.5px 0 7.5px 8px
+    border-color: transparent transparent transparent $color-white
+  &.open:after
+    top: rem-calc(16)
+    border-width: 8px 7.5px 0 7.5px
+    border-color: $color-white transparent transparent transparent
+

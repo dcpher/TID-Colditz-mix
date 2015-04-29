@@ -1,40 +1,44 @@
 // nav-bar
 
 nav
-  
   .logo
     height: 40px
     width: 154px
-   
-  .top-bar-section
-    ul 
-      li
-        &.sign-in
-          a
-            font-weight: 500
-            color: $color-blue
-            
-            // set the sign in hover color to blue
-            &:not(.button):hover
-              color: $color-white
-              background-color: $color-blue
-              
-        //transition effect for nav buttons
-        a
-          +transition
-
-        a:hover 
-          background-color: $color-dark-grey 
-          color: $color-white
+  .top-bar-section ul li
+    &.sign-in a
+      font-weight: 500
+      color: $color-blue
       
-        // Menu backgroud colour override
-        @media #{$small-only}
-          background-color: $color-dark-grey
-          border-bottom: 1px solid darken($color-dark-grey, 5)
-          a
-            color: $color-white
+      // set the sign in hover color to blue
+      &:not(.button):hover
+        color: $color-white
+        background-color: $color-blue
+          
+    //transition effect for nav buttons
+    a
+      +transition
+
+    a:hover 
+      background-color: $color-dark-grey 
+      color: $color-white
+  
+    // Menu backgroud colour override
+    @media #{$small-only}
+      background-color: $color-dark-grey
+      border-bottom: 1px solid darken($color-dark-grey, 5)
+      a
+        color: $color-white
 
     // TODO: Do this in the way Foundation would like us to
   @media all and (max-width: 780px) and (min-width: 642px)
     &.top-bar section.top-bar-section ul.right li a
       padding: 0 rem-calc(8)
+
+  body.quote &,
+  body.options &,
+  body.details &,
+  body.payment &,
+    .right > li:nth-child(1),
+    .right > li:nth-child(2),
+    .right > li:nth-child(3)
+      display: none !important

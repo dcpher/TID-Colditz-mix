@@ -1,0 +1,70 @@
+// _pre-ex.sass
+
+body.pre-ex
+  // TODO: Is there a different more foundationish way to do container pads?
+  .row
+    @media #{$small-only}
+      margin-left: 0
+      margin-right: 0
+      width: 100%
+  .header-panel
+    margin-bottom: rem-calc(20)
+    @media #{$small-only}
+      padding-left: rem-calc(6)
+      padding-right: rem-calc(6)
+  ul
+    margin-left: 0
+    list-style-type: none
+  .actions
+    +clearfix
+    float: left
+    margin-bottom: rem-calc(20)
+    .panel-bg-highlight
+      padding-top: rem-calc(20)
+    h4
+      font-weight: 300
+  .accept
+    background: $color-light-grey
+    border-right: 10px solid $color-white
+    h4
+      color: $color-green
+      font-weight: bold
+    button
+      background: $color-green
+  .decline
+    background: $color-light-grey
+    border-left: 10px solid $color-white
+    h4
+      color: $color-dark-blue
+      font-weight: bold
+    button
+      background: $color-dark-blue
+  .check label
+    font-size: rem-calc(18)
+    
+  @media #{$small-only}
+    .accept, .decline
+      border-left: 0
+      border-right: 0
+  .no-cover li
+    margin-bottom: rem-calc(8)
+    font-size: rem-calc(16)
+  .travelclear
+    background: $color-light-grey
+    margin-bottom: rem-calc(20)
+    .travelclear-title
+      font-size: rem-calc(30)
+      font-weight: bold
+      color: $color-blue
+      margin-top: rem-calc(20)
+  .price-container
+    margin-bottom: rem-calc(20)
+  .price-container span
+    color: $color-blue
+    font-size: rem-calc(60)
+    line-height: rem-calc(60)
+    font-weight: 100
+    letter-spacing: rem-calc(-3)
+    @media #{$small-only}
+      font-size: rem-calc(40)
+      line-height: rem-calc(40)

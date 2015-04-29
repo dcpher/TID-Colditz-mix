@@ -1,7 +1,8 @@
-// modals
+// _modals.sass
 
 .javascript-popup,
-#do-not-travel-modal
+#do-not-travel-modal,
+.modal-content
   z-index: 50
   position: fixed
   left: 50%
@@ -13,6 +14,8 @@
   background: #fff
   padding: 20px
   box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5)
+  @media #{$small-only}
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 1)
   h2, h3
     font-size: rem-calc(32)
     margin-bottom: rem-calc(8)
@@ -33,3 +36,126 @@
     $width: 95%
     width: $width
     margin-left: $width * -0.5
+
+.modal-overlay
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  z-index: 45
+  background: $color-white
+  background: $color-white-trans
+.modal-content
+  position: absolute
+  h1, h2
+    font-size: rem-calc(30)
+    line-height: rem-calc(34)
+    margin-bottom: rem-calc(20)
+    letter-spacing: rem-calc(-1)
+  h3
+    font-size: rem-calc(20)
+    line-height: rem-calc(24)
+    margin-bottom: rem-calc(10)
+    letter-spacing: rem-calc(-1)
+  .link-like
+    background: none
+    outline: none
+    border: none
+    font-family: 'Museo Sans', sans-serif
+    font-weight: 100
+    font-size: rem-calc(16)
+    color: $color-blue
+    padding: 0 
+  .button-primary
+    float: right
+  .cancel
+    float: right
+    margin-right: rem-calc(20)
+    padding: rem-calc(10) 0
+
+// Specific modals
+// Terms and conditions modal
+.modal-content.terms-and-conditions
+  .input-group.radio-button-group
+    float: left
+    clear: none
+    margin-right: rem-calc(20)
+  form > div,
+  .terms-and-conditions-check
+    +clearfix
+  p
+    font-size: rem-calc(14)
+    line-height: rem-calc(18)
+    float: left
+    clear: left
+  .question-wrapper
+    border-bottom: 1px solid darken($color-light-grey, 5%)
+    margin-bottom: rem-calc(20)
+  input[type='checkbox'],
+  button
+    margin-bottom: 0
+  h3
+    font-weight: normal
+  h3,
+  .input-group
+    float: left
+    clear: left
+  .session-tokens
+    float: left
+    clear: left
+    margin-bottom: rem-calc(20)
+
+// Donation modal
+.modal-content.donation-editor-panel
+  .item
+    +clearfix
+    position: relative
+    border-bottom: 1px solid $color-mid-grey
+    &:first-of-type
+      border-top: 1px solid $color-mid-grey
+    &.selected
+      background: $color-light-grey
+  .last-item
+    margin-bottom: rem-calc(20)
+  img.project
+    float: right
+    width: 30%
+    height: auto
+  img.logo
+    position: absolute
+    right: 0
+    top: 0
+    height: 25%
+    width: auto
+  input[type='radio']
+    position: absolute
+    left: rem-calc(10)
+    top: 50%
+    margin-top: rem-calc(-5)
+  .item-wrapper
+    float: right
+    width: 70%
+    padding-top: rem-calc(5)
+    label, a
+      margin-left: rem-calc(35)
+    label
+      font-size: rem-calc(20)
+      line-height: rem-calc(24)
+  .footprints-network
+    margin-bottom: 0
+    float: right
+    clear: both
+    width: 100%
+    font-size: rem-calc(14)
+    line-height: rem-calc(18)
+  .cancel span, .cancel:after
+    display: none
+  @media #{$small-only}
+    .item-wrapper
+      float: none
+      width: auto
+      padding: rem-calc(10 0)
+    img.project,
+    img.logo
+      display: none

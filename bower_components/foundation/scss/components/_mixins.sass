@@ -39,3 +39,22 @@
   border: 1px solid darken($color-dark-blue, 5%)
   font-size: rem-calc(20)
   padding: rem-calc(13) rem-calc(16)
+
+=pp-button-green
+  @include button
+  +gradient-button($color-green)
+  +border-radius(4px)
+  border: 1px solid darken($color-green, 5%)
+  font-size: rem-calc(20)
+  padding: rem-calc(13) rem-calc(16)
+
+=pp-button-tertiary
+  @include button
+  +gradient-button(darken($color-light-grey, 7%))
+  color: $color-black
+  +border-radius(4px)
+  border: 1px solid darken($color-light-grey, 10%)
+  font-size: rem-calc(16)
+  padding: rem-calc(9) rem-calc(16)
+  &:hover
+    color: $color-black

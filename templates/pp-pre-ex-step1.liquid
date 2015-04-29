@@ -1,0 +1,63 @@
+{% block title %}TID Pre ex flow{% endblock %}
+{% block body_class %}pre-ex step-1{% endblock %}
+{% block body_id %}pre-ex{% endblock %}
+{% block content %}
+
+<section id="main-content">
+
+  <div class="blue-panel header-panel">
+    <div class='row'>
+      <div class='small-12 columns'>
+        {% include "pp-breadcrumb" %}
+        <h1>Pre existing conditions</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="global-messages-container"></div>
+
+  <div class="row">
+    <div class="pre-ex-path step-1">
+      <div class="small-12 columns">
+        <h3>You're already covered for 43 pre-existing medical conditions.</h3>
+        <p>You are automatically covered if your pre-existing medical condition(s) are described below, provided that you:</p>
+
+        <ul class="provided">
+          <li>a)  have not been hospitalised in the past 24 months (including day surgery or emergency  department attendance)</li>
+          <li>b)  do not have any other pre-existing medical conditions</li>
+        </ul>
+
+        <h3>Pre-existing medical conditions automatically covered:</h3>
+      </div>
+
+      <ul class="list first columns small-12 medium-4">    <li>1.   Acne</li>    <li>2.   Allergies limited to Rhinitis, Chronic Sinusitis, Eczema, Food Intolerance, Hay Fever</li>    <li>3.   Asthma <span>providing that you are less than 60 years of age at the time of policy purchase and/or  have no other lung disease.</span></li>    <li>4.   Bell's Palsy</li>    <li>5.   Benign Positional Vertigo</li>    <li>6.   Bunions</li>    <li>7.   Carpal Tunnel Syndrome</li>    <li>8.   Cataracts</li>    <li>9.   Coeliac Disease</li>    <li>10. Congenital Blindness</li>    <li>11. Congenital Deafness</li>    <li>12. Diabetes Mellitus (Types I &amp; II) <span>providing you were diagnosed over 12 months ago, have no eye, kidney, nerve or vascular complications and do not also suffer from a known cardiovascular disease, hypertension, hyperlipidaemia or hypercholesterolaemia (and are under 50 years of age at the date of policy purchase for Type I).</span></li>    <li>13. Dry Eye Syndrome</li>  </ul>    <ul class="list columns small-12 medium-4">    <li>14. Epilepsy <span>providing there has been no change to your medication regime in the past 12 months</span></li>    <li>15. Folate Deficiency</li>    <li>16. Gastric Reflux</li>    <li>17. Glaucoma</li>    <li>18. Goitre</li>    <li>19. Graves' Disease</li>    <li>20. Hiatus Hernia</li>    <li>21. Hypercholesterolaemia (High Cholesterol) <span>provided you do not also suffer from a known cardiovascular disease and/or diabetes</span></li>    <li>22. Hyperlipidaemia (High Blood Lipids) <span>provided you do not also suffer from a known cardiovascular disease and/or diabetes</span></li>    <li>23. Hypertension (High Blood Pressure) <span>provided you do not also suffer from a known cardiovascular disease and/or diabetes</span></li>    <li>24. Hypothyroidism, including Hashimoto's Disease</li>    <li>25. Impaired Glucose Tolerance</li>    <li>26. Incontinence</li>  </ul>    <ul class="list last columns small-12 medium-4">    <li>27. Insulin Resistance</li>    <li>28. Iron Deficiency Anaemia</li>    <li>29. Macular Degeneration</li>    <li>30. Meniere's Disease</li>    <li>31. Migraine</li>    <li>32. Nocturnal cramps</li>    <li>33. Osteopaenia</li>    <li>34. Osteoporosis</li>    <li>35. Pernicious Anaemia</li>    <li>36. Plantar Fasciitis</li>    <li>37. Pregnancy <span>for a single, uncomplicated pregnancy, where your trip ends on or before 26 weeks gestation, which did not arise from services or treatment associated with an assisted reproductive program, including but not limited to in vitro fertilisation.</span></li>    <li>38. Raynaud's Disease</li>    <li>39. Sleep Apnoea</li>    <li>40. Solar Keratosis</li>    <li>41. Trigeminal Neuralgia</li>    <li>42. Trigger Finger</li>    <li>43. Vitamin B12 Deficiency</li>  </ul>
+
+      <div class="actions columns small-12">
+        <div class="row">
+          <div class="accept panel-bg-highlight columns small-12 medium-6">
+
+            <h4><span aria-hidden="true" class="tid-icon icon-tid-tick"></span>Yes</h4>
+            <p>All my conditions are listed above and I have not been hospitalised in the last 24 months.</p>
+
+            <button type="submit" name="SubmitIncludedPreEx" class="button-primary">
+              Continue &amp; Buy <span aria-hidden="true" class="tid-icon icon-tid-button-arrow"></span>
+            </button>
+
+          </div>
+          <div class="decline panel-bg-highlight columns small-12 medium-6">
+            <h4><span aria-hidden="true" class="tid-icon icon-tid-cross"></span>No</h4>
+            <p>All of my conditions are <span>NOT</span> listed above or <span>I HAVE</span> attended a hospital (including day surgery or emergency department attendance) in the last 24 months.</p>
+
+            <button type="submit" name="ContinueIncludedPreEx" class="button-secondary">
+              Continue to Next Step <span aria-hidden="true" class="tid-icon icon-tid-button-arrow"></span>
+            </button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+{% endblock %}

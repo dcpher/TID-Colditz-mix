@@ -1,0 +1,111 @@
+{% block title %}TID Pre ex flow{% endblock %}
+{% block body_class %}pre-ex step-3{% endblock %}
+{% block body_id %}pre-ex{% endblock %}
+{% block content %}
+
+<section id="main-content">
+
+  <div class="blue-panel header-panel">
+    <div class='row'>
+      <div class='small-12 columns'>
+        {% include "pp-breadcrumb" %}
+        <h1>Pre existing conditions</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="global-messages-container"></div>
+
+  <div class="row">
+    <div class="pre-ex-path step-3">
+
+      <div class="small-12 medium-9 columns">
+        <h3>All other medical conditions</h3>
+
+        <p>
+        This policy will include cover for any medical conditions that have not been described in
+        <a href="/PolicyPurchase/ShowIncludedPreEx?SessionTokenPolicyPurchaseModel=32f03d64-20f7-49cf-bc6d-58a92d7f4a7b">Step 1</a>
+        or <a href="/PolicyPurchase/ContinueIncludedPreEx?SessionTokenPolicyPurchaseModel=32f03d64-20f7-49cf-bc6d-58a92d7f4a7b">Step 2</a>.
+        The premium quoted below is for the pre-existing medical conditions policy.
+        </p>
+
+        <p>
+        Please consider your medical history carefully because overseas medical care is expensive.
+        </p>
+
+        <ul class="check" data-analytics-id="preex-accept-terms">
+          <li>
+          <div class="input-group">
+            <label for="preExTerm_0" class="label-for-single-checkbox">
+              <input id="preExTerm_0" name="QuoteDto.PreExOptionContents[0].IsSelected" type="checkbox" value="true"><input name="QuoteDto.PreExOptionContents[0].IsSelected" type="hidden" value="false">
+              Your condition is not one of the 43
+              <a href="/PolicyPurchase/ShowIncludedPreEx?SessionTokenPolicyPurchaseModel=32f03d64-20f7-49cf-bc6d-58a92d7f4a7b">automatically covered medical conditions</a>.
+            </label>
+          </div>
+          </li>
+          <li>
+          <div class="input-group">
+            <label for="preExTerm_1" class="label-for-single-checkbox">
+              <input id="preExTerm_1" name="QuoteDto.PreExOptionContents[1].IsSelected" type="checkbox" value="true"><input name="QuoteDto.PreExOptionContents[1].IsSelected" type="hidden" value="false">
+              Your condition is not listed under <a href="/PolicyPurchase/ContinueIncludedPreEx?SessionTokenPolicyPurchaseModel=32f03d64-20f7-49cf-bc6d-58a92d7f4a7b">step 2</a> (these conditions are NOT covered.)
+            </label>
+          </div>
+          </li>
+          <li>
+          <div class="input-group">
+            <label for="preExTerm_2" class="label-for-single-checkbox">
+              <input id="preExTerm_2" name="QuoteDto.PreExOptionContents[2].IsSelected" type="checkbox" value="true"><input name="QuoteDto.PreExOptionContents[2].IsSelected" type="hidden" value="false">
+              That you have read and understood the
+              <a href="/Document/OpenRegulatoryWording?RegulatoryWordingTypeId=1" target="blank">PDS</a>
+              as it relates to <a href="/PolicyPurchase/ShowPreExInfo?SessionTokenPolicyPurchaseModel=32f03d64-20f7-49cf-bc6d-58a92d7f4a7b">pre-existing medical conditions</a>.
+            </label>
+          </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="actions">
+        <div class="accept panel-bg-highlight columns small-12 medium-6">
+
+          <h4><span aria-hidden="true" class="tid-icon icon-tid-tick"></span>Yes</h4>
+
+          <p>I would like to buy a policy that includes cover for my Pre-Existing Medical Condition.</p>
+          <div class="price-container">
+            <span class="currency-symbol">
+              $
+            </span>
+            <span class="price-value">148.50</span>
+            <span class="currency">
+              AUD
+            </span>
+          </div>
+          <button type="submit" name="SubmitPremiumPreEx" class="button-primary buy-with-preex" data-analytics-id="preex-buy-with-cover">
+            Buy with Pre-Ex Cover <span aria-hidden="true" class="tid-icon icon-tid-button-arrow"></span>
+          </button>
+
+        </div>
+        <div class="decline panel-bg-highlight columns small-12 medium-6">
+
+          <h4><span aria-hidden="true" class="tid-icon icon-tid-cross"></span>No</h4>
+          <p>By selecting <span>NO</span> I understand that there's <span>NO COVER</span> for any costs relating to or associated with my Pre-Existing Medical Condition.</p>
+
+          <div class="price-container">
+            <span class="currency-symbol">
+              $
+            </span>
+            <span class="price-value">71.00</span>
+            <span class="currency">
+              AUD
+            </span>
+          </div>
+
+          <button type="submit" name="ShowPreExPremiumRemoval" class="button-secondary">
+            Buy without Pre-Ex Cover <span aria-hidden="true" class="tid-icon icon-tid-button-arrow"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -5,8 +5,133 @@
 
 <div id="content" data-analytics-id="layout-content-container">
 
+
   <div id="modal-container">
+
+    <!-- Donations Modal Start
+
+    <div class="modal-content donation-editor-panel donation-editor-modal">
+      <form action="/Quote/MultiTarget" id="donationForm" method="post">    <input class="close link-like" type="submit" value="Close &times;" name="CancelEditDonationProjects">
+        <h2 class="modal-header">
+          Select a project
+        </h2>
+
+        <div class="item ">
+          <input checked="" class="bool" id="15" name="QuoteDto.DonationProjectId" type="radio" value="15">
+          <img class="logo" alt="WaterAid Australia" src="http://build.footprints.org.au/uploadimages/WaterAid_small.jpg">
+          <img class="project" alt="Water, sanitation &amp; hygiene education" src="http://build.footprints.org.au/uploadimages/img-home-03.jpg">
+          <div class='item-wrapper'>
+            <label class="header" for="13">Blindness prevention program</label>
+            <a class="learn-more" target="_blank" href="http://build.footprints.org.au/default.aspx?c=10&amp;x1=13">Find out more</a>
+          </div>
+
+        </div>
+
+        <div class="item last-item selected">
+          <input checked="checked" class="bool" id="13" name="QuoteDto.DonationProjectId" type="radio" value="13">
+
+          <img class="logo" alt="Fred Hollows Foundation" src="http://build.footprints.org.au/uploadimages/fhf_small.jpg">
+          <img class="project" alt="Blindness prevention program" src="http://build.footprints.org.au/uploadimages/hollows_camb_small.jpg">
+          <div class='item-wrapper'>
+            <label class="header" for="13">Blindness prevention program</label>
+            <a class="learn-more" target="_blank" href="http://build.footprints.org.au/default.aspx?c=10&amp;x1=13">Find out more</a>
+          </div>
+        </div>
+
+        <button type="submit" class="continue button-primary" value="" name="UpdateDonation">
+          Continue 
+          <span aria-hidden="true" class="tid-icon icon-tid-button-arrow"></span>
+        </button>
+        <button type="submit" value="" name="CancelEditDonationProjects" class="cancel link-like">
+          Cancel
+          <span aria-hidden="true" class="tid-icon icon-tid-button-arrow"></span>
+        </button>
+        <p class="footprints-network">
+        TID is a member of the 
+        <a href="http://footprintsnetwork.org" target="_blank">FootprintsNetwork.org</a>
+        </p>
+        <div class="session-tokens"><input name="SessionTokenQuoteModel" type="hidden" value="31531087-2d0f-4919-85a5-0baf145d5e5c"></div>
+    </form></div>
+     Donations Modal End -->
+
+    <!-- Terms and Conditions Modal Start -->
+    <div class="modal-content terms-and-conditions terms-and-conditions-modal">
+      <form action="/Quote/MultiTarget" data-analytics-id="terms-and-conditions" id="termsAcceptanceForm" method="post">
+        <h1>Terms &amp; Conditions</h1>
+
+        <div class="global-messages-container"><div class="global-messages-container"></div></div>
+
+        <div class="pre-ex-check question-wrapper">
+          <h3>Do you or anyone on this policy have a Pre-Existing Medical Condition?</h3>
+
+          <div class="input-group radio-button-group">
+            <input id="hasPreExTrue" name="QuoteDto.HasPreExCondition" type="radio" value="True">
+            <label for="hasPreExTrue">Yes</label>
+          </div>
+          <div class="input-group radio-button-group">
+            <input id="hasPreExFalse" name="QuoteDto.HasPreExCondition" type="radio" value="False">
+            <label for="hasPreExFalse">No</label>
+          </div>
+          <p>Unsure? This is what we mean by
+          <a class="link-like load-by-ajax what-is-pre-ex" href="/Quote/ShowPreExInfo?SessionTokenQuoteModel=d7aa4d18-72e0-4524-a5ab-69d7e60d5586">a Pre-Existing Medical Condition.</a></p>
+        </div>
+        <div data-analytics-id="terms-and-conditions-snow-check" class='question-wrapper'>
+          <h3>Will anybody on this policy be skiing or doing any snow sports?</h3>
+          <p>
+          If anyone on this policy will be skiing or doing any snow sports, you need to 
+          <a class="link-like load-by-ajax what-is-pre-ex" href="/Quote/Options?enc=kLg_wPS4F7AFuDMliLqLTZppVFyMfhC7QRT0AN3SJwlkYd4pjeYZlDz8Wjr4gVhypKfuD4vsEfMYs5b6f3LVt1CRwa8vdEfgPfSEqUR2bkbq1Eca1BUfCg1CUZE8mf7Eav6v3ChLmIfb89brIcWgtZVyz7-0NTi2-WfwVHsdCXQ%5E">add ski &amp; snow sports activities cover</a>.
+          </p>
+
+          <ul class="terms-and-conditions-check">
+            <li>
+            <div class="input-group">
+              <label for="snow-sports-declaration" class="label-for-single-checkbox">
+                <input id="snow-sports-declaration" name="QuoteDto.NoSkiingDeclared" type="checkbox" value="true"><input name="QuoteDto.NoSkiingDeclared" type="hidden" value="false">            
+                Neither I, nor anybody on the policy will be skiing or doing snow sports on this trip
+              </label>
+            </div>
+            </li>
+          </ul>
+        </div>
+        <div data-analytics-id="terms-and-conditions-other-check" class='question-wrapper'>
+          <h3>Have you read the Product Disclosure Statement yet?</h3>
+
+          <ul class="terms-and-conditions-check">
+            <li>
+            <div class="input-group">        
+              <label for="regulatoryDeclaration_0" class="label-for-single-checkbox">
+                <input id="regulatoryDeclaration_0" name="QuoteDto.RegulatoryDeclarations[0].IsSelected" type="checkbox" value="true"><input name="QuoteDto.RegulatoryDeclarations[0].IsSelected" type="hidden" value="false">                           
+                I agree to receive all policy documents electronically and have read, understood &amp; agree to the conditions in the 
+                <a href="/pds?RegulatoryWordingTranslationId=30" target="blank">Policy Wording</a>              </label>
+            </div>
+            </li>
+            <li>
+            <div class="input-group">        
+              <label for="regulatoryDeclaration_1" class="label-for-single-checkbox">
+                <input id="regulatoryDeclaration_1" name="QuoteDto.RegulatoryDeclarations[1].IsSelected" type="checkbox" value="true"><input name="QuoteDto.RegulatoryDeclarations[1].IsSelected" type="hidden" value="false">                           
+                I am a <input type="submit" name="ShowResidentDefinition" class="link-like" value="resident"> of Australia
+              </label>
+            </div>
+            </li>
+          </ul>
+        </div>
+        <div class="session-tokens"><input name="SessionTokenQuoteModel" type="hidden" value="d7aa4d18-72e0-4524-a5ab-69d7e60d5586"></div>      
+        <button type="submit" name="SubmitAcceptedTerms" class="continue button-primary">
+          Accept <span aria-hidden="true" class="tid-icon icon-tid-button-arrow"></span>
+        </button>
+        <a class="cancel link-like load-by-ajax" href="/Quote/CancelFromTermsConditions?SessionTokenQuoteModel=d7aa4d18-72e0-4524-a5ab-69d7e60d5586">x Cancel</a>
+      </form>
+    </div>
+
+    <!-- Terms and Conditions Modal End -->
+
+    <div class="modal-overlay">
+    </div>
   </div>
+
+
+
+
 
   <form action="/Quote/MultiTarget" id="optionsForm" method="post">  <input type="hidden" class="nonAjaxSignOut" value="true" />
 
@@ -14,31 +139,7 @@
 
       <div class='row'>
         <div class='small-12 columns'>
-          <nav class="breadcrumb">
-            <ol>
-              <li class="step1">
-              <a href="/Quote?enc=kLg_wPS4F7AFuDMliLqLTZppVFyMfhC7QRT0AN3SJwmok64h3-c7pL0w5V7zv3tiCQQlKNBIzSwI-bxOAuDqGGu6Pq13zZvnoJKz7OjLGeG9yESmd5rfM1yGpeCWpKRYRtxFvnJcD07pKmJr3Jab8wg6ZtoDMNpH0sliZDAAdDRDmJ9WCLaHI7ihxqpCVp_n" data-analytics-id="breadcrumb-goto-quote">
-                1. Quote
-              </a>
-              </li>
-              <li class="step2 active">
-              <em>
-                2. Options
-              </em>
-              </li>
-              <li class="step3">
-              <em>
-                3. Details
-              </em>
-              </li>
-              <li class="step4">
-              <em>
-                4. Review &amp; Pay
-              </em>
-              </li>
-            </ol>
-          </nav>
-
+          {% include "pp-breadcrumb" %}
         </div>
       </div>
       <div class='row'>
@@ -67,20 +168,52 @@
       </div>
     </div>
 
+
+    <form action="/Quote/MultiTarget" id="emailQuoteForm" method="post">
+
+      <div class="widget-email-quote">
+        <div class='row'>
+          <div class='widget-email-quote-content'>
+            <div class="email-title">
+              <span aria-hidden="true" class="tid-icon icon-tid-email"></span>
+              Email your quote
+            </div>
+
+            <div class="input-group">
+              <input id="QuoteDto_EmailQuoteAddress" name="QuoteDto.EmailQuoteAddress" placeholder="Enter your email" type="text" value="" />
+            </div>
+
+            <div class="button-wrapper">
+              <button type="submit" class="button-secondary button-no-text" name="SubmitEmailQuote" data-analytics-id="email-quote">
+                Send
+                <span aria-hidden='true' class='tid-icon icon-tid-button-arrow'></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="session-tokens">
+        <input name="SessionTokenQuoteModel" type="hidden" value="285620a3-e98b-4fe7-bc8f-96a9bec1ea3f" />
+      </div>
+
+    </form>
+
+
+
     <div class="session-tokens">
       <input name="SessionTokenQuoteModel" type="hidden" value="285620a3-e98b-4fe7-bc8f-96a9bec1ea3f" />
     </div>
 
     <div class="global-messages-container"></div>
 
-    <section id="main-content" role="main">
+    <section class="main-content" id="main-content" role="main">
 
       <div class='row'>
 
         <div class='medium-12 large-9 columns'>
           <!-- Snow Sports -->
           <div class='row skiing-row manual-update-container' id='snow-sports'>
-            <div class='small-12 medium-8 large-9 column description-column'>
+            <div class='small-12 medium-9 large-9 column description-column'>
               <h2>
                 <span aria-hidden="true" class="tid-icon icon-tid-snow"></span>
                 <span>Will you be skiing or doing any snow sports?</span>
@@ -99,7 +232,7 @@
               </span>
             </div>
 
-            <div class='small-12 medium-4 large-3 column premium-column'>
+            <div class='small-12 medium-3 large-3 column premium-column'>
               <span class="price-with-currency-medium">$0.00</span>
               <span class="price-description">Additional premium</span>
             </div>
@@ -107,7 +240,7 @@
 
           <!-- Reduce Policy Excess -->
           <div class='row reduce-excess-row manual-update-container' id='reduce-excess'>
-            <div class='small-12 medium-8 large-9 column description-column'>
+            <div class='small-12 medium-9 large-9 column description-column'>
               <h2>
                 <span aria-hidden="true" class="tid-icon icon-tid-excess"></span>
                 <span>Would you like to reduce your policy excess?</span>
@@ -129,7 +262,7 @@
               </span>
             </div>
 
-            <div class='small-12 medium-4 large-3 column premium-column'>
+            <div class='small-12 medium-3 large-3 column premium-column'>
               <span class="price-with-currency-medium">$0.00</span>
               <span class="price-description">Additional premium</span>
             </div>
@@ -137,38 +270,58 @@
 
           <!-- Specified Items -->
           <div class='row specified-items-row manual-update-container' id='specItems'>
-            <div class='small-12 medium-8 large-9 column description-column'>
+            <div class='small-12 medium-9 large-9 column description-column'>
               <h2>
                 <span aria-hidden="true" class="tid-icon icon-tid-luggage"></span>
                 <span>Would you like extra cover for valuable items?</span>
               </h2>
-              <table class="additional-items">
+
+              <table class="specified-item-display">
+                <thead>
+                  <tr>
+                    <th class="item-name">Item Name</th>
+                    <th class="item-value">Item Value ($)</th>
+                    <th class="premium">Premium ($)</th>
+                    <th class="action">&nbsp;</th>
+                  </tr>
+                </thead>
                 <tbody>
                 <tr>
-                  <th class="item-name">Item Name</th>
-                  <th class="item-serial">Serial Number</th>
-                  <th class="item-value">Value</th>
-                  <th class="item-premium">Premium</th>
+                  <td class="item-name">iPhone</td>
+                  <td class="item-value">1,233.00</td>
+                  <td class="premium">$61.65</td>
+                  <td class="action">
+                    <button class="remove" name="RemoveSpecifiedItem_specifiedItemIndex_0">x<span> remove</span></button>
+                  </td>
                 </tr>
-                <tr data-analytics-id="specified-item-row">
-                  <td class="item-name-entry" data-analytics-id="item-name">
-                    <input id="QuoteDto_PolicyOptions_2__PolicySpecifiedItemOptionDto_SpecifiedItems_0__Name" name="QuoteDto.PolicyOptions[2].PolicySpecifiedItemOptionDto.SpecifiedItems[0].Name" type="text" value="" />
-                  </td>
-                  <td class="item-serial-entry">
-                    <input id="QuoteDto_PolicyOptions_2__PolicySpecifiedItemOptionDto_SpecifiedItems_0__SerialNumber" name="QuoteDto.PolicyOptions[2].PolicySpecifiedItemOptionDto.SpecifiedItems[0].SerialNumber" placeholder="Optional" type="text" value="" />
-                  </td>
-                  <td class="item-value-entry" data-analytics-id="item-value">
-                    <input class="manual-update-trigger" id="QuoteDto_PolicyOptions_2__PolicySpecifiedItemOptionDto_SpecifiedItems_0__ItemValueAsString" name="QuoteDto.PolicyOptions[2].PolicySpecifiedItemOptionDto.SpecifiedItems[0].ItemValueAsString" type="text" value="" />
-                  </td>
-                  <td class="item-premium-entry">
-                    -
-                  </td>
-                  <td>
+                <tr>
+                  <td class="item-name">iPad</td>
+                  <td class="item-value">123.00</td>
+                  <td class="premium">$6.15</td>
+                  <td class="action">
+                    <button class="remove" name="RemoveSpecifiedItem_specifiedItemIndex_1">x<span> remove</span></button>
                   </td>
                 </tr>
                 </tbody>
               </table>
-              <input type="submit" value="Update" class="button-tertiary" name="UpdateSpecifiedItemOption" />
+
+
+              <ul class="specified-item-editor row">
+                <li class="item-name small-12 medium-4 columns">
+                <label>Item Name</label>
+                <input id="ActiveQuoteDto_PolicyOptions_0__PolicySpecifiedItemOptionDto_SpecifiedItems_2__Name" name="ActiveQuoteDto.PolicyOptions[0].PolicySpecifiedItemOptionDto.SpecifiedItems[2].Name" type="text" value="">
+                </li>
+                <li class="item-value small-12 medium-4 columns">
+                <label>Item Value ($)</label>
+                <input id="ActiveQuoteDto_PolicyOptions_0__PolicySpecifiedItemOptionDto_SpecifiedItems_2__ItemValue" name="ActiveQuoteDto.PolicyOptions[0].PolicySpecifiedItemOptionDto.SpecifiedItems[2].ItemValue" type="text" value="0">
+                </li>
+                <li class="action small-12 medium-4 columns">
+                <label>&nbsp;</label>
+                <button class="button-tertiary" name="UpdateEditableItemAndAddNewSpecifiedItem">Update</button>
+                </li>
+              </ul>
+
+              <input type="submit" value="Add another item" class="button-tertiary" name="UpdateSpecifiedItemOption" />
               <p></p>
               <p>
               If you would like <a href="http://service.travelinsurancedirect.com.au/customer/portal/articles/526847-cover-for-laptops-cameras-and-phones" 
@@ -180,7 +333,7 @@
               </p>
             </div>
 
-            <div class='small-12 medium-4 large-3 column premium-column'>
+            <div class='small-12 medium-3 large-3 column premium-column'>
               <span class="price-with-currency-medium">$0.00</span>
               <span class="price-description">Additional premium
               </span>
@@ -190,7 +343,7 @@
 
           <!-- Car Rental -->
           <div class='row car-rental-row manual-update-container' id='carExcess'>
-            <div class='small-12 medium-8 large-9 column description-column'>
+            <div class='small-12 medium-9 large-9 column description-column'>
               <h2>
                 <span aria-hidden="true" class="tid-icon icon-tid-car"></span>
                 <span>Would you like extra cover for Rental Vehicle Excess?</span>
@@ -220,7 +373,7 @@
               of any excess you may be liable for from the hire company.
               </p>
             </div>
-            <div class='small-12 medium-4 large-3 column premium-column'>
+            <div class='small-12 medium-3 large-3 column premium-column'>
               <span class="price-with-currency-medium">$0.00</span>
               <span class="price-description">Additional premium</span>
             </div>
@@ -228,7 +381,7 @@
 
           <!-- Footprints -->
           <div class='row footprints-row manual-update-container' id='donation'>
-            <div class='small-12 medium-8 large-9 column description-column'>
+            <div class='small-12 medium-9 large-9 column description-column'>
               <h2>
                 <span aria-hidden="true" class="tid-icon icon-tid-charity"></span>
                 <span>Small enough to change the world</span>
@@ -277,7 +430,7 @@
                 </figcaption>
               </figure>
             </div>
-            <div class='small-12 medium-4 large-3 column premium-column'>
+            <div class='small-12 medium-3 large-3 column premium-column'>
               <span class="price-with-currency-medium">$0.00</span>
               <span class="price-description">Donation</span>
             </div>
@@ -285,7 +438,7 @@
 
           <!-- Promo discount -->
           <div class='row promo-row manual-update-container' id='promotion-discount'>
-            <div class='small-12 medium-8 large-9 column description-column'>
+            <div class='small-12 medium-9 large-9 column description-column'>
               <h2>
                 <span aria-hidden="true" class="tid-icon icon-tid-promo"></span>
                 <span>Have a campaign code?</span>
@@ -301,7 +454,7 @@
                 </div>
               </div>
             </div>
-            <div class='small-12 medium-4 large-3 column premium-column'>
+            <div class='small-12 medium-3 large-3 column premium-column'>
               <span class="price-with-currency-medium">($0.00)</span>
               <span class="price-description">Discount</span>
             </div>
@@ -309,14 +462,13 @@
 
           <!-- Purchase info row footer -->
           <div class='row purchase-info-row bottom'>
-            <div class='small-12 medium-4 large-3 column price-column'>
+            <div class='small-12 medium-3 large-3 column price-column'>
               <strong class="options-total delta-size">Total</strong>
               <div class="price-display price-container">
                 <span class="currency-symbol">$</span>
                 <span class="price-value">
                   710.00
                 </span>
-                <span class="currency">AUD</span>
               </div>
             </div>
             <div class='small-12 medium-4 small-4 column cta-column'>
@@ -329,51 +481,18 @@
 
         <div class='medium-12 large-3 columns'>
           <aside id="additional-content" data-analytics-id="options-side-bar-content">
-            <div class="widget-email-quote-container panel-bg-highlight">
 
-              <form action="/Quote/MultiTarget" id="emailQuoteForm" method="post">  <div class="widget-email-quote">
+            <h4>Contact us</h4>
 
-                  <div class="email-title">
-                    <span aria-hidden="true" class="tid-icon icon-tid-email"></span>
-                    Email your quote
-                  </div>
+            <ul class="contact-list">
 
-                  <div class="input-group">
-                    <input id="QuoteDto_EmailQuoteAddress" name="QuoteDto.EmailQuoteAddress" placeholder="Enter your email" type="text" value="" /></div>
+              <li><a href="/customer/portal/emails/new" data-tooltip="" aria-haspopup="true" class="has-tip [tip-bottom] [radius round]" title="Our customer service team will respond to you privately."><span class="fa fa-envelope"></span>Email us</a></li>
+              <li><a href="/customer/portal/questions/new" data-tooltip="" aria-haspopup="true" class="has-tip [tip-bottom] [radius round]" title="This will be visible on the public forum for the benefit of everyone."><span class="fa  fa-comment"></span>Post a question</a></li>
+              <li><a href="https://www.facebook.com/TIDaustralia"><span class="fa fa-facebook"></span>Facebook</a></li>
+              <li><a href="https://twitter.com/TIDaustralia"><span class="fa fa-twitter"></span>Twitter</a></li>
+              <li><a href="https://plus.google.com/+travelinsurancedirect"><span class="fa fa-google-plus"></span>Google+</a></li>
 
-                  <div class="button-wrapper">
-                    <button type="submit" class="button-secondary button-no-text" name="SubmitEmailQuote" data-analytics-id="email-quote">
-                      Send
-                      <span aria-hidden='true' class='tid-icon icon-tid-button-arrow'></span>
-                    </button>
-                  </div>
-
-                </div>
-                <div class="session-tokens">
-                  <input name="SessionTokenQuoteModel" type="hidden" value="285620a3-e98b-4fe7-bc8f-96a9bec1ea3f" />
-                </div>
-                <div class="panel-aside">
-                  <h4>Have a question?</h4>
-                  <p>
-                  Post a Question on the forum for the benefit of everyone.                        
-                  </p>
-                  <a href="http://service.travelinsurancedirect.com.au/customer/portal/questions/new?purchase_path_origin=options" target="_blank" class="standalone-link">Ask a Question</a>
-                  <p>
-                  Email our customer service team we will respond to you privately.                        
-                  </p>
-                  <a href="http://service.travelinsurancedirect.com.au/customer/portal/emails/new?purchase_path_origin=options" target="_blank" class="standalone-link">Send us an email</a>
-                </div>
-
-                <div class="panel-aside twitter-info">
-                  <h4>
-                    <span aria-hidden="true" class="tid-icon icon-tid-twitter"></span>
-                    <span class="text-after-icon">Tweet to us </span>
-                    <a href="https://twitter.com/tidaustralia" target="_blank" class="tid-twitter-link base-size">@tidaustralia</a>
-                  </h4>
-                </div>
-              </form>
-
-            </div>
+            </ul>
 
           </aside>
         </div>
@@ -387,6 +506,11 @@
 <script>
 $(function() {
     $('.manual-update button, .manual-update input').hide();
+
+    $('.continue.button-primary').on('click', function(e) {
+      e.preventDefault();
+      $('.modal-content, .modal-overlay').hide();
+      });
     });
 </script>
 

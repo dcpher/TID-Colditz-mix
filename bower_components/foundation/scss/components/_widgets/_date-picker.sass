@@ -1,6 +1,5 @@
 // date-picker
 
-
 // Datepicker [not namespaced]
 .datepicker
   background: $dp-color-background
@@ -61,15 +60,16 @@
             text-decoration: none
             cursor: pointer
             background-color: $color-blue
-        
       td.selected
         background: $color-blue
         a
           color: $color-white
       td.disabled
-        color: $dp-color-link-disabled
-        &:hover
-          text-decoration: none
+        a
+          color: $dp-color-link-disabled
+          &:hover,
+          a
+            text-decoration: none
       th
         font-weight: 300
         text-align: center

@@ -8,6 +8,13 @@ body.payment
       margin-left: 0
       margin-right: 0
       width: 100%
+  .blue-panel
+    padding-left: 0
+    @media #{$small-only}
+      .row
+        margin-top: 0
+      h1
+        margin-bottom: 0
   .purchase-path-panel,
   .payment-panel
     @include grid-row($behavior: nest)
@@ -37,26 +44,37 @@ body.payment
     a
       position: absolute
       right: rem-calc(24)
-      top: rem-calc(10)
+      top: rem-calc(0)
 
   // Panels
   .review-details-group
     @include grid-column(3)
+    &.address-details
+      @include grid-column(6)
     @media #{$small-only}
-      @include grid-column(12)
-
+      @include grid-column(6)
+      dl
+        margin-bottom: rem-calc(10)
+      dt, dd
+        font-size: rem-calc(14)
+        line-height: rem-calc(14)
+      &.destinations,
+      &.email,
+      &.address-details,
+      &.ages
+        @include grid-column(12)
+        
   .list-key-value
     +clearfix
 
-  .purchase-path-panel,
-  .trip-summary
+  .purchase-path-panel
     border-bottom: 1px solid $color-light-grey
     margin-bottom: rem-calc(20)
-
-  .address-details
-    @include grid-column(6)
+    &:nth-last-child(2)
+      border-bottom: none
     @media #{$small-only}
-      @include grid-column(12)
+      &.trip-summary
+        margin-top: rem-calc(20)
 
   // Payment panel (which includes options stuff)
   .payment-panel
@@ -72,6 +90,10 @@ body.payment
       border-top: 1px solid $color-mid-grey
       .price-container
         display: inline
+      th
+        font-weight: 100
+      td
+        font-weight: bold
       @media #{$small-only}
         th
           width: 65%
@@ -102,8 +124,6 @@ body.payment
       padding-left: rem-calc(50)
       position: relative
       min-height: 67px
-      @media #{$small-only}
-        min-height: initial
       img
         position: absolute
         left: rem-calc(9)
@@ -113,6 +133,12 @@ body.payment
         font-weight: 100
         display: block
         line-height: rem-calc(18)
+      @media #{$small-only}
+        min-height: initial
+        margin-top: rem-calc(10)
+        span
+          font-size: rem-calc(14)
+          line-height: rem-calc(14)
     .input-group
       clear: left
       @media #{$small-only}
@@ -134,6 +160,11 @@ body.payment
       background: none
       border: none
       color: $color-blue
+      padding: 0
+      font-size: rem-calc(14)
+      font-family: 'Museo Sans', sans-serif
+      &:hover
+        cursor: pointer
     .cc-expiry select
       width: auto
     .cc-verification
@@ -150,8 +181,12 @@ body.payment
         clear: left
       .hint
         position: absolute
-        bottom: rem-calc(3)
+        bottom: rem-calc(12)
         right: rem-calc(12)
+        div
+          background-size: 100% 100%
+          width: 70px
+          height: 45px
       .other
         background: transparent url('/Content/styles/i/cc_other_small.png') no-repeat left top
         width: 84px
@@ -174,7 +209,9 @@ body.payment
         @media #{$small-only}
           width: 65px
     .buy-now
+      +pp-button-dark
       float: left
       clear: left
       margin-left: rem-calc(12)
       margin-top: rem-calc(18)
+      padding-right: rem-calc(40)

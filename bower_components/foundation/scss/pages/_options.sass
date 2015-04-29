@@ -1,35 +1,50 @@
 // _options.sass
 
 body.options
-
   // TODO: Is there a different more foundationish way to do container pads?
   .row
     margin-top: rem-calc(20)
+    @media #{$medium-only}
+      width: 100%
+    @media #{$small-only}
+      margin-top: 0
+  .blue-panel
+    padding-left: 0
+    padding-right: 0
   ul
     margin-left: 0
     list-style-type: none
   figure
     margin: 0
+  .widget-email-quote .row
+    margin-top: 0
 
   // Big h1
   .blue-panel h1
     margin-bottom: 0
-    @media #{$small-up}
-      font-size: rem-calc(48)
-    @media #{$medium-up}
+    @media #{$small-only}
+      font-size: rem-calc(30)
+    @media #{$medium-only}
       font-size: rem-calc(60)
-    @media #{$large-up}
+      padding-left: rem-calc(12)
+    @media #{$large-only}
       font-size: rem-calc(80)
 
   // Header with CTA and price.
+  .main-content .row
+    @media #{$small-only}
+      margin-bottom: rem-calc(20)
   .purchase-info-row
     margin-bottom: rem-calc(30)
-    .cta-column
-      button
-        +pp-button-dark
-        padding-right: rem-calc(40)
-        width: 100%
-        text-align: left
+    @media #{$small-only}
+      margin-bottom: 0
+    .cta-column button
+      +pp-button-dark
+      padding-right: rem-calc(40)
+      width: 100%
+      text-align: left
+      @media #{$small-only}
+        margin-bottom: 0
     strong
       color: $color-white
     .price-display
@@ -53,37 +68,57 @@ body.options
     &.bottom
       strong,
       .price-display span
-        color: $color-blue
+        color: $color-dark-blue
       .price-display
         line-height: rem-calc(30)
-      .cta-column,
+      .cta-column
+        float: left
       .price-column
         float: right
       .price-value
         font-size: rem-calc(45)
         line-height: rem-calc(45)
+      @media #{$medium-only}
+        .price-value
+          font-size: rem-calc(40)
+          line-height: rem-calc(40)
       @media #{$small-only}
         .price-column
           margin-bottom: rem-calc(16)
-
   // Option row general styles
+  .main-conetnt .row
+    margin-bottom: rem-calc(20)
   .description-column
     h2
       font-size: rem-calc(30)
       margin-bottom: rem-calc(18)
       letter-spacing: 0
       font-weight: 300
+      @media #{$small-only}
+        font-size: rem-calc(18)
+        margin-bottom: rem-calc(20)
+        letter-spacing: 0
+        font-weight: bold
     label
       font-size: rem-calc(18)
       color: $color-blue
+      margin-bottom: rem-calc(10)
+      input[type='checkbox'], select
+        margin-bottom: 0
     input[type='submit'], button
-      +pp-button-dark
+      +pp-button-tertiary
+      text-align: left
   .premium-column
     .price-with-currency-medium
-      color: $color-blue
+      color: $color-dark-blue
       font-size: rem-calc(30)
+      @media #{$small-only}
+        font-weight: bold
+        font-size: rem-calc(18)
     .price-description
       display: block
+      @media #{$small-only}
+        font-size: rem-calc(14)
     @media #{$small-only}
       .price-with-currency-medium,
       .price-description
@@ -99,7 +134,63 @@ body.options
   .promo-row
     padding-bottom: rem-calc(18)
     border-bottom: 1px solid $color-mid-grey
-  
+    @media #{$small-only}
+      p
+        font-size: rem-calc(16)
+        line-height: rem-calc(20)
+        margin-bottom: rem-calc(10)
+  .specified-items-row
+    input[type='text'],
+    input[type='submit'],
+      margin-bottom: 0
+    table
+      width: 100%
+      tr th
+        font-size: rem-calc(12)
+        font-weight: bold
+      button
+        background: none
+        border: none
+        color: $color-red
+        padding: 0
+        text-shadow: none
+        margin-bottom: 0
+        font-size: rem-calc(18)
+        span
+          color: $color-red
+        &:after
+          display: none
+        &:hover
+          background: none
+          color: $color-red
+      @media #{$small-only}
+        td.action
+          text-align: center
+          font-weight: bold
+        td, th
+          padding: rem-calc(5)
+        button span
+          display: none
+    .specified-item-editor.row
+      margin-bottom: 0
+      label
+        font-size: rem-calc(12)
+        font-weight: bold
+        margin-bottom: 0
+        color: $color-black
+      input[type='text']
+        margin-bottom: 0
+      button
+        padding-right: rem-calc(40)
+        width: 100%
+        &:after
+          bottom: rem-calc(12)
+      @media #{$small-only}
+        .action label
+          display: none
+        input[type='text']
+          margin-bottom: rem-calc(12)
+
   .car-rental-row
     select
       width: 120px
@@ -114,7 +205,8 @@ body.options
         border-right: 1px solid $color-mid-grey
         margin-right: rem-calc(16)
         padding-right: rem-calc(16)
-      input[type='submit']
+      input[type='submit'],
+      input[type='submit']:hover
         background: none
         border: none
         font-size: rem-calc(18)
@@ -122,10 +214,24 @@ body.options
         padding: 0
         margin: 0
         color: $color-blue
+      input[type='submit']:hover
+        color: $color-dark-blue
     .donation-images img
       width: 100%
       height: auto
       border: 1px solid $color-black
+    @media #{$small-only}
+      img.logo-donation-project
+        bottom: rem-calc(-50)
+        left: 0
+        right: auto !important
+        top: auto !important
+      .list-actions,
+      .list-actions input[type='submit'],
+      .list-actions input[type='submit']:hover
+        font-size: rem-calc(14)
+      h2
+        margin-bottom: rem-calc(10)
   .promo-row
     .input-group
       label
@@ -134,29 +240,26 @@ body.options
         margin-right: rem-calc(30)
         float: left
       input[type='text']
-        max-width: 120px
+        max-width: 150px
         float: left
         margin-right: rem-calc(30)
       button.button-tertiary
         padding-right: rem-calc(40)
-        padding-bottom: 7px
-        padding-top: 7px
         float: left
         &:after
           bottom: rem-calc(10)
-      @media #{$small-only}
-        button.button-tertiary
-          float: right
+    @media #{$small-only}
+      .input-group
+        input[type='text']
+          max-width: 100px
+        label
+          display: none
 
   // Aside
   aside
     margin-top: rem-calc(20)
     @media #{$small-only}
       margin-top: 0
-  .widget-email-quote
-    +clearfix
-    .email-title
-      font-size: rem-calc(30)
-      margin-bottom: rem-calc(8)
-    button
-      float: right
+      margin-bottom: rem-calc(20)
+    @media #{$medium-only}
+      margin-bottom: rem-calc(20)

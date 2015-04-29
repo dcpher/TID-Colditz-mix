@@ -4,20 +4,21 @@
 {% block content %}
 
 <div class="blue-panel header-panel">
-  
   <div class='row'>
     <div class='small-12 columns'>
       {% include "pp-breadcrumb" %}
-      <h1>Review and pay</h1>
+      <h1>Review &amp; pay</h1>
     </div>
   </div>
+</div>
 
+<div class='mobile-toggle show-for-small-only'>
+  Tap to <span>see</span> trip details.
 </div>
 
 <div class='row'>
 
   <div class='small-12 medium-12 large-9 columns main-content-column'>
-
     <form action="/PolicyPurchase/MultiTarget" id="paymentForm" method="post">
       <div class="session-tokens">
         <input name="SessionTokenPolicyPurchaseModel" type="hidden" value="7de07a9c-5654-4f87-affb-e6ebc435f5c1">
@@ -25,46 +26,35 @@
       <section id="main-content" role="main" data-analytics-id="payment-main-section">
         <div class="global-messages-container"></div>
         <div class="review-and-pay">
-          <div class="purchase-path-panel trip-summary">
+          <div class="purchase-path-panel trip-summary mobile-toggle-target">
             <header class="header-with-link">
               <h2>Your Trip</h2>
 
               <a class="header-link link-like button-like" data-analytics-id="open-edit-trip" href="/PolicyPurchase/EditTrip?SessionTokenPolicyPurchaseModel=7de07a9c-5654-4f87-affb-e6ebc435f5c1" name="EditTrip">Edit your trip &raquo;</a></header>
 
             <ul class="list-key-value list-horizontal">
-              <li class="review-details-group">
+              <li class="review-details-group destinations">
               <dl>
-                <dt>
-                Going to:
-                </dt>
-                <dd>
-                Spain      </dd>
+                <dt>Going to:</dt>
+                <dd>Spain</dd>
               </dl>
               </li>
 
-              <li class="review-details-group">
+              <li class="review-details-group departure-date">
               <dl>
-                <dt>
-                Departure Date:
-                </dt>
-                <dd>
-                10 Apr 2015
-                </dd>
+                <dt>Departure Date:</dt>
+                <dd>10 Apr 2015</dd>
               </dl>
               </li>
 
-              <li class="review-details-group">
+              <li class="review-details-group return-date">
               <dl>
-                <dt>
-                Return Date:
-                </dt>
-                <dd>
-                16 Apr 2015
-                </dd>
+                <dt>Return Date:</dt>
+                <dd>16 Apr 2015</dd>
               </dl>
               </li>
 
-              <li class="review-details-group">
+              <li class="review-details-group ages">
               <dl>
                 <dt>
                 Travellers age(s):
@@ -77,7 +67,7 @@
 
           </div>
 
-          <div class="purchase-path-panel traveller-details">
+          <div class="purchase-path-panel traveller-details mobile-toggle-target">
 
             <header class="header-with-link">
               <h2>Details</h2>
@@ -87,7 +77,7 @@
 
             <ul class="list-key-value list-horizontal">
 
-              <li class="review-details-group">
+              <li class="review-details-group travellers">
               <dl>
                 <dt>Travellers
                 </dt>
@@ -96,7 +86,7 @@
                 </dd>
               </dl>
               </li>
-              <li class="review-details-group">
+              <li class="review-details-group date-of-birth">
               <dl>
                 <dt>Date of Birth
                 </dt>
@@ -104,7 +94,7 @@
                 1 Jan 1981          </dd>
               </dl>
               </li>
-              <li class="review-details-group">
+              <li class="review-details-group email">
               <dl>
                 <dt>Email
                 </dt>
@@ -113,7 +103,7 @@
                 </dd>
               </dl>
               </li>
-              <li class="review-details-group">
+              <li class="review-details-group mobile">
               <dl>
                 <dt>Mobile
                 </dt>
@@ -125,7 +115,6 @@
             </ul>
 
             <ul class="list-key-value list-horizontal">
-
             </ul>
 
             <ul class="list-key-value list-horizontal">
@@ -303,7 +292,7 @@
 
                 <div class="input-group cc-name">
                   <label for="PaymentDto_NameOnCreditCard">Name on card:</label>    <span class="help">The name on the front of your card</span>
-                  <input class="name" id="PaymentDto_NameOnCreditCard" name="PaymentDto.NameOnCreditCard" tabindex="4" type="text" value="">    <input class="link-like set-name" type="submit" name="SetDefaultNameOnCard" tabindex="11" value="< Click to insert name of first traveller">
+                  <input class="name" id="PaymentDto_NameOnCreditCard" name="PaymentDto.NameOnCreditCard" tabindex="4" type="text" value="">    <input class="link-like set-name" type="submit" name="SetDefaultNameOnCard" tabindex="11" value="Click to insert name of first traveller">
                 </div>
                 <div class="input-group cc-number">
                   <label for="PaymentDto_CreditCardNumber">Credit Card Number:</label>    <span class="help">The digits on the front of your credit card</span>
@@ -398,5 +387,6 @@
   </div>
 
 </div>
+
 
 {% endblock %}

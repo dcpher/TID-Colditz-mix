@@ -1,0 +1,48 @@
+// _email-quote-widget.sass
+
+.widget-email-quote
+  +benefits-bar-style
+  .row
+    margin-top: 0
+  .widget-email-quote-content
+    +clearfix
+    float: right
+    padding: rem-calc(0 12)
+  .email-title
+    font-size: rem-calc(24)
+    line-height: rem-calc(38)
+    color: $color-white
+    margin-right: rem-calc(20)
+  .input-group
+    margin-right: rem-calc(20)
+  .email-title,
+  .input-group,
+  .button-wrapper
+    float: left
+  button
+    +pp-button-tertiary
+    padding-right: rem-calc(40)
+    &:after
+      bottom: rem-calc(11)
+  button,
+  input[type='text']
+    margin-bottom: 0
+  @media #{$medium-only}
+    .widget-email-quote-content
+      padding: rem-calc(0 24)
+  @media #{$small-only}
+    margin-bottom: rem-calc(20)
+    .widget-email-quote-content
+      float: none
+      padding: 0
+    .email-title
+      font-size: rem-calc(20)
+      line-height: rem-calc(24)
+      margin-bottom: rem-calc(10)
+      @include grid-column(12)
+    .input-group
+      @include grid-column(7)
+      margin-right: 0
+      clear: left
+    .button-wrapper
+      @include grid-column(5)

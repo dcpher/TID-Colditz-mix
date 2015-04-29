@@ -1,3 +1,183 @@
 // _quote.sass
 
+body.quote
+  .blue-panel
+    padding: rem-calc(20 0 0 0)
+    // Cool backgrounds
+    background: transparent url('i/quote_default_desktop.jpg') no-repeat center center
+    background-size: cover
+    @media #{$small-only}
+      background: transparent url('i/quote_default_phone.jpg') no-repeat center center
+      background-size: cover
+    @media #{$medium-only}
+      background: transparent url('i/quote_default_tablet.jpg') no-repeat center center
+      background-size: cover
+    .row
+      position: relative
+  .header
+    clear: both
 
+  .price-display
+    font-size: rem-calc(70)
+    line-height: rem-calc(78)
+    span
+      color: $color-white
+      letter-spacing: rem-calc(-1)
+    .currency
+      font-size: rem-calc(30)
+    @media #{$small-only}
+      line-height: rem-calc(54)
+      .currency-symbol,
+      .price-value
+        font-size: rem-calc(50)
+        line-height: rem-calc(54)
+
+  .choose-options.button-like
+    +pp-button-green
+    padding-right: rem-calc(44)
+    a, a:hover
+      color: $color-white
+
+  .underwriter
+    position: absolute
+    top: 0
+    right: 0
+
+  .widget-email-quote-container
+    form
+      +clearfix
+      @media #{$medium-only}
+        margin-bottom: rem-calc(20)
+      @media #{$small-only}
+        margin-bottom: rem-calc(20)
+    @media #{$small-only}
+      padding-left: 0
+      padding-right: 0
+  .widget-email-quote
+    padding: 0
+    background: none
+    border-top: none
+    .input-group
+      margin-right: 0
+    input[type='text']
+      border: none
+      border-top-left-radius: 5px
+      border-bottom-left-radius: 5px
+    button
+      border: none
+      background: $color-blue
+      color: white
+      padding: rem-calc(17 30 22 16)
+      border-top-left-radius: 0
+      border-bottom-left-radius: 0
+    @media #{$small-only}
+      width: 100%
+      margin: 0
+      .input-group,
+      .button-wrapper
+        padding: 0
+      .input-group
+        width: 81%
+      .button-wrapper
+        width: 19%
+
+  label.total
+    color: $color-white
+    font-size: rem-calc(20)
+  h2
+    @include grid-column(12)
+    color: $color-blue
+    margin-top: rem-calc(20)
+    @media #{$small-only}
+      font-size: rem-calc(40)
+      margin-top: rem-calc(10)
+      margin-bottom: rem-calc(10)
+      &, + section
+        padding: 0
+
+  .rating
+    +clearfix
+    margin-bottom: rem-calc(20)
+    .stars
+      float: left
+      .star
+        float: left
+        width: 30px
+        height: 30px
+        background: transparent url('i/icon_ratingstar.png') no-repeat left top
+      .star:last-child
+        width: 18px
+    .rating-review-number
+      float: left
+      line-height: rem-calc(36)
+      margin-left: rem-calc(10)
+      color: $color-white
+
+  .trip-details
+    +clearfix
+    h2
+      display: none
+    ul
+      margin-left: 0
+    ul, li
+      margin-bottom: 0
+      list-style-type: none
+    dl, dt, dd
+      margin-bottom: 0
+    dt
+      font-weight: 300
+    dl
+      font-size: rem-calc(14)
+      line-height: rem-calc(18)
+
+  .mobile-toggle
+    background: none
+    border-top: 0
+    padding-top: 0
+    text-decoration: underline
+    &:after
+      top: rem-calc(6)
+    &.open
+      margin-bottom: rem-calc(20)
+  .trip-summary-bar
+    background: rgba(0, 0, 0, 0.3)
+    border-top: 1px solid rgba(0, 0, 0, 0.3)
+    padding: rem-calc(10 0)
+    .email-title,
+    a.link-like
+      display: none
+    @media #{$small-only}
+      .review-details-group
+        margin-bottom: rem-calc(10)
+
+  .trust-list
+    list-style-type: none
+    margin-left: 0
+    li
+      position: relative
+      padding-left: rem-calc(60)
+      margin-bottom: rem-calc(15)
+      max-width: rem-calc(222)
+    li:after
+      $dimension: 40px
+      position: absolute
+      top: 0
+      left: 0
+      font-family: tid-icon
+      font-size: rem-calc(24)
+      border-radius: $dimension
+      background: $color-blue
+      line-height: rem-calc($dimension)
+      display: block
+      width: rem-calc($dimension)
+      height: rem-calc($dimension)
+      text-align: center
+      color: $color-white
+    li.trusted:after
+      content: "F"
+    li.award:after
+      content: "B"
+    li.owned:after
+      content: "A"
+    li.secure:after
+      content: "G"

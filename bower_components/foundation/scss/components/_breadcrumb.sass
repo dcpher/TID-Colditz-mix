@@ -7,16 +7,48 @@ nav.breadcrumb
     +clearfix
     list-style-type: none
     margin-left: 0
+    border-bottom: 1px solid $color-white
   li
     @include grid-column(3)
-    border-bottom: 4px solid $color-white
+    font-weight: 300
+    font-size: rem-calc(20)
+    line-height: rem-calc(30)
     color: $color-white
+    // border-bottom: 4px solid $color-white
     em
       font-style: normal
-    a
+    a span
       color: $color-white
     &.active
       border-color: $color-dark-blue
       color: $color-dark-blue
     &.active
       border-color: $color-dark-blue
+  @media #{$small-only}
+    margin-bottom: rem-calc(20)
+    ol
+      margin-bottom: 0
+    .number
+      display: block
+      text-align: center
+    .description
+      display: none
+      text-align: center
+    li
+      @include grid-column(2)
+    li.active 
+      @include grid-column(6)
+      text-align: center
+      .number
+        display: inline
+      .description
+        display: inline
+
+  // Trying another style (also commented out a line above)
+  li
+    a, em 
+      display: block
+      border-bottom: 6px solid $color-white
+    &.active
+      em
+        border-color: $color-dark-blue
