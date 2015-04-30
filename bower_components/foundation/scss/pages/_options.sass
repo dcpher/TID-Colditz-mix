@@ -18,6 +18,8 @@ body.options
     margin: 0
   .widget-email-quote .row
     margin-top: 0
+    .input-group.error label
+      color: $color-light-red
 
   // Big h1
   .blue-panel h1
@@ -244,11 +246,25 @@ body.options
         float: left
         margin-right: rem-calc(30)
       button.button-tertiary
-        padding-right: rem-calc(40)
         float: left
         &:after
-          bottom: rem-calc(10)
+        display: none
+    .promotion-code-message,
+    .promotion-code-value
+      line-height: rem-calc(40)
+      margin-left: rem-calc(10)
+    .promotion-code-value
+      color: $color-blue
+    @media #{$medium-only}
+      .promotion-code-message
+        clear: left
+        float: left
+        line-height: rem-calc(22)
     @media #{$small-only}
+      .promotion-code-message
+        clear: left
+        float: left
+        line-height: rem-calc(22)
       .input-group
         input[type='text']
           max-width: 100px
