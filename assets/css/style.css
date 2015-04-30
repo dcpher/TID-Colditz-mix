@@ -8212,6 +8212,8 @@ nav.breadcrumb {
     color: #FFF; }
     nav.breadcrumb li em {
       font-style: normal; }
+    nav.breadcrumb li a:hover {
+      background: none; }
     nav.breadcrumb li a span {
       color: #FFF; }
     nav.breadcrumb li.active {
@@ -8360,6 +8362,9 @@ body.quote .widget-email-quote {
     padding: 1.0625rem 1.875rem 1.375rem 1rem;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0; }
+    body.quote .widget-email-quote button:after {
+      font-family: tid-icon;
+      content: "D"; }
   @media only screen and (max-width: 40em) {
     body.quote .widget-email-quote {
       width: 100%;
