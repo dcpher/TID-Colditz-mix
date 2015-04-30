@@ -1,0 +1,19 @@
+// _forms.sass
+
+.input-validation-errors
+  @include grid-column(12)
+  float: left
+  clear: left
+  li
+    line-height: rem-calc(22)
+  label
+    font-size: rem-calc(18)
+    color: $color-red
+
+.input-group.error
+  select,
+  input[type='text'],
+  input[type='email'],
+  input[type='number'],
+  input[type='password']
+    border: 1px solid $color-red
