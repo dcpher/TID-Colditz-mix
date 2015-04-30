@@ -2,7 +2,7 @@
 
 body.quote
   .blue-panel
-    padding: rem-calc(20 0 0 0)
+    padding: rem-calc(30 0 0 0)
     // Cool backgrounds
     background: transparent url('i/quote_default_desktop.jpg') no-repeat center center
     background-size: cover
@@ -18,25 +18,43 @@ body.quote
     clear: both
 
   .price-display
-    font-size: rem-calc(70)
-    line-height: rem-calc(78)
+    font-size: rem-calc(92)
+    line-height: rem-calc(68)
+    font-weight: 100
+    text-shadow: 1px 1px 1px rgba(64,64,64,.5)
+    @media #{$small-only}
+      font-size: 4.2rem
+      line-height: 4.225rem
+      margin-top: none
+    @media #{$medium-only}
+      font-size: 4.5rem
+      line-height: 4.225rem
+      margin-top: none
+    @media #{$xxlarge-only}
+      font-size: rem-calc(110)
+      line-height: rem-calc(88)
     span
       color: $color-white
-      letter-spacing: rem-calc(-1)
+      letter-spacing: rem-calc(-4)
+      font-weight: 300;
+      text-shadow: 1px 1px 1px rgba(64,64,64,.5)
     .currency
       font-size: rem-calc(30)
-    @media #{$small-only}
-      line-height: rem-calc(54)
+      letter-spacing: rem-calc(-2)
+      font-weight:100
+      text-shadow: 1px 1px 1px rgba(64,64,64,.5)
       .currency-symbol,
       .price-value
         font-size: rem-calc(50)
         line-height: rem-calc(54)
-
+        
   .choose-options.button-like
     +pp-button-green
     padding-right: rem-calc(44)
     a, a:hover
       color: $color-white
+    @media #{$small-only}
+      width:100%
 
   .underwriter
     position: absolute
@@ -47,16 +65,18 @@ body.quote
     form
       +clearfix
       @media #{$medium-only}
-        margin-bottom: rem-calc(20)
+        margin-bottom: rem-calc(10)
       @media #{$small-only}
-        margin-bottom: rem-calc(20)
+        margin-bottom: rem-calc(10)
     @media #{$small-only}
       padding-left: 0
       padding-right: 0
   .widget-email-quote
+    float: right
     padding: 0
     background: none
     border-top: none
+    width: rem-calc(230)
     .input-group
       margin-right: 0
     input[type='text']
@@ -77,13 +97,29 @@ body.quote
       .button-wrapper
         padding: 0
       .input-group
-        width: 81%
+        width: 91%
       .button-wrapper
-        width: 19%
+        width: 9%
+      
 
   label.total
     color: $color-white
     font-size: rem-calc(20)
+    font-weight: 100
+    margin-bottom: rem-calc(15)
+    margin-top: rem-calc(20)
+    text-shadow: 1px 1px 1px rgba(64,64,64,.3)
+    @media #{$small-only}
+      margin-bottom: rem-calc(10)
+      margin-top: rem-calc(10)
+    @media #{$medium-only}
+      margin-bottom: rem-calc(8)
+      margin-top: rem-calc(10)
+    @media #{$xxlarge-only}
+      margin-bottom: rem-calc(20)
+      margin-top: rem-calc(30)
+    
+    
   h2
     @include grid-column(12)
     color: $color-blue
@@ -97,7 +133,10 @@ body.quote
 
   .rating
     +clearfix
-    margin-bottom: rem-calc(20)
+    margin-bottom: rem-calc(50)
+    @media #{$xxlarge-only}
+      margin-bottom: rem-calc(60)
+    
     .stars
       float: left
       .star
@@ -129,19 +168,37 @@ body.quote
     dl
       font-size: rem-calc(14)
       line-height: rem-calc(18)
-
+      text-shadow: 2px 2px #000;
   .mobile-toggle
-    background: none
+    +border-radius(4px)
+    background: $color-dark-blue
     border-top: 0
-    padding-top: 0
-    text-decoration: underline
+    padding: rem-calc(10)
+    text-decoration: none
+    padding-left: rem-calc(44)
+    :before
+      padding-top: 5px
+      $dimension: 40px
+      position: absolute
+      top: 0
+      left: 0
+      font-family: tid-icon
+      font-size: rem-calc(24)
+      display: block
+      width: rem-calc($dimension)
+      height: rem-calc($dimension)
+      text-align: center
+      color: $tid-blue
+    :before
+      content: "O"
     &:after
-      top: rem-calc(6)
+      top: rem-calc(15)
     &.open
-      margin-bottom: rem-calc(20)
+      margin-bottom: rem-calc(15)
+  
   .trip-summary-bar
     background: rgba(0, 0, 0, 0.3)
-    border-top: 1px solid rgba(0, 0, 0, 0.3)
+    border-top: 1px solid rgba(0, 0, 0, 0.5)
     padding: rem-calc(10 0)
     .email-title,
     a.link-like
@@ -181,3 +238,5 @@ body.quote
       content: "A"
     li.secure:after
       content: "G"
+    
+    

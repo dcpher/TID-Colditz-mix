@@ -3437,6 +3437,12 @@ th.hide-for-touch {
   font-weight: 500;
   font-style: normal; }
 
+@font-face {
+  font-family: 'tid-icon';
+  src: url('/Content/styles/fonts/tid-icon.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal; }
+
 h1, h2 {
   letter-spacing: -0.25rem;
   margin-bottom: 2rem; }
@@ -3447,6 +3453,9 @@ h3, h4 {
 
 h5 {
   font-weight: 300; }
+
+tid-icon {
+  font-size: 28px; }
 
 h1, h2, h3, h4, h5, div, p, b, span {
   color: #404040; }
@@ -3508,7 +3517,8 @@ h1, h2, h3, h4, h5, div, p, b, span {
   position: relative;
   padding: 0.8125rem 1rem;
   padding-right: 2.75rem;
-  text-align: left; }
+  text-align: left;
+  font-weight: 100; }
   .button.expand, button.expand {
     padding: 0.5rem 1rem; }
   @media only screen and (max-width: 40em) {
@@ -3516,9 +3526,9 @@ h1, h2, h3, h4, h5, div, p, b, span {
       width: 100%; } }
   .button:after, button:after {
     content: '\f061';
-    font: normal normal normal 14px/1 FontAwesome;
+    font: normal normal normal 18px/1 FontAwesome;
     position: absolute;
-    bottom: 1.0625rem;
+    bottom: 1rem;
     right: 1rem; }
   .button:hover, button:hover {
     text-decoration: none;
@@ -3716,21 +3726,21 @@ h1, h2, h3, h4, h5, div, p, b, span {
       background: linear-gradient(to bottom, #b36c23 0%, #9a5d1e 100%);
       border: 1px solid #7c4b18; }
   .button.green, button.green {
-    background: #009500;
-    background: -moz-linear-gradient(top, #00a400 0%, #008600 100%);
-    background: -webkit-linear-gradient(top, #00a400 0%, #008600 100%);
-    background: -o-linear-gradient(top, #00a400 0%, #008600 100%);
-    background: -ms-linear-gradient(top, #00a400 0%, #008600 100%);
-    background: linear-gradient(to bottom, #00a400 0%, #008600 100%);
-    border: 1px solid #006200; }
+    background: #09b500;
+    background: -moz-linear-gradient(top, #0ac400 0%, #08a600 100%);
+    background: -webkit-linear-gradient(top, #0ac400 0%, #08a600 100%);
+    background: -o-linear-gradient(top, #0ac400 0%, #08a600 100%);
+    background: -ms-linear-gradient(top, #0ac400 0%, #08a600 100%);
+    background: linear-gradient(to bottom, #0ac400 0%, #08a600 100%);
+    border: 1px solid #068200; }
     .button.green:hover, button.green:hover {
-      background: #006200;
-      background: -moz-linear-gradient(top, #007100 0%, #005300 100%);
-      background: -webkit-linear-gradient(top, #007100 0%, #005300 100%);
-      background: -o-linear-gradient(top, #007100 0%, #005300 100%);
-      background: -ms-linear-gradient(top, #007100 0%, #005300 100%);
-      background: linear-gradient(to bottom, #007100 0%, #005300 100%);
-      border: 1px solid #002f00; }
+      background: #068200;
+      background: -moz-linear-gradient(top, #079100 0%, #067300 100%);
+      background: -webkit-linear-gradient(top, #079100 0%, #067300 100%);
+      background: -o-linear-gradient(top, #079100 0%, #067300 100%);
+      background: -ms-linear-gradient(top, #079100 0%, #067300 100%);
+      background: linear-gradient(to bottom, #079100 0%, #067300 100%);
+      border: 1px solid #044f00; }
   .button.grey, button.grey {
     background: #404040;
     background: -moz-linear-gradient(top, #484848 0%, #383838 100%);
@@ -4082,6 +4092,8 @@ nav .top-bar-section ul li a:hover {
 @media all and (max-width: 780px) and (min-width: 642px) {
   nav.top-bar section.top-bar-section ul.right li a {
     padding: 0 0.5rem; } }
+body.quote nav .right > li:nth-child(1), body.quote nav .right > li:nth-child(2), body.quote nav .right > li:nth-child(3), body.options nav .right > li:nth-child(1), body.options nav .right > li:nth-child(2), body.options nav .right > li:nth-child(3), body.details nav .right > li:nth-child(1), body.details nav .right > li:nth-child(2), body.details nav .right > li:nth-child(3), body.payment nav .right > li:nth-child(1), body.payment nav .right > li:nth-child(2), body.payment nav .right > li:nth-child(3) {
+  display: none !important; }
 
 #footer {
   margin-bottom: 0;
@@ -4483,7 +4495,7 @@ hr {
         font: normal normal normal 1.25rem FontAwesome;
         display: inline-block; }
     #main .article .rate-article div span {
-      color: #009500; }
+      color: #09b500; }
     #main .article .rate-article .rate-link-down span {
       color: #ed4338; }
     #main .article .rate-article div a:before {
