@@ -3,6 +3,9 @@
 nav.breadcrumb
   +clearfix
   margin-bottom: rem-calc(40)
+  color: $color-dark-blue
+  background: none
+  border-bottom: 0
   ol
     +clearfix
     list-style-type: none
@@ -17,10 +20,15 @@ nav.breadcrumb
     // border-bottom: 4px solid $color-white
     em
       font-style: normal
+    a:hover
+      background: none
     a span
       color: $color-white
+    em span
+      color: mix($color-black, $color-blue, 25%)
     &.active
       border-color: $color-dark-blue
+      em span
       color: $color-dark-blue
     &.active
       border-color: $color-dark-blue

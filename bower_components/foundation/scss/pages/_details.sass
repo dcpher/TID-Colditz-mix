@@ -44,6 +44,11 @@ body.details
     .password input[type='submit'].link-like
       color: $color-white
       text-decoration: underline
+    .input-validation-errors
+      li
+        line-height: rem-calc(14)
+      label
+        color: $color-light-red
     @media #{$small-only}
       h2
         display: none
@@ -161,3 +166,84 @@ body.details
       border-top: 1px solid $color-light-grey
       padding-top: rem-calc(20)
       padding-bottom: rem-calc(20)
+  
+  // Welcome back
+  .welcome-back-inline div
+    color: $color-white
+    font-size: rem-calc(18)
+    line-height: rem-calc(18)
+    .link-like
+      color: $color-white
+      background: none
+      padding: 0
+      font-size: rem-calc(18)
+      line-height: rem-calc(18)
+      text-decoration: underline
+      outline: none
+      border: none
+      font-weight: 100
+    @media #{$small-only}
+      padding: 0
+  
+  // Verify existing member
+  .verify-existing-member
+    p
+      @include grid-column(12)
+    .guest-purchase-preamble
+      border-top: 1px solid $color-mid-grey
+      padding-top: rem-calc(10)
+    .input-group.actions
+      margin-top: rem-calc(10)
+    .password
+      input
+        margin-bottom: 0
+      a
+        display: block
+        margin-bottom: rem-calc(10)
+    @media #{$small-only}
+      border-top: 1px solid $color-mid-grey
+      padding-top: rem-calc(10)
+  
+  // Previous traveller or dependent
+  .previous-traveller,
+  .previous-dependent
+    @include grid-column(4)
+    @media #{$small-only}
+      @include grid-column(12)
+    + .input-group
+      clear: left
+
+  // Change Dob
+  .change-dob
+    +clearfix
+    background: mix($color-white, $color-blue, 80%)
+    padding-top: rem-calc(10)
+    border: 1px solid $color-dark-blue
+    div
+      @include grid-column(12)
+      button
+        float: right
+        margin-left: rem-calc(20)
+      button:first-child
+        +pp-button-dark
+        padding-right: rem-calc(44)
+        margin-left: rem-calc(20)
+
+  // Errors
+  .global-messages-container
+    background-color: darken($color-blue, 3%)
+    border-top: 1px solid rgba($color-dark-grey, 0.09)
+    #global-messages
+      @include grid-row()
+    h3, ul
+      margin: 0
+      color: $color-light-red
+      @include grid-column(12)
+      @media #{$small-only}
+        padding: 0
+      @media #{$medium-only}
+        padding: 0
+    span
+      color: $color-light-red
+  .error select
+    margin-bottom: rem-calc(16)
