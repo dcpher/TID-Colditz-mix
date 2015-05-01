@@ -1,9 +1,25 @@
 // _details.sass
 
 body.details
+  .blue-panel
+    padding: rem-calc(30 0 0 0)
+    // Cool backgrounds
+    background: $tid-blue url('i/details_default_desktop.jpg') no-repeat center center
+    background-size: cover
+    @media #{$small-only}
+      background: $tid-blue url('i/quote_default_phone.jpg') no-repeat center center
+      background-size: cover
+    @media #{$medium-only}
+      background: $tid-blue url('i/quote_default_tablet.jpg') no-repeat center center
+      background-size: cover
+  
   // TODO: Is there a different more foundationish way to do container pads?
+  
   .row
     margin-top: rem-calc(20)
+    h1
+      margin-top: rem-calc(40)
+      margin-bottom: rem-calc(190)
     @media #{$medium-only}
       width: 100%
     @media #{$small-only}
@@ -11,7 +27,7 @@ body.details
       margin-right: 0
       width: 100%
       h1
-        margin-bottom: 0
+        margin-bottom: rem-calc(60)
   .blue-panel .row
     margin-top: 0
   ul
@@ -38,7 +54,7 @@ body.details
     &.open
       margin-bottom: 0
   .inline-sign-in-wrapper
-    +benefits-bar-style
+    margin-top: rem-calc(-152)
     h2, label
       color: $color-white
     .password input[type='submit'].link-like
@@ -83,6 +99,7 @@ body.details
       margin-right: 0
 
   // Top inline sign in panel
+
   .sign-in-or-forgot-password
     .password
       input[type='submit']

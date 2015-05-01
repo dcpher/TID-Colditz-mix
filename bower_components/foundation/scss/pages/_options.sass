@@ -1,6 +1,17 @@
 // _options.sass
 
 body.options
+  .blue-panel
+    padding: rem-calc(30 0 0 0)
+    // Cool backgrounds
+    background: $tid-blue url('i/options_default_desktop.jpg') no-repeat center center
+    background-size: cover
+    @media #{$small-only}
+      background: $tid-blue url('i/quote_default_phone.jpg') no-repeat center center
+      background-size: cover
+    @media #{$medium-only}
+      background: $tid-blue url('i/quote_default_tablet.jpg') no-repeat center center
+      background-size: cover
   // TODO: Is there a different more foundationish way to do container pads?
   .row
     margin-top: rem-calc(20)
@@ -37,36 +48,76 @@ body.options
     @media #{$small-only}
       margin-bottom: rem-calc(20)
   .purchase-info-row
-    margin-bottom: rem-calc(30)
+    margin-bottom: rem-calc(60)
+    margin-top: rem-calc(-40)
+    @media #{$xxlarge-only}
+      margin-bottom: rem-calc(80)
+      margin-top: rem-calc(-30)
     @media #{$small-only}
       margin-bottom: 0
     .cta-column button
-      +pp-button-dark
+      +pp-button-green
       padding-right: rem-calc(40)
-      width: 100%
+      width: 80%
       text-align: left
       @media #{$small-only}
-        margin-bottom: 0
+        margin-bottom: rem-calc(50)
     strong
       color: $color-white
     .price-display
-      font-size: rem-calc(60)
-      line-height: rem-calc(50)
-      letter-spacing: -1px
+      font-size: rem-calc(92)
+      line-height: rem-calc(88)
+      font-weight: 100
+      text-shadow: 1px 1px 1px rgba(64,64,64,.5)
+      margin-left: rem-calc(18)
+      @media #{$small-only}
+        font-size: 4.2rem
+        line-height: 4.225rem
+        margin-top: rem-calc(48)
+      @media #{$medium-only}
+        font-size: 4.5rem
+        line-height: 4.225rem
+        margin-top: none
+      @media #{$xxlarge-only}
+        font-size: rem-calc(110)
+        line-height: rem-calc(88)
       span
         color: $color-white
-    .price-value
-      margin-left: -10px
+        letter-spacing: rem-calc(-4)
+        font-weight: 300;
+        text-shadow: 1px 1px 1px rgba(64,64,64,.5)
+        margin-left: rem-calc(-20)
+      .currency
+        font-size: rem-calc(30)
+        letter-spacing: rem-calc(-2)
+        font-weight:100
+        text-shadow: 1px 1px 1px rgba(64,64,64,.5)
+        .currency-symbol
+        .price-value
+          font-size: rem-calc(50)
+          line-height: rem-calc(54)
+          margin-left: -10px
+          @media #{$small-only}
+            font-size: rem-calc(50)
+          @media #{$medium-up}
+            font-size: rem-calc(60)
+    .options-total
+      color: $color-white
+      font-size: rem-calc(20)
+      font-weight: 100
+      margin-bottom: rem-calc(15)
+      margin-top: rem-calc(20)
+      text-shadow: 1px 1px 1px rgba(64,64,64,.3)
       @media #{$small-only}
-        font-size: rem-calc(50)
-      @media #{$medium-up}
-        font-size: rem-calc(60)
-    .currency-symbol
-      font-size: rem-calc(20)
-      vertical-align: super
-    .currency
-      font-size: rem-calc(20)
-      margin-left: -10px
+        margin-bottom: rem-calc(10)
+        margin-top: rem-calc(10)
+      @media #{$medium-only}
+        margin-bottom: rem-calc(8)
+        margin-top: rem-calc(10)
+      @media #{$xxlarge-only}
+        margin-bottom: rem-calc(20)
+        margin-top: rem-calc(30)
+
     &.bottom
       strong,
       .price-display span
@@ -183,6 +234,7 @@ body.options
       input[type='text']
         margin-bottom: 0
       button
+        +pp-button-green
         padding-right: rem-calc(40)
         width: 100%
         &:after
@@ -248,7 +300,7 @@ body.options
       button.button-tertiary
         float: left
         &:after
-        display: none
+          display: none
     .promotion-code-message,
     .promotion-code-value
       line-height: rem-calc(40)
