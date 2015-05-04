@@ -1,6 +1,18 @@
 // _payment.sass
 
 body.payment
+  .blue-panel
+    padding: rem-calc(30 0 0 0)
+    // Cool backgrounds
+    background: $tid-blue url('i/quote_default_desktop.jpg') no-repeat center center
+    background-size: cover
+    @media #{$small-only}
+      background: $tid-blue url('i/quote_default_phone.jpg') no-repeat center center
+      background-size: cover
+    @media #{$medium-only}
+      background: $tid-blue url('i/quote_default_tablet.jpg') no-repeat center center
+      background-size: cover
+  
   // TODO: Is there a different more foundationish way to do container pads?
   .row
     margin-top: rem-calc(20)
@@ -10,6 +22,9 @@ body.payment
       width: 100%
   .blue-panel
     padding-left: 0
+    h1
+      margin-top: rem-calc(20)
+      margin-bottom: rem-calc(80)
     @media #{$small-only}
       .row
         margin-top: 0
