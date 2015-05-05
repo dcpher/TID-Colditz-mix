@@ -8456,7 +8456,7 @@ body.payment .blue-panel {
     body.payment .blue-panel .row {
       margin-top: 0; }
     body.payment .blue-panel h1 {
-      margin-bottom: 0; } }
+      margin-bottom: 3.125rem; } }
 body.payment .purchase-path-panel, body.payment .payment-panel {
   width: auto;
   margin: 0 -0.75rem;
