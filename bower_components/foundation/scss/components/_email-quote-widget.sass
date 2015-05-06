@@ -13,20 +13,35 @@
     line-height: rem-calc(38)
     color: $color-white
     margin-right: rem-calc(20)
-  .input-group
-    margin-right: rem-calc(20)
   .email-title,
   .input-group,
   .button-wrapper
     float: left
   button
-    +pp-button-tertiary
-    padding-right: rem-calc(40)
+    border: none
+    background: $color-blue
+    color: white
+    padding: rem-calc(17 30 22 16)
+    border-top-left-radius: 0
+    border-bottom-left-radius: 0
     &:after
-      bottom: rem-calc(11)
+      font-family: tid-icon
+      content: "D"
+      font-size: rem-calc(20)
+      right: rem-calc(12)
+      bottom: rem-calc(10)
   button,
   input[type='text']
     margin-bottom: 0
+  .success-email
+    float: left
+    clear: left
+    font-size: rem-calc(14) 
+    line-height: rem-calc(18)
+    margin-top: rem-calc(10)
+    color: $color-white
+  .input-group.error label  
+    margin-top: rem-calc(10)
   @media #{$medium-only}
     .widget-email-quote-content
       padding: rem-calc(0 24)

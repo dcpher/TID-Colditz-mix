@@ -1,18 +1,6 @@
 // _payment.sass
 
 body.payment
-  .blue-panel
-    padding: rem-calc(30 0 0 0)
-    // Cool backgrounds
-    background: $tid-blue url('i/quote_default_desktop.jpg') no-repeat center center
-    background-size: cover
-    @media #{$small-only}
-      background: $tid-blue url('i/quote_default_phone.jpg') no-repeat center center
-      background-size: cover
-    @media #{$medium-only}
-      background: $tid-blue url('i/quote_default_tablet.jpg') no-repeat center center
-      background-size: cover
-  
   // TODO: Is there a different more foundationish way to do container pads?
   .row
     margin-top: rem-calc(20)
@@ -21,15 +9,13 @@ body.payment
       margin-right: 0
       width: 100%
   .blue-panel
-    padding-left: 0
     h1
-      margin-top: rem-calc(20)
-      margin-bottom: rem-calc(80)
+      padding: rem-calc(30 0 0 0)
     @media #{$small-only}
       .row
         margin-top: 0
       h1
-        margin-bottom: 0
+        margin-top: rem-calc(20)
   .purchase-path-panel,
   .payment-panel
     @include grid-row($behavior: nest)
@@ -82,6 +68,9 @@ body.payment
   .list-key-value
     +clearfix
 
+  .review-details-group.ages input[type='submit']
+    display: none
+    
   .purchase-path-panel
     border-bottom: 1px solid $color-light-grey
     margin-bottom: rem-calc(20)
@@ -123,7 +112,7 @@ body.payment
       float: right
     .thawte
       position: absolute
-      top: rem-calc(8)
+      top: rem-calc(-80)
       right: rem-calc(8)
     label
       font-weight: bold
@@ -133,7 +122,8 @@ body.payment
       display: block
       margin-bottom: rem-calc(4)
     h2
-      font-size: rem-calc(25)
+      font-size: rem-calc(18)
+      line-height: rem-calc(20)
       letter-spacing: 0
       font-weight: 300
       padding-left: rem-calc(50)
@@ -144,10 +134,10 @@ body.payment
         left: rem-calc(9)
         top: 0
       span
-        font-size: rem-calc(18)
+        font-size: rem-calc(16)
         font-weight: 100
         display: block
-        line-height: rem-calc(18)
+        line-height: rem-calc(20)
       @media #{$small-only}
         min-height: initial
         margin-top: rem-calc(10)
@@ -224,12 +214,21 @@ body.payment
         @media #{$small-only}
           width: 65px
     .buy-now
-      +pp-button-dark
+      +pp-button-green
       float: left
       clear: left
       margin-left: rem-calc(12)
-      margin-top: rem-calc(18)
       padding-right: rem-calc(40)
+
+  // Layout for button and h2
+  .buy-now-button-wrapper
+    @include grid-column(3)
+    @media #{$small-only}
+      @include grid-column(12)
+  .payment-info
+    @include grid-column(9)
+    @media #{$small-only}
+      @include grid-column(12)
  
   .contact-list
     list-style-type: none

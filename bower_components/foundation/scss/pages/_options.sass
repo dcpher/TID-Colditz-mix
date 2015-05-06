@@ -1,17 +1,6 @@
 // _options.sass
 
 body.options
-  .blue-panel
-    padding: rem-calc(30 0 0 0)
-    // Cool backgrounds
-    background: $tid-blue url('i/options_default_desktop.jpg') no-repeat center center
-    background-size: cover
-    @media #{$small-only}
-      background: $tid-blue url('i/quote_default_phone.jpg') no-repeat center center
-      background-size: cover
-    @media #{$medium-only}
-      background: $tid-blue url('i/quote_default_tablet.jpg') no-repeat center center
-      background-size: cover
   // TODO: Is there a different more foundationish way to do container pads?
   .row
     margin-top: rem-calc(20)
@@ -22,6 +11,15 @@ body.options
   .blue-panel
     padding-left: 0
     padding-right: 0
+    // Cool backgrounds
+    background: transparent url('i/quote_default_desktop.jpg') no-repeat center center
+    background-size: cover
+    @media #{$small-only}
+      background: transparent url('i/quote_default_phone.jpg') no-repeat center center
+      background-size: cover
+    @media #{$medium-only}
+      background: transparent url('i/quote_default_tablet.jpg') no-repeat center center
+      background-size: cover
   ul
     margin-left: 0
     list-style-type: none
@@ -29,6 +27,11 @@ body.options
     margin: 0
   .widget-email-quote .row
     margin-top: 0
+    @media #{$small-only}
+      .input-group
+        padding-right: 0
+      .button-wrapper
+        padding-left: 0
     .input-group.error label
       color: $color-light-red
 
@@ -41,7 +44,7 @@ body.options
       font-size: rem-calc(60)
       padding-left: rem-calc(12)
     @media #{$large-only}
-      font-size: rem-calc(80)
+      font-size: rem-calc(70)
 
   // Header with CTA and price.
   .main-content .row
@@ -49,7 +52,6 @@ body.options
       margin-bottom: rem-calc(20)
   .purchase-info-row
     margin-bottom: rem-calc(60)
-    margin-top: rem-calc(-40)
     @media #{$xxlarge-only}
       margin-bottom: rem-calc(80)
       margin-top: rem-calc(-30)
@@ -84,23 +86,14 @@ body.options
       span
         color: $color-white
         letter-spacing: rem-calc(-4)
-        font-weight: 300;
+        font-weight: 300
         text-shadow: 1px 1px 1px rgba(64,64,64,.5)
         margin-left: rem-calc(-20)
       .currency
         font-size: rem-calc(30)
         letter-spacing: rem-calc(-2)
-        font-weight:100
-        text-shadow: 1px 1px 1px rgba(64,64,64,.5)
-        .currency-symbol
-        .price-value
-          font-size: rem-calc(50)
-          line-height: rem-calc(54)
-          margin-left: -10px
-          @media #{$small-only}
-            font-size: rem-calc(50)
-          @media #{$medium-up}
-            font-size: rem-calc(60)
+        font-weight: 100
+        text-shadow: 1px 1px 1px rgba(64, 64, 64, 0.5)
     .options-total
       color: $color-white
       font-size: rem-calc(20)
@@ -128,6 +121,7 @@ body.options
         float: left
       .price-column
         float: right
+      .currency-symbol,
       .price-value
         font-size: rem-calc(45)
         line-height: rem-calc(45)
@@ -143,10 +137,10 @@ body.options
     margin-bottom: rem-calc(20)
   .description-column
     h2
-      font-size: rem-calc(30)
-      margin-bottom: rem-calc(18)
+      font-size: rem-calc(24)
+      margin-bottom: rem-calc(28)
       letter-spacing: 0
-      font-weight: 300
+      font-weight: 100
       @media #{$small-only}
         font-size: rem-calc(18)
         margin-bottom: rem-calc(20)
@@ -163,7 +157,6 @@ body.options
       text-align: left
   .premium-column
     .price-with-currency-medium
-      color: $color-dark-blue
       font-size: rem-calc(30)
       @media #{$small-only}
         font-weight: bold
@@ -186,7 +179,7 @@ body.options
   .footprints-row,
   .promo-row
     padding-bottom: rem-calc(18)
-    border-bottom: 1px solid $color-mid-grey
+    border-bottom: 1px solid $color-border-grey
     @media #{$small-only}
       p
         font-size: rem-calc(16)
@@ -234,7 +227,6 @@ body.options
       input[type='text']
         margin-bottom: 0
       button
-        +pp-button-green
         padding-right: rem-calc(40)
         width: 100%
         &:after
@@ -244,6 +236,13 @@ body.options
           display: none
         input[type='text']
           margin-bottom: rem-calc(12)
+  .specified-items-row
+    input.input-validation-error
+      border: 1px solid $color-red
+    .input-validation-errors
+      padding-left: 0
+      label
+        color: $color-red
 
   .car-rental-row
     select
@@ -297,10 +296,10 @@ body.options
         max-width: 150px
         float: left
         margin-right: rem-calc(30)
-      button.button-tertiary
-        float: left
-        &:after
-          display: none
+    button.button-tertiary
+      float: left
+      &:after
+        display: none
     .promotion-code-message,
     .promotion-code-value
       line-height: rem-calc(40)
@@ -320,8 +319,8 @@ body.options
       .input-group
         input[type='text']
           max-width: 100px
-        label
-          display: none
+      label
+        display: none
 
   // Aside
   aside

@@ -13,21 +13,25 @@ nav
       &:not(.button):hover
         color: $color-white
         background-color: $color-blue
-          
-    //transition effect for nav buttons
-    a
-      +transition
+        
+  //transition effect for nav buttons
+  a
+    +transition
 
-    a:hover 
-      background-color: $color-dark-grey 
+  a:hover 
+    background-color: $color-dark-grey 
+    color: $color-white
+  h1 a:hover,
+  .menu-icon a:hover
+    background: none
+    color: $color-dark-grey
+
+  // Menu backgroud colour override
+  @media #{$small-only}
+    background-color: $color-dark-grey
+    border-bottom: 1px solid darken($color-dark-grey, 5)
+    a
       color: $color-white
-  
-    // Menu backgroud colour override
-    @media #{$small-only}
-      background-color: $color-dark-grey
-      border-bottom: 1px solid darken($color-dark-grey, 5)
-      a
-        color: $color-white
 
     // TODO: Do this in the way Foundation would like us to
   @media all and (max-width: 780px) and (min-width: 642px)

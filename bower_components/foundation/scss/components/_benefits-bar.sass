@@ -1,18 +1,5 @@
 // benefits-bar
 
-// Make this a mixin so we can reuse it elsewhere.
-=benefits-bar-style
-  padding-top: rem-calc(10)
-  padding-bottom: rem-calc(10)
-  margin-top: 0
-  background-color: darken($color-blue, 3%)
-  border-top: 1px solid rgba($color-dark-grey, 0.09)
-  color: $color-white
-  .row
-    margin-top: 0
-  button
-    margin-bottom: 0
-
 .benefits-bar
   padding-top: rem-calc(10)
   padding-bottom: rem-calc(10)
@@ -30,7 +17,7 @@
       background-size: 40px 40px
       padding-left: rem-calc(56)
       padding-right: rem-calc(44)
-      padding-top: rem-calc(4)
+      padding-top: rem-calc(4)    
       padding-bottom: 0
       line-height: 1.1
       min-height: 44px
@@ -44,6 +31,7 @@
         background-image: url('i/icons/icon_trust_ozzie.png')
       &.secure
         background-image: url('i/icons/icon_trust_secure.png')
+        
         
       &.lloyds
         background-size: contain

@@ -63,7 +63,7 @@
     outline: none
     border: none
     font-family: 'Museo Sans', sans-serif
-    font-weight: 100
+    ont-weight: 100
     font-size: rem-calc(16)
     color: $color-blue
     padding: 0 
@@ -92,6 +92,13 @@
   .question-wrapper
     border-bottom: 1px solid darken($color-light-grey, 5%)
     margin-bottom: rem-calc(20)
+  .label-for-single-checkbox
+    padding-left: rem-calc(25)
+    position: relative
+    input[type='checkbox']
+      position: absolute
+      top: rem-calc(3)
+      left: 0
   input[type='checkbox'],
   button
     margin-bottom: 0
@@ -105,6 +112,22 @@
     float: left
     clear: left
     margin-bottom: rem-calc(20)
+  button.continue
+    +pp-button-green
+    padding-right: rem-calc(44)
+    margin-bottom: 0
+
+// Pre ex modal and resdient definition
+.modal-content.pre-ex-info-modal,
+.modal-content.resident-definition-modal
+  .button-secondary
+    float: right
+  .cancel
+    background: none
+    float: right
+    color: $color-dark-blue
+    &:after
+      display: none
 
 // Donation modal
 .modal-content.donation-editor-panel
@@ -149,13 +172,35 @@
     width: 100%
     font-size: rem-calc(14)
     line-height: rem-calc(18)
+  .cancel
+    background: none
+    color: $color-dark-blue
   .cancel span, .cancel:after
     display: none
   @media #{$small-only}
+    .item
+      padding-left: rem-calc(35)
     .item-wrapper
       float: none
       width: auto
       padding: rem-calc(10 0)
     img.project,
     img.logo
+      display: none
+
+// Edit your trip modal
+.modal-content.trip-editor-modal
+  .close
+    position: absolute
+    top: rem-calc(10)
+    right: rem-calc(20)
+  #quick-quote
+    margin: 0
+    h3
+      margin-bottom: 0
+    label
+      color: $color-dark-grey
+    #destinations li
+      color: $color-white
+    .children-go-free
       display: none

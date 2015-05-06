@@ -42,6 +42,19 @@ body.pre-ex
   .check label
     font-size: rem-calc(18)
     
+  // List styles and layout becuase we don't have control of the markup
+  .step-1 ul.list
+    @media #{$small-only}
+      @include grid-column(12)
+    @media #{$medium-up}
+      @include grid-column(4)
+
+  .input-validation-errors
+    padding: 0
+    margin-left: 0
+    span
+      color: $color-red
+
   @media #{$small-only}
     .accept, .decline
       border-left: 0
@@ -68,3 +81,14 @@ body.pre-ex
     @media #{$small-only}
       font-size: rem-calc(40)
       line-height: rem-calc(40)
+
+  // Modals
+  .modal-content.pre-ex-remove-modal
+    .remove
+      float: right
+      +pp-button-dark
+      margin-bottom: 0
+      a
+        color: $color-white
+    .cancel
+      float: right

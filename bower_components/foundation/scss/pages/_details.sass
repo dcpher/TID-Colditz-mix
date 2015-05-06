@@ -3,23 +3,12 @@
 body.details
   .blue-panel
     padding: rem-calc(30 0 0 0)
-    // Cool backgrounds
-    background: $tid-blue url('i/details_default_desktop.jpg') no-repeat center center
-    background-size: cover
-    @media #{$small-only}
-      background: $tid-blue url('i/quote_default_phone.jpg') no-repeat center center
-      background-size: cover
-    @media #{$medium-only}
-      background: $tid-blue url('i/quote_default_tablet.jpg') no-repeat center center
-      background-size: cover
-  
   // TODO: Is there a different more foundationish way to do container pads?
-  
   .row
     margin-top: rem-calc(20)
     h1
       margin-top: rem-calc(40)
-      margin-bottom: rem-calc(190)
+      margin-bottom: rem-calc(80)
     @media #{$medium-only}
       width: 100%
     @media #{$small-only}
@@ -43,18 +32,21 @@ body.details
   .purchase-path-panel  
     +clearfix
     @media #{$medium-up}
-      border-bottom: 1px solid $color-mid-grey
+      border-bottom: 1px solid $color-border-grey
       margin-bottom: rem-calc(20)
       &:last-child
         border-bottom: none
         margin-bottom: 0
 
+  fieldset
+    // for IE8
+    width: 100%
   .mobile-toggle
     margin-bottom: rem-calc(20)
     &.open
       margin-bottom: 0
   .inline-sign-in-wrapper
-    margin-top: rem-calc(-152)
+    +benefits-bar-style
     h2, label
       color: $color-white
     .password input[type='submit'].link-like
@@ -99,7 +91,6 @@ body.details
       margin-right: 0
 
   // Top inline sign in panel
-
   .sign-in-or-forgot-password
     .password
       input[type='submit']
@@ -118,10 +109,21 @@ body.details
       padding-top: rem-calc(7)
       padding-bottom: rem-calc(7)
       margin-top: rem-calc(25)
+      background: $color-dark-blue
       &:after
         bottom: rem-calc(10)
       @media #{$small-only}
         margin-top: 0
+  .login-panel-main.forgot-password
+    input[type='submit']
+      margin-left: rem-calc(10)
+      background: none
+      border: none
+      font-size: rem-calc(20)
+      color: $color-white
+      text-decoration: underline
+      font-family: 'Museo Sans', sans-serif
+      font-weight: 100
 
   // Adult traveller details
   .adult-traveller
@@ -171,7 +173,7 @@ body.details
     .cta-wrapper
       clear: left
     .button-primary
-      +pp-button-dark
+      +pp-button-green
       padding-right: rem-calc(40)
 
   // Aside content column

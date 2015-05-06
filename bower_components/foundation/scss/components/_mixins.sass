@@ -47,6 +47,8 @@
   border: 1px solid darken($color-green, 5%)
   font-size: rem-calc(20)
   padding: rem-calc(13) rem-calc(16)
+  &:hover
+    +gradient-button(lighten($color-green, 5%))
 
 =pp-button-tertiary
   @include button

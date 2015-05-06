@@ -1,77 +1,55 @@
 // _breadcrumb.sass
 
 nav.breadcrumb
+  // temporary until a new breadcrumb is designed.
   display: none
+  
+// nav.breadcrumb
   +clearfix
   margin-bottom: rem-calc(40)
   color: $color-dark-blue
   background: none
   border-bottom: 0
-  @include grid-column(6)
-  margin-left: rem-calc(140)
-  margin-top: rem-calc(-106)
-  @media #{$medium-only}
-    margin-left: rem-calc(160)
-  @media #{$small-only}
-    @include grid-column(12)
-    margin-top: rem-calc(-30)
-    margin-left: rem-calc(-20)
-    margin-bottom: rem-calc(30)
-    @include grid-column(12)
-     
   ol
     +clearfix
     list-style-type: none
     margin-left: 0
-    //border-bottom: 1px solid $color-white
+    border-bottom: 1px solid $color-white
   li
     @include grid-column(3)
     font-weight: 300
-    font-size: rem-calc(18)
-    line-height: rem-calc(50)
+    font-size: rem-calc(20)
+    line-height: rem-calc(30)
     color: $color-white
-    text-align: center
-    @media #{$small-only}
-      @include grid-column(4)
-    
     // border-bottom: 4px solid $color-white
     em
       font-style: normal
     a:hover
       background: none
     a span
-      color: $tid-blue      
+      color: $color-white
     em span
-      color: mix($color-black, $color-mid-grey, 15%)
-      white-space: nowrap
-      @media #{$small-only}
-        color: $color-white
+      color: mix($color-black, $color-blue, 25%)
     &.active
       border-color: $color-dark-blue
       em span
-      color: $color-dark-blue
-      @media #{$small-only}
-        color: $color-white
+        color: $color-dark-blue
     &.active
       border-color: $color-dark-blue
-  @media #{$small-only}, #{$medium-only}
+  @media #{$small-only}
+    margin-bottom: rem-calc(20)
     ol
       margin-bottom: 0
     .number
       display: block
       text-align: center
-      color: $color-dark-blue
-      @media #{$small-only}
-        color: $color-white
     .description
       display: none
       text-align: center
     li
       @include grid-column(2)
     li.active 
-      @include grid-column(4)
-      @media #{$small-only}
-        @include grid-column(5)
+      @include grid-column(6)
       text-align: center
       .number
         display: inline
@@ -79,12 +57,10 @@ nav.breadcrumb
         display: inline
 
   // Trying another style (also commented out a line above)
-  li
+  // li
     a, em 
       display: block
-      border-bottom: 6px solid $color-dark-blue
+      border-bottom: 6px solid $color-white
     &.active
       em
         border-color: $color-dark-blue
-        @media #{$small-only}
-          border-color: $tid-blue
