@@ -1,20 +1,29 @@
-$list: bali thailand india canada china vanuatu australia fiji spain germany france japan hong-kong singapore malaysia indonesia italy philipines new-zealand united-states south-africa vietnam united-kingdom
+$list: bali thailand india canada china vanuatu australia fiji spain germany france japan hong-kong singapore malaysia indonesia italy philippines new-zealand united-states south-africa vietnam united-kingdom bhutan egypt
 
 =destination-images
   @each $destination in $list   
     .blue-panel.#{$destination}
     
       @media all and (min-width: 40em)
-        background: transparent url('/Media/Default/main/headers/quote_destinations_#{$destination}_desktop.jpg') no-repeat center center
+        background: #00bae4 url('/Media/Default/main/headers/quote_destinations_#{$destination}_desktop.jpg') no-repeat center center
         background-size: cover
   
       @media all and (max-width: 64em)
-        background: transparent url('/Media/Default/main/headers/quote_destinations_#{$destination}_tablet.jpg') no-repeat center center
+        background: #00bae4 url('/Media/Default/main/headers/quote_destinations_#{$destination}_tablet.jpg') no-repeat center center
         background-size: cover
 
       @media all and (max-width: 40em)
-        background: transparent url('/Media/Default/main/headers/quote_destinations_#{$destination}_phone.jpg') no-repeat center center
+        background: #00bae4 url('/Media/Default/main/headers/quote_destinations_#{$destination}_phone.jpg') no-repeat center center
         background-size: cover
     
 body.quote
+  +destination-images
+  
+body.options
+  +destination-images
+  
+body.details
+  +destination-images
+
+body.payment
   +destination-images
