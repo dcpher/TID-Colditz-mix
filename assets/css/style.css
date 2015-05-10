@@ -1,8 +1,8 @@
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: 'Sass Error: The line was indented 2 levels deeper than the previous line. \A         on line 117 of C:\\Temp\\TID-Colditz-mix\\bower_components\\foundation\\scss\\components\\_home-page.sass \A         from line 20 of C:\\Temp\\TID-Colditz-mix\\bower_components\\foundation\\scss\\style.sass \A   Use --trace for backtrace. \A '; }
-
-  body * {
-  	display: none;
-  }
+body:before { 
+                            white-space: pre; 
+                            font-family: monospace; 
+                            content: 'Sass \\Users\\pfellows\\Documents\\GIT\\TID-Colditz-mix\\bower_components\\foundation\\scss\\pages\\_details.sass:46: no mixin named benefits-bar-style \A Backtrace: \A 	Users\\pfellows\\Documents\\GIT\\TID-Colditz-mix\\bower_components\\foundation\\scss\\pages\\_details.sass:46 \A '; } 
+                            
+                            body * { 
+                            display: none; 
+                            } 
