@@ -1,0 +1,148 @@
+{% layout "edmnz" %}
+{% block title %}TID EDM{% endblock %}
+{% block content %}
+
+
+
+          <!-- Content Area -->
+          <table class="container content-area">
+            <tr>
+              <td>
+
+                <!-- content start -->
+                <table class="row callout">
+                  <tr>
+                    <td class="wrapper last">
+
+                      <table class="twelve columns">
+                        <tr>
+                          <td class="left-text-pad right-text-pad">
+                            
+                            <h3 style="margin-top:24px;">Thanks for visiting Travel Insurance Direct, below is your quote to {$Quote - Destinations}.</h3>
+
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+                  </tr>
+                </table>
+
+                <table class="row">
+                  <tr>
+                    <td class="wrapper last">
+
+                      <table class="twelve columns">
+                        <tr>
+                          <td>
+                            <hr/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="left-text-pad right-text-pad">
+
+                            <h4>${$Quote - Price} for your trip to {$Quote - Destinations}</h4>
+                            <p><strong>Departure Date:</strong> {$Quote - Departure Date}</p>
+                            <p><strong>Return Date:</strong> {$Quote - Return Date}</p>
+                            <p><strong>Destination:</strong> {$Quote - Destinations}</p>
+
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+                  </tr>
+                </table>
+
+                <table class="row">
+                  <tr>
+                    <td class="wrapper last">
+
+                      <table class="five columns">
+                        <tr>
+                          <td class="left-text-pad">
+
+                            <table class="button">
+                              <tr>
+                                <td>
+                                  <a href="{$Quote - Link}&utm_source=tid_nz&utm_medium=email&utm_content=quote&utm_campaign=QuoteEmail">Buy now</a>
+                                </td>
+                              </tr>
+                            </table>
+
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+                  </tr>
+                </table>
+
+                <table class="row">
+                  <tr>
+                    <td class="wrapper last">
+
+                      <table class="twelve columns">
+                        <tr>
+                          <td>
+                            <hr/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="left-text-pad right-text-pad">
+                            <h4>Why Travel Insurance Direct</h4>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="left-text-pad right-text-pad">
+                            <ul>
+                              <li>Unlimted Medical Help</li>
+                              <li>Unlimted Cancellation Costs</li>
+                              <li>Upto $24,000 Luggage Cover</li>
+                              <li>Over 1 Million Customers</li>
+                              <li>14 Day Money Back Guarentee</li>
+                              <li>10 Years Old</li>
+                            </ul> 
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+                  </tr>
+                </table>
+
+
+                <table class="row">
+                  <tr>
+                    <td class="wrapper last">
+
+                      <table class="twelve columns">
+                        <tr>
+                          <td class="left-text-pad right-text-pad">
+                            <p style="font-size: 12px; line-height: 120%;">This quote is based on the information you provided and does not include cover for pre-existing medical conditions other than those outlined as automatically covered in the <a href="https://www.travelinsurancedirect.co.nz/Document/OpenRegulatoryWording?RegulatoryWordingTypeId=1">PDS</a>. We reserve the right to change the price or benefits without notice.</p>
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+                  </tr>
+                </table>
+
+                
+
+                <!-- container end below -->
+              </td>
+            </tr>
+          </table>
+          
+          
+          
+
+
+
+{% endblock %}
