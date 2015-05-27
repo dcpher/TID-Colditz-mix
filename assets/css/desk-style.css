@@ -3716,21 +3716,21 @@ h1, h2, h3, h4, h5, div, p, b, span {
       background: linear-gradient(to bottom, #b36c23 0%, #9a5d1e 100%);
       border: 1px solid #7c4b18; }
   .button.green, button.green {
-    background: #009500;
-    background: -moz-linear-gradient(top, #00a400 0%, #008600 100%);
-    background: -webkit-linear-gradient(top, #00a400 0%, #008600 100%);
-    background: -o-linear-gradient(top, #00a400 0%, #008600 100%);
-    background: -ms-linear-gradient(top, #00a400 0%, #008600 100%);
-    background: linear-gradient(to bottom, #00a400 0%, #008600 100%);
-    border: 1px solid #006200; }
+    background: #0ac300;
+    background: -moz-linear-gradient(top, #0bd200 0%, #09b400 100%);
+    background: -webkit-linear-gradient(top, #0bd200 0%, #09b400 100%);
+    background: -o-linear-gradient(top, #0bd200 0%, #09b400 100%);
+    background: -ms-linear-gradient(top, #0bd200 0%, #09b400 100%);
+    background: linear-gradient(to bottom, #0bd200 0%, #09b400 100%);
+    border: 1px solid #079000; }
     .button.green:hover, button.green:hover {
-      background: #006200;
-      background: -moz-linear-gradient(top, #007100 0%, #005300 100%);
-      background: -webkit-linear-gradient(top, #007100 0%, #005300 100%);
-      background: -o-linear-gradient(top, #007100 0%, #005300 100%);
-      background: -ms-linear-gradient(top, #007100 0%, #005300 100%);
-      background: linear-gradient(to bottom, #007100 0%, #005300 100%);
-      border: 1px solid #002f00; }
+      background: #09b900;
+      background: -moz-linear-gradient(top, #0ac800 0%, #09aa00 100%);
+      background: -webkit-linear-gradient(top, #0ac800 0%, #09aa00 100%);
+      background: -o-linear-gradient(top, #0ac800 0%, #09aa00 100%);
+      background: -ms-linear-gradient(top, #0ac800 0%, #09aa00 100%);
+      background: linear-gradient(to bottom, #0ac800 0%, #09aa00 100%);
+      border: 1px solid #078600; }
   .button.grey, button.grey {
     background: #404040;
     background: -moz-linear-gradient(top, #484848 0%, #383838 100%);
@@ -4488,7 +4488,7 @@ hr {
         font: normal normal normal 1.25rem FontAwesome;
         display: inline-block; }
     #main .article .rate-article div span {
-      color: #009500; }
+      color: #0ac300; }
     #main .article .rate-article .rate-link-down span {
       color: #ed4338; }
     #main .article .rate-article div a:before {

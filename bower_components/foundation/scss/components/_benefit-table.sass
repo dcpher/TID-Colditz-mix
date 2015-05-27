@@ -6,6 +6,8 @@
     font-weight: 100
     line-height: 1.1
     margin-bottom: rem-calc(16)
+  tr
+    background: $white
     
     
   @media #{$small-only}
@@ -14,7 +16,8 @@
   .event-based-benefit
     td
       vertical-align: text-top
-      padding: rem-calc(12)
+      padding: rem-calc(28)
+      border-top: 1px solid #eaeaea
       
       .title, .amount
         font-size: rem-calc(24)
@@ -31,8 +34,12 @@
         display: block
       td:last-child
         padding-left: rem-calc(50)
+        margin-top: rem-calc(-40)
+        border-top: none
       td:before
         content: attr(data-th) ": "
+        color: $tid-blue        
+      
       
     td:first-child
       background-image: url('i/icons/event-benefit-sprite.png')
@@ -41,64 +48,64 @@
 
     &.need-medical-help
       td:first-child
-        background-position: 8px 16px
+        background-position: 8px 30px
     &.in-an-accident
       td:first-child
-        background-position: 8px -184px
+        background-position: 8px -170px
     &.medical-evacuation 
       td:first-child
-        background-position: 8px -384px
+        background-position: 8px -370px
     &.death 
       td:first-child
-        background-position: 8px -584px
+        background-position: 8px -570px
     &.luggage 
       td:first-child
-        background-position: 8px -784px
+        background-position: 8px -770px
     &.cancellation-or-delay
       td:first-child
-        background-position: 8px -984px
+        background-position: 8px -970px
     &.return-early 
       td:first-child
-        background-position: 8px -1184px
+        background-position: 8px -1170px
     &.unable-to-travel 
       td:first-child
-        background-position: 8px -1384px
+        background-position: 8px -1370px
     &.special-event
       td:first-child
-        background-position: 8px -1584px
+        background-position: 8px -1570px
     &.work-on-time 
       td:first-child
-        background-position: 8px -1784px
+        background-position: 8px -1770px
     &.car-rental-excess 
       td:first-child
-        background-position: 8px -1984px
+        background-position: 8px -1970px
     &.personal-liability 
       td:first-child
-        background-position: 8px -2184px
+        background-position: 8px -2170px
     &.bad-weather 
       td:first-child
-        background-position: 8px -2384px
+        background-position: 8px -2370px
     &.natural-disaster 
       td:first-child
-        background-position: 8px -2584px
+        background-position: 8px -2570px
     &.passport-stolen 
       td:first-child
-        background-position: 8px -2784px
+        background-position: 8px -2770px
     &.credit-card-stolen 
       td:first-child
-        background-position: 8px -2984px
+        background-position: 8px -2970px
     &.baggage-delayed 
       td:first-child
-        background-position: 8px -3184px
+        background-position: 8px -3170px
     &.travel-delay 
       td:first-child
-        background-position: 8px -3384px
+        background-position: 8px -3370px
     &.loss-of-income
       td:first-child
-        background-position: 8px -3584px
+        background-position: 8px -3570px
     &.permanent-disability 
       td:first-child
-        background-position: 8px -3784px
+        background-position: 8px -3770px
     &.snow-sports 
       td:first-child
-        background-position: 8px -3984px
+        background-position: 8px -3970px

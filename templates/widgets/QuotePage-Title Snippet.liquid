@@ -1,0 +1,1445 @@
+<!-- Collecting email addresses of customers who request a quote for surveying DONT DELETE TALK TO JW -->
+
+<script>
+$(function() {
+  var topForm = $('#emailQuoteForm');
+  var bottomForm = $('#emailQuoteFooterForm');
+  var forms = topForm.add(bottomForm);
+
+  forms.find('button').on('mousedown', function() {
+    var input = $(this).closest('form').find('#QuoteDto_EmailQuoteAddress');
+    var emailAddress = input.val();
+    var src = '//docs.google.com/forms/d/1NV6PORPSiuKHbNE8sJQhEHpF96UgZsQSsta17XzHBJ4/formResponse?entry.966160044=' + encodeURI(emailAddress);
+
+    window.gfpli = $('<img/>', {
+      'src':src
+    });
+  });
+});
+</script>
+
+<!-- End collecting email addresses of customers who request a quote for surveying -->
+
+
+<!--  a/b test -->
+<script>
+function splitTestConvertIn(testName, goalName) {
+  var cookieName = 'SplitTest: ' + testName;
+
+  var testCookie = wng.googleAnalytics.utils.getCookie(cookieName);
+
+  if (testCookie) {
+    var shownAndConverted = testCookie.split('||');
+    var versionShown = shownAndConverted[0];
+    var convertedGoals = shownAndConverted[1] ? shownAndConverted[1].split('|') : [];
+
+    if ($.inArray(goalName, convertedGoals) == -1) {
+      convertedGoals.push(goalName);
+      var newCookieValue = [versionShown, convertedGoals.join('|')].join('||');
+      wng.googleAnalytics.utils.setCookie(cookieName, newCookieValue, { 'expires':90 });
+      wng.googleAnalytics.trackEvent(cookieName, cookieName + ' - Converted: ' + goalName + ' - ' + versionShown);
+    }
+  }
+}
+</script>
+<script>
+  splitTestConvertIn('JustaTID head - v1', 'Got to quote');
+</script>
+<!-- a/b test END -->
+
+<!-- Benefits Table HotFix START -->
+<style>
+#event-based-benefits th {
+  font-size: 2rem;
+  font-weight: 100;
+  line-height: 1.1;
+  margin-bottom: 1rem; }
+#event-based-benefits tr {
+  background: #FFFFFF; }
+@media only screen and (max-width: 40em) {
+  #event-based-benefits th {
+    display: none; } }
+#event-based-benefits .event-based-benefit td {
+  vertical-align: text-top;
+  padding: 1.75rem;
+  border-top: 1px solid #eaeaea; }
+  #event-based-benefits .event-based-benefit td .title, #event-based-benefits .event-based-benefit td .amount {
+    font-size: 1.5rem;
+    line-height: 1.1;
+    font-weight: 100;
+    margin-bottom: 0.5rem; }
+  #event-based-benefits .event-based-benefit td .description {
+    color: #777; }
+@media only screen and (max-width: 40em) {
+  #event-based-benefits .event-based-benefit td {
+    display: block; }
+  #event-based-benefits .event-based-benefit td:last-child {
+    padding-left: 3.125rem;
+    margin-top: -2.5rem;
+    border-top: none; }
+  #event-based-benefits .event-based-benefit td:before {
+    content: attr(data-th) ": ";
+    color: #00bae4; } }
+#event-based-benefits .event-based-benefit td:first-child {
+  padding-left: 3.125rem; }
+#event-based-benefits .event-based-benefit.need-medical-help td:first-child {
+  background-position: 8px 30px; }
+#event-based-benefits .event-based-benefit.in-an-accident td:first-child {
+  background-position: 8px -170px; }
+#event-based-benefits .event-based-benefit.medical-evacuation td:first-child {
+  background-position: 8px -370px; }
+#event-based-benefits .event-based-benefit.death td:first-child {
+  background-position: 8px -570px; }
+#event-based-benefits .event-based-benefit.luggage td:first-child {
+  background-position: 8px -770px; }
+#event-based-benefits .event-based-benefit.cancellation-or-delay td:first-child {
+  background-position: 8px -970px; }
+#event-based-benefits .event-based-benefit.return-early td:first-child {
+  background-position: 8px -1170px; }
+#event-based-benefits .event-based-benefit.unable-to-travel td:first-child {
+  background-position: 8px -1370px; }
+#event-based-benefits .event-based-benefit.special-event td:first-child {
+  background-position: 8px -1570px; }
+#event-based-benefits .event-based-benefit.work-on-time td:first-child {
+  background-position: 8px -1770px; }
+#event-based-benefits .event-based-benefit.car-rental-excess td:first-child {
+  background-position: 8px -1970px; }
+#event-based-benefits .event-based-benefit.personal-liability td:first-child {
+  background-position: 8px -2170px; }
+#event-based-benefits .event-based-benefit.bad-weather td:first-child {
+  background-position: 8px -2370px; }
+#event-based-benefits .event-based-benefit.natural-disaster td:first-child {
+  background-position: 8px -2570px; }
+#event-based-benefits .event-based-benefit.passport-stolen td:first-child {
+  background-position: 8px -2770px; }
+#event-based-benefits .event-based-benefit.credit-card-stolen td:first-child {
+  background-position: 8px -2970px; }
+#event-based-benefits .event-based-benefit.baggage-delayed td:first-child {
+  background-position: 8px -3170px; }
+#event-based-benefits .event-based-benefit.travel-delay td:first-child {
+  background-position: 8px -3370px; }
+#event-based-benefits .event-based-benefit.loss-of-income td:first-child {
+  background-position: 8px -3570px; }
+#event-based-benefits .event-based-benefit.permanent-disability td:first-child {
+  background-position: 8px -3770px; }
+#event-based-benefits .event-based-benefit.snow-sports td:first-child {
+  background-position: 8px -3970px; }
+</style>
+<!-- Benefits Table HotFix START -->
+
+<!-- Quote Title + Excess block START -->
+<style>
+.excess-cta { 
+  background-color:#f8f8f8;
+  margin-top: 20px;
+  margin-bottom:20px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  display: block;
+  height: 64px;
+}
+.excess-cta .titlecopy{
+  padding: 8px;
+  padding-left: 14px;
+}
+.excess-cta div{
+  font-size: 20px;
+}
+.excess-cta .remove-excess:after {  
+  content: '\f061';
+  font: normal normal normal 18px/1 FontAwesome;
+  position: absolute;
+  bottom: 43px;
+  right: 31px;
+
+}
+.excess-cta .remove-excess {
+  color: #c1c1c1;
+  height: 64px;
+  padding: 28px;
+  color: #c1c1c1;
+  display:block;
+  background-color: #f1f1f1;
+    -webkit-border-top-right-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    -moz-border-radius-topright: 3px;
+    -moz-border-radius-bottomright: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  
+}
+.excess-cta .remove-excess:hover {
+  color: #fff;
+  background-color: #00bae4;  
+  
+}
+.excess-cta p { 
+  font-size: 14px; 
+  color: #777; 
+  margin-top: -6px;
+  margin-bottom: 0px;
+}
+@media all and (max-width: 40em) { 
+     .excess-cta .remove-excess:after {  
+      content: '\f061';
+      font: normal normal normal 18px/1 FontAwesome;
+      position: absolute;
+      bottom: 53px;
+      right: 31px;
+
+    }
+    .excess-cta, .excess-cta .remove-excess { 
+      height: 84px
+    }
+  .excess-cta p { 
+  width:200px;
+    line-height:16px;
+    margin-top:2px;
+    
+    
+}
+  
+  }
+</style>
+<div class="row">
+  <div class="small-12 medium-12 large-8 column">
+    <h2 class="blue" style="margin-top: 22px; margin-bottom: 10px;">You're covered with TID</h1>
+  </div>
+  <div class="small-12 medium-12 large-4 column">
+    <div class="excess-cta">
+      <div class="titlecopy left">
+        <div>Policy Excess $100</div>
+        <p>Please <a href="/pds" target="_blank">read the PDS</a> for full policy details</p>
+      </div>
+      <div class="right"><a href="" class="remove-excess"></a></div>
+    </div>
+  </div>
+</div>
+<!-- Quote Title + Excess block END -->
+
+<script>
+$(function() {
+var $optionsButton = $('.choose-options a').eq(0);
+var $removeExcess = $('a.remove-excess');
+var targetHref = $optionsButton.attr("href");
+$removeExcess.attr("href", targetHref);
+});
+</script>
+
+<script>
+$(function() {
+  $('a.remove-excess').on('click', function() {
+    wng.googleAnalytics.trackEvent('Quote Page', 'remove excess');
+  })
+})
+</script>
+
+
+<style>
+
+@media all and (min-width: 40em) {
+  body.quote .blue-panel.bali {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_bali_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.quote .blue-panel.bali {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_bali_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.quote .blue-panel.bali {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_bali_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.quote .blue-panel.thailand {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_thailand_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.quote .blue-panel.thailand {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_thailand_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.quote .blue-panel.thailand {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_thailand_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.quote .blue-panel.india {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_india_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.quote .blue-panel.india {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_india_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.quote .blue-panel.india {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_india_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.quote .blue-panel.canada {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_canada_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.quote .blue-panel.canada {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_canada_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.quote .blue-panel.canada {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_canada_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.quote .blue-panel.china {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_china_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.quote .blue-panel.china {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_china_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.quote .blue-panel.china {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_china_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.quote .blue-panel.vanuatu {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_vanuatu_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.quote .blue-panel.vanuatu {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_vanuatu_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.quote .blue-panel.vanuatu {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_vanuatu_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.quote .blue-panel.australia {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_australia_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.quote .blue-panel.australia {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_australia_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.quote .blue-panel.australia {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_australia_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.quote .blue-panel.fiji {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_fiji_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.quote .blue-panel.fiji {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_fiji_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.quote .blue-panel.fiji {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_fiji_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.quote .blue-panel.spain {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_spain_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.quote .blue-panel.spain {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_spain_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.quote .blue-panel.spain {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_spain_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.quote .blue-panel.germany {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_germany_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.quote .blue-panel.germany {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_germany_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.quote .blue-panel.germany {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_germany_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.quote .blue-panel.france {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_france_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.quote .blue-panel.france {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_france_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.quote .blue-panel.france {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_france_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.quote .blue-panel.japan {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_japan_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.quote .blue-panel.japan {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_japan_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.quote .blue-panel.japan {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_japan_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.quote .blue-panel.hong-kong {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_hong-kong_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.quote .blue-panel.hong-kong {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_hong-kong_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.quote .blue-panel.hong-kong {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_hong-kong_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.quote .blue-panel.singapore {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_singapore_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.quote .blue-panel.singapore {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_singapore_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.quote .blue-panel.singapore {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_singapore_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.quote .blue-panel.malaysia {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_malaysia_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.quote .blue-panel.malaysia {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_malaysia_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.quote .blue-panel.malaysia {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_malaysia_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.quote .blue-panel.indonesia {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_indonesia_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.quote .blue-panel.indonesia {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_indonesia_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.quote .blue-panel.indonesia {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_indonesia_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.quote .blue-panel.italy {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_italy_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.quote .blue-panel.italy {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_italy_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.quote .blue-panel.italy {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_italy_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.quote .blue-panel.philippines {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_philippines_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.quote .blue-panel.philippines {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_philippines_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.quote .blue-panel.philippines {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_philippines_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.quote .blue-panel.new-zealand {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_new-zealand_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.quote .blue-panel.new-zealand {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_new-zealand_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.quote .blue-panel.new-zealand {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_new-zealand_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.quote .blue-panel.united-states {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_united-states_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.quote .blue-panel.united-states {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_united-states_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.quote .blue-panel.united-states {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_united-states_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.quote .blue-panel.south-africa {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_south-africa_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.quote .blue-panel.south-africa {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_south-africa_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.quote .blue-panel.south-africa {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_south-africa_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.quote .blue-panel.vietnam {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_vietnam_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.quote .blue-panel.vietnam {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_vietnam_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.quote .blue-panel.vietnam {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_vietnam_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.quote .blue-panel.united-kingdom {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_united-kingdom_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.quote .blue-panel.united-kingdom {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_united-kingdom_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.quote .blue-panel.united-kingdom {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_united-kingdom_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.quote .blue-panel.bhutan {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_bhutan_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.quote .blue-panel.bhutan {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_bhutan_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.quote .blue-panel.bhutan {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_bhutan_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.quote .blue-panel.egypt {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_egypt_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.quote .blue-panel.egypt {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_egypt_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.quote .blue-panel.egypt {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_egypt_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+
+@media all and (min-width: 40em) {
+  body.options .blue-panel.bali {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_bali_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.options .blue-panel.bali {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_bali_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.options .blue-panel.bali {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_bali_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.options .blue-panel.thailand {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_thailand_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.options .blue-panel.thailand {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_thailand_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.options .blue-panel.thailand {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_thailand_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.options .blue-panel.india {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_india_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.options .blue-panel.india {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_india_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.options .blue-panel.india {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_india_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.options .blue-panel.canada {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_canada_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.options .blue-panel.canada {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_canada_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.options .blue-panel.canada {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_canada_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.options .blue-panel.china {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_china_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.options .blue-panel.china {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_china_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.options .blue-panel.china {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_china_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.options .blue-panel.vanuatu {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_vanuatu_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.options .blue-panel.vanuatu {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_vanuatu_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.options .blue-panel.vanuatu {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_vanuatu_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.options .blue-panel.australia {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_australia_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.options .blue-panel.australia {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_australia_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.options .blue-panel.australia {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_australia_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.options .blue-panel.fiji {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_fiji_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.options .blue-panel.fiji {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_fiji_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.options .blue-panel.fiji {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_fiji_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.options .blue-panel.spain {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_spain_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.options .blue-panel.spain {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_spain_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.options .blue-panel.spain {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_spain_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.options .blue-panel.germany {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_germany_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.options .blue-panel.germany {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_germany_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.options .blue-panel.germany {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_germany_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.options .blue-panel.france {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_france_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.options .blue-panel.france {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_france_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.options .blue-panel.france {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_france_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.options .blue-panel.japan {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_japan_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.options .blue-panel.japan {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_japan_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.options .blue-panel.japan {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_japan_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.options .blue-panel.hong-kong {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_hong-kong_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.options .blue-panel.hong-kong {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_hong-kong_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.options .blue-panel.hong-kong {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_hong-kong_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.options .blue-panel.singapore {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_singapore_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.options .blue-panel.singapore {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_singapore_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.options .blue-panel.singapore {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_singapore_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.options .blue-panel.malaysia {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_malaysia_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.options .blue-panel.malaysia {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_malaysia_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.options .blue-panel.malaysia {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_malaysia_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.options .blue-panel.indonesia {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_indonesia_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.options .blue-panel.indonesia {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_indonesia_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.options .blue-panel.indonesia {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_indonesia_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.options .blue-panel.italy {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_italy_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.options .blue-panel.italy {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_italy_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.options .blue-panel.italy {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_italy_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.options .blue-panel.philippines {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_philippines_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.options .blue-panel.philippines {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_philippines_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.options .blue-panel.philippines {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_philippines_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.options .blue-panel.new-zealand {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_new-zealand_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.options .blue-panel.new-zealand {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_new-zealand_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.options .blue-panel.new-zealand {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_new-zealand_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.options .blue-panel.united-states {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_united-states_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.options .blue-panel.united-states {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_united-states_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.options .blue-panel.united-states {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_united-states_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.options .blue-panel.south-africa {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_south-africa_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.options .blue-panel.south-africa {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_south-africa_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.options .blue-panel.south-africa {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_south-africa_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.options .blue-panel.vietnam {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_vietnam_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.options .blue-panel.vietnam {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_vietnam_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.options .blue-panel.vietnam {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_vietnam_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.options .blue-panel.united-kingdom {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_united-kingdom_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.options .blue-panel.united-kingdom {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_united-kingdom_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.options .blue-panel.united-kingdom {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_united-kingdom_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.options .blue-panel.bhutan {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_bhutan_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.options .blue-panel.bhutan {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_bhutan_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.options .blue-panel.bhutan {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_bhutan_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.options .blue-panel.egypt {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_egypt_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.options .blue-panel.egypt {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_egypt_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.options .blue-panel.egypt {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_egypt_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+
+@media all and (min-width: 40em) {
+  body.details .blue-panel.bali {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_bali_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.details .blue-panel.bali {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_bali_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.details .blue-panel.bali {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_bali_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.details .blue-panel.thailand {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_thailand_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.details .blue-panel.thailand {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_thailand_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.details .blue-panel.thailand {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_thailand_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.details .blue-panel.india {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_india_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.details .blue-panel.india {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_india_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.details .blue-panel.india {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_india_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.details .blue-panel.canada {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_canada_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.details .blue-panel.canada {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_canada_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.details .blue-panel.canada {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_canada_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.details .blue-panel.china {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_china_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.details .blue-panel.china {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_china_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.details .blue-panel.china {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_china_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.details .blue-panel.vanuatu {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_vanuatu_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.details .blue-panel.vanuatu {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_vanuatu_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.details .blue-panel.vanuatu {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_vanuatu_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.details .blue-panel.australia {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_australia_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.details .blue-panel.australia {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_australia_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.details .blue-panel.australia {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_australia_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.details .blue-panel.fiji {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_fiji_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.details .blue-panel.fiji {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_fiji_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.details .blue-panel.fiji {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_fiji_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.details .blue-panel.spain {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_spain_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.details .blue-panel.spain {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_spain_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.details .blue-panel.spain {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_spain_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.details .blue-panel.germany {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_germany_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.details .blue-panel.germany {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_germany_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.details .blue-panel.germany {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_germany_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.details .blue-panel.france {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_france_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.details .blue-panel.france {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_france_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.details .blue-panel.france {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_france_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.details .blue-panel.japan {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_japan_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.details .blue-panel.japan {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_japan_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.details .blue-panel.japan {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_japan_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.details .blue-panel.hong-kong {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_hong-kong_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.details .blue-panel.hong-kong {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_hong-kong_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.details .blue-panel.hong-kong {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_hong-kong_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.details .blue-panel.singapore {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_singapore_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.details .blue-panel.singapore {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_singapore_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.details .blue-panel.singapore {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_singapore_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.details .blue-panel.malaysia {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_malaysia_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.details .blue-panel.malaysia {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_malaysia_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.details .blue-panel.malaysia {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_malaysia_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.details .blue-panel.indonesia {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_indonesia_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.details .blue-panel.indonesia {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_indonesia_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.details .blue-panel.indonesia {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_indonesia_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.details .blue-panel.italy {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_italy_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.details .blue-panel.italy {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_italy_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.details .blue-panel.italy {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_italy_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.details .blue-panel.philippines {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_philippines_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.details .blue-panel.philippines {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_philippines_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.details .blue-panel.philippines {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_philippines_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.details .blue-panel.new-zealand {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_new-zealand_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.details .blue-panel.new-zealand {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_new-zealand_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.details .blue-panel.new-zealand {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_new-zealand_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.details .blue-panel.united-states {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_united-states_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.details .blue-panel.united-states {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_united-states_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.details .blue-panel.united-states {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_united-states_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.details .blue-panel.south-africa {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_south-africa_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.details .blue-panel.south-africa {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_south-africa_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.details .blue-panel.south-africa {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_south-africa_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.details .blue-panel.vietnam {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_vietnam_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.details .blue-panel.vietnam {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_vietnam_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.details .blue-panel.vietnam {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_vietnam_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.details .blue-panel.united-kingdom {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_united-kingdom_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.details .blue-panel.united-kingdom {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_united-kingdom_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.details .blue-panel.united-kingdom {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_united-kingdom_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.details .blue-panel.bhutan {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_bhutan_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.details .blue-panel.bhutan {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_bhutan_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.details .blue-panel.bhutan {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_bhutan_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.details .blue-panel.egypt {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_egypt_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.details .blue-panel.egypt {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_egypt_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.details .blue-panel.egypt {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_egypt_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+
+@media all and (min-width: 40em) {
+  body.payment .blue-panel.bali {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_bali_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.payment .blue-panel.bali {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_bali_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.payment .blue-panel.bali {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_bali_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.payment .blue-panel.thailand {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_thailand_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.payment .blue-panel.thailand {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_thailand_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.payment .blue-panel.thailand {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_thailand_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.payment .blue-panel.india {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_india_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.payment .blue-panel.india {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_india_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.payment .blue-panel.india {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_india_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.payment .blue-panel.canada {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_canada_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.payment .blue-panel.canada {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_canada_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.payment .blue-panel.canada {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_canada_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.payment .blue-panel.china {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_china_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.payment .blue-panel.china {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_china_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.payment .blue-panel.china {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_china_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.payment .blue-panel.vanuatu {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_vanuatu_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.payment .blue-panel.vanuatu {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_vanuatu_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.payment .blue-panel.vanuatu {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_vanuatu_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.payment .blue-panel.australia {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_australia_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.payment .blue-panel.australia {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_australia_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.payment .blue-panel.australia {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_australia_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.payment .blue-panel.fiji {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_fiji_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.payment .blue-panel.fiji {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_fiji_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.payment .blue-panel.fiji {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_fiji_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.payment .blue-panel.spain {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_spain_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.payment .blue-panel.spain {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_spain_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.payment .blue-panel.spain {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_spain_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.payment .blue-panel.germany {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_germany_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.payment .blue-panel.germany {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_germany_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.payment .blue-panel.germany {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_germany_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.payment .blue-panel.france {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_france_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.payment .blue-panel.france {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_france_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.payment .blue-panel.france {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_france_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.payment .blue-panel.japan {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_japan_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.payment .blue-panel.japan {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_japan_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.payment .blue-panel.japan {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_japan_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.payment .blue-panel.hong-kong {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_hong-kong_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.payment .blue-panel.hong-kong {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_hong-kong_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.payment .blue-panel.hong-kong {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_hong-kong_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.payment .blue-panel.singapore {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_singapore_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.payment .blue-panel.singapore {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_singapore_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.payment .blue-panel.singapore {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_singapore_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.payment .blue-panel.malaysia {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_malaysia_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.payment .blue-panel.malaysia {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_malaysia_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.payment .blue-panel.malaysia {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_malaysia_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.payment .blue-panel.indonesia {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_indonesia_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.payment .blue-panel.indonesia {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_indonesia_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.payment .blue-panel.indonesia {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_indonesia_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.payment .blue-panel.italy {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_italy_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.payment .blue-panel.italy {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_italy_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.payment .blue-panel.italy {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_italy_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.payment .blue-panel.philippines {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_philippines_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.payment .blue-panel.philippines {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_philippines_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.payment .blue-panel.philippines {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_philippines_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.payment .blue-panel.new-zealand {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_new-zealand_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.payment .blue-panel.new-zealand {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_new-zealand_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.payment .blue-panel.new-zealand {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_new-zealand_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.payment .blue-panel.united-states {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_united-states_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.payment .blue-panel.united-states {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_united-states_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.payment .blue-panel.united-states {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_united-states_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.payment .blue-panel.south-africa {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_south-africa_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.payment .blue-panel.south-africa {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_south-africa_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.payment .blue-panel.south-africa {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_south-africa_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.payment .blue-panel.vietnam {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_vietnam_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.payment .blue-panel.vietnam {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_vietnam_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.payment .blue-panel.vietnam {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_vietnam_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.payment .blue-panel.united-kingdom {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_united-kingdom_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.payment .blue-panel.united-kingdom {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_united-kingdom_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.payment .blue-panel.united-kingdom {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_united-kingdom_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.payment .blue-panel.bhutan {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_bhutan_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.payment .blue-panel.bhutan {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_bhutan_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.payment .blue-panel.bhutan {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_bhutan_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (min-width: 40em) {
+  body.payment .blue-panel.egypt {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_egypt_desktop.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 64em) {
+  body.payment .blue-panel.egypt {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_egypt_tablet.jpg') no-repeat center center;
+    background-size: cover; } }
+@media all and (max-width: 40em) {
+  body.payment .blue-panel.egypt {
+    background: #00bae4 url('/Media/Default/main/headers/quote_destinations_egypt_phone.jpg') no-repeat center center;
+    background-size: cover; } }
+
+</style>
