@@ -129,19 +129,91 @@ function splitTestConvertIn(testName, goalName) {
 
 <!-- Quote Title + Excess block START -->
 <style>
-.quotetitle {
-  margin-top: 22px; 
-  margin-bottom: 10px;
+.excess-cta { 
+  background-color:#f8f8f8;
+  margin-top: 20px;
+  margin-bottom:20px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  display: block;
+  height: 64px;
 }
-@media only screen and (min-width: 120.063em) {
-body.quote h2 {
-  font-size: 4.75rem;
+.excess-cta .titlecopy{
+  padding: 8px;
+  padding-left: 14px;
+}
+.excess-cta div{
+  font-size: 20px;
+}
+.excess-cta .remove-excess:after {  
+  content: '\f061';
+  font: normal normal normal 18px/1 FontAwesome;
+  position: absolute;
+  bottom: 43px;
+  right: 31px;
 
 }
+.excess-cta .remove-excess {
+  color: #c1c1c1;
+  height: 64px;
+  padding: 28px;
+  color: #c1c1c1;
+  display:block;
+  background-color: #f1f1f1;
+    -webkit-border-top-right-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    -moz-border-radius-topright: 3px;
+    -moz-border-radius-bottomright: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  
+}
+.excess-cta .remove-excess:hover {
+  color: #fff;
+  background-color: #00bae4;  
+  
+}
+.excess-cta p { 
+  font-size: 14px; 
+  color: #777; 
+  margin-top: -6px;
+  margin-bottom: 0px;
+}
+@media all and (max-width: 40em) { 
+     .excess-cta .remove-excess:after {  
+      content: '\f061';
+      font: normal normal normal 18px/1 FontAwesome;
+      position: absolute;
+      bottom: 53px;
+      right: 31px;
+
+    }
+    .excess-cta, .excess-cta .remove-excess { 
+      height: 84px
+    }
+  .excess-cta p { 
+  width:200px;
+    line-height:16px;
+    margin-top:2px;
+    
+    
+}
+  
+  }
 </style>
 <div class="row">
   <div class="small-12 medium-12 large-8 column">
-    <h2 class="quotetitle blue">You're covered with TID</h1>
+    <h2 class="blue" style="margin-top: 22px; margin-bottom: 10px;">You're covered with TID</h1>
+  </div>
+  <div class="small-12 medium-12 large-4 column">
+    <div class="excess-cta">
+      <div class="titlecopy left">
+        <div>Policy Excess $100</div>
+        <p>Please <a href="/pds" target="_blank">read the PDS</a> for full policy details</p>
+      </div>
+      <div class="right"><a href="" class="remove-excess"></a></div>
+    </div>
   </div>
 </div>
 <!-- Quote Title + Excess block END -->
@@ -163,7 +235,7 @@ $(function() {
 })
 </script>
 
-<!-- Quote Header Destination Backgrounds START -->
+
 <style>
 
 @media all and (min-width: 40em) {
@@ -767,6 +839,7 @@ $(function() {
   body.options .blue-panel.egypt {
     background: #00bae4 url('/Media/Default/main/headers/quote_destinations_egypt_phone.jpg') no-repeat center center;
     background-size: cover; } }
+
 @media all and (min-width: 40em) {
   body.details .blue-panel.bali {
     background: #00bae4 url('/Media/Default/main/headers/quote_destinations_bali_desktop.jpg') no-repeat center center;
@@ -1370,4 +1443,3 @@ $(function() {
     background-size: cover; } }
 
 </style>
-<!-- Quote Header Destination Backgrounds END -->
