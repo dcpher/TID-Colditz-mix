@@ -1,0 +1,124 @@
+// search
+$gsc-input-height: rem-calc(34)
+// search box
+.gsc-search-box-tools 
+  .gsc-search-box 
+    .gsc-input
+      height: $gsc-input-height !important
+      font-size: rem-calc(16)
+      line-height: rem-calc(22)
+      
+      table 
+        background-color: $color-white
+        input
+          .gsc-input 
+            background: none !important
+            position: relative
+            z-index: 100
+
+
+      // Search box bg
+      .gsc-input-box
+        border: 1px solid #D9D9D9
+        height: $gsc-input-height+rem-calc(2)
+        -webkit-box-shadow: rgba(153, 153, 153, 0.2) 1px 2px 8px inset
+        -moz-box-shadow: rgba(153, 153, 153, 0.2) 1px 2px 8px inset
+        box-shadow: rgba(153, 153, 153, 0.2) 1px 2px 8px inset
+        position: relative
+
+      .gsib_a, .gsib_b
+        padding-top: 1px
+        padding-left: 0
+        padding-right: 0
+
+      input.gsc-input
+        padding: 9px 12px 9px 12px !important
+    
+// turn off the table content on focus
+.gsc-input-box.gsc-input-box-focus table td:first-child:after
+  display: none
+  
+    
+// Search button
+.gsc-search-button
+  display: block
+  float: none
+  position: relative
+  padding-top: 2px
+  input.gsc-search-button
+    height: 34px
+    width: 64px!important
+    +gradient-button($color-blue)
+    border: 1px solid darken($color-blue, 10%)
+    +border-radius(3px)
+    padding:  rem-calc(9) rem-calc(24) 
+    display: inline-block
+    &:hover
+      +gradient-button(darken($color-dark-blue, 10%))
+  
+// Autocomplete Styles
+
+.gsc-completion-container
+  //font-family: $default-font-family!important
+  //font-weight: $default-font-weight!important
+  .gssb_a
+    padding: 2px 8px
+
+// Results Tab bar
+
+.gsc-tabsArea
+  height: $gsc-input-height!important
+  
+.gsc-tabsArea > .gsc-tabHeader
+  display: inline-block
+  padding: 2px 8px 1px 8px
+  margin-right: 0px
+  margin-top: 0px
+  font-weight: bold
+  height: $gsc-input-height!important
+  line-height: $gsc-input-height
+  min-width: 84px
+  text-align: center
+  overflow: hidden
+  font-size: 1rem
+  //font-weight: $default-font-weight!important
+
+.gsc-tabHeader.gsc-tabhInactive
+  border-bottom: 1px solid $color-blue!important
+.gsc-selected-option-container 
+  min-width: rem-calc(84)!important
+
+// Results formatting
+
+//.gsc-control-cse, .gsc-control-cse .gsc-table-result
+ // font-family: $default-font-family!important
+ // font-weight: $default-font-weight!important
+
+.gsc-control-cse
+  padding: 0
+  .gsc-table-result
+    font-size: rem-calc(16)!important
+    caption, th, td
+    // font-weight: $default-font-weight!important
+  .gsc-thumbnail-inside, .gsc-url-top
+    padding-left: 0
+  .gsc-thumbnail-inside
+    padding-top: rem-calc(8)
+  .gsc-url-top
+    .gs-visibleUrl
+      color: $color-light-grey
+  .gs-result
+    .gs-title, .gs-title b
+      font-size: rem-calc(20)!important
+      color: $color-blue!important
+      text-decoration: none
+      line-height: 1.2
+      &:hover
+        text-decoration: underline
+        color: darken($color-blue, 20)
+
+td.gsc-search-button
+    padding: 0
+
+td.gsc-input
+    padding: 0
