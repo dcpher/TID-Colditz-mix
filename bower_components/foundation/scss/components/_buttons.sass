@@ -26,6 +26,29 @@
   &:hover
     text-decoration: none
     text-shadow: 1px 1px 10px rgba($color-dark-grey, 0.2)
+  
+  &.large
+    padding: 1.125rem 3.75rem 1.1875rem 1.125rem
+    &:after
+      font-size: rem-calc(16)
+      bottom: rem-calc(26)
+      right: rem-calc(20)
+  
+  &.medium
+    padding: rem-calc(8) rem-calc(12)
+    padding-right: rem-calc(44)
+    font-size: rem-calc(16)
+    &:after
+      font-size: rem-calc(12)
+      bottom: rem-calc(12)
+      right: rem-calc(12)
+    @media #{$small-only}
+      padding: rem-calc(4) rem-calc(8)
+      padding-right: rem-calc(32)
+      &:after
+        font-size: rem-calc(12)
+        bottom: rem-calc(6)
+        right: rem-calc(6)  
 
   // TID Button colours
   

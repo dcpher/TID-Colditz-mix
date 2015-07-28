@@ -1,0 +1,273 @@
+{% block title %}Travel Insurance App - Download Tripwise and Save{% endblock %}
+{% block content %}
+
+
+<div class="header-panel panel campaign-header" id="header">
+    <div class="row">
+        <div class="small-12 medium-6 column">
+            <h1>Save up to 10%* on your travel insurance</h1>
+            <p>Special offer for TripAdvisor subscribers</p>
+        </div>
+    </div>
+</div>
+<div class="benefits-bar blue">
+    <!--  Include Benefits Bar  -->
+      <div class="row">
+    <div class="small-12 column">
+      <ul class="small-block-grid-2 medium-block-grid-4 large-block-grid-5">
+        <li class="trusted">
+          Trusted by 1 Million Aussies
+        </li>
+        <li class="award">
+          Award Winning Value
+        </li>
+        <li class="owned">
+          100% Australian Owned
+        </li>
+        <li class="secure">
+          Secure Payment
+        </li>        
+        <li class="lloyds text-right show-for-large-up">
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<style>
+
+  
+  @media all and (min-width: 40em) {
+#header {
+    background: url('/Media/Default/main/hero-images/') no-repeat center center #00bae4;
+    background-size: cover;
+  }
+
+}
+@media all and (max-width: 64em) {
+#header {
+    background: url('/Media/Default/main/hero-images/') no-repeat center center #00bae4;
+    background-size: cover;
+  }
+
+}
+@media all and (max-width: 40em) {
+#header {
+    background: url('/Media/Default/main/hero-images/') no-repeat right center #00bae4;
+    background-size: cover;
+  }
+
+}
+.iphone:before, .android:before {
+  content: '\f179';
+  font: normal normal normal 18px/1 FontAwesome;
+  position: absolute;
+  bottom: 1.0625rem;
+  right: 1rem;
+  left: 1rem;
+}
+.android:before {
+  content: '\f17b';
+}
+.iphone, .android {
+  padding-left: 40px;
+  margin-right: 32px;
+  margin-top: 8px;
+}
+.iphone.button:after, .android.button:after {
+  content: '\f063';
+  font: normal normal normal 14px/1 FontAwesome;
+  position: absolute;
+  bottom: 1.0625rem;
+  right: 1rem;
+}
+
+.light-grey-panel { padding: auto 40px; }
+</style>
+
+<div class="content-panel">
+
+<div class="row">
+  <div class="small-12 medium-4 large-4 column"><img src="/Media/Default/images/members-tripwise-phones.png" /></div>
+  <div class="small-12 medium-8 large-8 column">
+    <h2>Save when you buy on tripwise travel app.</h2>
+    <p>Tripwise puts insights, advice, phrase books and your policy details in your pocket while you travel.</p>
+    <!-- Start Download Now Button -->
+    <p><a class="tripwise-easy-download button blue">Free - Download now</a></p>
+    <script type="text/javascript">// <![CDATA[
+      $(function() {
+          // Change this each time the button is used - This allows us to split the source traffic on Google play to check users convert properly.
+          var utm_campaign = 'Tripwise on TID AU';
+          // Note that the utm_campaign should be double encoded
+          var referrer_param = encodeURIComponent('utm_source=tid-au&utm_medium=web&utm_campaign=' + encodeURIComponent(utm_campaign));
+
+          var google_play_url = 'https://play.google.com/store/apps/details?id=au.com.tid.tripwise';
+          var google_play_attribtued_url = google_play_url + '&referrer=' + referrer_param;
+          var app_store_url = 'https://itunes.apple.com/au/app/tripwise-travel-guide-phrase/id567334051';
+
+          $('.tripwise-easy-download').off('click.ted').on('click.ted', function() {
+            if (wng && wng.googleAnalytics) {
+              wng.googleAnalytics.trackEvent('Tripwise', 'Clicked easy download link');
+            }
+
+            if (navigator.userAgent.match(/Android/i)) {
+              window.location = google_play_attribtued_url;
+            } else if (navigator.userAgent.match(/iPhone|iPod|iPad/i)) {
+              window.location = app_store_url;
+            } else {
+              var download_selector = $("<div class='tripwise-download-selector'><h3>What kind of phone do you use?</h3></div>");
+
+              $(this).after(download_selector).remove();
+
+              $("<a/>", {
+                'html': "Download for iPhone",
+                'class': 'iphone button blue',
+                'href': app_store_url
+              }).appendTo(download_selector);
+
+              $("<a/>", {
+                'html': "Download for Android",
+                'class': 'android button blue',
+                'href': google_play_url
+              }).appendTo(download_selector);
+
+            }
+
+            return false;
+          });
+        });
+// ]]></script>
+<!-- End download now button -->
+    <a href="https://itunes.apple.com/app/apple-store/id567334051?pt=506649&amp;ct=buy-on-tripwise&amp;mt=8"><img src="/Media/Default/main/tripwise/itunes-download.png" /></a> <a href="https://play.google.com/store/apps/details?id=au.com.tid.tripwise"><img src="/Media/Default/main/tripwise/google-download.png" /></a>
+    </div>
+  </div>
+</div>
+  
+  
+<!-- How to save -->
+<hr />
+<div class="row">
+  <div class="small-12 column text-center">
+    <h2>How to save</h2>
+  </div>
+  <div class="small-12 medium-6 large-5 large-offset-1 column text-center">
+    <h3>New customers</h3>
+    <p>New to TID? Buy your policy through our free travel app and get 5% off.</p>
+    <img src="/Media/Default/main/tripwise/Tripwise-loggedOut.jpg" />
+  </div>
+  <div class="small-12 medium-6 large-5 end column text-center">
+    <h3>Repeat customers</h3>
+    <p>If you're a repeat customer, we'd like to say thanks for your loyalty. Sign into the app and get 10% off.</p>
+    <img src="/Media/Default/main/tripwise/Tripwise-loggedIn.jpg" />
+  </div>
+  <div class="small-12 column text-center">
+    <p>&nbsp;</p>
+    <p><a class="tripwise-easy-download button blue">Download now</a></p>
+  </div>
+  
+</div>
+<!-- End How to save -->
+  
+<!--Tripwise reviews -->
+<div class="panel">  
+  <div class="row">
+    <div class="small-12 columns"><h2>What our customers say:</h2></div>
+    <div class="small-12 medium-6 large-3 column"><span class="fa fa-star yellow"></span><span class="fa fa-star yellow"></span><span class="fa fa-star yellow"></span><span class="fa fa-star yellow"></span>
+<p>"Decided to download this app and found it already to be a great gathering of information for a specific destination."</p>
+<p>niggles42, iTunes AppStore Review</p>
+</div>
+<div class="small-12 medium-6 large-3 column"><span class="fa fa-star yellow"></span><span class="fa fa-star yellow"></span><span class="fa fa-star yellow"></span><span class="fa fa-star yellow"></span><span class="fa fa-star yellow"></span>
+<p>"Excellent app, full of great tips and advice for your current location. Especially love the phrase books and emergency contact details."</p>
+<p>Spot50, iTunes AppStore Review</p>
+</div>
+<div class="small-12 medium-6 large-3 column"><span class="fa fa-star yellow"></span><span class="fa fa-star yellow"></span><span class="fa fa-star yellow"></span><span class="fa fa-star yellow"></span><span class="fa fa-star yellow"></span>
+<p>"Handy app to have when you're travelling. Has everything you need to know about your travel destination in simple terms."</p>
+<p>Chironick88, iTunes AppStores Review</p>
+</div>
+<div class="small-12 medium-6 large-3 column"><span class="fa fa-star yellow"></span><span class="fa fa-star yellow"></span><span class="fa fa-star yellow"></span><span class="fa fa-star yellow"></span>
+<p>"The advice in this app is up there with the best I've ever seen, and I'm quite the traveller."</p>
+<p>balupton, iTunes AppStore Review</p>
+    </div>
+  </div>
+</div>
+<!--End Tripwise reviews -->
+
+  
+  <!-- Start Tripwise features -->
+<div class="content-panel">
+<div class="row">
+<div class="small-0 medium-4 large-4 column"><img src="/Media/Default/main/tripwise/iPhone5c-first24.jpg" /></div>
+<div class="small-0 medium-8 large-8 column">
+<h2>Just a TID travel smart.</h2>
+<p class="promo-content">TID puts insights and advice and helpful information relevant to the countries you&rsquo;re visiting right in your pocket.</p>
+<ul class="tidsmarter no-bullet">
+<li>✓ Passport, visa &amp; vaccinations for your destination</li>
+<li>✓ How to avoid common local scams</li>
+<li>✓ How to get connected while you're away</li>
+<li>✓ Alerts you if something happens in your destination</li>
+<li>✓ Local insights on culture and customs</li>
+<li>✓ Local consulates &amp; hospitals</li>
+<li>✓ How to get help in an emergency</li>
+</ul>
+</div>
+</div>
+<hr />
+</div>
+  
+<!--  -->
+<div class="content-panel">
+  <div class="row">
+    <div class="small-12 columns">
+      <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-4 text-center">
+        <li>
+          <img src="/Media/Default/main/tripwise/phrasebook-icon.jpg" />
+          <h4><a class="appstore-content-link" href="https://itunes.apple.com/au/app/id567334051">Phrase Books</a></h4>
+          <p>Up to 100 essential phrases so you'll be able to: Direct a tuk tuk, eat with the locals and buy all the souvenirs you'll ever need.</p>
+        </li>
+       <li>
+          <img src="/Media/Default/main/tripwise/help-icon.jpg" />
+          <h4><a class="appstore-content-link" href="https://itunes.apple.com/au/app/id567334051">Get help locally</a></h4>
+          <p>Important contact details for where you're going so you know who to call and where to go in case of emergency.</p>
+        </li>
+       <li>
+          <img src="/Media/Default/main/tripwise/alert-icon.jpg" />
+          <h4><a class="appstore-content-link" href="https://itunes.apple.com/au/app/id567334051">Trip notes &amp; insights</a></h4>
+          <p>Destination notes and safety insights relevant to your trip and the countries you're visiting.</p>
+        </li>
+       <li>
+          <img src="/Media/Default/main/tripwise/policy-icon.jpg" />
+          <h4><a class="appstore-content-link" href="https://itunes.apple.com/au/app/id567334051">Your policy details in your pocket</a></h4>
+          <p>Get all your travel insurance information in one safe location. </p>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+  <hr />
+</div>
+<!--  -->
+  
+
+<div class="content-panel">
+<!-- Footer call to action -->
+  <div class="row">
+    <div class="small-12 medium-12 large-12 column">
+      <h2>Travel just a TID smarter with Tripwise.</h2>
+      <p>Free app available for iPhone and Android.</p>
+      <p><a class="tripwise-easy-download button blue">Download now</a></p>
+      <a href="https://itunes.apple.com/app/apple-store/id567334051?pt=506649&amp;ct=buy-on-tripwise&amp;mt=8">
+        <img src="/Media/Default/main/tripwise/itunes-download.png" /></a>
+      <a href="https://play.google.com/store/apps/details?id=au.com.tid.tripwise">
+        <img src="/Media/Default/main/tripwise/google-download.png" /></a>
+    </div>
+  </div>
+</div>
+
+<div class="content-panel">
+  <div class="row">
+    <div class="small-12 medium-12 large-12 large-centered columns">
+    <h6>*The discount offered only applies to the base premium, and is not applied to any options or cover which can be purchased for an additional premium. These options include reducing the policy excess, cover for skiing or snow sports, extra cover for valuable items, extra cover for rental vehicle excess, cover for any pre-existing medical conditions and any charitable donations made.</h6>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

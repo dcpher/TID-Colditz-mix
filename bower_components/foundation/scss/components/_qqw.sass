@@ -3,6 +3,7 @@
 // Full Width QQWidget
 .qqw-full-width
   #quick-quote
+    margin: rem-calc(16) 0
     .destination.alpha
       @include grid-column(5)
       @media #{$medium-only} 
@@ -39,6 +40,7 @@
 // Contained QQWidget
 .qqw-contained  
   #quick-quote
+    margin: rem-calc(16) 0
     .destination.alpha
       @include grid-column(4)
       @media #{$small-only} 
@@ -191,7 +193,7 @@
     text-align: left
     &:hover 
       +gradient-button(darken($color-green, 5%))
-      border: 1px solid darken($color-green, 30%)
+      border: 1px solid darken($color-green, 15%)
       text-shadow: 1px 1px 10px rgba(0, 184, 226, 0.5)
     @media #{$small-only}
       clear: left

@@ -30,7 +30,204 @@
     {% include "benefits-bar" %}
   
 </div>
+
+<!--  Quick Answers -->
+<div class="content-panel content grey-panel quick-answers">  
+  <div class="row">
+    <div class="small-12 column">
+      <h2 class="medium-text-center">Got a question about...?</h2>
+    </div>
+  </div>    
+  <script type="text/javascript" src="//www.travelinsurancedirect.com.au/Media/Default/js/jquery.atooltip.min.js"></script>
+  <script type="text/javascript">
+    $(function(){ 
+      $('a.clickTipmedical ').aToolTip({
+          clickIt: true,
+          tipContent: '<h4>Travelling with a medical condition?</h4><p>Pregnancy, asthma, diabetes and 40 other conditions are generally covered although some conditions may apply. <a href="http://service.travelinsurancedirect.com.au/customer/portal/articles/595785-pre-existing-medical-conditions">Learn more</a></p>'
+      }); 
+      $('a.clickTipcruising').aToolTip({
+          clickIt: true,
+          tipContent: '<h4>We cover cruising</h4><p>If you’re cruising in Australia, enter ‘Australian Waters’ in the Country field. Otherwise, simply enter the countries you’re stopping in or the region (eg. Europe). <a href="http://service.travelinsurancedirect.com.au/customer/portal/articles/500446-travel-insurance-for-cruising">Learn more</a></p>'
+      }); 
+      $('a.clickTipcover').aToolTip({
+          clickIt: true,
+          tipContent: '<h4>Cover for other travellers</h4><p>Dependent children or grandchildren under the age of 21 who are travelling with you can travel for free. Some visa holders and Australians already overseas can also be covered. <a href="http://service.travelinsurancedirect.com.au/customer/portal/articles/526821-who-can-buy-">Learn more</a></p>'
+      }); 
+      $('a.clickTipactivities').aToolTip({
+          clickIt: true,
+          tipContent: '<h4>100 sports activities covered</h4><p>Activities such as hiking and cycling are automatically covered, while snow sports can be selected as an option. <a href="http://service.travelinsurancedirect.com.au/customer/portal/articles/721221-travel-insurance-for-sports-and-activities">Learn more</a></p>'
+      }); 
+      $('a.clickTipgear').aToolTip({
+          clickIt: true,
+          tipContent: '<h4>Protect your tech toys</h4><p>Laptops, tablets and cameras are covered up to $4,000. Your phone and all other items are up to $700. Add additional coverage on valuable items as an option. <a href="http://service.travelinsurancedirect.com.au/customer/portal/articles/526847-cover-for-phones-cameras-and-laptops">Learn more</a></p>'
+      }); 
+      $('a.clickTipmotorbike').aToolTip({
+          clickIt: true,
+          tipContent: '<h4>Wheely good coverage</h4><p>We don’t charge you extra if you’re riding on two wheels, you just need to have the right license and the right gear. <a href="http://service.travelinsurancedirect.com.au/customer/portal/articles/528596-travel-insurance-for-motorcycle-riding">Learn more</a></p>'
+      });   
+    }); 
+  </script>
+<style>
+#aToolTip {
+  position: absolute;
+  display: none;
+  z-index: 50000;
+}
+  #aToolTip .aToolTipContent {
+    position:relative;
+    margin:0;
+    padding:0;
+  }
+.defaultTheme {
+  border:1px solid #ddd;
+  background:#ffffff;
+  margin:0;
+  padding: 16px; 
+  max-width: 400px;  
+  -moz-border-radius: 4px 4px 4px 0;
+  -webkit-border-radius: 4px 4px 4px 0;
+  -khtml-border-radius: 4px 4px 4px 0;
+  border-radius: 4px 4px 4px 0;
   
+  -moz-box-shadow: 0px 2px 5px #777; /* for Firefox 3.5+ */
+  -webkit-box-shadow: 0px 2px 5px #777; /* for Safari and Chrome */
+  box-shadow: 0px 2px 5px #777; /* for Safari and Chrome */
+}
+  .defaultTheme #aToolTipCloseBtn {
+    display:block;
+    height:26px;
+    width:26px;
+    background:url(//www.travelinsurancedirect.com.au/Media/Default/click-tips/close-icon.png) no-repeat;
+    text-indent:-9999px;
+    outline:none;
+    position:absolute;
+    top:-10px;
+    right:-10px;
+    margin:2px;
+    padding:4px;
+  }
+  #aToolTip h5, #aToolTip p {
+    font-weight: 300;
+    width: 100%;
+    display: block;
+    color: #777;
+  } 
+  ul#quickanswers, ul#quickanswers li {
+    list-style: none;
+  }
+  ul#quickanswers li {
+    min-height: 150px;
+    padding-left: 70px;
+  }
+  ul#quickanswers li img, ul#quickanswers li h4, ul#quickanswers li p {
+    float: left;
+    display: inline-block;
+    margin-bottom:4px;
+    width: 100%;
+  }
+   ul#quickanswers li p {
+        color: #777;
+   }
+  ul#quickanswers li p.quickinfo {
+    color: #00bae4;
+    padding-left: 24px;
+    background-position-y: 4px;
+  }
+ul#quickanswers li.medicalconditions {
+  background: url('//www.travelinsurancedirect.com.au/Media/Default/click-tips/hh-pregnancy.png') no-repeat top left;
+}
+ul#quickanswers li.cruise {
+  background: url('//www.travelinsurancedirect.com.au/Media/Default/click-tips/hh-cruise.png') no-repeat top left;
+}
+ul#quickanswers li.covered {
+  background: url('//www.travelinsurancedirect.com.au/Media/Default/click-tips/hh-kids.png') no-repeat top left;
+}
+ul#quickanswers li.activities {
+  background: url('//www.travelinsurancedirect.com.au/Media/Default/click-tips/hh-sports.png') no-repeat top left;
+}
+ul#quickanswers li.laptops {
+  background: url('//www.travelinsurancedirect.com.au/Media/Default/click-tips/hh-tech.png') no-repeat top left;
+}
+ul#quickanswers li.motorbikes {
+  background: url('//www.travelinsurancedirect.com.au/Media/Default/click-tips/hh-motorbike.png') no-repeat top left;
+}
+.quickinfo {
+  background: url('//www.travelinsurancedirect.com.au/Media/Default/click-tips/hh-question.png') no-repeat top left;
+}
+</style>
+
+  <ul class="row" id="quickanswers">
+    <li class="small-12 medium-6 large-4 column medicalconditions">
+      <a href="#" class="clickTipmedical" >
+        <h4>Existing medical conditions  </h4>
+        <p>Asthma, diabetes or pregnant?</p>
+        <p class="quickinfo">Quick info</p>
+      </a>
+    </li>
+    <li class="small-12 medium-6 large-4 column cruise">
+      <a href="#" class="clickTipcruising" >
+        <h4>Going on a cruise </h4>
+        <p>Here’s what to do</p>
+        <p class="quickinfo">Quick info</p>
+      </a>
+    </li>
+    <li class="small-12 medium-6 large-4 column covered">
+      <a href="#" class="clickTipcover" >
+        <h4>Who’s covered?</h4>
+        <p>Kids, 457s or already overseas</p>
+        <p class="quickinfo">Quick info</p>
+      </a>
+    </li>
+    <li class="small-12 medium-6 large-4 column activities">
+      <a href="#" class="clickTipactivities" >
+        <h4>Sports & activities</h4>
+        <p>Winter sports, cycling and more </p>
+        <p class="quickinfo">Quick info</p>
+      </a>
+    </li>
+    <li class="small-12 medium-6 large-4 column laptops">
+      <a href="#" class="clickTipgear" >
+        <h4>Phones, laptops & cameras</h4>
+        <p>Ensure your gear is covered</p>
+        <p class="quickinfo">Quick info</p>
+      </a>
+    </li>
+    <li class="small-12 medium-6 large-4 column motorbikes">
+      <a href="#" class="clickTipmotorbike" >
+        <h4>Motorbikes</h4>
+        <p>On tour or hiring a scooter?</p>
+        <p class="quickinfo">Quick info</p>
+      </a>
+    </li>
+  </ul>
+<script>
+$(function() {
+  $('a.clickTipmedical').on('click', function() {
+    wng.googleAnalytics.trackEvent('QuickQuestion', 'Existing medical conditions');
+  })
+  $('a.clickTipcruising').on('click', function() {
+    wng.googleAnalytics.trackEvent('QuickQuestion', 'Going on a cruise');
+  })
+  $('a.clickTipcover').on('click', function() {
+    wng.googleAnalytics.trackEvent('QuickQuestion', 'Whos covered?');
+  })
+  $('a.clickTipactivities').on('click', function() {
+    wng.googleAnalytics.trackEvent('QuickQuestion', 'Sports  activities');
+  })
+  $('a.clickTipgear').on('click', function() {
+    wng.googleAnalytics.trackEvent('QuickQuestion', 'Phones laptops cameras');
+  })
+  $('a.clickTipmotorbike').on('click', function() {
+    wng.googleAnalytics.trackEvent('QuickQuestion', 'Motorbikes');
+  })
+})
+</script>
+</div>  
+<!--  Quick Answers END -->
+
+
+
+
 <div class="content-panel content tripwise-panel">
   <div class="row">
     <div class="small-12 column">

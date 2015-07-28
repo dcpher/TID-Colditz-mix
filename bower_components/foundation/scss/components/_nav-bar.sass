@@ -1,9 +1,12 @@
 // nav-bar
 
 nav
-  .logo
-    height: 40px
-    width: 154px
+  .title-area
+    a:hover
+      background-color: $color-white
+    .logo
+      height: 40px
+      width: 154px  
   .top-bar-section ul li
     &.sign-in a
       font-weight: 500
@@ -33,7 +36,7 @@ nav
     a
       color: $color-white
 
-    // TODO: Do this in the way Foundation would like us to
+  // TODO: Do this in the way Foundation would like us to
   @media all and (max-width: 780px) and (min-width: 642px)
     &.top-bar section.top-bar-section ul.right li a
       padding: 0 rem-calc(8)

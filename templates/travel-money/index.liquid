@@ -1,0 +1,252 @@
+{% block title %}TID Travel Money Card{% endblock %}
+{% block content %}
+<style>
+
+  #header.header-panel p {
+    font-size: 1.125rem;
+    letter-spacing: 0;
+  }
+  #header.header-panel p.highlight {
+    font-size: 2rem;
+    letter-spacing: -.0625rem
+  }
+  #header.header-panel { padding-bottom: 0; } 
+  #header-actions { 
+    position: relative;
+    bottom: 0px; left: 0; right: 0;
+    /*    opacity: .75;*/
+    
+    filter: alpha(opacity=90);
+    background-color: rgba(60, 28, 100, 0.75);
+    padding: 10px 0;
+    margin-top: 2rem;
+  }
+  #header-actions .button { margin-bottom: 0; }
+  #header-actions p { padding-top: 8px; padding-bottom: 6px;  margin-bottom: 0px; color: #FFFFFF; }
+  #header .row { position: relative; } 
+  #header-TMC { position: absolute; bottom: 0; right: 1.5rem; }
+  
+  #steps h3:before { font-size: 30px; color: #FFFFFF; display: inline-block; width: 42px; height: 42px; text-align: center; margin-right: 1rem; -webkit-border-radius: 21px; -moz-border-radius: 21px; -ms-border-radius: 21px; border-radius: 21px; padding-top: 5px; }
+  #steps h3 { border-bottom: 4px solid; padding-bottom: 0.75rem; }
+  #steps h3.step-1:before {
+    content: "1";
+    background-color: #ea3091;
+  }
+  #steps h3.step-2:before {
+    content: "2";
+    background-color: #7961ab;
+  }
+  #steps h3.step-3:before {
+    content: "3";
+    background-color: #88166b;
+  }
+  /* why benefits grid block */
+  .why-benefits li.avoid-fees { background-image: url(/Media/Default/travel-money/icon-avoid-fees.png) }
+  .why-benefits li.ten-currencies { background-image: url(/Media/Default/travel-money/icon-ten-currencies.png) }
+  .why-benefits li.easy-to-use { background-image: url(/Media/Default/travel-money/icon-easy-to-use.png) }
+  .why-benefits li.safer-than-cash { background-image: url(/Media/Default/travel-money/icon-safer-than-cash.png) }
+  .why-benefits li.manage-online { background-image: url(/Media/Default/travel-money/icon-manage-online.png) }
+  .why-benefits li.medical-claims { background-image: url(/Media/Default/travel-money/icon-medical-claims.png) }
+  
+  /* travel smart benefits grid block */
+  .travel-smart-benefits li p { font-size: 0.9rem; line-height: 1.1; padding-top: 0.5rem; } 
+  
+  /* tips for using your card */
+  .tips li.local-merchant { background-image: url(/Media/Default/travel-money/icon-local-merchants.png) }
+  .tips li.pre-authorisation { background-image: url(/Media/Default/travel-money/icon-pre-authorisation.png) }
+  .tips li.need-help { background-image: url(/Media/Default/travel-money/icon-need-help.png) }
+  
+  
+  @media all and (min-width: 40em) {
+    #header {
+      background-image: url('/Media/Default/travel-money/tid-tmc-header-bg.jpg');
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+  }
+  @media all and (max-width: 64em) {
+    #header {
+      background-image: url('/Media/Default/travel-money/tid-tmc-header-bg.jpg');
+    }
+    #steps h3 { font-size: 1.25rem; }
+    #steps h3:before { font-size: 1.5rem; width: 32px; height: 32px; }
+  }
+  @media all and (max-width: 40em) {
+    #header {
+      background-image: url('/Media/Default/travel-money/tid-tmc-header-bg.jpg');
+      padding-top: 1.5rem;
+    }
+    #header-TMC { position: relative; bottom: inherit; right: inherit; }
+  }
+
+</style>
+<article class="content-item">
+  <div class="header-panel purple-panel" id="header">
+    <div class="row">
+      <div class="small-12 medium-8 large-9 column">
+        <h1>Grab your free TID Travel Money Card</h1>
+        <p class="white highlight">The smart way to spend &amp; save overseas.</p>
+        <a href="" class="button pink large">Get your free card</a>
+        <p>Exclusive to all TID customers</p>
+      </div>
+      <div class="small-12 medium-4 large-3 column" id="header-TMC">
+        <img src="/Media/Default/travel-money/tid-tmc-header.png">
+        <p>Delivered to your door. </p>
+      </div>
+    </div>
+    
+    <div class="" id="header-actions">
+      <div class="row">
+        <div class="small-12 medium-6 columns">
+          <p>Already have your card? Activate now to get started.</p>
+        </div>
+        <div class="small-12 medium-6 columns">
+          <a href="" class="button purple medium">Activate now</a>
+          <a href="" class="button purple medium">Load up now</a>
+        </div> 
+      </div>
+    </div>
+  </div>
+  
+  
+  <!-- 3 steps -->
+  <div class="content-panel">
+    <div class="row" id="steps">
+      <div class="small-12 medium-4 large-4 columns">
+        <h3 class="pink step-1">Order your card</h3>
+      </div>
+      <div class="small-12 medium-4 large-4 columns">
+        <h3 class="purple step-2">Activate your card</h3>
+      </div>
+      <div class="small-12 medium-4 large-4 columns">
+        <h3 class="dark-pink step-3">Load up and go!</h3>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="content-panel">
+    <div class="row header">
+      <div class="small-12 columns">
+        <h2 class="text-center small-only-text-left purple">Why it’s the smart way to spend</h2>
+
+        <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3 why-benefits">
+          <li class="text-with-img avoid-fees">
+            <h4>Avoid fees </h4>
+            <p>Lock in your exchange rate and pay in the local currency to avoid surprise fees.</p>
+          </li>
+          <li class="text-with-img ten-currencies">
+            <h4>10 currencies </h4>
+            <p>Load your card with up to 10 different currencies</p>
+          </li>
+          <li class="text-with-img easy-to-use">
+            <h4>Easy to use </h4>
+            <p>Use like a debit card at 36 million destinations worldwide.</p>
+          </li>
+          <li class="text-with-img safer-than-cash">
+            <h4>Safer than cash </h4>
+            <p>Your personalised card is not linked to any bank accounts and is protected against frauds, scams and skimming.</p>
+          </li>
+          <li class="text-with-img manage-online">
+            <h4>Manage online </h4>
+            <p>Access your account online or via TID’s Tripwise App where you can easily top up and manage</p>
+          </li>
+          <li class="text-with-img medical-claims">
+            <h4>Medical &amp; Claims</h4>
+            <p>TID can load extra funds directly onto your card when you claim.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <div class="content-panel purple-panel">
+    <div class="row">
+      <div class="small-12 medium-3 large-3 columns"><img src="/Media/Default/travel-money/fh-brenden-esposito.jpg"></div>
+      <div class="small-12 medium-6 large-6 columns">
+        <h3>Everytime you load up, we’ll make a donation!</h3>
+        <p>When you load funds on your TID Travel Money Card, TID will make a donation to The Fred Hollows Foundation. Let’s work together to put an end to avoidable blindness.</p>
+      </div>
+      <div class="small-12 medium-3 large-3 columns"><img src="/Media/Default/travel-money/fh-logo.png"></div>
+    </div>
+  </div>
+  
+    <div class="content-panel">
+    <div class="row">
+      <div class="small-12 columns"><h2 class="small-only-text-left text-center purple">Travel smart with TID</h2></div>
+      <div class="small-12 medium-6 large-6 columns">
+        <p>With no upfront card costs or hidden fees, TID’s Travel Money Card makes your money go further. By spending in the local currency, you won’t get slugged with hidden transaction or currency conversion fees when you make a purchase or withdraw cash from an ATM. </p>
+        <ul class="small-block-grid-3 medium-block-grid-3 large-block-grid-5 travel-smart-benefits">
+          <li class="text-center">
+            <img src="/Media/Default/travel-money/icon-phrase-books.png">
+            <p>Phrase Books</p>
+          </li>
+          <li class="text-center">
+            <img src="/Media/Default/travel-money/icon-travel-tips.png">
+            <p>Travel Tips</p>
+          </li>
+          <li class="text-center">
+            <img src="/Media/Default/travel-money/icon-travel-alerts.png">
+            <p>Trip Alerts</p>
+          </li>
+          <li class="text-center">
+            <img src="/Media/Default/travel-money/icon-local-help.png">
+            <p>Local Help</p>
+          </li>
+          <li class="text-center">
+            <img src="/Media/Default/travel-money/icon-policy.png">
+            <p>Your Policy</p>
+          </li>
+        </ul>
+        <a class="button pink">Get your free card</a>
+      </div>
+      <div class="small-12 medium-6 large-6 columns"><img src="/Media/Default/travel-money/tid-tmc-iphone.jpg"></div>
+    </div>
+  </div>
+  
+    <div class="content-panel light-grey-panel">
+    <div class="row">
+      <div class="small-12 columns"><h2 class="small-only-text-left text-center purple">How your TID Travel Money Card works</h2></div>
+      <div class="small-12 medium-5 large-5 columns small-only-text-left text-center">
+        <img src="/Media/Default/travel-money/tid-tmc-header.png">
+        <a href="" class="button pink">Get your free card</a>
+      </div>
+      <div class="samll-12 medium-7 columns">
+        <p>With no upfront card costs or hidden fees, TID’s Travel Money Card makes your money go further. By spending in the local currency, you won’t get slugged with hidden transaction or currency conversion fees when you make a purchase or withdraw cash from an ATM.</p>
+        <p>Once you have received and activated your card, simply load money on using Bank Transfer or BPAY. Pick a single currency or several to lock in the exchange rate so you know exactly how much you have to spend on your holiday. You can then use your card like debit card to make purchases or withdraw cash.</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="content-panel">
+    <div class="row">
+      <div class="small-12 columns"><h2 class="small-only-text-left text-center purple">Tips for using your TID Travel Money Card</h2></div>
+      <div class="small-12 medium-12 large-10 large-offset-1 end columns">
+        <ul class="small-block-grid-1 tips">
+          <li class="text-with-img local-merchant">
+            <h4>DCC - Dynamic Currency Conversion</h4>
+            <p>Local merchants may ask if you’d prefer to pay in AUD or the another currency, this is called ‘DCC’ Dynamic Currency Conversion which will cost you more so always choose the local currency to avoid foreign exchange fees.</p>
+          </li>
+          <li class="text-with-img pre-authorisation">
+            <h4>Pre-authorisation</h4>
+            <p>If you need to book rental cars or hotels, be careful using your card as a security deposit. Your money can be held for up to 30 days so keep an eye on your account balance.</p>
+          </li>
+          <li class="text-with-img need-help">
+            <h4>Need help?</h4>
+            <p>From AUS, call 1800 098 231. From overseas call +44 207 649 9404. Online tid.com.au/travel-money </p>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+  
+  
+  
+  
+</article>
+
+{% endblock %}

@@ -2,51 +2,69 @@
   
 .blue-panel
   //@include panel($bg: $color-blue, $adjust: true)  
-  +panel($bg: $color-blue, $adjust: true)
-
+  //+panel($bg: $color-blue, $adjust: true)
+  background-color: $color-blue
 .pink-panel
-  +panel($bg: $color-pink, $adjust: true)
-
+  //+panel($bg: $color-pink, $adjust: true)
+  background-color: $color-pink
 .purple-panel
-  +panel($bg: $color-purple, $adjust: true)
+  //+panel($bg: $color-purple, $adjust: true)
+  background-color: $color-purple
   
 .teal-panel
-  +panel($bg: $color-teal, $adjust: true)
+  //+panel($bg: $color-teal, $adjust: true)
+  background-color: $color-teal
   
 .red-panel
-  +panel($bg: $color-red, $adjust: true)
+  //+panel($bg: $color-red, $adjust: true)
+  background-color: $color-red
   
 .yellow-panel
-  +panel($bg: $color-yellow, $adjust: true)
+  //+panel($bg: $color-yellow, $adjust: true)
+  background-color: $color-yellow
   
+.blue-panel, .pink-panel, .purple-panel, .teal-panel, .red-panel, .dark-blue-panel, .dark-pink-panel, .dark-purple-panel, .dark-teal-panel, .dark-red-panel, .dark-yellow-panel
+  b, div, h1, h2, h3, h4, h5, p, span
+    color: $color-white
 
+
+ 
 // Dark panels 
 
 .dark-blue-panel
-  +panel($bg: $color-dark-blue, $adjust: true)
+  //+panel($bg: $color-dark-blue, $adjust: true)
+  background-color: $color-dark-blue
 
 .dark-pink-panel
-  +panel($bg: $color-dark-pink, $adjust: true)
+  //+panel($bg: $color-dark-pink, $adjust: true)
+  background-color: $color-dark-pink
 
 .dark-purple-panel
-  +panel($bg: $color-dark-purple, $adjust: true)
+  //+panel($bg: $color-dark-purple, $adjust: true)
+  background-color: $color-dark-purple
   
 .dark-teal-panel
-  +panel($bg: $color-dark-teal, $adjust: true)
+  //+panel($bg: $color-dark-teal, $adjust: true)
+  background-color: $color-dark-teal
   
 .dark-red-panel
-  +panel($bg: $color-dark-red, $adjust: true)
+  //+panel($bg: $color-dark-red, $adjust: true)
+  background-color: $color-dark-red
   
 .dark-yellow-panel
-  +panel($bg: $color-dark-yellow, $adjust: true)
+  //+panel($bg: $color-dark-yellow, $adjust: true)
+  background-color: $color-dark-yellow
   
   
 // Additional Panel colours
 
-.grey-panel
-  +panel($bg: $color-light-grey, $adjust: false)
+.grey-panel, .light-grey-panel
+  //+panel($bg: $color-light-grey, $adjust: false)
   //@include grid-row($behavior: nest)
+  background-color: $color-light-grey
 
 .dark-grey-panel
-  +panel($bg: $color-dark-grey, $adjust: true)
+  //+panel($bg: $color-dark-grey, $adjust: true)
+  background-color: $color-dark-grey
+  
   
