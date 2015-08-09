@@ -1,0 +1,199 @@
+// sharetools
+#socialarea 
+  float: left
+  margin-bottom: 0
+
+#share-icons 
+  float: left
+  a
+    &.twitter,
+    &.facebook,
+    &.linkedin,
+    &.pinterest,
+    &.gplus, 
+    &.stumbleupon,
+    &.plus
+      float: left
+      margin-right: 10px
+      background: #c4c4c4
+      color: #fff
+      text-decoration: none
+      font-size: 20px
+      font-family: "FontAwesome"
+      line-height: 24px
+      margin-bottom: 10px
+      padding: 10px 14px
+      +border-radius(3px)
+      &:hover
+        cursor: pointer 
+    &.twitter 
+      background: #69c1f3
+    &.twitter:hover 
+      background: #5ba7d2
+    &.facebook 
+      background: #2c4066
+    &.facebook:hover 
+      background: #415f9a
+    &.linkedin 
+      background: #0074a1      
+    &.linkedin:hover 
+      background: #025676
+    &.pinterest 
+      background: #cb2027
+    &.pinterest:hover 
+      background: #8f2027
+    &.gplus 
+      background: #eb4026
+    &.gplus:hover 
+      background: #c7341e
+    &.stumbleupon 
+      background: #ea4b24
+    &.stumbleupon:hover 
+      background: #cb4321
+    &.plus,
+    &.plus.open 
+      background: #c5c5c5
+    &.plus:hover,
+    &.plus.open:hover 
+      background: #848688
+    &.plus:after 
+      content: "\f067"       
+    &.plus.open:after 
+      content: "\f068"
+
+    &.twitter,
+    &.facebook
+      span 
+        font-size: 16px
+        font-weight: 300
+        color: $color-white
+        font-family: 'Museo Sans', Helvetica, Arial, sans-serif
+        margin-top: 0
+        margin-right: 16px
+        float: left
+
+    
+#sharedcount 
+  float: left
+  color: $color-dark-grey
+  text-align: left
+  margin-bottom: 0
+  position: relative
+  
+  p 
+    text-transform: uppercase
+    font-size: 12px
+    color: $color-mid-grey
+    margin-top: 2rem
+    margin-bottom: 0
+    float: left
+    display: inline-block
+    line-height: 1.1
+    margin-right: rem-calc(8px)
+    //position: absolute // incase shares wrap
+    //bottom: 16px
+    
+  #total
+    font-size: rem-calc(48)
+    margin-bottom: rem-calc(8px)
+    margin-right: rem-calc(0)
+    padding-top: rem-calc(4px)
+    float: left
+    display: inline-block
+    line-height: 1.1
+    &:after
+      content: "/"
+      color: lighten($color-mid-grey, 30%)
+      margin-right: 0px
+
+      
+
+@media all and (max-width: 860px)
+  #share-icons 
+    a
+      &.twitter,
+      &.facebook
+        span 
+          display: none
+      &.facebook:before,
+      &.twitter:before
+        font-size: 16px
+        font-weight: 300
+        font-family: "Ubuntu"
+        margin-top: 0
+        margin-right: 8px
+        float: left
+      &.twitter:before
+        content: "Tweet"
+      &.facebook:before
+        content: "Share"
+
+@media all and (max-width: 630px)
+  #share-icons
+    //width: 280px
+@media all and (max-width: 500px)
+  #share-icons 
+    width: 130px
+    a
+      &.plus
+        display: none
+      &.facebook:before,
+      &.twitter:before
+        display: none
+
+// Small widget
+#sharetools-small
+  margin-top: 0px
+  float: left
+  margin-left: 20px
+  #share-icons 
+    a
+      &.twitter,
+      &.facebook
+        span 
+          display: none
+      &.facebook:before,
+      &.twitter:before
+        display: none
+          
+
+@media all and (max-width: 700px)
+  #sharetools-small
+    width: 100%
+    padding-top: 10px
+    padding-bottom: 8px
+    margin: 0 0 0 20
+    #sharedcount 
+      background: url() no-repeat right top
+      margin-right: rem-calc(8px)
+      p
+        margin-right: rem-calc(24px)
+
+    #share-icons
+      margin-top: 3px
+
+
+// Long widget
+#sharetools-long 
+  width: 100%
+  float: left
+  padding-top: 16px
+  padding-bottom: 8px
+  margin: 0
+  background-color: $color-light-grey
+  margin-bottom: 40px
+  //box-shadow: #ccc 0px 0px 12px
+  #sharedcount 
+    margin-right: rem-calc(8px)
+    p
+      margin-right: rem-calc(24px)   
+  #share-icons
+    margin-top: 3px
+    margin-bottom: 0px
+  #total
+    line-height: 46px
+  .normal-content 
+    margin-top: 0
+
+
+

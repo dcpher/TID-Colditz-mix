@@ -1,0 +1,317 @@
+{% block title %}TID Travel Money Card - Competition Winners{% endblock %}
+{% block content %}
+
+
+<style>
+
+  #header.header-panel p {
+    font-size: 1.125rem;
+    letter-spacing: 0;
+  }
+  #header.header-panel p.highlight {
+    font-size: 2rem;
+    letter-spacing: -.0625rem
+  }
+  #header.header-panel p.small {
+    font-size: 0.95rem;
+    letter-spacing: 0rem
+  }
+  #header .text-with-img { margin-bottom: 0; padding-bottom: 0; } 
+  #header .panel { margin-bottom: 2rem; }
+  #header.header-panel { padding-bottom: 0; }
+  
+  /* prizes grid block */
+  #header-prize-panel { 
+    position: relative;
+    bottom: 0px; left: 0; right: 0;
+    background-color: rgba(60, 28, 100, 0.75);
+    padding: 10px 0;
+    margin-top: 2rem;
+  }
+  .prizes li.big-prizes { background-image: url(/Media/Default/travel-money/icon-big-prize-inverse.png) } 
+  .prizes li.small-prizes { background-image: url(/Media/Default/travel-money/icon-small-prize-inverse.png) } 
+  .prizes li.chances { background-image: url(/Media/Default/travel-money/icon-calendar-inverse.png) }
+  
+  /* winners cards */
+  /* #winners .winner-card { padding: 0 .625rem 1.25rem 0 ; }*/
+  #winners .winner-card img { padding-bottom: 1rem; } 
+  #winners { border-bottom: 1px solid #eeeeee; border-top: 1px solid #eeeeee; padding: 2rem 0 0 0; margin-top: 2rem; }
+  /* competition-dates-list */
+  #days, #hours, #mins { color: #ea3091; }
+  .competition-dates-list span { display: block; margin-bottom: .5rem; }
+  .content-panel { padding-bottom: 1.5rem; }
+  
+  /* why benefits grid block */
+  .why-benefits li.avoid-fees { background-image: url(/Media/Default/travel-money/icon-avoid-fees.png) }
+  .why-benefits li.ten-currencies { background-image: url(/Media/Default/travel-money/icon-ten-currencies.png) }
+  .why-benefits li.easy-to-use { background-image: url(/Media/Default/travel-money/icon-easy-to-use.png) }
+  .why-benefits li.safer-than-cash { background-image: url(/Media/Default/travel-money/icon-safer-than-cash.png) }
+  .why-benefits li.manage-online { background-image: url(/Media/Default/travel-money/icon-manage-online.png) }
+  .why-benefits li.medical-claims { background-image: url(/Media/Default/travel-money/icon-medical-claims.png) }
+
+  
+  @media all and (min-width: 40em) {
+    #header {
+      background-image: url('/Media/Default/travel-money/tid-tmc-header-bg.jpg');
+      background-position: top center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      min-height: 380px;
+    }
+
+  }
+  @media all and (max-width: 64em) {
+    #header {
+      background-image: url('/Media/Default/travel-money/tid-tmc-header-bg.jpg');
+    }
+
+  }
+  @media all and (max-width: 40em) {
+    #header {
+      background-image: url('/Media/Default/travel-money/tid-tmc-header-bg.jpg');
+      padding-top: 1.5rem;
+    }
+    #header .panel { margin-bottom: 1rem; }
+    #header .panel .columns { margin-bottom: 0; padding: 0;  }
+    /*  show background icons on mobile  */
+    #header .prizes li.text-with-img { background-repeat: no-repeat; background-position: 0 16px; background-size: 48px 48px; }
+    #header .prizes li.text-with-img p, #header .prizes li.text-with-img h4 { padding-left: 64px; }
+    .prizes li.text-with-img.big-prizes { background-image: url(/Media/Default/travel-money/icon-big-prize-inverse.png);}
+    .prizes li.text-with-img.small-prizes { background-image: url(/Media/Default/travel-money/icon-small-prize-inverse.png);}
+    .prizes li.text-with-img.chances { background-image: url(/Media/Default/travel-money/icon-calendar-inverse.png);}
+  }
+
+</style>
+<article class="content-item">
+  <div class="header-panel purple-panel" id="header">
+    <div class="row">
+      <div class="small-12 medium-7 columns">
+        <h1>TID Travel Money Card Winners</h1>
+        <p class="highlight">Let TID put some extra spending money on your card.</p>
+      </div>
+    </div>
+    <div class="" id="header-prize-panel">
+      <div class="row">
+        <div class="small-12 columns">
+          <ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-3 prizes">
+              <li class="text-with-img big-prizes">
+                <p class="small">Big Prizes</p>
+                <h4>4 x $1,500</h4>
+                <p>1 winner wins $1500 each week</p>
+              </li>
+              <li class="text-with-img small-prizes">
+                <p class="small">Small Prizes</p>
+                <h4>200 x $100</h4>
+                <p>50 winners get $100 each draw</p>
+              </li>
+              <li class="text-with-img chances">
+                <p class="small">Weekly Draw</p>
+                <h4>4 x Chances</h4>
+                <p>New chance to win each week</p>
+              </li>
+            </ul>
+        </div> 
+      </div>
+    </div>
+  </div>
+  
+  
+<!-- Share Tools -->
+  <div id="sharetools-long">
+    <div class="row">
+      <div class="small-12 columns">
+        <div id="socialarea">     
+          <div id="sharedcount">
+            <div id="total">323</div>
+            <p>Shares</p> 
+          </div>
+          <div id="share-icons">
+            <a class="facebook" target="_blank"><span>Share on Facebook</span>&#xf09a;</a>
+            <a class="twitter" target="_blank"><span>Share on Twitter</span>&#xf099;</a>
+            <a class="pinterest">&#xf231;</a>
+            <a class="gplus" target="_blank">&#xf0d5;</a>
+            <a class="linkedin" target="_blank">&#xf0e1;</a>
+            <a class="stumbleupon" target="_blank">&#xf1a4;</a>
+            <a class="plus"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- 3 steps -->
+  <div class="content-panel">
+    <div class="row">
+      <div class="small-12 medium-8 columns">
+        <h2 class="purple">You've arrived early!</h2>
+        <h3>We haven't drawn the winners yet, but watch this space and pop back soon to find out if you're Travel Money card is just a TID lucky.</h3>    
+      </div>
+      
+      <!--  Countdown script  -->
+      <script type="text/javascript">
+        var year = 2015; 
+        var month = 09; 
+        var day = 4;
+        var hour= 9; 
+        var min= 0; 
+        var sec= 0;
+      </script>
+      <script type="text/javascript" src="/Media/Default/scripts/js/counter-countdown.js"></script>
+      <div class="small-12 medium-4 large-3 large-push-1 columns">
+        <div class="panel grey-panel">
+          <h4>Next draw in...</h4>
+          <ul id="countbox">
+          </ul>
+        </div>
+      </div>
+      
+      <div class="small-12 columns">
+      
+        <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-4 text-center" id="winners">
+          <li class="winner-card">
+            <img alt="" src="/Media/Default/travel-money/winner-thumb-female.jpg">
+            <h4>Draw 1</h4>
+            <p>Winner Announced on 4th Sept 2015</p>
+          </li>
+          <li class="winner-card">
+            <img alt="" src="/Media/Default/travel-money/winner-thumb-male.jpg">
+            <h4>Draw 2</h4>
+            <p>Winner Announced on 11th Sept 2015</p>
+          </li>
+          <li class="winner-card">
+            <img alt="" src="/Media/Default/travel-money/winner-thumb-female.jpg">
+            <h4>Draw 3</h4>
+            <p>Winner Announced on 18th Sept 2015</p>
+          </li>
+          <li class="winner-card">
+            <img alt="" src="/Media/Default/travel-money/winner-thumb-male.jpg">
+            <h4>Draw 4</h4>
+            <p>Winner Announced on 25th Sept 2015</p>
+          </li>
+        </ul>
+        
+      </div>
+    </div>
+    
+
+  </div>
+
+
+  <div class="content-panel light-grey-panel" id="">
+    <div class="row">
+      <div class="small-12 medium-5 large-4 medium-offset-1 large-offset-1 columns application-panel text-center">
+        <h3 class="purple">Have you entered?</h3>
+        <p>If you've entered and applied for your card don't forget to activate it to be in the running.</p>
+        <a href="" class="button pink">Activate your card</a>
+      </div>
+      <div class="small-12 medium-5 large-4 large-offset-2 end columns application-panel text-center">
+        <h3 class="purple">Not entered yet?</h3>
+        <p>Good news! There is still time to get your card and you could win up to $1500 for your next trip.</p>
+        <a href="" class="button pink">Get your card</a>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="content-panel">
+    <div class="row header">
+      <div class="small-12 columns">
+        <h2 class="text-center small-only-text-left purple">Why it’s the smart way to spend</h2>
+
+        <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3 why-benefits">
+          <li class="text-with-img avoid-fees">
+            <h4>Avoid fees </h4>
+            <p>Lock in your exchange rate and pay in the local currency to avoid surprise fees.</p>
+          </li>
+          <li class="text-with-img ten-currencies">
+            <h4>10 currencies </h4>
+            <p>Load your card with up to 10 different currencies</p>
+          </li>
+          <li class="text-with-img easy-to-use">
+            <h4>Easy to use </h4>
+            <p>Use like a debit card at 36 million destinations worldwide.</p>
+          </li>
+          <li class="text-with-img safer-than-cash">
+            <h4>Safer than cash </h4>
+            <p>Your personalised card is not linked to any bank accounts and is protected against frauds, scams and skimming.</p>
+          </li>
+          <li class="text-with-img manage-online">
+            <h4>Manage online </h4>
+            <p>Access your account online or via TID’s Tripwise App where you can easily top up and manage</p>
+          </li>
+          <li class="text-with-img medical-claims">
+            <h4>Medical &amp; Claims</h4>
+            <p>TID can load extra funds directly onto your card when you claim.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="small-12 columns text-center">
+        <a class="button purple">Find out more</a>
+      </div>
+    </div>
+
+  </div>
+  
+  
+<!-- Share Tool Scripts -->
+  <script>
+
+      // Build the target srcs for the icons on click.
+      var socialMedialUrl          = window.location;
+
+      var facebookParamU           = "";
+
+      var twitterParamText         = "";
+
+      var pinParamDescription      = "TID Travel Money Card Winners";
+      var pinParamMedia            = "";
+
+      var linkedParamTitle         = "";
+      var linkedParamDescription   = "";
+
+      $(function() {
+        var $plus = $(".plus");
+        var $toggleableButtons = $(".pinterest, .gplus, .linkedin, .stumbleupon").hide();
+        $plus.on("click", function() {
+          var $this = $(this);
+          $toggleableButtons.toggle();
+          $plus.toggleClass("open");
+        });
+      });
+
+      $(function() {
+        var $si = $(".socialicon");
+        var targetUrl = "";
+        $si.on("click", function() {
+          var $this = $(this);
+          if ($this.hasClass("facebook")) {
+            targetUrl = "http://www.facebook.com/share.php?u=" + facebookParamU;
+            window.open(targetUrl, 'name', 'width=600,height=400');
+          }
+          else if ($this.hasClass("twitter")) {
+            targetUrl = "https://twitter.com/intent/tweet?text=" + twitterParamText;
+            window.open(targetUrl, 'name', 'width=600,height=400');
+          }
+          else if ($this.hasClass("pinterest")) {
+            targetUrl = "http://pinterest.com/pin/create/button?description=" + pinParamDescription + "&media=" + pinParamMedia; + "&url=" + socialMedialUrl; 
+            window.open(targetUrl, 'name', 'width=755,height=400,scrollbars=no');
+          }
+          else if ($this.hasClass("gplus")) {
+            targetUrl = "https://plus.google.com/share?url=" + socialMedialUrl;
+            window.open(targetUrl, 'name', 'width=600,height=400');
+          }
+          else if ($this.hasClass("linkedin")) {
+            targetUrl = "https://www.linkedin.com/shareArticle?mini=true&url=" + socialMedialUrl + "&title=" + linkedParamTitle + "&summary=" + linkedParamDescription;
+            window.open(targetUrl, 'name', 'width=600,height=400');
+          }
+          else if ($this.hasClass("stumbleupon")) {
+            targetUrl = "http://www.stumbleupon.com/badge/?url=" + socialMedialUrl;
+            window.open(targetUrl, 'name', 'width=600,height=400');
+          }
+        });
+      });
+    </script>
+  
+</article>
+
+{% endblock %}

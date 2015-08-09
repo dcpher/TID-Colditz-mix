@@ -26,7 +26,7 @@
 .blue-panel, .pink-panel, .purple-panel, .teal-panel, .red-panel, .dark-blue-panel, .dark-pink-panel, .dark-purple-panel, .dark-teal-panel, .dark-red-panel, .dark-yellow-panel
   b, div, h1, h2, h3, h4, h5, p, span
     color: $color-white
-
+  
 
  
 // Dark panels 
@@ -42,6 +42,8 @@
 .dark-purple-panel
   //+panel($bg: $color-dark-purple, $adjust: true)
   background-color: $color-dark-purple
+  &.transparent
+    background-color: rgba($color-dark-purple, 0.75)
   
 .dark-teal-panel
   //+panel($bg: $color-dark-teal, $adjust: true)
