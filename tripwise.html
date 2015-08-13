@@ -1,0 +1,131 @@
+ <div class="content-panel content tripwise-panel">
+    <div class="row">
+      <div class="small-12 column">
+
+<!-- A/B Test Code -->
+<style>
+.newtest {
+    display: none;
+}
+</style>
+    
+<script>
+  function splitTestParticipateIn(testName) {
+    var cookieName = 'SplitTest: ' + testName;
+  
+    var numberOfVariations = arguments.length;
+    
+    function getRandomCookieValue() {
+      var variationIndex = Math.floor(Math.random() * numberOfVariations);
+  
+      if (variationIndex == 0) {
+        return 'Control';
+      } else {
+        return 'Variation ' + variationIndex;
+      }
+    }
+  
+    var versionToShow = wng.googleAnalytics.utils.getCookie(cookieName);
+  
+    if (!versionToShow) {
+      versionToShow = getRandomCookieValue();
+      wng.googleAnalytics.utils.setCookie(cookieName, versionToShow, { 'expires':90 });
+      wng.googleAnalytics.trackEvent(cookieName, cookieName + ' - Shown - ' + versionToShow);
+    }
+  
+    var variationVersion = versionToShow.match(/^Variation (\d)/);
+  
+    if (variationVersion) {
+      arguments[Number(variationVersion[1])]();
+    }
+    
+    if ($(".originaltest").is(":visible")) {
+      $("#v2").remove();
+    } else {
+      $("#v1").remove();
+    }
+  }
+</script>
+<!-- A/B Test Code END -->
+
+
+<!-- AB v1 END -->
+<div class="originaltest">
+  <div id="v1">
+
+        <a href="/tripwise-iphone-android-app-from-travel-insurance-direct"><h2 class="medium-text-center blue">Just a TID smarter on your travels</h2></a>
+
+
+  </div>
+</div>
+<!-- AB v1 END -->
+
+<!-- AB v2 -->
+<div class="newtest">
+  <div id="v2">
+
+
+        <a href="/tripwise-iphone-android-app-from-travel-insurance-direct"><h2 class="medium-text-center blue">Save when you buy on Tripwise</h2></a>
+
+
+  </div>
+</div>
+<!-- AB v2 END -->
+
+<script>
+   splitTestParticipateIn('Tripwise Wording v1', function() {
+       $( ".originaltest" ).hide();
+       $( ".newtest" ).show();
+   });
+</script>
+<!-- END AB TEST -->
+
+
+        <div class="row">
+          <div class="small-12 column text-center">
+            <a class="button blue small-expand" href="/tripwise-iphone-android-app-from-travel-insurance-direct">Download Tripwise App</a>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="small-12 medium-4 column middle">
+            <ul class="no-bullet medium-text-right">
+              <li>
+              <a href="/tripwise-iphone-android-app-from-travel-insurance-direct">
+                <h4>Phrase Books</h4>
+                <p>Essential phrases for your destination so you'll be able to direct a taxi, eat with the locals and buy all the souvenirs you'll ever need.</p>
+              </a>
+              </li>
+              <li>
+              <a href="/tripwise-iphone-android-app-from-travel-insurance-direct">
+                <h4>Get help locally</h4>
+                <p>In just a TID bit of trouble? Addresses and contact details for consulates and local emergency services in your destinations.</p>
+              </a>
+              </li>
+            </ul>
+          </div>
+          <div class="small-12 medium-4 column hide-for-small-only text-center"><a href="/tripwise-iphone-android-app-from-travel-insurance-direct"><img src="/Media/Default/images/Oct2014HomeRedesignTest/tripwise.jpg" /></a>
+          </div>
+          <div class="small-12 medium-4 column middle">
+            <ul class="no-bullet">
+              <li>
+              <a href="/tripwise-iphone-android-app-from-travel-insurance-direct">
+                <h4>Trip Notes</h4>
+                <p>Insights, advice and helpful tips for your destinations. Everything you need to avoid trouble and have a better trip.</p>
+              </a>
+              </li>
+              <li>
+              <a href="/tripwise-iphone-android-app-from-travel-insurance-direct">
+                <h4>Your policy</h4>
+                <p>Carry your policy details, emergency contact numbers and claims instructions on your phone. You can even buy a policy before you go.</p>
+              </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+       
+
+      </div>
+    </div>
+  </div>
