@@ -24,8 +24,8 @@
   #header-prize-panel { 
     position: relative;
     bottom: 0px; left: 0; right: 0;
-    background-color: rgba(60, 28, 100, 0.75);
-    padding: 16px 0;
+    background-color: rgba(0, 0, 0, 0.45);
+    padding: 8px 0;
     margin-top: 2rem;
   }
   .prizes li.big-prizes { background-image: url(/Media/Default/travel-money/icon-big-prize-inverse.png) } 
@@ -44,23 +44,32 @@
 
   @media all and (min-width: 40em) {
     #header {
-      background-image: url('/Media/Default/travel-money/tid-tmc-header-bg.jpg');
-      background-position: top center;
+      background-image: url('/Media/Default/travel-money/travelmoney-landing-desktop.jpg');
+      background-position: center right;
       background-size: cover;
       background-repeat: no-repeat;
       min-height: 380px;
+    }
+    #header.header-panel {
+      padding-top: 4rem;
     }
 
   }
   @media all and (max-width: 64em) {
     #header {
-      background-image: url('/Media/Default/travel-money/tid-tmc-header-bg.jpg');
+      background-image: url('/Media/Default/travel-money/travelmoney-landing-tablet.jpg');
+      background-position: center right;
+      background-size: cover;
+      background-repeat: no-repeat;
     }
 
   }
   @media all and (max-width: 40em) {
     #header {
-      background-image: url('/Media/Default/travel-money/tid-tmc-header-bg.jpg');
+      background-image: url('/Media/Default/travel-money/travelmoney-landing-phone.jpg');
+      background-position: center right;
+      background-size: cover;
+      background-repeat: no-repeat;
       padding-top: 1.5rem;
     }
     #header .panel { margin-bottom: 1rem; }
