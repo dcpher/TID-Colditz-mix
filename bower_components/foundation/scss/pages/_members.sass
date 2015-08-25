@@ -1,0 +1,478 @@
+// TID PP Members page
+
+.members
+    $header-text-shadow: 2px 2px 7px rgba(0,0,0,0.4)
+
+    .blue-panel
+        padding-top: rem-calc(50)
+        background: url('i/quote_default_desktop.jpg') no-repeat center center
+        background-size: cover
+        @media #{$small-only}
+            background: url('i/quote_default_phone.jpg') no-repeat center center
+            background-size: cover
+        @media #{$medium-only}
+            background: url('i/quote_default_tablet.jpg') no-repeat center center
+            background-size: cover
+
+    &-header
+        @media #{$small-only}
+            text-align: center
+
+        &-title
+            margin-bottom: rem-calc(6)
+            font-size: rem-calc(26)
+            text-shadow: $header-text-shadow
+            @media #{$medium-only}
+                font-size: rem-calc(20)
+            @media #{$small-only}
+                font-size: rem-calc(16)
+
+        &-welcome
+            margin-bottom: 0
+            font-size: rem-calc(110)
+            line-height: 1
+            text-shadow: $header-text-shadow
+            @media #{$medium-only}
+                font-size: rem-calc(82)
+            @media #{$small-only}
+                font-size: rem-calc(56)
+
+        &-policy
+            font-size: rem-calc(38)
+            text-shadow: $header-text-shadow
+            @media #{$medium-only}
+                font-size: rem-calc(30)
+            @media #{$small-only}
+                font-size: rem-calc(22)
+
+        &-details
+            font-weight: 100
+            font-size: rem-calc(18)
+            text-shadow: $header-text-shadow
+            @media #{$medium-only}
+                font-size: rem-calc(16)
+            @media #{$small-only}
+                font-size: rem-calc(14)
+
+        .members-header-status
+            color: $color-green
+
+        &-nav
+            min-height: 70px
+            margin-top: rem-calc(50)
+            border-top: 1px solid darken($color-dark-blue, 8%)
+            background-color: rgba($color-black, 0.25)
+            > .row
+                padding-top: rem-calc(10)
+                padding-bottom: rem-calc(10)
+
+            @media (max-width:640px)
+                background-color: $color-dark-blue
+                > .row
+                    margin: 0
+                    width: 100%
+                    padding-top: 0
+                    padding-bottom: 0
+
+        &-link
+            position: relative
+            display: inline-block
+            margin-right: rem-calc(50)
+            padding: rem-calc(4 16 4) 44px
+            white-space: nowrap
+            font-weight: 100
+            font-size: rem-calc(28)
+            color: $color-white
+            text-align: left
+            @media #{$medium-only}
+                margin-right: 0
+            @media (max-width:800px)
+                padding: rem-calc(8 16 8) 44px
+                font-size: rem-calc(20)
+            @media (max-width:640px)
+                float: left
+                width: 50%
+                margin-right: 0
+                padding: rem-calc(18 0 18) 42px
+                font-size: rem-calc(18)
+                &:nth-child(odd)
+                    border-right: 1px solid darken($color-dark-blue, 8%)
+                &:nth-child(3),
+                &:nth-child(4)
+                    border-top: 1px solid darken($color-dark-blue, 8%)
+            &:hover
+                background-color: rgba($color-black, 0.3)
+
+            .icon-members
+                position: absolute
+                left: 4px
+                top: 6px
+                @media (min-width:640px) and (max-width:800px)
+                    top: 4px
+                @media (max-width:640px)
+                    top: 12px
+
+    &-content
+        margin-top: rem-calc(30)
+        text-align: center
+
+[class*="icon-members-"]
+    width: 34px
+    height: 34px
+    background: url('i/icons/members-dashboard-nav-sprite.png') no-repeat
+    background-size: 214px
+    @media #{$small-only}
+        background-size: 107px
+
+.icon-members--policies
+    background-position: -110px -3px
+    @media #{$small-only}
+        background-position: -72px -1px
+
+.icon-members--claims
+    background-position: -4px -3px
+    @media #{$small-only}
+        background-position: -20px -1px
+
+.icon-members--quote
+    background-position: -110px -74px
+    @media #{$small-only}
+        background-position: -73px -37px
+
+.icon-members--profile
+    background-position: -4px -74px
+    @media #{$small-only}
+        background-position: -20px -37px
+
+
+
+// body.quote
+//   .blue-panel
+//     padding: rem-calc(30 0 0 0)
+//     // Cool backgrounds
+//     background: transparent url('i/quote_default_desktop.jpg') no-repeat center center
+//     background-size: cover
+//     @media #{$small-only}
+//       background: transparent url('i/quote_default_phone.jpg') no-repeat center center
+//       background-size: cover
+//     @media #{$medium-only}
+//       background: transparent url('i/quote_default_tablet.jpg') no-repeat center center
+//       background-size: cover
+//     .row
+//       position: relative
+//   .header
+//     clear: both
+
+//   .bold
+//     font-weight: 500
+
+//   .price-display
+//     font-size: rem-calc(92)
+//     line-height: rem-calc(68)
+//     font-weight: 100
+//     text-shadow: 1px 1px 1px rgba(64,64,64,.5)
+//     @media #{$small-only}
+//       font-size: 4.2rem
+//       line-height: 4.225rem
+//     @media #{$medium-only}
+//       font-size: 4.5rem
+//       line-height: 4.225rem
+//     @media #{$xxlarge-only}
+//       font-size: rem-calc(110)
+//       line-height: rem-calc(88)
+//     span
+//       color: $color-white
+//       letter-spacing: rem-calc(-4)
+//       font-weight: 300;
+//       text-shadow: 1px 1px 1px rgba(64,64,64,.5)
+//     .currency
+//       font-size: rem-calc(30)
+//       letter-spacing: rem-calc(-2)
+//       font-weight:100
+//       text-shadow: 1px 1px 1px rgba(64,64,64,.5)
+//       .currency-symbol,
+//       .price-value
+//         font-size: rem-calc(50)
+//         line-height: rem-calc(54)
+
+//   .choose-options.button-like
+//     width: auto
+//     background: none
+//     padding: 0
+//     border: none
+//     a
+//       +pp-button-green
+//       padding-right: rem-calc(44)
+//       margin-bottom: 0
+//     a,
+//     a:hover
+//       color: $color-white
+//     @media #{$small-only}
+//       a
+//         width:100%
+
+//   .underwriter
+//     position: absolute
+//     top: 0
+//     right: 0
+
+//   // Top trip summary panel grid setup
+//   .trip-details.trip-summary
+//     @media #{$small-up}
+//       @include grid-column(12)
+//     @media #{$medium-up}
+//       li
+//         @include grid-column(3)
+//         margin-bottom: rem-calc(10)
+//     @media #{$large-up}
+//       @include grid-column(8)
+//   .widget-email-quote-container
+//     @media #{$small-up}
+//       @include grid-column(12)
+//     @media #{$large-up}
+//       @include grid-column(4)
+//     .widget-email-quote
+//       @include grid-column(12)
+
+//   .widget-email-quote-container
+//     form
+//       +clearfix
+//       @media #{$medium-only}
+//         margin-bottom: rem-calc(10)
+//       @media #{$small-only}
+//         margin-bottom: rem-calc(10)
+//     @media #{$small-only}
+//       padding-left: 0
+//       padding-right: 0
+//   .widget-email-quote
+//     padding: 0
+//     background: none
+//     border-top: none
+//     .input-group
+//       margin-right: 0
+//     input[type='text']
+//       border: none
+//       border-top-left-radius: 5px
+//       border-bottom-left-radius: 5px
+//     button
+//       border: none
+//       background: $color-blue
+//       color: white
+//       padding: rem-calc(17 30 22 16)
+//       border-top-left-radius: 0
+//       border-bottom-left-radius: 0
+//       &:after
+//         font-family: tid-icon
+//         content: "D"
+//         font-size: rem-calc(20)
+//         right: rem-calc(12)
+//         bottom: rem-calc(10)
+//     @media #{$small-only}
+//       width: 100%
+//       margin: 0
+//       .input-group,
+//       .button-wrapper
+//         padding: 0
+//       .input-group
+//         width: 81%
+//       .button-wrapper
+//         width: 19%
+
+//   .ages
+//     position: relative
+//     .change-age-button-form
+//       position: absolute
+//       top: 0
+//       right: 0
+//     input[type='submit']
+//       background: none
+//       border: none
+//       color: $color-white
+//       padding: 0
+//       font-family: 'Museo Sans', sans-serif
+//       text-decoration: underline
+//       text-shadow: 1px 1px 1px rgba(64,64,64,.3)
+//       margin-right: rem-calc(40)
+//       &:hover
+//         cursor: pointer
+
+//   label.total
+//     color: $color-white
+//     font-size: rem-calc(20)
+//     font-weight: 100
+//     margin-bottom: rem-calc(15)
+//     margin-top: rem-calc(20)
+//     text-shadow: 1px 1px 1px rgba(64,64,64,.3)
+//     @media #{$small-only}
+//       margin-bottom: rem-calc(10)
+//       margin-top: rem-calc(10)
+//     @media #{$medium-only}
+//       margin-bottom: rem-calc(8)
+//       margin-top: rem-calc(10)
+//     @media #{$xxlarge-only}
+//       margin-bottom: rem-calc(20)
+//       margin-top: rem-calc(30)
+
+
+//   h2
+//     @include grid-column(12)
+//     color: $color-blue
+//     margin-top: rem-calc(20)
+//     @media #{$small-only}
+//       font-size: rem-calc(40)
+//       margin-top: rem-calc(10)
+//       margin-bottom: rem-calc(10)
+//       &, + section
+//         padding: 0
+
+//   .rating
+//     +clearfix
+//     clear: left
+//     margin-bottom: rem-calc(50)
+//     @media #{$xxlarge-only}
+//       margin-bottom: rem-calc(60)
+
+//     .stars
+//       float: left
+//       .star
+//         float: left
+//         width: 30px
+//         height: 30px
+//         background: transparent url('i/icon_ratingstar.png') no-repeat left top
+//       .star:last-child
+//         width: 18px
+//     .rating-review-number
+//       float: left
+//       line-height: rem-calc(36)
+//       margin-left: rem-calc(10)
+//       color: $color-white
+
+//   .trip-details
+//     +clearfix
+//     h2
+//       display: none
+//     ul
+//       margin-left: 0
+//     ul, li
+//       margin-bottom: 0
+//       list-style-type: none
+//     dl, dt, dd
+//       margin-bottom: 0
+//     dt
+//       font-weight: 300
+//     dl
+//       font-size: rem-calc(14)
+//       line-height: rem-calc(18)
+//       text-shadow: 2px 2px #000;
+//   .mobile-toggle
+//     border-radius: 4px
+//     border-top: 0
+//     background: none
+//     padding: rem-calc(10)
+//     text-decoration: none
+//     padding-left: rem-calc(44)
+//     :before
+//       padding-top: 5px
+//       $dimension: 40px
+//       position: absolute
+//       top: 0
+//       left: 0
+//       font-family: tid-icon
+//       font-size: rem-calc(24)
+//       display: block
+//       width: rem-calc($dimension)
+//       height: rem-calc($dimension)
+//       text-align: center
+//       color: $tid-blue
+//     :before
+//       content: "O"
+//     &:after
+//       top: rem-calc(15)
+//     &.open
+//       margin-bottom: rem-calc(15)
+
+//   .trip-summary-bar
+//     background: rgba(0, 0, 0, 0.3)
+//     border-top: 1px solid rgba(0, 0, 0, 0.5)
+//     padding: rem-calc(10 0)
+//     .email-title,
+//     a.link-like
+//       display: none
+//     @media #{$small-only}
+//       .review-details-group
+//         margin-bottom: rem-calc(10)
+
+//   .trust-list
+//     list-style-type: none
+//     margin-left: 0
+//     li
+//       position: relative
+//       padding-left: rem-calc(60)
+//       margin-bottom: rem-calc(15)
+//       max-width: rem-calc(222)
+//     li:after
+//       $dimension: 40px
+//       position: absolute
+//       top: 0
+//       left: 0
+//       font-family: tid-icon
+//       font-size: rem-calc(24)
+//       border-radius: $dimension
+//       background: $color-blue
+//       line-height: rem-calc($dimension)
+//       display: block
+//       width: rem-calc($dimension)
+//       height: rem-calc($dimension)
+//       text-align: center
+//       color: $color-white
+//     li.trusted:after
+//       content: "F"
+//     li.award:after
+//       content: "B"
+//     li.owned:after
+//       content: "A"
+//     li.secure:after
+//       content: "G"
+
+//   .bottom-pds-link
+//     display: block
+//     float: right
+//     margin-bottom: rem-calc(10)
+
+//   .benefit-summary
+//     +clearfix
+//     margin-bottom: rem-calc(20)
+//     border-bottom: 1px solid $color-border-grey
+
+//   // Bottom panel with button
+//   .bottom-price
+//     @include grid-column(6)
+//     @media #{$small-only}
+//       @include grid-column(12)
+//     .price-display
+//       font-size: rem-calc(70)
+//     label.total,
+//     .price-display span,
+//     .rating .rating-review-number
+//       color: $color-dark-blue
+//     @media #{$small-only}
+//       .rating
+//         margin-bottom: rem-calc(20)
+//   .widget-email-quote-container.bottom
+//     padding-left: 0
+//     width: auto
+//     margin-bottom: rem-calc(20)
+//     @media #{$small-only}
+//       margin-bottom: 0
+//     .widget-email-quote
+//       padding-left: 0
+//     .email-title
+//       display: none
+//     input[type='text']
+//       border: 1px solid #ccc
+//     @media #{$small-only}
+//       form
+//         float: left
+//       .widget-email-quote
+//         padding-left: 0
+//         margin-bottom: rem-calc(20)
