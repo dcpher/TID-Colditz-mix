@@ -2,41 +2,102 @@
 {% block body_class %}members{% endblock %}
 {% block body_id %}members{% endblock %}
 {% block content %}
+<section class="members">
 
-<section class="members-header blue-panel">
-    <div class="row">
-        <h4 class="members-header-title">Members Dashboard</h4>
-        <h1 class="members-header-welcome">You’re Covered</h1>
-        <h3 class="members-header-policy">Your policy number is: TIDAUS151129125</h3>
-        <div class="members-header-details">Status: <span class="members-header-status">Active</span> | <a href="#">View policy</a></div>
-    </div>
-    <nav class="members-header-nav">
+    <div class="members-header blue-panel">
         <div class="row">
-            <a class="members-header-link" href="#">
-                <span class="icon-members icon-members--policies"></span>
-                Policies
-            </a>
-            <a class="members-header-link" href="#">
-                <span class="icon-members icon-members--claims"></span>
-                Claims
-            </a>
-            <a class="members-header-link" href="#">
-                <span class="icon-members icon-members--quote"></span>
-                Get a Quote
-            </a>
-            <a class="members-header-link" href="#">
-                <span class="icon-members icon-members--profile"></span>
-                My Profile
-            </a>
+            <h4 class="members-header-title">Members Dashboard</h4>
+            <h1 class="members-header-welcome">You’re Covered</h1>
+            <h3 class="members-header-policy">Your policy number is: {{PolicyNumber}}</h3>
+            <div class="members-header-details">Status: <span class="members-header-status">{{PolicyStatus}}</span> | <a href="{{CurrentPolicyLink}}">View policy</a></div>
         </div>
-    </nav>
+        <nav class="members-header-nav">
+            <div class="row">
+                <a class="members-header-link" href="{{AllPoliciesLink}}">
+                    <span class="icon-members icon-members--policies"></span>
+                    Policies
+                </a>
+                <a class="members-header-link" href="{{ClaimsLink}}">
+                    <span class="icon-members icon-members--claims"></span>
+                    Claims
+                </a>
+                <a class="members-header-link" href="/">
+                    <span class="icon-members icon-members--quote"></span>
+                    Get a Quote
+                </a>
+                <a class="members-header-link" href="{{ProfileLink}}">
+                    <span class="icon-members icon-members--profile"></span>
+                    My Profile
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Roadblock Modal -->
+    <div id="roadblockModal" class="members-roadblock reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+        <h2 class="members-roadblock-title" id="modalTitle">WIN your share of <br>$26,000 in cash</h2>
+        <div class="members-roadblock-lead">
+            <h4 class="lead">Get your FREE TID Travel Money Card to enter!</h4>
+        </div>
+        <img class="members-roadblock-card" src="/Media/Default/member-homepage/travelmoney-card-modal.png" alt="Image of the TID Travel Money Card">
+        <div class="members-roadblock-cta">
+            <a href="#" class="button pink">Get your free card</a>
+        </div>
+        <ul class="members-roadblock-benefits">
+            <li>
+                <span class="icon-travelmoney icon-travelmoney--piggy"></span>
+                <span class="members-roadblock-item">Avoid fees</span>
+            </li>
+            <li>
+                <span class="icon-travelmoney icon-travelmoney--currency"></span>
+                <span class="members-roadblock-item">10 currencies</span>
+            </li>
+            <li>
+                <span class="icon-travelmoney icon-travelmoney--easy"></span>
+                <span class="members-roadblock-item">Easy to use</span>
+            </li>
+            <li>
+                <span class="icon-travelmoney icon-travelmoney--safe"></span>
+                <span class="members-roadblock-item">Safer than cash</span>
+            </li>
+            <li>
+                <span class="icon-travelmoney icon-travelmoney--online"></span>
+                <span class="members-roadblock-item">Manage online</span>
+            </li>
+            <li>
+                <span class="icon-travelmoney icon-travelmoney--claim"></span>
+                <span class="members-roadblock-item">Use with claims</span>
+            </li>
+        </ul>
+        <a href="#" class="close-reveal-modal" aria-label="Close">&#215;</a>
+    </div>
+
+    <div class="members-mobilesales mobilesales">
+        <h2 class="members-mobilesales-title mobilesales-title">WIN your share of $26,000 in cash</h2>
+        <!-- <a class="button blue large-expand tripwise" href="/tripwise-iphone-android-app-from-travel-insurance-direct">Save with Tripwise</a> -->
+        <img class="members-mobilesales-card" src="/Media/Default/member-homepage/travelmoney-card-modal.png" alt="Image of the TID Travel Money Card">
+        <a class="mobilesales-close" href="#">&#215;</a>
+    </div>
+    <!-- End roadblock modal -->
+
+    <!-- Content section placeholder -->
+    <a id="modalToggle" href="#" data-reveal-id="roadblockModal">Click Me For A Modal</a>
+
 </section>
 
-<section class="members-content">
-    <div class="row">
-        <h2 class="blue">Get your free TID travel smarts</h2>
-        
-    </div>
-</section>
+<script>
+    $(function() {
+      $('.mobilesales').on('click', function() {
+        wng.googleAnalytics.trackEvent('XXX', 'XXXX');
+      });
+    });
+    $(function() {
+        $(".mobilesales").show();
+        $("a.mobileclose").click(function( event ) {
+            event.preventDefault();
+            $(".mobilesales").hide();
+        });
+    });
+</script>
 
 {% endblock %}
