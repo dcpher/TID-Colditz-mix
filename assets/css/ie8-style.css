@@ -2939,7 +2939,8 @@ hr {
     padding-left: 0;
     padding-right: 0; }
   #homepage-header h1 {
-    text-align: center; }
+    text-align: center;
+    font-size: 50px; }
   
 
 .homepage .tripwise-panel .text-with-img a p, .homepage .tripwise-panel .text-with-img a .learn-more, .homepage .tripwise-panel li a p, .homepage .tripwise-panel li a .learn-more, .benefits-panel .text-with-img a p, .benefits-panel .text-with-img a .learn-more, .benefits-panel li a p, .benefits-panel li a .learn-more {
