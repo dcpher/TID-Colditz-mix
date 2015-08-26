@@ -1,0 +1,28 @@
+// .mobilesales
+//     display: none
+
+.mobilesales
+    display: block
+    width: 100%
+    position: fixed
+    bottom: 0
+    left: 0
+    padding: rem-calc(20)
+    z-index: 5000
+    background: $color-white
+    box-shadow: 0px -4px 11px 0px rgba(99,99,99,0.6)
+    @media (max-width:640px)
+        display: block
+
+    &-title
+        font-size: rem-calc(32)
+
+    &-close
+        position: absolute
+        top: rem-calc(10)
+        right: rem-calc(10)
+        color: #222222
+        text-decoration: none
+        font-size: 24px
+        line-height: 24px
+        margin-bottom: 10px
