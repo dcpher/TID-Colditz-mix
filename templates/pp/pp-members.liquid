@@ -41,7 +41,6 @@
         </div>
         <img class="members-roadblock-card" src="/Media/Default/member-homepage/travelmoney-card-modal.png" alt="Image of the TID Travel Money Card">
         <div class="members-roadblock-cta">
-            <!-- TO DO - add redirect url -->
             <a href="/tid-travel-money" class="button pink">Get your free card</a>
         </div>
         <ul class="members-roadblock-benefits">
@@ -91,39 +90,29 @@
     //   });
     // });
 
-    $(document).ready(function(){
-        $(function() {
-            $('#roadblockMobile').click(function(){
-                window.location.href = "/tid-travel-money";
-            });
+    function showPanel() {
+        // Show the modals
+        $('#roadblockModal').foundation('reveal', 'open');
+        $('#roadblockMobile').fadeIn('fast');
+        // Hide the mobile modal when close is clicked
+        $('.close-reveal-modal').click(function(e) {
+            e.preventDefault();
+            $('#roadblockModal').hide();
         });
-    })
-
-    $(document).ready(function(){
-        function showPanel() {
-            // Show the modals
-            $('#roadblockModal').foundation('reveal', 'open');
-            $('#roadblockMobile').fadeIn('fast');
-            // Hide the mobile modal when close is clicked
-            $('.close-reveal-modal').click(function(e) {
-                e.preventDefault();
-                $('#roadblockModal').hide();
-            });
-            // Hide the mobile modal when close is clicked
-            $('.mobilesales-close').click(function(e) {
-                e.preventDefault();
-                $('#roadblockMobile').hide();
-            });
-        }
-        var modals;
-        function showModal() {
-            modals = window.setTimeout(showPanel, 1000);
-        }
-        if (getCookie("Travel-Money") == null) {
-            setCookie("Travel-Money", "modal-viewed");
-            showPanel()
-        }
-    });
+        // Hide the mobile modal when close is clicked
+        $('.mobilesales-close').click(function(e) {
+            e.preventDefault();
+            $('#roadblockMobile').hide();
+        });
+    }
+    var timeoutID;
+    function showModal() {
+        timeoutID = window.setTimeout(showPanel, 5000);
+    }
+    if (getCookie("Travel-Money") == null) {
+        setCookie("Travel-Money", "modal-viewed");
+        showModal()
+    }
 
     function setCookie(key, value) {
         //(3 * 24 * 60 * 60 * 1000) = > day hr min second milliseconds
@@ -137,6 +126,14 @@
         var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
         return keyValue ? keyValue[2] : null;
     };
+
+    $(document).ready(function(){
+        $(function() {
+            $('#roadblockMobile').click(function(){
+                window.location.href = "/tid-travel-money";
+            });
+        });
+    })
 
 </script>
 
