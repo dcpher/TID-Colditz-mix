@@ -1,19 +1,18 @@
 // TID PP Members page
-@import ../components/mobile-modal
 
 .members
     $header-text-shadow: 2px 2px 7px rgba(0,0,0,0.4)
 
     // Header section
     .blue-panel
-        padding: rem-calc(50 0 0 0)
-        background: url('/Media/Default/member-homepage/quote_default_desktop.jpg') no-repeat center center
+        padding: 50px 0 0 0
+        background: $color-dark-blue url('/Media/Default/member-homepage/quote_default_desktop.jpg') no-repeat center center
         background-size: cover
         @media #{$small-only}
-            background: url('/Media/Default/member-homepage/quote_default_phone.jpg') no-repeat center center
+            background: $color-dark-blue url('/Media/Default/member-homepage/quote_default_phone.jpg') no-repeat center center
             background-size: cover
         @media #{$medium-only}
-            background: url('/Media/Default/member-homepage/quote_default_tablet.jpg') no-repeat center center
+            background: $color-dark-blue url('/Media/Default/member-homepage/quote_default_tablet.jpg') no-repeat center center
             background-size: cover
 
     &-header
@@ -23,47 +22,47 @@
             text-align: center
 
         &-title
-            margin-bottom: rem-calc(6)
-            font-size: rem-calc(26)
+            margin-bottom: 6px
+            font-size: 26px
             text-shadow: $header-text-shadow
             @media #{$medium-only}
-                font-size: rem-calc(20)
+                font-size: 20px
             @media #{$small-only}
-                font-size: rem-calc(16)
+                font-size: 16px
 
         &-welcome
             margin-bottom: 0
-            font-size: rem-calc(110)
+            font-size: 110px
             line-height: 1
             text-shadow: $header-text-shadow
             @media #{$medium-only}
-                font-size: rem-calc(82)
+                font-size: 82px
             @media #{$small-only}
-                font-size: rem-calc(56)
+                font-size: 56px
 
         &-policy
-            font-size: rem-calc(38)
+            font-size: 38px
             text-shadow: $header-text-shadow
             @media #{$medium-only}
-                font-size: rem-calc(30)
+                font-size: 30px
             @media #{$small-only}
-                font-size: rem-calc(22)
+                font-size: 22px
 
         &-details
             font-weight: 100
-            font-size: rem-calc(18)
+            font-size: 18px
             color: $color-white
             text-shadow: $header-text-shadow
             @media #{$medium-only}
-                font-size: rem-calc(16)
+                font-size: 16px
             @media #{$small-only}
-                font-size: rem-calc(14)
+                font-size: 14px
 
         .members-header-status
             color: lighten($color-green, 5%)
 
         &-nav
-            margin-top: rem-calc(50)
+            margin-top: 50px
             border-top: 1px solid darken($color-dark-blue, 8%)
             background-color: rgba($color-black, 0.25)
 
@@ -78,23 +77,23 @@
         &-link
             position: relative
             display: inline-block
-            margin-right: rem-calc(10)
-            padding: rem-calc(12 18 12) 52px
+            margin-right: 10px
+            padding: 12px 18px 12px 52px
             white-space: nowrap
-            font-size: rem-calc(28)
+            font-size: 28px
             color: $color-white
             text-align: left
             @media #{$medium-only}
                 margin-right: 0
-            @media (max-width:800px)
-                padding: rem-calc(8 16 8) 44px
-                font-size: rem-calc(20)
+            @media (max-width:830px)
+                padding: 12px 16px 12px 44px
+                font-size: 20px
             @media (max-width:640px)
                 float: left
                 width: 50%
                 margin-right: 0
-                padding: rem-calc(18 0 18) 48px
-                font-size: rem-calc(18)
+                padding: 18px 0 18px 48px
+                font-size: 18px
                 &:nth-child(odd)
                     border-right: 1px solid darken($color-dark-blue, 8%)
                 &:nth-child(3),
@@ -107,83 +106,10 @@
                 position: absolute
                 left: 10px
                 top: 14px
-                @media (min-width:640px) and (max-width:800px)
-                    top: 4px
+                @media (min-width:640px) and (max-width:830px)
+                    top: 7px
                 @media (max-width:640px)
                     top: 12px
-
-    // Roadblocker Modal
-    &-roadblock
-        max-width: rem-calc(860)
-        overflow: hidden
-        padding: rem-calc(10 30)
-        text-align: center
-        @media (max-width:640px)
-            display: none !important;
-
-        &-title
-            margin-bottom: rem-calc(16)
-            color: $color-pink
-
-        &-lead
-            min-height: rem-calc(248)
-            margin-left: rem-calc(-34)
-            margin-right: rem-calc(-34)
-            padding: rem-calc(20 20 0)
-            background-color: $color-purple
-
-            .lead
-                color: $color-white
-
-        &-card
-            width: 60%
-            max-width: 402px
-            height: auto
-            margin-top: -182px
-
-        &-cta
-            margin-top: rem-calc(10)
-            margin-bottom: rem-calc(10)
-
-            .button
-                min-width: rem-calc(270)
-
-        &-benefits
-            display: table
-            width: 100%
-            list-style: none
-            padding-left: 0
-
-            > li
-                display: table-cell
-                font-size: rem-calc(16)
-                text-align: center
-
-        .icon-travelmoney
-            display: inline-block
-
-        &-item
-            display: block;
-            line-height: 1.1
-            color: $color-purple
-
-    // Roadblocker Modal - Mobile
-    .members-mobilesales
-        text-align: center
-
-    &-mobilesales
-        &-title
-            margin-bottom: rem-calc(20)
-            color: $color-pink
-
-        &-card
-            width: 80%
-
-
-// Hack to hide modal on mobile devices
-.reveal-modal-bg
-    @media (max-width:640px)
-        display: none !important;
 
 // Nav icons
 [class*="icon-members-"]
@@ -213,27 +139,3 @@
     background-position: -4px -74px
     @media #{$small-only}
         background-position: -20px -37px
-
-// Roadblock modal icons
-[class*="icon-travelmoney-"]
-    width: 52px;
-    height: 52px;
-    background: url('/Media/Default/member-homepage/travelmoney-card-modal-sprite.png') no-repeat
-
-.icon-travelmoney--claim
-    background-position: -124px -64px
-
-.icon-travelmoney--currency
-    background-position: -64px -64px
-
-.icon-travelmoney--easy
-    background-position: -4px -64px
-
-.icon-travelmoney--online
-    background-position: -124px -4px
-
-.icon-travelmoney--piggy
-    background-position: -64px -4px
-
-.icon-travelmoney--safe
-    background-position: -4px -4px

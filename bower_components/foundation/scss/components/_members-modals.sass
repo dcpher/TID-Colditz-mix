@@ -1,0 +1,116 @@
+// TID PP Members page modals
+
+.members
+
+    // Roadblocker Modal
+    .members-roadblock
+        max-width: 860px
+        overflow: hidden
+        padding: 10px 30px
+        text-align: center
+        @media (max-width:414px)
+            display: none !important;
+
+        &-title
+            margin-bottom: 16
+            color: $color-pink
+
+        &-lead
+            min-height: 248px
+            margin-left: -34px
+            margin-right: -34px
+            padding: 20px 20px 0px
+            background-color: $color-purple
+
+            .lead
+                color: $color-white
+
+        &-card
+            width: 60%
+            max-width: 402px
+            height: auto
+            margin-top: -182px
+
+        &-cta
+            margin-top: 10px
+            margin-bottom: 10px
+
+            .button
+                min-width: 270px
+
+        &-benefits
+            display: table
+            width: 100%
+            list-style: none
+            padding-left: 0
+            margin-left: 0
+
+            > li
+                display: table-cell
+                font-size: 16px
+                text-align: center
+
+        .icon-travelmoney
+            display: inline-block
+
+        &-item
+            display: block;
+            line-height: 1.1
+            color: $color-purple
+
+    // Roadblocker Modal - Mobile
+    .members-mobilesales
+        text-align: center
+        cursor: pointer
+        &::after
+            position: absolute
+            top: 60%
+            bottom: 0
+            left: 0
+            right: 0
+            z-index: 0
+            background-color: $color-purple
+            content: ''
+
+    &-mobilesales
+        &-title
+            position: relative
+            z-index: 1
+            margin-bottom: 10
+            color: $color-pink
+            pointer-events: none
+
+        &-card
+            position: relative
+            z-index: 1
+            width: 80%
+            pointer-events: none
+
+// Hack to hide modal bg on mobile devices
+.reveal-modal-bg
+    @media (max-width:414px)
+        display: none !important;
+
+// Roadblock modal icons
+[class*="icon-travelmoney-"]
+    width: 52px;
+    height: 52px;
+    background: url('/Media/Default/member-homepage/travelmoney-card-modal-sprite.png') no-repeat
+
+.icon-travelmoney--claim
+    background-position: -124px -64px
+
+.icon-travelmoney--currency
+    background-position: -64px -64px
+
+.icon-travelmoney--easy
+    background-position: -4px -64px
+
+.icon-travelmoney--online
+    background-position: -124px -4px
+
+.icon-travelmoney--piggy
+    background-position: -64px -4px
+
+.icon-travelmoney--safe
+    background-position: -4px -4px

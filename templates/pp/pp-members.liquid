@@ -41,7 +41,8 @@
         </div>
         <img class="members-roadblock-card" src="/Media/Default/member-homepage/travelmoney-card-modal.png" alt="Image of the TID Travel Money Card">
         <div class="members-roadblock-cta">
-            <a href="#" class="button pink">Get your free card</a>
+            <!-- TO DO - add redirect url -->
+            <a href="/tid-travel-money" class="button pink">Get your free card</a>
         </div>
         <ul class="members-roadblock-benefits">
             <li>
@@ -72,32 +73,71 @@
         <a href="#" class="close-reveal-modal" aria-label="Close">&#215;</a>
     </div>
 
-    <div class="members-mobilesales mobilesales">
+    <div id="roadblockMobile" class="members-mobilesales mobilesales">
         <h2 class="members-mobilesales-title mobilesales-title">WIN your share of $26,000 in cash</h2>
-        <!-- <a class="button blue large-expand tripwise" href="/tripwise-iphone-android-app-from-travel-insurance-direct">Save with Tripwise</a> -->
         <img class="members-mobilesales-card" src="/Media/Default/member-homepage/travelmoney-card-modal.png" alt="Image of the TID Travel Money Card">
         <a class="mobilesales-close" href="#">&#215;</a>
     </div>
     <!-- End roadblock modal -->
 
-    <!-- Content section placeholder -->
-    <a id="modalToggle" href="#" data-reveal-id="roadblockModal">Click Me For A Modal</a>
-
 </section>
 
 <script>
-    $(function() {
-      $('.mobilesales').on('click', function() {
-        wng.googleAnalytics.trackEvent('XXX', 'XXXX');
-      });
-    });
-    $(function() {
-        $(".mobilesales").show();
-        $("a.mobileclose").click(function( event ) {
-            event.preventDefault();
-            $(".mobilesales").hide();
+
+    // GA tracking
+    // $(function() {
+    //   $('.mobilesales').on('click', function() {
+    //     wng.googleAnalytics.trackEvent('XXX', 'XXXX');
+    //   });
+    // });
+
+    $(document).ready(function(){
+        $(function() {
+            $('#roadblockMobile').click(function(){
+                window.location.href = "/tid-travel-money";
+            });
         });
+    })
+
+    $(document).ready(function(){
+        function showPanel() {
+            // Show the modals
+            $('#roadblockModal').foundation('reveal', 'open');
+            $('#roadblockMobile').fadeIn('fast');
+            // Hide the mobile modal when close is clicked
+            $('.close-reveal-modal').click(function(e) {
+                e.preventDefault();
+                $('#roadblockModal').hide();
+            });
+            // Hide the mobile modal when close is clicked
+            $('.mobilesales-close').click(function(e) {
+                e.preventDefault();
+                $('#roadblockMobile').hide();
+            });
+        }
+        var modals;
+        function showModal() {
+            modals = window.setTimeout(showPanel, 1000);
+        }
+        if (getCookie("Travel-Money") == null) {
+            setCookie("Travel-Money", "modal-viewed");
+            showPanel()
+        }
     });
+
+    function setCookie(key, value) {
+        //(3 * 24 * 60 * 60 * 1000) = > day hr min second milliseconds
+        var expires = new Date();
+        var daysExpiresInMilliseconds = (180 * 1000)
+        expires.setTime(expires.getTime() + daysExpiresInMilliseconds);
+        document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+    };
+
+    function getCookie(key) {
+        var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+        return keyValue ? keyValue[2] : null;
+    };
+
 </script>
 
 {% endblock %}
