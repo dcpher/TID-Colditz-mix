@@ -1,0 +1,770 @@
+{% block content %}
+
+<script type="text/javascript">
+
+    jQuery(document).ready( function($){
+
+        var is_completed = 0;
+        // click block
+        $('.Quiz .Quiz-answer').click( function(){
+            if( is_completed == 0 ){
+            // drop settings
+            var pnt = $(this).parent('.Quiz-questionInner');
+            $( '.Quiz-answer', pnt ).removeClass('checked_block');
+            $( '.block_checkbox', pnt ).attr( 'checked', false );
+
+        // add new one
+            if( $( '.block_checkbox', this ).attr( 'checked' ) ){
+                $( '.block_checkbox', this ).attr( 'checked', false );
+                $(this).removeClass('checked_block');
+
+            }else{
+                $( '.block_checkbox', this ).attr( 'checked', 'checked' );
+                $(this).addClass('checked_block');
+                var parent_point = $(this).parents('.Quiz-question');
+
+                console.log( parent_point.next() );
+
+                if( parent_point.next().hasClass('Quiz-question')  ){
+                    $('html, body').animate({
+                        scrollTop: parent_point.next().offset().top - 50
+                    }, 1000);
+                }
+
+                //var next_el = $('.parent_point').next('.Quiz-question');
+                //console.log( next_el.html() );
+                //$( next_el ).css('background', '#ff0');
+
+            }
+
+            $( '.Quiz-answer', pnt ).each(function(){
+                if( $(this).hasClass('checked_block')  ){
+                    $(this).removeClass('op_05');
+                }else{
+                    $(this).addClass('op_05');
+                }
+            })
+
+
+            check_test_complete();
+            }
+        })
+        $('.Quiz .block_checkbox').click( function(e){
+            if( is_completed == 0 ){
+                $(this).parent('.Quiz-answer').click();
+            }else{
+                e.preventDefault();
+            }
+        })
+
+        /*
+        $('.Quiz-question .btn').click(function(){
+
+            var top_pnt = $(this).parents('.Quiz-question');
+            $('.btn', top_pnt).removeClass('btn-danger');
+            $('.btn', top_pnt).addClass('btn-success');
+
+            $(this).addClass('btn-danger');
+            $(this).removeClass('btn-success');
+
+            // move next
+            var this_step = parseInt( $(this).attr('data-step') );
+            this_step++;
+            $('.pag_'+this_step).click();
+            check_test_complete();
+        })
+        */
+        // check if test is complete
+        function check_test_complete(){
+            var counter = 0;
+            $('.Quiz .Quiz-question').each(function(){
+
+                var id = $(this).attr('data-num');
+                var slide_pnt = $('.slide_'+id);
+                $( '.checked_block', slide_pnt).each(function(){
+
+                    if( $(this).hasClass('checked_block') == true ){
+                        counter++;
+                    }
+                })
+            })
+
+            if( $('.Quiz .Quiz-question').length == counter ){
+                //$('.check_res').fadeIn();
+                $('.Quiz .check_results').click();
+                    $('html, body').animate({
+                        scrollTop: $('.Quiz .results_block').offset().top - 50
+                    }, 1000);
+            }
+        }
+
+        // check results
+        $('.Quiz .check_results').click(function(){
+            var this_arr = new Array();
+            var counter = 1;
+            var res = new Array();
+            var cnt;
+            $('.Quiz .Quiz-inner .checked_block').each(function(){
+                cnt = $(this).attr('data-values').split('|').length;
+                this_arr = $(this).attr('data-values').split('|') ; //.split('|')
+                if( counter == 1 ){
+                    for ( var i = 0; i < cnt; i++ ) {
+                        res[i] = parseInt( this_arr[i] );
+                    }
+                }else{
+                    for ( var i = 0; i < cnt; i++ ) {
+                        res[i] = parseInt( res[i] ) + parseInt( this_arr[i] );
+                    }
+                }
+                counter++;
+            })
+
+            var maxValueInArray = Math.max.apply(Math, res  );
+
+            var out = 0;
+            for ( var i = 0; i < cnt; i++ ) {
+                if( res[i] == maxValueInArray && out == 0 ){
+                    var num = i+1;
+                    $('.result_'+num).fadeIn();
+                    $('.top_adsense, .bottom_adsense').removeClass('hide');
+                    out = 1;
+                    is_completed = 1;
+                }
+            }
+        })
+
+        //patch height
+        // $('.Quiz .Quiz-question .Quiz-questionInner').each(function(){
+        //     if( $( '.image_type', this).length > 0 ){
+        //     if( $(' .check_row .check_text', this).length == 2 || $(' .check_row .check_text', this).length == 4 ){
+        //         for( $k=0; $k <=4; $k=$k+2){
+        //         var height = [];
+
+        //         var ind1 = $k;
+        //         var ind2 = $k+1;
+        //         var ind3 = $k+2;
+
+        //         if( $(' .check_row .check_text:eq('+ind1+')', this).height() )
+        //             height.push( $(' .check_row .check_text:eq('+ind1+')', this).height() );
+
+        //         if( $(' .check_row .check_text:eq('+ind2+')', this).height() )
+        //             height.push( $(' .check_row .check_text:eq('+ind2+')', this).height() );
+
+
+        //         var max_of_array = Math.max.apply(Math, height);
+
+        //         $('.check_row .check_text:eq('+ind1+')', this).css('height', max_of_array );
+        //         $(' .check_row .check_text:eq('+ind2+')', this).css('height', max_of_array );
+
+        //     }
+
+        //     }else{
+        //     for( $k=0; $k <=9; $k=$k+3){
+        //         var height = [];
+
+        //         var ind1 = $k;
+        //         var ind2 = $k+1;
+        //         var ind3 = $k+2;
+
+        //         if( $(' .check_row .check_text:eq('+ind1+')', this).height() )
+        //             height.push( $(' .check_row .check_text:eq('+ind1+')', this).height() );
+
+        //         if( $(' .check_row .check_text:eq('+ind2+')', this).height() )
+        //             height.push( $(' .check_row .check_text:eq('+ind2+')', this).height() );
+
+        //         if( $(' .check_row .check_text:eq('+ind3+')', this).height() )
+        //         height.push( $(' .check_row .check_text:eq('+ind3+')', this).height() );
+
+        //         var max_of_array = Math.max.apply(Math, height);
+
+        //         $('.check_row .check_text:eq('+ind1+')', this).css('height', max_of_array );
+        //         $(' .check_row .check_text:eq('+ind2+')', this).css('height', max_of_array );
+        //         $(' .check_row .check_text:eq('+ind3+')', this).css('height', max_of_array );
+        //     }
+
+
+
+        //     }
+
+        //     }
+
+        // })
+
+    }) // global end
+
+</script>
+
+<style type="text/css">
+
+.hide{
+    display:none !important;
+}
+
+.Quiz-question {
+    display: block;
+}
+
+/* SQUARED ONE */
+.squaredOne {
+    width: 28px;
+    height: 28px;
+    margin: 5px 0px 0px 0px;
+    position: relative;
+    background-color: #ff0000;
+}
+
+.squaredOne label {
+    cursor: pointer;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 4px;
+    top: 4px;
+    background-color: #000;
+}
+
+.squaredOne input {
+    display: none;
+}
+
+.op_05{
+    opacity: 0.5;
+}
+
+.check_res{
+    display:none;
+}
+.single_result{
+    display: none;
+}
+.results_block {
+    padding: 20px 0;
+}
+
+</style>
+
+<section class="socialquiz">
+
+    <header class="socialquiz-header">
+        <div class="socialquiz-headerHero header-panel blue-panel">
+            <div class="row">
+                <div class="small-12 columns">
+                    <h1 class="socialquiz-headerTitle">What type of traveller are you?</h1>
+                    <p class="socialquiz-headerCopy">Know your travel style? Take our quiz to find if you're really the traveller you think you are (and enter to win $200 flight vouchers with Virgin Australia!).</p>
+                </div>
+            </div>
+        </div>
+        <div class="socialquiz-headerShare">
+            <div class="row">
+                <div class="small-12 medium-3 columns">
+                    <a class="socialquiz-headerLink" href="#">
+                        <span class="socialquiz-headerIcon icon-social-twitter"></span>
+                        Share on Twitter
+                    </a>
+                </div>
+                <div class="small-12 medium-3 columns">
+                    <a class="socialquiz-headerLink" href="#">
+                        <span class="socialquiz-headerIcon icon-social-facebook"></span>
+                        Share on Facebook
+                    </a>
+                </div>
+                <div class="small-12 medium-3 columns">
+                    <a class="socialquiz-headerLink" href="#">
+                        <span class="socialquiz-headerIcon icon-social-email"></span>
+                        Share on Email
+                    </a>
+                </div>
+                <div class="small-12 medium-3 columns">
+                    <!-- <span>Shares</span> -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="socialquiz-quiz row">
+
+        <div class="small-12 columns Quiz">
+            <!-- quiz questions -->
+            <form class="Quiz-inner">
+                <!-- Q1 -->
+                <div class="Quiz-question slide_1" data-num="1">
+                    <formstep class="Quiz-questionInner row">
+                        <div class="row">
+                            <legend class="Quiz-questionTitle small-12 medium-9 large-6">Pick your luggage</legend>
+                        </div>
+                        <div class="Quiz-answer small-6 medium-4 columns answ_1" data-step="1" data-values="1|0|0|0|0|0">
+                            <div class="Quiz-answerInner">
+                                <div class="squaredOne">
+                                    <input type="checkbox" class="block_checkbox" id="quizQuestion01">
+                                    <label for="quizQuestion01"></label>
+                                </div>
+                                <div>Carry-on only</div>
+                            </div>
+                        </div>
+
+                        <div class="Quiz-answer small-6 medium-4 columns answ_2" data-step="1" data-values="0|1|0|0|0|0">
+                            <div class="Quiz-answerInner">
+                                <div class="squaredOne">
+                                    <input type="checkbox" class="block_checkbox" id="quizQuestion02">
+                                    <label for="quizQuestion02"></label>
+                                </div>
+                                <div>Hard-shell suitcase</div>
+                            </div>
+                        </div>
+
+                        <div class="Quiz-answer small-6 medium-4 columns answ_3" data-step="1" data-values="0|0|1|0|0|0">
+                            <div class="Quiz-answerInner">
+                                <div class="squaredOne">
+                                    <input type="checkbox" class="block_checkbox" id="quizQuestion03">
+                                    <label for="quizQuestion03"></label>
+                                </div>
+                                <div>Trusty backpack</div>
+                            </div>
+                        </div>
+
+                        <div class="Quiz-answer small-6 medium-4 columns answ_4" data-step="1" data-values="0|0|0|1|0|0">
+                            <div class="Quiz-answerInner">
+                                <div class="squaredOne">
+                                    <input type="checkbox" class="block_checkbox" id="quizQuestion04">
+                                    <label for="quizQuestion04"></label>
+                                </div>
+                                <div>Brand name</div>
+                            </div>
+                        </div>
+
+                        <div class="Quiz-answer small-6 medium-4 columns answ_5" data-step="1" data-values="0|0|0|0|1|0">
+                            <div class="Quiz-answerInner">
+                                <div class="squaredOne">
+                                    <input type="checkbox" class="block_checkbox" id="quizQuestion04">
+                                    <label for="quizQuestion04"></label>
+                                </div>
+                                <div>Duffel bag</div>
+                            </div>
+                        </div>
+
+                        <div class="Quiz-answer small-6 medium-4 columns answ_6" data-step="1" data-values="0|0|0|0|0|1">
+                            <div class="Quiz-answerInner">
+                                <div class="squaredOne">
+                                    <input type="checkbox" class="block_checkbox" id="quizQuestion04">
+                                    <label for="quizQuestion04"></label>
+                                </div>
+                                <div>Soft suitcase</div>
+                            </div>
+                        </div>
+                    </formstep>
+                </div>
+                <!-- Q2 -->
+                <div class="Quiz-question slide_2 " data-num="2">
+                    <formstep class="Quiz-questionInner">
+                        <legend class="Quiz-questionTitle">What are you most likely doing on the plane?</legend>
+                        <div class="Quiz-answer answ_1" data-step="2" data-values="1|0|0|0|0|0">
+                            <div class="squaredOne">
+                                <input type="checkbox" class="block_checkbox" id="quizQuestion05">
+                                <label for="quizQuestion05"></label>
+                            </div>
+                            <div class="">
+                                Sleeping like this in Economy
+                            </div>
+                        </div>
+                        <div class="Quiz-answer answ_2" data-step="2" data-values="0|1|0|0|0|0">
+                            <div class="squaredOne">
+                                <input type="checkbox" class="block_checkbox" id="quizQuestion06">
+                                <label for="quizQuestion06"></label>
+                            </div>
+                            <div class="">
+                                Requesting more snacks
+                            </div>
+                        </div>
+                        <div class="Quiz-answer answ_3" data-step="2" data-values="0|0|1|0|0|0">
+                            <div class="squaredOne">
+                                <input type="checkbox" class="block_checkbox" id="quizQuestion07">
+                                <label for="quizQuestion07"></label>
+                            </div>
+                            <div class="">
+                                Reading
+                            </div>
+                        </div>
+                        <div class="Quiz-answer answ_4" data-step="2" data-values="0|0|0|1|0|0">
+                            <div class="squaredOne">
+                                <input type="checkbox" class="block_checkbox" id="quizQuestion08">
+                                <label for="quizQuestion08"></label>
+                            </div>
+                            <div class="">
+                                Chatting with the person next to you
+                            </div>
+                        </div>
+                        <div class="Quiz-answer answ_5" data-step="2" data-values="0|0|0|0|1|0">
+                            <div class="squaredOne">
+                                <input type="checkbox" class="block_checkbox" id="quizQuestion08">
+                                <label for="quizQuestion08"></label>
+                            </div>
+                            <div class="">
+                                Sleeping like this in Business
+                            </div>
+                        </div>
+                        <div class="Quiz-answer answ_6" data-step="2" data-values="0|0|0|0|0|1">
+                            <div class="squaredOne">
+                                <input type="checkbox" class="block_checkbox" id="quizQuestion08">
+                                <label for="quizQuestion08"></label>
+                            </div>
+                            <div class="">
+                                Watching your 4th movie
+                            </div>
+                        </div>
+                    </formstep>
+                </div>
+                <!-- Q3 -->
+                <div class="Quiz-question slide_3" data-num="3">
+                    <formstep class="Quiz-questionInner">
+                        <legend class="Quiz-questionTitle">Pick a place to go</legend>
+                        <div class="Quiz-answer answ_1" data-step="3" data-values="1|0|0|0|0|0">
+                            <div class="squaredOne">
+                                <input type="checkbox" class="block_checkbox" id="quizQuestion09">
+                                <label for="quizQuestion09"></label>
+                            </div>
+                            <div class="">
+                                Cinque Terre, Italy
+                            </div>
+                        </div>
+                        <div class="Quiz-answer answ_2" data-step="3" data-values="0|1|0|0|0|0">
+                            <div class="squaredOne">
+                                <input type="checkbox" class="block_checkbox" id="quizQuestion10">
+                                <label for="quizQuestion10"></label>
+                            </div>
+                            <div class="">
+                                Machu Piccu, Peru
+                            </div>
+                        </div>
+                        <div class="Quiz-answer answ_3" data-step="3" data-values="0|0|1|0|0|0">
+                            <div class="squaredOne">
+                                <input type="checkbox" class="block_checkbox" id="quizQuestion11">
+                                <label for="quizQuestion11"></label>
+                            </div>
+                            <div class="">
+                                Serengeti, Tanzania
+                            </div>
+                        </div>
+                        <div class="Quiz-answer answ_4" data-step="3" data-values="0|0|0|1|0|0">
+                            <div class="squaredOne">
+                                <input type="checkbox" class="block_checkbox" id="quizQuestion12">
+                                <label for="quizQuestion12"></label>
+                            </div>
+                            <div class="">
+                                Dalmatian Coast, Croatia
+                            </div>
+                        </div>
+                        <div class="Quiz-answer answ_5" data-step="3" data-values="0|0|0|0|1|0">
+                            <div class="squaredOne">
+                                <input type="checkbox" class="block_checkbox" id="quizQuestion12">
+                                <label for="quizQuestion12"></label>
+                            </div>
+                            <div class="">
+                                Grand Bazaar, Instanbul
+                            </div>
+                        </div>
+                        <div class="Quiz-answer answ_6" data-step="3" data-values="0|0|0|0|0|1">
+                            <div class="squaredOne">
+                                <input type="checkbox" class="block_checkbox" id="quizQuestion12">
+                                <label for="quizQuestion12"></label>
+                            </div>
+                            <div class="">
+                                Barcelona, Spain
+                            </div>
+                        </div>
+                    </formstep>
+                </div>
+                <!-- Q4 -->
+                <div class="Quiz-question slide_4" data-num="4">
+                    <formstep class="Quiz-questionInner">
+                        <legend class="Quiz-questionTitle">Pick an Instagram filter</legend>
+                        <div class="Quiz-answer answ_1" data-step="4" data-values="1|0|0|0|0|0">
+                            <div class="squaredOne">
+                                <input type="checkbox" class="block_checkbox" id="quizQuestion13">
+                                <label for="quizQuestion13"></label>
+                            </div>
+                            <div class="">
+                                Crema
+                            </div>
+                        </div>
+                        <div class="Quiz-answer answ_2" data-step="4" data-values="0|1|0|0|0|0">
+                            <div class="squaredOne">
+                                <input type="checkbox" class="block_checkbox" id="quizQuestion14">
+                                <label for="quizQuestion14"></label>
+                            </div>
+                            <div class="">
+                                Valencia
+                            </div>
+                        </div>
+                        <div class="Quiz-answer answ_3" data-step="4" data-values="0|0|1|0|0|0">
+                            <div class="squaredOne">
+                                <input type="checkbox" class="block_checkbox" id="quizQuestion15">
+                                <label for="quizQuestion15"></label>
+                            </div>
+                            <div class="">
+                                X-Pro II
+                            </div>
+                        </div>
+                        <div class="Quiz-answer answ_4" data-step="4" data-values="0|0|0|1|0|0">
+                            <div class="squaredOne">
+                                <input type="checkbox" class="block_checkbox" id="quizQuestion15">
+                                <label for="quizQuestion15"></label>
+                            </div>
+                            <div class="">
+                                I adjust my own settings, thanks.
+                            </div>
+                        </div>
+                        <div class="Quiz-answer answ_5" data-step="4" data-values="0|0|0|0|1|0">
+                            <div class="squaredOne">
+                                <input type="checkbox" class="block_checkbox" id="quizQuestion15">
+                                <label for="quizQuestion15"></label>
+                            </div>
+                            <div class="">
+                                Inkwell
+                            </div>
+                        </div>
+                        <div class="Quiz-answer answ_6" data-step="4" data-values="0|0|0|0|0|1">
+                            <div class="squaredOne">
+                                <input type="checkbox" class="block_checkbox" id="quizQuestion15">
+                                <label for="quizQuestion15"></label>
+                            </div>
+                            <div class="">
+                                Rise
+                            </div>
+                        </div>
+                    </formstep>
+                </div>
+                <!-- Q5 -->
+                <div class="Quiz-question slide_5 " data-num="5">
+                    <formstep class="Quiz-questionInner">
+                        <legend class="Quiz-questionTitle">Pick something for lunch</legend>
+                        <div class="Quiz-answer answ_1" data-step="5" data-values="1|0|0|0|0|0">
+                            <div class="squaredOne">
+                                <input type="checkbox" class="block_checkbox" id="quizQuestion16">
+                                <label for="quizQuestion16"></label>
+                            </div>
+                            <div class="">
+                                Curry
+                            </div>
+                        </div>
+                        <div class="Quiz-answer answ_2" data-step="5" data-values="0|1|0|0|0|0">
+                            <div class="squaredOne">
+                                <input type="checkbox" class="block_checkbox" id="quizQuestion17">
+                                <label for="quizQuestion17"></label>
+                            </div>
+                            <div class="">
+                                Tacos
+                            </div>
+                        </div>
+                        <div class="Quiz-answer answ_3" data-step="5" data-values="0|0|1|0|0|0">
+                            <div class="squaredOne">
+                                <input type="checkbox" class="block_checkbox" id="quizQuestion18">
+                                <label for="quizQuestion18"></label>
+                            </div>
+                            <div class="">
+                                Steak
+                            </div>
+                        </div>
+                        <div class="Quiz-answer answ_4" data-step="5" data-values="0|0|0|1|0|0">
+                            <div class="squaredOne">
+                                <input type="checkbox" class="block_checkbox" id="quizQuestion18">
+                                <label for="quizQuestion18"></label>
+                            </div>
+                            <div class="">
+                                Pad Thai
+                            </div>
+                        </div>
+                        <div class="Quiz-answer answ_5" data-step="5" data-values="0|0|0|0|1|0">
+                            <div class="squaredOne">
+                                <input type="checkbox" class="block_checkbox" id="quizQuestion18">
+                                <label for="quizQuestion18"></label>
+                            </div>
+                            <div class="">
+                                Cup-o-noodles
+                            </div>
+                        </div>
+                        <div class="Quiz-answer answ_6" data-step="5" data-values="0|0|0|0|0|1">
+                            <div class="squaredOne">
+                                <input type="checkbox" class="block_checkbox" id="quizQuestion18">
+                                <label for="quizQuestion18"></label>
+                            </div>
+                            <div class="">
+                                Sushi
+                            </div>
+                        </div>
+                    </formstep>
+                </div>
+                <!-- Q6 -->
+                <div class="Quiz-question slide_6 " data-num="6">
+                    <formstep class="Quiz-questionInner">
+                        <legend class="Quiz-questionTitle">What’s the first thing you’d do in NYC?</legend>
+                        <div class="Quiz-answer answ_1" data-step="6" data-values="1|0|0|0|0|0">
+                            <div class="squaredOne">
+                                <input type="checkbox" class="block_checkbox" id="quizQuestion19">
+                                <label for="quizQuestion19"></label>
+                            </div>
+                            <div class="">
+                                Cocktails
+                            </div>
+                        </div>
+                        <div class="Quiz-answer answ_2" data-step="5" data-values="0|1|0|0|0|0">
+                            <div class="squaredOne">
+                                <input type="checkbox" class="block_checkbox" id="quizQuestion20">
+                                <label for="quizQuestion20"></label>
+                            </div>
+                            <div class="">
+                                Shopping
+                            </div>
+                        </div>
+                        <div class="Quiz-answer answ_3" data-step="5" data-values="0|0|1|0|0|0">
+                            <div class="squaredOne">
+                                <input type="checkbox" class="block_checkbox" id="quizQuestion21">
+                                <label for="quizQuestion21"></label>
+                            </div>
+                            <div class="">
+                                Bagels
+                            </div>
+                        </div>
+                        <div class="Quiz-answer answ_3" data-step="5" data-values="0|0|0|1|0|0">
+                            <div class="squaredOne">
+                                <input type="checkbox" class="block_checkbox" id="quizQuestion21">
+                                <label for="quizQuestion21"></label>
+                            </div>
+                            <div class="">
+                                Central Park
+                            </div>
+                        </div>
+                        <div class="Quiz-answer answ_3" data-step="5" data-values="0|0|0|0|1|0">
+                            <div class="squaredOne">
+                                <input type="checkbox" class="block_checkbox" id="quizQuestion21">
+                                <label for="quizQuestion21"></label>
+                            </div>
+                            <div class="">
+                                Brooklyn
+                            </div>
+                        </div>
+                        <div class="Quiz-answer answ_3" data-step="5" data-values="0|0|0|0|0|1">
+                            <div class="squaredOne">
+                                <input type="checkbox" class="block_checkbox" id="quizQuestion21">
+                                <label for="quizQuestion21"></label>
+                            </div>
+                            <div class="">
+                                Guggenheim Museum
+                            </div>
+                        </div>
+                    </formstep>
+                </div>
+                <!-- Q7 -->
+                <div class="Quiz-question slide_7 " data-num="7">
+                    <formstep class="Quiz-questionInner">
+                        <legend class="Quiz-questionTitle">Pick a souvenir</legend>
+                        <div class="Quiz-answer answ_1" data-step="7" data-values="1|0|0|0|0|0">
+                            <div class="squaredOne">
+                                <input type="checkbox" class="block_checkbox" id="quizQuestion22">
+                                <label for="quizQuestion22"></label>
+                            </div>
+                            <div class="">
+                                Barcelona snow globe
+                            </div>
+                        </div>
+                        <div class="Quiz-answer answ_2" data-step="5" data-values="0|1|0|0|0|0">
+                            <div class="squaredOne">
+                                <input type="checkbox" class="block_checkbox" id="quizQuestion23">
+                                <label for="quizQuestion23"></label>
+                            </div>
+                            <div class="">
+                                Sombrero
+                            </div>
+                        </div>
+                        <div class="Quiz-answer answ_3" data-step="5" data-values="0|0|1|0|0|0">
+                            <div class="squaredOne">
+                                <input type="checkbox" class="block_checkbox" id="quizQuestion24">
+                                <label for="quizQuestion24"></label>
+                            </div>
+                            <div class="">
+                                Oriental fan
+                            </div>
+                        </div>
+                        <div class="Quiz-answer answ_3" data-step="5" data-values="0|0|0|1|0|0">
+                            <div class="squaredOne">
+                                <input type="checkbox" class="block_checkbox" id="quizQuestion24">
+                                <label for="quizQuestion24"></label>
+                            </div>
+                            <div class="">
+                                London bus
+                            </div>
+                        </div>
+                        <div class="Quiz-answer answ_3" data-step="5" data-values="0|0|0|0|1|0">
+                            <div class="squaredOne">
+                                <input type="checkbox" class="block_checkbox" id="quizQuestion24">
+                                <label for="quizQuestion24"></label>
+                            </div>
+                            <div class="">
+                                Waving kitty
+                            </div>
+                        </div>
+                        <div class="Quiz-answer answ_3" data-step="5" data-values="0|0|0|0|0|1">
+                            <div class="squaredOne">
+                                <input type="checkbox" class="block_checkbox" id="quizQuestion24">
+                                <label for="quizQuestion24"></label>
+                            </div>
+                            <div class="">
+                                Leather camel
+                            </div>
+                        </div>
+                    </formstep>
+                </div>
+            </form>
+            <!-- / quiz questions -->
+
+            <!-- hidden results button -->
+            <div class="check_res">
+                <button type="button" class="btn btn-success check_results">Check Results</button>
+            </div>
+
+            <!-- / quiz results -->
+            <div class="results_block">
+                results
+                <div class="single_result result_1">
+                    <div>Answer 01</div>
+                    <div>
+                        The Eternal Backpacker  - Your backpack is just a TID more tattered than your passport. You’re an eternal backpacker, chasing adventure from one continent to another. You’re a lone wolf, but you know how to rock up at a new place and make friends. For you, the road is life. Your travel hero: Alexander SuperTramp
+                    </div>
+                </div>
+                <div class="single_result result_2">
+                    <div>Answer 02</div>
+                    <div>
+                        The Jetsetter – You work hard so you can take make the most of your annual leave and get out and see just a TID bit of the world. From the great American adventure to ski seasons and Euro trips, you embrace every opportunity that comes your way. You haven’t been everywhere yet, but it’s on your list. Your travel hero: Michael Palin
+                    </div>
+                </div>
+                <div class="single_result result_3">
+                    <div>Answer 03</div>
+                    <div>
+                        The Luxury Traveller – Business class flights, 5 star hotels, VIP lounges and just a TID bit of brand name shopping - you enjoy the best of the best when you travel. You plan in advance so you can insure the best table at the best restaurant in town or the best seats at the best new Broadway show. You travel in style. No doubt about it. Your travel hero: Victoria Beckham
+                    </div>
+                </div>
+                <div class="single_result result_4">
+                    <div>Answer 04</div>
+                    <div>
+                        The Voluntourist  – You travel the world so you can give just a TID back. Whether it’s helping rescue Orangutans in Borneo or visiting orphanages in China, you have a servant heart that just wants to help. The best travel mementos you have are the memories you’ve taken away from the projects you’ve been involved in. Your travel hero: Dian Fossey
+                    </div>
+                </div>
+                <div class="single_result result_5">
+                    <div>Answer 05</div>
+                    <div>
+                        The Foodie – From dining at Michelin star restaurants to eating scorpions at the street market, you’re always just a TID hungry and keen for a culinary challenge. When it comes to making tough travel choices, you do what your gut tells you (literally). Your travel hero: Anthony Bourdain
+                    </div>
+                </div>
+                <div class="single_result result_6">
+                    <div>Answer 06</div>
+                    <div>
+                        The Spiritual Seeker – You’re on both a physical and figurative journey to discovering just a TID more about yourself. Your holidays are a time to connect with your centre, practice mindfulness and search for inner peace. From ashrams in India to Cambodian temples, your trips are about taking time out, and as much of it as it takes. Your travel hero: Elizabeth Gilbert
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- / quiz results -->
+
+</section>
+
+{% endblock %}
