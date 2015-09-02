@@ -1,6 +1,7 @@
 .Quiz
     &-question
         margin-bottom: rem-calc(60)
+
         &Title
             max-width: rem-calc(740)
             margin-bottom: rem-calc(20)
@@ -10,5 +11,35 @@
             letter-spacing: rem-calc(-2)
 
     &-answer
+        margin-bottom: rem-calc(20)
+
         &Inner
-            background-color: $color-light-grey
+            position: relative
+            width: 100%
+            padding: rem-calc(14)
+            background-color: darken($color-light-grey, 5%)
+
+        &Check
+            position: absolute
+            bottom: rem-calc(10)
+            right: rem-calc(10)
+            width: rem-calc(28)
+            height: rem-calc(28)
+            background-color: $color-white
+
+            > input
+                display: none;
+
+        .Quiz-answerLabel
+            display: block
+            position: absolute
+            left: rem-calc(4)
+            right: rem-calc(4)
+            top: rem-calc(4)
+            bottom: rem-calc(4)
+            margin: 0
+            cursor: pointer
+            background-color: $color-black
+
+.is-opaque
+    opacity: 0.5
