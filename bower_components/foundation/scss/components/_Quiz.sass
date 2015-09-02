@@ -1,5 +1,6 @@
 .Quiz
     &-question
+        display: block
         margin-bottom: rem-calc(60)
 
         &Title
@@ -18,14 +19,34 @@
             width: 100%
             padding: rem-calc(14)
             background-color: darken($color-light-grey, 5%)
+            transition: background-color 0.2s ease
+            cursor: pointer
+            &:hover
+                background-color: $color-blue
+                .Quiz-answerTitle
+                    color: $color-white
+
+        &Image
+            width: 100%
+            margin: rem-calc(0 0 15 0)
+            text-align: center
+
+            > img
+                width: 100%
+                max-width: rem-calc(260)
+
+        &Title
+            display: block
+            margin-right: rem-calc(34)
 
         &Check
             position: absolute
-            bottom: rem-calc(10)
-            right: rem-calc(10)
+            bottom: rem-calc(12)
+            right: rem-calc(12)
             width: rem-calc(28)
             height: rem-calc(28)
             background-color: $color-white
+            border-radius: rem-calc(4)
 
             > input
                 display: none;
@@ -38,8 +59,14 @@
             top: rem-calc(4)
             bottom: rem-calc(4)
             margin: 0
+            opacity: 0
             cursor: pointer
             background-color: $color-black
+            transition: opacity 0.2s ease-in
+
+        &.checked_block
+            .Quiz-answerLabel
+                opacity: 1
 
 .is-opaque
     opacity: 0.5
