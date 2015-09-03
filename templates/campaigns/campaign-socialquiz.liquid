@@ -1,210 +1,5 @@
 {% block content %}
 
-<script type="text/javascript">
-
-    jQuery(document).ready( function($){
-
-        var is_completed = 0;
-        // click block
-        $('.js-quiz .js-quiz-answer').click( function(){
-            if( is_completed == 0 ){
-            // drop settings
-            var pnt = $(this).parent('.js-quiz-question-inner');
-            $( '.js-quiz-answer', pnt ).removeClass('checked_block');
-            $( '.block_checkbox', pnt ).attr( 'checked', false );
-
-        // add new one
-            if( $( '.block_checkbox', this ).attr( 'checked' ) ){
-                $( '.block_checkbox', this ).attr( 'checked', false );
-                $(this).removeClass('checked_block');
-
-            }else{
-                $( '.block_checkbox', this ).attr( 'checked', 'checked' );
-                $(this).addClass('checked_block');
-                var parent_point = $(this).parents('.js-quiz-question');
-
-                console.log( parent_point.next() );
-
-                if( parent_point.next().hasClass('js-quiz-question')  ){
-                    $('html, body').animate({
-                        scrollTop: parent_point.next().offset().top - 50
-                    }, 1000);
-                }
-
-                //var next_el = $('.parent_point').next('.Quiz-question');
-                //console.log( next_el.html() );
-                //$( next_el ).css('background', '#ff0');
-
-            }
-
-            $( '.js-quiz-answer', pnt ).each(function(){
-                if( $(this).hasClass('checked_block')  ){
-                    $(this).removeClass('is-opaque');
-                }else{
-                    $(this).addClass('is-opaque');
-                }
-            })
-
-
-            check_test_complete();
-            }
-        })
-        $('.js-quiz .block_checkbox').click( function(e){
-            if( is_completed == 0 ){
-                $(this).parent('.js-quiz-answer').click();
-            }else{
-                e.preventDefault();
-            }
-        })
-
-        /*
-        $('.Quiz-question .btn').click(function(){
-
-            var top_pnt = $(this).parents('.Quiz-question');
-            $('.btn', top_pnt).removeClass('btn-danger');
-            $('.btn', top_pnt).addClass('btn-success');
-
-            $(this).addClass('btn-danger');
-            $(this).removeClass('btn-success');
-
-            // move next
-            var this_step = parseInt( $(this).attr('data-step') );
-            this_step++;
-            $('.pag_'+this_step).click();
-            check_test_complete();
-        })
-        */
-        // check if test is complete
-        function check_test_complete(){
-            var counter = 0;
-            $('.js-quiz .js-quiz-question').each(function(){
-
-                var id = $(this).attr('data-num');
-                var slide_pnt = $('.slide_'+id);
-                $( '.checked_block', slide_pnt).each(function(){
-
-                    if( $(this).hasClass('checked_block') == true ){
-                        counter++;
-                    }
-                })
-            })
-
-            if( $('.js-quiz .js-quiz-question').length == counter ){
-                //$('.check_res').fadeIn();
-                $('.js-quiz .check_results').click();
-                    $('html, body').animate({
-                        scrollTop: $('.js-quiz .results_block').offset().top - 50
-                    }, 1000);
-            }
-        }
-
-        // check results
-        $('.js-quiz .check_results').click(function(){
-            var this_arr = new Array();
-            var counter = 1;
-            var res = new Array();
-            var cnt;
-            $('.js-quiz .js-quiz-inner .checked_block').each(function(){
-                cnt = $(this).attr('data-values').split('|').length;
-                this_arr = $(this).attr('data-values').split('|') ; //.split('|')
-                if( counter == 1 ){
-                    for ( var i = 0; i < cnt; i++ ) {
-                        res[i] = parseInt( this_arr[i] );
-                    }
-                }else{
-                    for ( var i = 0; i < cnt; i++ ) {
-                        res[i] = parseInt( res[i] ) + parseInt( this_arr[i] );
-                    }
-                }
-                counter++;
-            })
-
-            var maxValueInArray = Math.max.apply(Math, res  );
-
-            var out = 0;
-            for ( var i = 0; i < cnt; i++ ) {
-                if( res[i] == maxValueInArray && out == 0 ){
-                    var num = i+1;
-                    $('.result_'+num).fadeIn();
-                    $('.top_adsense, .bottom_adsense').removeClass('hide');
-                    out = 1;
-                    is_completed = 1;
-                }
-            }
-        })
-
-        //patch height
-        // $('.Quiz .Quiz-question .Quiz-questionInner').each(function(){
-        //     if( $( '.image_type', this).length > 0 ){
-        //     if( $(' .check_row .check_text', this).length == 2 || $(' .check_row .check_text', this).length == 4 ){
-        //         for( $k=0; $k <=4; $k=$k+2){
-        //         var height = [];
-
-        //         var ind1 = $k;
-        //         var ind2 = $k+1;
-        //         var ind3 = $k+2;
-
-        //         if( $(' .check_row .check_text:eq('+ind1+')', this).height() )
-        //             height.push( $(' .check_row .check_text:eq('+ind1+')', this).height() );
-
-        //         if( $(' .check_row .check_text:eq('+ind2+')', this).height() )
-        //             height.push( $(' .check_row .check_text:eq('+ind2+')', this).height() );
-
-
-        //         var max_of_array = Math.max.apply(Math, height);
-
-        //         $('.check_row .check_text:eq('+ind1+')', this).css('height', max_of_array );
-        //         $(' .check_row .check_text:eq('+ind2+')', this).css('height', max_of_array );
-
-        //     }
-
-        //     }else{
-        //     for( $k=0; $k <=9; $k=$k+3){
-        //         var height = [];
-
-        //         var ind1 = $k;
-        //         var ind2 = $k+1;
-        //         var ind3 = $k+2;
-
-        //         if( $(' .check_row .check_text:eq('+ind1+')', this).height() )
-        //             height.push( $(' .check_row .check_text:eq('+ind1+')', this).height() );
-
-        //         if( $(' .check_row .check_text:eq('+ind2+')', this).height() )
-        //             height.push( $(' .check_row .check_text:eq('+ind2+')', this).height() );
-
-        //         if( $(' .check_row .check_text:eq('+ind3+')', this).height() )
-        //         height.push( $(' .check_row .check_text:eq('+ind3+')', this).height() );
-
-        //         var max_of_array = Math.max.apply(Math, height);
-
-        //         $('.check_row .check_text:eq('+ind1+')', this).css('height', max_of_array );
-        //         $(' .check_row .check_text:eq('+ind2+')', this).css('height', max_of_array );
-        //         $(' .check_row .check_text:eq('+ind3+')', this).css('height', max_of_array );
-        //     }
-
-
-
-        //     }
-
-        //     }
-
-        // })
-
-    }) // global end
-
-</script>
-
-<style type="text/css">
-
-.check_res{
-    display:none;
-}
-.single_result{
-    display: none;
-}
-
-</style>
-
 <section class="socialquiz">
 
     <header class="socialquiz-header">
@@ -219,10 +14,10 @@
         <div id="sharetools-long">
             <div class="row">
               <div class="small-12 columns">
-                <div id="socialarea">     
+                <div id="socialarea">
                   <div id="sharedcount">
                     <div id="total">323</div>
-                    <p>Shares</p> 
+                    <p>Shares</p>
                   </div>
                   <div id="share-icons">
                     <a class="facebook" target="_blank"><span>Share on Facebook</span>&#xf09a;</a>
@@ -808,54 +603,240 @@
             <!-- / quiz questions -->
 
             <!-- hidden results button -->
-            <div class="check_res">
+            <div class="Quiz-check check_res">
                 <button type="button" class="btn btn-success check_results">Check Results</button>
             </div>
 
             <!-- / quiz results -->
-            <div class="results_block">
-                results
-                <div class="single_result result_1">
-                    <div>Answer 01</div>
-                    <div>
-                        The Eternal Backpacker  - Your backpack is just a TID more tattered than your passport. You’re an eternal backpacker, chasing adventure from one continent to another. You’re a lone wolf, but you know how to rock up at a new place and make friends. For you, the road is life. Your travel hero: Alexander SuperTramp
-                    </div>
-                </div>
-                <div class="single_result result_2">
-                    <div>Answer 02</div>
-                    <div>
-                        The Jetsetter – You work hard so you can take make the most of your annual leave and get out and see just a TID bit of the world. From the great American adventure to ski seasons and Euro trips, you embrace every opportunity that comes your way. You haven’t been everywhere yet, but it’s on your list. Your travel hero: Michael Palin
-                    </div>
-                </div>
-                <div class="single_result result_3">
-                    <div>Answer 03</div>
-                    <div>
-                        The Luxury Traveller – Business class flights, 5 star hotels, VIP lounges and just a TID bit of brand name shopping - you enjoy the best of the best when you travel. You plan in advance so you can insure the best table at the best restaurant in town or the best seats at the best new Broadway show. You travel in style. No doubt about it. Your travel hero: Victoria Beckham
-                    </div>
-                </div>
-                <div class="single_result result_4">
-                    <div>Answer 04</div>
-                    <div>
-                        The Voluntourist  – You travel the world so you can give just a TID back. Whether it’s helping rescue Orangutans in Borneo or visiting orphanages in China, you have a servant heart that just wants to help. The best travel mementos you have are the memories you’ve taken away from the projects you’ve been involved in. Your travel hero: Dian Fossey
-                    </div>
-                </div>
-                <div class="single_result result_5">
-                    <div>Answer 05</div>
-                    <div>
-                        The Foodie – From dining at Michelin star restaurants to eating scorpions at the street market, you’re always just a TID hungry and keen for a culinary challenge. When it comes to making tough travel choices, you do what your gut tells you (literally). Your travel hero: Anthony Bourdain
-                    </div>
-                </div>
-                <div class="single_result result_6">
-                    <div>Answer 06</div>
-                    <div>
-                        The Spiritual Seeker – You’re on both a physical and figurative journey to discovering just a TID more about yourself. Your holidays are a time to connect with your centre, practice mindfulness and search for inner peace. From ashrams in India to Cambodian temples, your trips are about taking time out, and as much of it as it takes. Your travel hero: Elizabeth Gilbert
-                    </div>
-                </div>
-            </div>
+            <ul class="Quiz-result results_block row">
+                <li class="small-12 columns Quiz-resultItem result_1">
+                    <h2>The Eternal Backpacker</h2>
+                    <img class="Quiz-resultImage" src="/Media/Default/campaigns/socialquiz/A-backpacker.png">
+                    <p>
+                        Your backpack is just a TID more tattered than your passport. You’re an eternal backpacker, chasing adventure from one continent to another. You’re a lone wolf, but you know how to rock up at a new place and make friends. For you, the road is life.
+                    </p>
+                    <span>Your travel hero: Alexander SuperTramp</span>
+                </li>
+                <li class="Quiz-resultItem result_2">
+                    <h2>The Jetsetter</h2>
+                    <img class="Quiz-resultImage" src="/Media/Default/campaigns/socialquiz/A-jetsetter.png">
+                    <p>
+                        You work hard so you can take make the most of your annual leave and get out and see just a TID bit of the world. From the great American adventure to ski seasons and Euro trips, you embrace every opportunity that comes your way. You haven’t been everywhere yet, but it’s on your list.
+                    </p>
+                    <span>Your travel hero: Michael Palin</span>
+                </li>
+                <li class="Quiz-resultItem result_3">
+                    <h2>The Luxury Traveller</h2>
+                    <img class="Quiz-resultImage" src="/Media/Default/campaigns/socialquiz/A-luxury-traveller.png">
+                    <p>
+                        Business class flights, 5 star hotels, VIP lounges and just a TID bit of brand name shopping - you enjoy the best of the best when you travel. You plan in advance so you can insure the best table at the best restaurant in town or the best seats at the best new Broadway show. You travel in style. No doubt about it.
+                    </p>
+                    <span>Your travel hero: Victoria Beckham</span>
+                </li>
+                <li class="Quiz-resultItem result_4">
+                    <h2>The Voluntourist</h2>
+                    <img class="Quiz-resultImage" src="/Media/Default/campaigns/socialquiz/A-voluntourist.png">
+                    <p>
+                        You travel the world so you can give just a TID back. Whether it’s helping rescue Orangutans in Borneo or visiting orphanages in China, you have a servant heart that just wants to help. The best travel mementos you have are the memories you’ve taken away from the projects you’ve been involved in.
+                    </p>
+                    <span>Your travel hero: Dian Fossey</span>
+                </li>
+                <li class="Quiz-resultItem result_5">
+                    <h2>The Foodie</h2>
+                    <img class="Quiz-resultImage" src="/Media/Default/campaigns/socialquiz/A-foodie.png">
+                    <p>
+                        From dining at Michelin star restaurants to eating scorpions at the street market, you’re always just a TID hungry and keen for a culinary challenge. When it comes to making tough travel choices, you do what your gut tells you (literally).
+                    </p>
+                    <span>Your travel hero: Anthony Bourdain</span>
+                </li>
+                <li class="Quiz-resultItem result_6">
+                    <h2>The Spiritual Seeker</h2>
+                    <img class="Quiz-resultImage" src="/Media/Default/campaigns/socialquiz/A-spitualist.png">
+                    <p>
+                        You’re on both a physical and figurative journey to discovering just a TID more about yourself. Your holidays are a time to connect with your centre, practice mindfulness and search for inner peace. From ashrams in India to Cambodian temples, your trips are about taking time out, and as much of it as it takes.
+                    </p>
+                    <span>Your travel hero: Elizabeth Gilbert</span>
+                </li>
+            </ul>
         </div>
     </section>
     <!-- / quiz results -->
 
+    <section class="socialquiz-competition">
+        <div class="row">
+            <h2>Win $200 flight vouchers with Virgin Australia!</h2>
+            <p>Now you know what type of traveller you are, it’s time to kick start your next adventure!</p>
+            <p>To be in the running to WIN 1 x 3 $200 flights vouchers with Virgin Australia, tell us in 20 words or less who inspires you to travel.</p>
+            <form class="socialquiz-competitionForm">
+                <div class="row">
+                    <span class="small-12 medium-6 columns">
+                        <label for="fullName">Full Name:</label>
+                    </span>
+                    <span class="small-12 medium-6 columns">
+                        <input id="fullName" type="text">
+                    </span>
+                </div>
+                <div class="row">
+                    <span class="small-12 medium-6 columns">
+                        <label for="email">Email Address:</label>
+                    </span>
+                    <span class="small-12 medium-6 columns">
+                        <input id="email" type="text">
+                    </span>
+                </div>
+                <div class="row">
+                    <span class="small-12 medium-6 columns">
+                        <label for="inspireCopy">Who inspires you to travel and why?</label>
+                        <small>(In 20 words or less)</small>
+                    </span>
+                    <span class="small-12 medium-6 columns">
+                        <textarea id="inspireCopy"></textarea>
+                    </span>
+                </div>
+                <div class="row">
+                    <span class="small-12 medium-6 columns">
+                        <label for="nextTrip">When’s your next adventure?</label>
+                    </span>
+                    <span class="small-12 medium-6 columns">
+                        <input id="nextTrip" type="date">
+                    </span>
+                </div>
+                <div class="row">
+                    <span class="small-6 small-offset-6 columns">
+                        <input id="acceptTerms" type="checkbox">
+                        <label for="acceptTerms">I accept the <a href="#">Terms and Conditions</a></label>
+                    </span>
+                </div>
+                <div class="row">
+                    <span class="small-6 small-offset-6 columns">
+                        <button class="button green medium">Enter to win flights</button>
+                    </span>
+                </div>
+            </form>
+        </div>
+    </section>
+
 </section>
+
+<script type="text/javascript">
+
+    jQuery(document).ready( function($){
+
+        var is_completed = 0;
+        // click block
+        $('.js-quiz .js-quiz-answer').click( function(){
+            if( is_completed == 0 ){
+            // drop settings
+            var pnt = $(this).parent('.js-quiz-question-inner');
+            $( '.js-quiz-answer', pnt ).removeClass('checked_block');
+            $( '.block_checkbox', pnt ).attr( 'checked', false );
+
+            // add new one
+            if( $( '.block_checkbox', this ).attr( 'checked' ) ){
+                $( '.block_checkbox', this ).attr( 'checked', false );
+                $(this).removeClass('checked_block');
+
+            }
+            else{
+                $( '.block_checkbox', this ).attr( 'checked', 'checked' );
+                $(this).addClass('checked_block');
+                var parent_point = $(this).parents('.js-quiz-question');
+
+                console.log( parent_point.next() );
+
+                if( parent_point.next().hasClass('js-quiz-question')  ){
+                    $('html, body').animate({
+                        scrollTop: parent_point.next().offset().top - 50
+                    }, 1000);
+                }
+
+                //var next_el = $('.parent_point').next('.Quiz-question');
+                //console.log( next_el.html() );
+                //$( next_el ).css('background', '#ff0');
+
+            }
+
+            $( '.js-quiz-answer', pnt ).each(function(){
+                if( $(this).hasClass('checked_block')  ){
+                    $(this).removeClass('is-opaque');
+                }else{
+                    $(this).addClass('is-opaque');
+                }
+            })
+
+
+            check_test_complete();
+            }
+        })
+        $('.js-quiz .block_checkbox').click( function(e){
+            if( is_completed == 0 ){
+                $(this).parent('.js-quiz-answer').click();
+            }else{
+                e.preventDefault();
+            }
+        })
+
+        // check if test is complete
+        function check_test_complete(){
+            var counter = 0;
+            $('.js-quiz .js-quiz-question').each(function(){
+
+                var id = $(this).attr('data-num');
+                var slide_pnt = $('.slide_'+id);
+                $( '.checked_block', slide_pnt).each(function(){
+
+                    if( $(this).hasClass('checked_block') == true ){
+                        counter++;
+                    }
+                })
+            })
+
+            if( $('.js-quiz .js-quiz-question').length == counter ){
+                //$('.check_res').fadeIn();
+                $('.js-quiz .check_results').click();
+                    $('html, body').animate({
+                        scrollTop: $('.js-quiz .results_block').offset().top - 50
+                    }, 1000);
+            }
+        }
+
+        // check results
+        $('.js-quiz .check_results').click(function(){
+            var this_arr = new Array();
+            var counter = 1;
+            var res = new Array();
+            var cnt;
+            $('.js-quiz .js-quiz-inner .checked_block').each(function(){
+                cnt = $(this).attr('data-values').split('|').length;
+                this_arr = $(this).attr('data-values').split('|') ; //.split('|')
+                if( counter == 1 ){
+                    for ( var i = 0; i < cnt; i++ ) {
+                        res[i] = parseInt( this_arr[i] );
+                    }
+                }else{
+                    for ( var i = 0; i < cnt; i++ ) {
+                        res[i] = parseInt( res[i] ) + parseInt( this_arr[i] );
+                    }
+                }
+                counter++;
+            })
+
+            var maxValueInArray = Math.max.apply(Math, res  );
+
+            var out = 0;
+            for ( var i = 0; i < cnt; i++ ) {
+                if( res[i] == maxValueInArray && out == 0 ){
+                    var num = i+1;
+                    $('.result_'+num).fadeIn();
+                    $('.top_adsense, .bottom_adsense').removeClass('hide');
+                    out = 1;
+                    is_completed = 1;
+                }
+            }
+        })
+
+    }) // global end
+
+</script>
 
 {% endblock %}

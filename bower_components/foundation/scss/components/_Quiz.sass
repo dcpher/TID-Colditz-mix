@@ -3,7 +3,7 @@
         display: block
         margin-bottom: rem-calc(30)
         @media #{$small-only}
-            margin-bottom: rem-calc(10)
+            margin-bottom: 0
 
         &Title
             max-width: rem-calc(740)
@@ -58,8 +58,6 @@
                 font-size: rem-calc(18)
                 line-height: rem-calc(24)
 
-
-
         &Check
             position: absolute
             bottom: rem-calc(12)
@@ -68,28 +66,51 @@
             height: rem-calc(28)
             background-color: $color-white
             border-radius: rem-calc(4)
+            &::before
+                display: block
+                position: absolute
+                top: rem-calc(1)
+                bottom: 0
+                left: rem-calc(5)
+                right: 0
+                opacity: 0
+                margin: auto
+                font-size: rem-calc(20)
+                color: $color-mid-grey
+                transition: opacity 0.1s ease-in
+                content: '\2714'
             @media #{$small-only}
                 display: none
 
             > input
                 display: none;
 
-        .Quiz-answerLabel
-            display: block
-            position: absolute
-            left: rem-calc(4)
-            right: rem-calc(4)
-            top: rem-calc(4)
-            bottom: rem-calc(4)
-            margin: 0
-            opacity: 0
-            cursor: pointer
-            background-color: $color-black
-            transition: opacity 0.2s ease-in
-
         &.checked_block
-            .Quiz-answerLabel
-                opacity: 1
+            .Quiz-answerCheck
+                &::before
+                    opacity: 1
+
+    &-check
+        display: none
+
+    .Quiz-result
+        margin-bottom: rem-calc(60)
+        list-style: none
+        padding-left: 0
+
+        &Item
+            display: none;
+
+        &Image
+            float: right
+            margin-left: rem-calc(60)
+            margin-bottom: rem-calc(30)
+            @media (max-width: 730px)
+                max-width: rem-calc(300)
+            @media #{$small-only}
+                float: none
+                margin-left: 0
+                margin-bottom: rem-calc(20)
 
 .is-opaque
     opacity: 0.5
