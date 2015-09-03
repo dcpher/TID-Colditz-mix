@@ -1,7 +1,9 @@
 .Quiz
     &-question
         display: block
-        margin-bottom: rem-calc(60)
+        margin-bottom: rem-calc(30)
+        @media #{$small-only}
+            margin-bottom: rem-calc(10)
 
         &Title
             max-width: rem-calc(740)
@@ -10,6 +12,9 @@
             line-height: 1.1
             font-weight: 100
             letter-spacing: rem-calc(-2)
+            @media #{$small-only}
+                font-size: rem-calc(40)
+                line-height: 1;
 
     &-answer
         margin-bottom: rem-calc(20)
@@ -38,6 +43,18 @@
         &Title
             display: block
             margin-right: rem-calc(34)
+            @media #{$small-only}
+                margin-right: 0
+            @media #{$medium-up}
+                min-height: rem-calc(50)
+                font-size: rem-calc(18)
+                line-height: rem-calc(24)
+            @media #{$large-up}
+                min-height: rem-calc(52)
+                font-size: rem-calc(18)
+                line-height: rem-calc(24)
+
+
 
         &Check
             position: absolute
@@ -47,6 +64,8 @@
             height: rem-calc(28)
             background-color: $color-white
             border-radius: rem-calc(4)
+            @media #{$small-only}
+                display: none
 
             > input
                 display: none;
