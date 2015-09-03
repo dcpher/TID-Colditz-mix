@@ -43,8 +43,12 @@
         &Title
             display: block
             margin-right: rem-calc(34)
+            @media (max-width: 380px)
+                font-size: rem-calc(14)
+                line-height: 1.1
             @media #{$small-only}
                 margin-right: 0
+                min-height: rem-calc(46)
             @media #{$medium-up}
                 min-height: rem-calc(50)
                 font-size: rem-calc(18)
