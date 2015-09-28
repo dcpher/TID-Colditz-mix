@@ -3,7 +3,29 @@
 {% block body_id %}quote{% endblock %}
 {% block content %}
 
-
+<aside class="quote-sticky stickyNav">
+  <div class="stickyNav-inner">
+    <span class="stickyNav-cell">
+      <span class="quote-sticky-price">$62.00</span>
+      <span class="quote-sticky-currency">AUD</span>
+    </span>
+    <span class="quote-sticky-buyCta stickyNav-cell">
+      <button class="button green medium">Buy now</button>
+    </span>
+    <span class="quote-sticky-trustPilot stickyNav-cell">
+      <!-- <div class="trustpilot-display"><div class="tp-stars stars-5"></div></div> -->
+      <img src="/Media/Default/images/stickyNav-trustpilot-temp.png">
+    </span>
+    <span class="quote-sticky-emailQuote stickyNav-cell">
+      <form class="quote-sticky-emailForm">
+        <input title="Email a quote" type="email" placeholder="Enter your email" required />
+        <button type="submit">
+          <span class="fa fa-envelope-o"></span>
+        </button>
+      </form>
+    </span>
+  </div>
+</aside>
 
 <div class="blue-panel">
   <div class="row">

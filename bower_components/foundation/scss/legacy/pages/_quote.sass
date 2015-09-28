@@ -87,7 +87,7 @@ body.quote
       @include grid-column(4)
     .widget-email-quote
       @include grid-column(12)
-    
+
   .widget-email-quote-container
     form
       +clearfix
@@ -166,8 +166,8 @@ body.quote
     @media #{$xxlarge-only}
       margin-bottom: rem-calc(20)
       margin-top: rem-calc(30)
-    
-    
+
+
   h2
     @include grid-column(12)
     color: $color-blue
@@ -185,7 +185,7 @@ body.quote
     margin-bottom: rem-calc(50)
     @media #{$xxlarge-only}
       margin-bottom: rem-calc(60)
-    
+
     .stars
       float: left
       .star
@@ -244,7 +244,7 @@ body.quote
       top: rem-calc(15)
     &.open
       margin-bottom: rem-calc(15)
-  
+
   .trip-summary-bar
     background: rgba(0, 0, 0, 0.3)
     border-top: 1px solid rgba(0, 0, 0, 0.5)
@@ -330,3 +330,62 @@ body.quote
       .widget-email-quote
         padding-left: 0
         margin-bottom: rem-calc(20)
+
+.quote
+  &-sticky
+    .stickyNav-cell
+      white-space: nowrap
+
+    &-price
+      font-size: 42px
+      line-height: 1
+      color: $color-green
+
+    &-buyCta
+
+      > .button
+        min-width: 220px
+        margin: 0
+        @media screen and (min-width: 960px)
+          min-width: 160px
+
+    &-trustPilot
+
+      > img // to be replaced by trust pilot widget
+        height: 42px
+        width: auto
+        max-width: none
+
+    &-emailQuote
+      width: 100%
+      text-align: right
+
+    &-emailForm
+      display: inline-block
+      max-width: 220px
+      width: 100%
+      @media screen and (min-width: 960px)
+        max-width: 320px
+
+      input
+        float: left
+        width: 80%
+        height: 38px
+        margin: 0
+        border-top-left-radius: 3px
+        border-bottom-left-radius: 3px
+
+      button
+        width: 20%
+        height: 38px
+        margin: 0
+        padding: 0
+        border-top-left-radius: 0
+        border-bottom-left-radius: 0
+        text-align: center
+        &:after
+          display: none
+
+        .fa
+          margin: auto
+          color: $color-white
