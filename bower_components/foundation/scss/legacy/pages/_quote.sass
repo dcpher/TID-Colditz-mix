@@ -337,28 +337,45 @@ body.quote
       white-space: nowrap
 
     &-price
-      font-size: 42px
+      font-size: 30px
       line-height: 1
       color: $color-green
+      @media #{$medium-up}
+        font-size: 42px
 
-    &-buyCta
+    .quote-sticky-buyCta
+      padding-right: 0
+      text-align: right
+      @media screen and (min-width: 550px)
+        padding-right: 20px
+        text-align: left
 
       > .button
-        min-width: 220px
         margin: 0
-        @media screen and (min-width: 960px)
+        @media screen and (min-width: 550px)
+          min-width: auto
+        @media screen and (min-width: 640px)
           min-width: 160px
 
-    &-trustPilot
+        @media screen and (min-width: 960px)
+          min-width: 220px
+
+    .quote-sticky-trustPilot
+      display: none
+      @media screen and (min-width: 790px)
+        display: table-cell
 
       > img // to be replaced by trust pilot widget
-        height: 42px
+        height: 40px
         width: auto
         max-width: none
 
-    &-emailQuote
+    .quote-sticky-emailQuote
+      display: none
       width: 100%
       text-align: right
+      @media screen and (min-width: 550px)
+        display: table-cell
 
     &-emailForm
       display: inline-block
@@ -370,19 +387,23 @@ body.quote
       input
         float: left
         width: 80%
-        height: 38px
+        height: 30px
         margin: 0
         border-top-left-radius: 3px
         border-bottom-left-radius: 3px
+        @media screen and (min-width: 640px)
+          height: 38px
 
       button
         width: 20%
-        height: 38px
+        height: 30px
         margin: 0
         padding: 0
         border-top-left-radius: 0
         border-bottom-left-radius: 0
         text-align: center
+        @media screen and (min-width: 640px)
+          height: 38px
         &:after
           display: none
 

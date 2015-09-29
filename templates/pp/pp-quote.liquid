@@ -3,7 +3,7 @@
 {% block body_id %}quote{% endblock %}
 {% block content %}
 
-<aside class="quote-sticky stickyNav">
+<aside class="quote-sticky stickyNav stickyNav-is-hidden">
   <div class="stickyNav-inner">
     <span class="stickyNav-cell">
       <span class="quote-sticky-price">$62.00</span>
@@ -18,7 +18,7 @@
     </span>
     <span class="quote-sticky-emailQuote stickyNav-cell">
       <form class="quote-sticky-emailForm">
-        <input title="Email a quote" type="email" placeholder="Enter your email" required />
+        <input title="Email your quote" type="email" placeholder="Email your quote" required />
         <button type="submit">
           <span class="fa fa-envelope-o"></span>
         </button>
@@ -354,5 +354,18 @@
   </aside>
 
 </div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+      $(window).scroll(function() {
+        if ($(this).scrollTop() >= 430) {
+          $('.stickyNav').removeClass('stickyNav-is-hidden');
+        }
+        else {
+          $('.stickyNav').addClass('stickyNav-is-hidden');
+        }
+      });
+  });
+</script>
 
 {% endblock %}
