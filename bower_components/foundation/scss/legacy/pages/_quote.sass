@@ -346,67 +346,76 @@ body.quote
     .quote-sticky-buyCta
       padding-right: 0
       text-align: right
-      @media screen and (min-width: 550px)
+      @media screen and (min-width: 750px)
         padding-right: 20px
         text-align: left
 
-      > .button
-        margin: 0
-        @media screen and (min-width: 550px)
-          min-width: auto
-        @media screen and (min-width: 640px)
-          min-width: 160px
-
-        @media screen and (min-width: 960px)
-          min-width: 220px
+    &-buyButton
+      margin: 0
+      padding: 5px 42px 5px 12px
+      font-size: 16px
+      &:after
+        bottom: 8px
+      @media #{$medium-up}
+        min-width: 250px
+        padding: 8px 16px
+        font-size: 20px
+        &:after
+          bottom: 13px
+      @media screen and (max-width: 820px)
+        min-width: 180px
+      @media screen and (max-width: 440px)
+        min-width: 0
 
     .quote-sticky-trustPilot
       display: none
-      @media screen and (min-width: 790px)
+      @media screen and (min-width: 750px)
         display: table-cell
 
-      > img // to be replaced by trust pilot widget
-        height: 40px
-        width: auto
-        max-width: none
-
-    .quote-sticky-emailQuote
-      display: none
-      width: 100%
-      text-align: right
-      @media screen and (min-width: 550px)
-        display: table-cell
-
-    &-emailForm
+    &-trustPilotWidget
       display: inline-block
-      max-width: 220px
       width: 100%
-      @media screen and (min-width: 960px)
-        max-width: 320px
+      max-width: 300px
 
-      input
-        float: left
-        width: 80%
-        height: 30px
-        margin: 0
-        border-top-left-radius: 3px
-        border-bottom-left-radius: 3px
-        @media screen and (min-width: 640px)
-          height: 38px
+    // Email Quote Form
 
-      button
-        width: 20%
-        height: 30px
-        margin: 0
-        padding: 0
-        border-top-left-radius: 0
-        border-bottom-left-radius: 0
-        text-align: center
-        @media screen and (min-width: 640px)
-          height: 38px
-        &:after
-          display: none
+    // .quote-sticky-emailQuote
+    //   display: none
+    //   width: 100%
+    //   text-align: right
+    //   @media screen and (min-width: 550px)
+    //     display: table-cell
 
-        .fa
-          margin: auto
-          color: $color-white
+    // &-emailForm
+    //   display: inline-block
+    //   max-width: 220px
+    //   width: 100%
+    //   @media screen and (min-width: 960px)
+    //     max-width: 320px
+
+    //   input
+    //     float: left
+    //     width: 80%
+    //     height: 30px
+    //     margin: 0
+    //     border-top-left-radius: 3px
+    //     border-bottom-left-radius: 3px
+    //     @media screen and (min-width: 640px)
+    //       height: 38px
+
+    //   button
+    //     width: 20%
+    //     height: 30px
+    //     margin: 0
+    //     padding: 0
+    //     border-top-left-radius: 0
+    //     border-bottom-left-radius: 0
+    //     text-align: center
+    //     @media screen and (min-width: 640px)
+    //       height: 38px
+    //     &:after
+    //       display: none
+
+    //     .fa
+    //       margin: auto
+    //       color: $color-white

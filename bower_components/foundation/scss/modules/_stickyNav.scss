@@ -20,6 +20,10 @@
         height: $stickyNav-height;
         padding: 10px 20px;
     }
+    // Hide stickyNav on smart phones
+    @media screen and (max-width: 414px) and (orientation: portrait), (max-width: 736px) and (orientation: landscape) {
+        display: none;
+    }
 
     &-is-hidden {
         top: -$stickyNav-height-small;
@@ -39,9 +43,11 @@
     &-cell {
         display: table-cell;
         vertical-align: middle;
-        padding-right: 20px;
+        padding-right: 30px;
         &:last-child {
+            width: 100%;
             padding-right: 0;
+            text-align: right;
         }
     }
 }
