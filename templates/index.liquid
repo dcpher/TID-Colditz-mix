@@ -12,20 +12,20 @@
 <!--   TID QQWidget Container    -->
 <div class="row qqw-full-width">
   <div class="small-12 column">
-    
+
     <!--  Include QQWidget  -->
     {% include "qqw" %}
-    
+
   </div>
 </div>
-  
+
 <!-- QQW Container END -->
 </div>
 <style>
   .globalalert {
     color: #005581;
-    border:0px solid #ffffff;  
-    padding:8px; 
+    border:0px solid #ffffff;
+    padding:8px;
     margin-bottom:0;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -35,7 +35,7 @@
   }
   .globalalert strong:before { content: '\f071'; font: normal normal normal 14px/1 FontAwesome; left: 0.5rem; top: 0.625rem; position: absolute; }
   .globalalert strong { margin-left: 1.5rem; line-height: 1.1; display: block; }
-  
+
   .globalalert:hover {
     background:#59d2ee;
     color:#005581;
@@ -55,48 +55,65 @@
     </div>
   </div>
 </div>
-<div class="benefits-bar blue">
-
-    <!--  Include Benefits Bar  -->
-    {% include "benefits-bar" %}
-  
+<div class="benefitsBarCms blue">
+  <ul class="row">
+    <li class="benefitsBarCms-item small-6 medium-3 large-2 columns trusted">
+      Trusted by over 1 Million Aussies
+    </li>
+    <li class="benefitsBarCms-item small-6 medium-3 large-2 columns award">
+      Award Winning Value
+    </li>
+    <li class="benefitsBarCms-item small-6 medium-3 large-2 columns owned">
+      100% Australian Owned
+    </li>
+    <li class="benefitsBarCms-item small-6 medium-3 large-2 columns secure">
+      Secure Payment
+    </li>
+    <li class="large-4 columns trustPilot">
+      <div class="trustpilot-widget" data-locale="en-AU" data-template-id="5406e65db0d04a09e042d5fc" data-businessunit-id="5500023c0000ff00057df92a" data-style-height="28px" data-style-width="100%" data-theme="dark">
+          <a href="https://au.trustpilot.com/review/travelinsurancedirect.com.au" target="_blank">Trustpilot</a>
+      </div>
+    </li>
+  </ul>
 </div>
+<script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.sync.bootstrap.min.js"></script>
+
 
 <!--  Quick Answers -->
-<div class="content-panel content grey-panel quick-answers">  
+<div class="content-panel content grey-panel quick-answers">
   <div class="row">
     <div class="small-12 column">
       <h2 class="medium-text-center">Got a question about...?</h2>
     </div>
-  </div>    
+  </div>
   <script type="text/javascript" src="//www.travelinsurancedirect.com.au/Media/Default/js/jquery.atooltip.min.js"></script>
   <script type="text/javascript">
-    $(function(){ 
+    $(function(){
       $('a.clickTipmedical ').aToolTip({
           clickIt: true,
           tipContent: '<h4>Travelling with a medical condition?</h4><p>Pregnancy, asthma, diabetes and 40 other conditions are generally covered although some conditions may apply. <a href="http://service.travelinsurancedirect.com.au/customer/portal/articles/595785-pre-existing-medical-conditions">Learn more</a></p>'
-      }); 
+      });
       $('a.clickTipcruising').aToolTip({
           clickIt: true,
           tipContent: '<h4>We cover cruising</h4><p>If you’re cruising in Australia, enter ‘Australian Waters’ in the Country field. Otherwise, simply enter the countries you’re stopping in or the region (eg. Europe). <a href="http://service.travelinsurancedirect.com.au/customer/portal/articles/500446-travel-insurance-for-cruising">Learn more</a></p>'
-      }); 
+      });
       $('a.clickTipcover').aToolTip({
           clickIt: true,
           tipContent: '<h4>Cover for other travellers</h4><p>Dependent children or grandchildren under the age of 21 who are travelling with you can travel for free. Some visa holders and Australians already overseas can also be covered. <a href="http://service.travelinsurancedirect.com.au/customer/portal/articles/526821-who-can-buy-">Learn more</a></p>'
-      }); 
+      });
       $('a.clickTipactivities').aToolTip({
           clickIt: true,
           tipContent: '<h4>100 sports activities covered</h4><p>Activities such as hiking and cycling are automatically covered, while snow sports can be selected as an option. <a href="http://service.travelinsurancedirect.com.au/customer/portal/articles/721221-travel-insurance-for-sports-and-activities">Learn more</a></p>'
-      }); 
+      });
       $('a.clickTipgear').aToolTip({
           clickIt: true,
           tipContent: '<h4>Protect your tech toys</h4><p>Laptops, tablets and cameras are covered up to $4,000. Your phone and all other items are up to $700. Add additional coverage on valuable items as an option. <a href="http://service.travelinsurancedirect.com.au/customer/portal/articles/526847-cover-for-phones-cameras-and-laptops">Learn more</a></p>'
-      }); 
+      });
       $('a.clickTipmotorbike').aToolTip({
           clickIt: true,
           tipContent: '<h4>Wheely good coverage</h4><p>We don’t charge you extra if you’re riding on two wheels, you just need to have the right license and the right gear. <a href="http://service.travelinsurancedirect.com.au/customer/portal/articles/528596-travel-insurance-for-motorcycle-riding">Learn more</a></p>'
-      });   
-    }); 
+      });
+    });
   </script>
 <style>
 #aToolTip {
@@ -113,13 +130,13 @@
   border:1px solid #ddd;
   background:#ffffff;
   margin:0;
-  padding: 16px; 
-  max-width: 400px;  
+  padding: 16px;
+  max-width: 400px;
   -moz-border-radius: 4px 4px 4px 0;
   -webkit-border-radius: 4px 4px 4px 0;
   -khtml-border-radius: 4px 4px 4px 0;
   border-radius: 4px 4px 4px 0;
-  
+
   -moz-box-shadow: 0px 2px 5px #777; /* for Firefox 3.5+ */
   -webkit-box-shadow: 0px 2px 5px #777; /* for Safari and Chrome */
   box-shadow: 0px 2px 5px #777; /* for Safari and Chrome */
@@ -142,7 +159,7 @@
     width: 100%;
     display: block;
     color: #777;
-  } 
+  }
   ul#quickanswers, ul#quickanswers li {
     list-style: none;
   }
@@ -253,7 +270,7 @@ $(function() {
   })
 })
 </script>
-</div>  
+</div>
 <!--  Quick Answers END -->
 
 
@@ -263,7 +280,7 @@ $(function() {
   <div class="row">
     <div class="small-12 column">
       <h2 class="medium-text-center blue">Just a TID smarter on your travels</h2>
-      
+
       <div class="row">
         <div class="small-12 medium-4 column middle">
           <ul class="no-bullet medium-text-right">
@@ -303,28 +320,28 @@ $(function() {
           </ul>
         </div>
       </div>
-      
+
       <div class="row">
         <div class="small-12 column text-center">
           <a class="button blue small-expand" href="#">Download Tripwise App</a>
         </div>
       </div>
-      
+
     </div>
   </div>
 </div>
-  
-<div class="content-panel content grey-panel benefits-panel">  
+
+<div class="content-panel content grey-panel benefits-panel">
   <!-- Include Benefits Panel Widget -->
-  {% include "benefits-panel" %}  
-</div>  
-  
-  
+  {% include "benefits-panel" %}
+</div>
+
+
 <div class="content-panel content blue-panel amt-panel">
   <div class="row">
     <div class="small-12 column">
       <h2 class="white">Frequent traveller? Save with Annual Multi Trip</h2>
-      
+
       <div class="row">
         <div class="small-12 medium-4 column hide-for-small">
           <img src="/Media/Default/images/amt_globe.png" />
@@ -333,7 +350,7 @@ $(function() {
             <p class="dark-blue amt-p">Are you planning a few trips this year for work and pleasure? Rather than buying every time you travel, get one annual multi trip travel insurance policy and have the same level of cover all year round, with the flexibility you need. Saving you and your family time and money.</p>
             <a class="button dark-blue medium small-expand" href="//www.travelinsurancedirect.com.au/annual-travel-insurance?homepage=amtcta">Get Annual Cover</a>
         </div>
-      </div> 
+      </div>
       <hr class="hide-for-small blue">
       <ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-3">
         <li class="text-with-img amt-medical">

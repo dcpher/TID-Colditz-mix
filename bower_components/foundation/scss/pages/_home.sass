@@ -1,0 +1,28 @@
+.homepage
+    .header-panel
+        .title
+            position: relative
+            overflow: hidden
+
+            @media #{$medium-up}
+                overflow: initial
+
+            &:after
+                display: block
+                position: absolute
+                right: 0
+                top: -54px
+                width: 100px
+                height: 175px
+                background-image: url('/Media/Default/index/tid-xmas-homepage-bungieguy@2x.png')
+                background-repeat: no-repeat
+                background-size: 100px 175px
+                background-position: -2px -2px
+                content: ''
+
+            @media #{$small-only}
+                &:after
+                    display: none
+
+    .benefits-bar.blue
+        background-color: $color-blue-light
