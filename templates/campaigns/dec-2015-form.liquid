@@ -1,0 +1,152 @@
+{% block title %}Travel Insurance to Bali: From $22{% endblock %}
+{% block content %}
+<style>
+
+  
+@media all and (min-width: 40em) {
+#header {
+    background: url('/Media/Default/campaigns/thailand-trip/friends-header-img-desktop.jpg') no-repeat center center #00bae4;
+    background-size: cover;
+  }
+  h1.family { display: none; }
+}
+@media all and (max-width: 64em) {
+#header {
+    background: url('/Media/Default/campaigns/thailand-trip/friends-header-img-tablet.jpg') no-repeat center center #00bae4;
+    background-size: cover;
+  }
+
+}
+@media all and (max-width: 40em) {
+#header {
+    background: url('/Media/Default/campaigns/thailand-trip/friends-header-img-mobile.jpg') no-repeat center center #00bae4;
+    background-size: cover;
+    min-height: 400px;
+  }
+
+
+}
+
+</style>
+
+<style class="family dest-style">
+  @media all and (min-width: 40em) {
+    #header { background: url('/Media/Default/campaigns/thailand-trip/family-header-img-desktop.jpg') no-repeat center center #00bae4; background-size: cover; }
+  }
+  @media all and (max-width: 64em) {
+    #header { background: url('/Media/Default/campaigns/thailand-trip/family-header-img-tablet.jpg') no-repeat center center #00bae4; background-size: cover; }
+  }
+  @media all and (max-width: 40em) {
+    #header { background: url('/Media/Default/campaigns/thailand-trip/family-header-img-mobile.jpg') no-repeat center center #00bae4; background-size: cover; }
+  }
+  
+  h1.family { display:block; }
+  h1.friends { display: none; }
+</style>
+
+
+<article class="content-item">
+
+<div class="header-panel panel campaign-header header-style friends" id="header">
+  <div class="row">
+    <div class="small-12 medium-9 large-6 column">
+      <h1 class="white friends">Win a trip to Thailand with 4 mates!</h1>
+      <h1 class="white family">Win a family holiday to Thailand!</h1>
+    </div>
+  </div>
+</div>
+
+<!-- Header Image switch -->
+<script>
+  $(function() {
+    var $destStyleTags = $("style.dest-style");
+    var targetHash = window.location.hash;
+    var targetClass = targetHash.substring(1, targetHash.length).toLowerCase();
+    $destStyleTags.each(function() {
+      var $this = $(this);
+      if (!$this.hasClass(targetClass)) {
+        $this.remove();
+      }
+    });    
+  });
+</script> 
+
+<div class="content-panel">
+  <div class="row">
+    <div class="small-12 medium-12 large-8  large-offset-2  column text-center">
+      <h3>Enter your details below and tell us who you would most like to take on a trip to Thailand and why?</h3>
+    </div>
+  </div>
+</div>
+
+<div class="content-panel">
+  <div class="row">
+     <form>
+    <div class="small-12 large-10 large-offset-1 column">
+      <div class="row">
+        <div class="small-12 medium-6 columns">
+          <label>First name:
+            <input type="text" placeholder="Enter First Name">
+          </label>
+        </div>
+        <div class="small-12 medium-6 columns">
+          <label>Last Name
+            <input type="text" placeholder="Enter Last Name">
+          </label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-12 medium-6 columns">
+          <label>Email Address:
+            <input type="text" placeholder="Enter Email">
+          </label>
+        </div>
+        <div class="small-12 medium-6 columns">
+          <label>TID Policy Number
+            <input type="text" placeholder="Enter Policy Number">
+          </label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-12 columns">
+          <label>Tell us in 25 words or less the person you would most like to take on a trip to Thailand and why?
+            <textarea type="text"></textarea>
+          </label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-12 columns">
+          <button class="pink">Enter to win</button>
+          <div>All form fields are required</div>
+        </div>
+      </div>
+    </div>
+    </form>
+    <hr>
+  </div>
+</div>
+  
+
+
+<div class="row">
+  <div class="small-12 medium-12 large-12 column text-center large-centered medium-centered small-centered">
+    <div class="small-4 medium-4 large-4 column text-center"><img src="/Media/Default/campaigns/thailand-trip/thailand-pic-villa.png" class="prize-image"></div>
+    <div class="small-4 medium-4 large-4 column text-center"><img src="/Media/Default/campaigns/thailand-trip/thailand-pic-beach.png" class="prize-image"></div>
+    <div class="small-4 medium-4 large-4 column text-center"><img src="/Media/Default/campaigns/thailand-trip/thailand-pic-food.png" class="prize-image"></div>
+    <p class="thai-prize">
+      XXX
+    </p>
+    <hr>
+    <p><small>The promotion is open to all Australian and New Zealand residents, over the age of 18 who purchase a Travel Insurance Direct travel insurance policy during the promotional period from 30 November – 22 December 2015 AEDT and tell us in 25 words or less “Who would you most like to take on a trip to Thailand and why?”. Full <a href="">terms and conditions</a> apply.</small></p>
+  </div>
+</div>
+  
+  
+<div class="content-panel content benefits-panel">  
+  <!-- Include Benefits Panel Widget -->
+<!--  {% include "benefits-panel" %}  -->
+</div>  
+  
+</article>
+
+{% endblock %}
