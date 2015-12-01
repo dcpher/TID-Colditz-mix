@@ -338,44 +338,45 @@
 
   <aside class='columns small-12 medium-12 large-3' id="additional-content" data-analytics-id="details-side-bar-content">
 
-    <div class="row quote-quickAnswers">
-      <div class="small-4 large-6 column quote-quickAnswers-item">
-        <span class="quote-quickAnswers-icon quote-quickAnswers-existing"></span>
-        <span class="quote-quickAnswers-label">Existing medical conditions</span>
-      </div>
-      <div class="small-4 large-6 column quote-quickAnswers-item">
-        <span class="quote-quickAnswers-icon quote-quickAnswers-cruise"></span>
-        <span class="quote-quickAnswers-label">Going on a cruise</span>
-      </div>
-      <div class="small-4 large-6 column quote-quickAnswers-item">
-        <span class="quote-quickAnswers-icon quote-quickAnswers-who"></span>
-        <span class="quote-quickAnswers-label">Who’s covered?</span>
-      </div>
-      <div class="small-4 large-6 column quote-quickAnswers-item">
-        <span class="quote-quickAnswers-icon quote-quickAnswers-activities"></span>
-        <span class="quote-quickAnswers-label">Sports &amp; activities</span>
-      </div>
-      <div class="small-4 large-6 column quote-quickAnswers-item">
-        <span class="quote-quickAnswers-icon quote-quickAnswers-gear"></span>
-        <span class="quote-quickAnswers-label">Phones, laptops &amp; cameras</span>
-      </div>
-      <div class="small-4 large-6 column quote-quickAnswers-item">
-        <span class="quote-quickAnswers-icon quote-quickAnswers-motorbikes"></span>
-        <span class="quote-quickAnswers-label">Motorbikes</span>
-      </div>
-    </div>
-
-    <!-- Travel Money + Tripwise :: Start -->
-    <style>
-      .pink {
-        color: #ea3091;
-      }
-      .travelmoney-tripwise h5 {
-        font-weight:100;
-        margin-bottom:0;
-        letter-spacing: -0.03em;
-      }
-    </style>
+    <h4 class="quote-sidebar-title">What TID Travel Insurance Covers</h4>
+    <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-2 quote-quickAnswers">
+      <li class="quote-quickAnswers-item">
+        <a id="clickTipmedical">
+          <span class="quote-quickAnswers-icon quote-quickAnswers-existing"></span>
+          <span class="quote-quickAnswers-label">Existing medical conditions</span>
+        </a>
+      </li>
+      <li class="quote-quickAnswers-item">
+        <a id="clickTipcruising">
+          <span class="quote-quickAnswers-icon quote-quickAnswers-cruise"></span>
+          <span class="quote-quickAnswers-label">Going on a cruise</span>
+        </a>
+      </li>
+      <li class="quote-quickAnswers-item">
+        <a id="clickTipcover">
+          <span class="quote-quickAnswers-icon quote-quickAnswers-who"></span>
+          <span class="quote-quickAnswers-label">Who’s covered?</span>
+        </a>
+      </li>
+      <li class="quote-quickAnswers-item">
+        <a id="clickTipactivities">
+          <span class="quote-quickAnswers-icon quote-quickAnswers-activities"></span>
+          <span class="quote-quickAnswers-label">Sports &amp; activities</span>
+        </a>
+      </li>
+      <li class="quote-quickAnswers-item">
+        <a id="clickTipgear">
+          <span class="quote-quickAnswers-icon quote-quickAnswers-gear"></span>
+          <span class="quote-quickAnswers-label">Phones, laptops &amp; cameras</span>
+        </a>
+      </li>
+      <li class="quote-quickAnswers-item">
+        <a id="clickTipmotorbike">
+          <span class="quote-quickAnswers-icon quote-quickAnswers-motorbikes"></span>
+          <span class="quote-quickAnswers-label">Motorbikes</span>
+        </a>
+      </li>
+    </ul>
 
     <div class="travelmoney-tripwise text-center">
       <div class="row">
@@ -399,6 +400,63 @@
 
 </div>
 
+<style type="text/css">
+#aToolTip {
+  position: absolute;
+  display: none;
+  z-index: 50000;
+}
+#aToolTip .aToolTipContent {
+  position:relative;
+  margin:0;
+  padding:0;
+}
+.defaultTheme {
+  border:1px solid #ddd;
+  background:#ffffff;
+  margin:0;
+  padding: 16px;
+  max-width: 400px;
+  -moz-border-radius: 4px 4px 4px 0;
+  -webkit-border-radius: 4px 4px 4px 0;
+  -khtml-border-radius: 4px 4px 4px 0;
+  border-radius: 4px 4px 4px 0;
+
+  -moz-box-shadow: 0px 2px 5px #777; /* for Firefox 3.5+ */
+  -webkit-box-shadow: 0px 2px 5px #777; /* for Safari and Chrome */
+  box-shadow: 0px 2px 5px #777; /* for Safari and Chrome */
+}
+.defaultTheme #aToolTipCloseBtn {
+  display:block;
+  height:26px;
+  width:26px;
+  background:url(//www.travelinsurancedirect.com.au/Media/Default/click-tips/close-icon.png) no-repeat;
+  text-indent:-9999px;
+  outline:none;
+  position:absolute;
+  top:-10px;
+  right:-10px;
+  margin:2px;
+  padding:4px;
+}
+#aToolTip h5, #aToolTip p {
+  font-weight: 300;
+  width: 100%;
+  display: block;
+  color: #777;
+}
+
+/* Travel Money + Tripwise :: Start */
+.pink {
+  color: #ea3091;
+}
+.travelmoney-tripwise h5 {
+  font-weight:100;
+  margin-bottom:0;
+  letter-spacing: -0.03em;
+}
+</style>
+
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.sync.bootstrap.min.js"></script>
 <script type="text/javascript">
   $(document).ready(function() {
@@ -411,6 +469,57 @@
         }
       });
   });
+</script>
+
+<script type="text/javascript" src="//www.travelinsurancedirect.com.au/Media/Default/js/jquery.atooltip.min.js"></script>
+<script type="text/javascript">
+  $(function(){
+    $('#clickTipmedical').aToolTip({
+        clickIt: true,
+        tipContent: '<h4>Travelling with a medical condition?</h4><p>Pregnancy, asthma, diabetes and 40 other conditions are generally covered although some conditions may apply. <a href="http://service.travelinsurancedirect.com.au/customer/portal/articles/595785-pre-existing-medical-conditions">Learn more</a></p>'
+    });
+    $('#clickTipcruising').aToolTip({
+        clickIt: true,
+        tipContent: '<h4>We cover cruising</h4><p>If you’re cruising in Australia, enter ‘Australian Waters’ in the Country field. Otherwise, simply enter the countries you’re stopping in or the region (eg. Europe). <a href="http://service.travelinsurancedirect.com.au/customer/portal/articles/500446-travel-insurance-for-cruising">Learn more</a></p>'
+    });
+    $('#clickTipcover').aToolTip({
+        clickIt: true,
+        tipContent: '<h4>Cover for other travellers</h4><p>Dependent children or grandchildren under the age of 21 who are travelling with you can travel for free. Some visa holders and Australians already overseas can also be covered. <a href="http://service.travelinsurancedirect.com.au/customer/portal/articles/526821-who-can-buy-">Learn more</a></p>'
+    });
+    $('#clickTipactivities').aToolTip({
+        clickIt: true,
+        tipContent: '<h4>100 sports activities covered</h4><p>Activities such as hiking and cycling are automatically covered, while snow sports can be selected as an option. <a href="http://service.travelinsurancedirect.com.au/customer/portal/articles/721221-travel-insurance-for-sports-and-activities">Learn more</a></p>'
+    });
+    $('#clickTipgear').aToolTip({
+        clickIt: true,
+        tipContent: '<h4>Protect your tech toys</h4><p>Laptops, tablets and cameras are covered up to $4,000. Your phone and all other items are up to $700. Add additional coverage on valuable items as an option. <a href="http://service.travelinsurancedirect.com.au/customer/portal/articles/526847-cover-for-phones-cameras-and-laptops">Learn more</a></p>'
+    });
+    $('#clickTipmotorbike').aToolTip({
+        clickIt: true,
+        tipContent: '<h4>Wheely good coverage</h4><p>We don’t charge you extra if you’re riding on two wheels, you just need to have the right license and the right gear. <a href="http://service.travelinsurancedirect.com.au/customer/portal/articles/528596-travel-insurance-for-motorcycle-riding">Learn more</a></p>'
+    });
+  });
+
+  $(function() {
+    $('#clickTipmedical').on('click', function() {
+      wng.googleAnalytics.trackEvent('QuickQuestion quote', 'Existing medical conditions');
+    })
+    $('#clickTipcruising').on('click', function() {
+      wng.googleAnalytics.trackEvent('QuickQuestion quote', 'Going on a cruise');
+    })
+    $('#clickTipcover').on('click', function() {
+      wng.googleAnalytics.trackEvent('QuickQuestion quote', 'Whos covered?');
+    })
+    $('#clickTipactivities').on('click', function() {
+      wng.googleAnalytics.trackEvent('QuickQuestion quote', 'Sports  activities');
+    })
+    $('#clickTipgear').on('click', function() {
+      wng.googleAnalytics.trackEvent('QuickQuestion quote', 'Phones laptops cameras');
+    })
+    $('#clickTipmotorbike').on('click', function() {
+      wng.googleAnalytics.trackEvent('QuickQuestion quote', 'Motorbikes');
+    })
+  })
 </script>
 
 {% endblock %}

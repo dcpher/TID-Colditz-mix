@@ -6,48 +6,47 @@
 @import "theme/variables";
 
 // Libraries
-
 // Legacy
-/* Foundation: needs to be re-implmented with an unmodified install */
+// Foundation: needs to be re-implmented with an unmodified install0
 @import "legacy/foundation";
-/* custom components */
-@import "legacy/components/mixins";
-@import "legacy/components/font";
-@import "legacy/components/type";
-@import "legacy/components/buttons";
-@import "legacy/components/qqw";
-@import "legacy/components/amtw";
-@import "legacy/components/panel";
-@import "legacy/components/full-width-img";
-@import "legacy/components/header-panel";
-@import "legacy/components/content-panel";
-@import "legacy/components/countdown-box";
-@import "legacy/components/nav-bar";
-@import "legacy/components/benefits-bar";
-@import "legacy/components/benefitsBarCms";
-@import "legacy/components/text-with-img";
-@import "legacy/components/footer";
-@import "legacy/components/hr";
-@import "legacy/components/home-page";
-@import "legacy/components/campaign-page";
-@import "legacy/components/seo-page";
-@import "legacy/components/share-tools";
-@import "legacy/components/blog";
-@import "legacy/components/modals";
-@import "legacy/components/benefit-table";
-@import "legacy/components/search";
+// custom components
+@import "legacy/components/mixins",
+        "legacy/components/font",
+        "legacy/components/type",
+        "legacy/components/buttons",
+        "legacy/components/qqw",
+        "legacy/components/amtw",
+        "legacy/components/panel",
+        "legacy/components/full-width-img",
+        "legacy/components/header-panel",
+        "legacy/components/content-panel",
+        "legacy/components/countdown-box",
+        "legacy/components/nav-bar",
+        "legacy/components/benefits-bar",
+        "legacy/components/benefitsBarCms",
+        "legacy/components/text-with-img",
+        "legacy/components/footer",
+        "legacy/components/hr",
+        "legacy/components/home-page",
+        "legacy/components/campaign-page",
+        "legacy/components/seo-page",
+        "legacy/components/share-tools",
+        "legacy/components/blog",
+        "legacy/components/modals",
+        "legacy/components/benefit-table",
+        "legacy/components/search";
 // @import components/desk
 @import "legacy/components/cms_responsive_qqc";
-/* purchase path pages */
-@import "legacy/components/breadcrumb";
-@import "legacy/components/mobile-modal";
-@import "legacy/components/members-modals";
-@import "legacy/pages/quote";
-@import "legacy/pages/options";
-@import "legacy/pages/details";
-@import "legacy/pages/payment";
-@import "legacy/pages/pre-ex";
-@import "legacy/pages/members";
+// purchase path pages
+@import "legacy/components/breadcrumb",
+        "legacy/components/mobile-modal",
+        "legacy/components/members-modals",
+        "legacy/pages/quote",
+        "legacy/pages/options",
+        "legacy/pages/details",
+        "legacy/pages/payment",
+        "legacy/pages/pre-ex",
+        "legacy/pages/members";
 
 // Base
 

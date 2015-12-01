@@ -1,0 +1,140 @@
+{% layout "edm-travelmoney" %}
+{% block title %}TID EDM{% endblock %}
+{% block content %}
+
+<style>
+    /*  TID Quote Styles  */
+    #header {padding-top: 0;}
+    #header-image {
+      display: inline-block;
+      margin-top: 10px;
+    }
+    #quote-title { background-color: #7961aa;}
+    #quote-header { background-color: #7961aa; padding: 15px; text-align:center;}
+    #quote-header-button {display: inline-table; width: auto;}
+    #quote-header-button td {padding: 10px 14px; background: #ea3091; border-color: #ea3091; margin-top: 20px;}
+    .quote-header-title {
+      text-align: center;
+      color: #ffffff;
+    }
+    h1.quote-header-title {
+      font-size: 65px;
+      line-height: 1;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    h2.quote-header-title {
+      font-size: 26px;
+    }
+    table.medium-button td {
+      display: block;
+      width: auto !important;
+      text-align: center;
+      background: #ea3091;
+      border: 1px solid #ea3091;
+      color: #ffffff;
+      padding: 14px 0;
+    }
+  table.medium-button td a {
+    font-size:24px;
+  }
+    table.button:hover td,
+    table.button:visited td,
+    table.button:active td {
+      background: #3e1c64 !important;
+    }
+    #quote-header table.medium-button {
+    }
+    #quote-header .cta {
+      padding:40px;
+    }
+   .quote-dates {width:40px;}
+   .quote-dates-space {width:20px;}
+   .label-grey {color:#bcbcbc;}
+   .price {color:#404040; border-top:1px solid #efefef;padding-top:20px;}
+  .price span{color:#bcbcbc;font-size:16px;}
+  .details-heading {margin-bottom:20px;color:#ea3091; font-size: 26px;}
+  .content {
+    text-align: center;
+  }
+  .content h2, .content p {
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  #activateButton {
+    margin-top: 20px;
+  }
+  #activateButton td {
+    padding: 10px 14px;
+    background: #ea3091;
+    border-color: #ea3091;
+  }
+</style>
+
+          <!-- Content Area -->
+<table class="container content-area" id="quote">
+  <tr>
+    <td>
+      <!-- content start -->
+      <table class="row">
+        <tr>
+          <td id="header" class="wrapper last">
+            <table class="twelve columns">
+              <tr>
+                <td id="quote-header">
+                  <h1 class="quote-header-title">Welcome to TID Travel Money</h1>
+                  <h2 class="quote-header-title">Your card is ready to use, load some funds before your next trip.</h2>
+                  <table id="quote-header-button" class="button">
+                    <tr>
+                      <td>
+                        <a href="#">Load some funds now</a>
+                      </td>
+                    </tr>
+                  </table><br/>
+                  <img id="header-image" src="http://www.travelinsurancedirect.com.au/Media/Default/email/tid-travelmoney-cardimage.jpg"/>
+                </td>
+                <td class="expander"></td>
+              </tr>
+            </table>
+            <img src="http://www.travelinsurancedirect.com.au/Media/Default/edm/travelmoney/travelmoney-zigzag.png">
+          </td>
+        </tr>
+      </table>
+      <table class="row">
+        <tr>
+          <td class="wrapper last">
+           <table class="twelve columns">
+              <tr>
+                <td class="content">
+                  <h2 class="details-heading">Be ready to go the moment you touch down, activate and load your TID Travel Money Card today.</h2>
+                  <p>Activate and load your card today and enjoy safe and convenient access to your money as you travel. With no transaction or conversion fees, that means more money to spend enjoying yourself.</p>
+                  <center>
+                    <table class="five columns">
+                      <tr>
+                        <td class="center">
+                          <table id="activateButton" class="button">
+                            <tr>
+                              <td>
+                                <a href="#">Ready to activate card?</a>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td class="expander"></td>
+                      </tr>
+                    </table>
+                  </center>
+                </td>
+                <td class="expander"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <!-- container end below -->
+    </td>
+  </tr>
+</table>
+
+{% endblock %}
