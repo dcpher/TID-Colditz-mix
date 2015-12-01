@@ -1,0 +1,135 @@
+{% block title %}Travel Insurance to Bali: From $22{% endblock %}
+{% block content %}
+<style>
+
+  
+@media all and (min-width: 40em) {
+#header {
+    background: url('/Media/Default/campaigns/thailand-trip/friends-header-img-desktop.jpg') no-repeat center center #00bae4;
+    background-size: cover;
+  }
+
+}
+@media all and (max-width: 64em) {
+#header {
+    background: url('/Media/Default/campaigns/thailand-trip/friends-header-img-tablet.jpg') no-repeat center center #00bae4;
+    background-size: cover;
+  }
+
+}
+@media all and (max-width: 40em) {
+#header {
+    background: url('/Media/Default/campaigns/thailand-trip/friends-header-img-mobile.jpg') no-repeat center center #00bae4;
+    background-size: cover;
+    min-height: 400px;
+  }
+
+}
+
+</style>
+<article class="content-item">
+
+<div class="header-panel panel campaign-header" id="header">
+  <div class="row">
+    <div class="small-12 medium-9 large-6 column">
+      <h1 class="white">Win a trip to Thailand with 4 mates!</h1>
+      
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="small-12 medium-12 large-8  large-offset-2  column text-center">
+    <h3 style="margin-top:20px">Buy a TID policy before 22 December and you could be jetting off to Thailand on a $10,000 family getaway.</h3>
+    <h3>Get a quote below and <span class="blue">save 5%</span>.</h3>
+  </div>
+</div>
+
+  
+<div class="content-panel content" id="campaign-qqw">
+  <div class="row header">
+    
+    
+  <!--   TID QQWidget Container    -->
+
+    <div class="row qqw-full-width blue-panel">
+      <div class="small-12 column">
+
+        <!--  Include QQWidget  -->
+        {% include "qqw" %}
+
+      </div> 
+      <div class="benefits-bar blue left">
+
+        <!--  Include Benefits Bar  -->
+        {% include "benefits-bar" %}
+
+      </div>  
+    </div>
+
+  <!-- QQW Container END -->
+    
+    
+  </div>
+</div>
+  
+<style>
+  .thai-prize {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .prize-image {
+    margin-bottom: 20px;
+  }
+
+.thai-prize-1{
+  background: url('/Media/Default/campaigns/thailand-trip/thailand-prize-ticks.png') no-repeat top center;
+  padding-top: 86px;
+}
+.thai-prize-2 {
+  background: url('/Media/Default/campaigns/thailand-trip/thailand-prize-acom.png') no-repeat top center;
+  padding-top: 86px;
+}
+.thai-prize-3 {
+  background: url('/Media/Default/campaigns/thailand-trip/thailand-prize-moneys.png') no-repeat top center;
+  padding-top: 86px;
+}
+.thai-prize-4 {
+  background: url('/Media/Default/campaigns/thailand-trip/thailand-prize-worth.png') no-repeat top center;
+  padding-top: 86px;
+}
+
+</style>
+  
+<div class="row">
+  <div class="small-12 medium-8 large-8 column text-center large-centered medium-centered small-centered thai-prize">
+    <h3>Prize includes  :</h3>
+    <div class="small-6 medium-3 large-3 column text-center thai-prize-1"><p>Return flights for <br>you &amp; 4 mates</p></div>
+    <div class="small-6 medium-3 large-3 column text-center thai-prize-2"><p>5 nights <br>accommodation</p></div>
+    <div class="small-6 medium-3 large-3 column text-center thai-prize-3"><p>$1000 <br>spending money</p></div>
+    <div class="small-6 medium-3 large-3 column text-center thai-prize-4"><p>Worth <br>$10,000</p></div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="small-12 medium-12 large-12 column text-center large-centered medium-centered small-centered">
+    <div class="small-4 medium-4 large-4 column text-center"><img src="/Media/Default/campaigns/thailand-trip/thailand-pic-villa.png" class="prize-image"></div>
+    <div class="small-4 medium-4 large-4 column text-center"><img src="/Media/Default/campaigns/thailand-trip/thailand-pic-beach.png" class="prize-image"></div>
+    <div class="small-4 medium-4 large-4 column text-center"><img src="/Media/Default/campaigns/thailand-trip/thailand-pic-food.png" class="prize-image"></div>
+    <p class="thai-prize">
+      XXX
+    </p>
+    <hr>
+    <p><small>The promotion is open to all Australian and New Zealand residents, over the age of 18 who purchase a Travel Insurance Direct travel insurance policy during the promotional period from 30 November – 22 December 2015 AEDT and tell us in 25 words or less “Who would you most like to take on a trip to Thailand and why?”. Full <a href="">terms and conditions</a> apply.</small></p>
+  </div>
+</div>
+  
+  
+<div class="content-panel content benefits-panel">  
+  <!-- Include Benefits Panel Widget -->
+<!--  {% include "benefits-panel" %}  -->
+</div>  
+  
+</article>
+
+{% endblock %}
