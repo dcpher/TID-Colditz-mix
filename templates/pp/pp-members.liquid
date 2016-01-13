@@ -83,57 +83,81 @@
 
 <script>
 
-    // GA tracking
-    // $(function() {
-    //   $('.mobilesales').on('click', function() {
-    //     wng.googleAnalytics.trackEvent('XXX', 'XXXX');
-    //   });
-    // });
+    $(document).ready(function() {
 
-    function showPanel() {
-        // Show the modals
-        $('#roadblockModal').foundation('reveal', 'open');
-        $('#roadblockMobile').fadeIn('fast');
-        // Hide the mobile modal when close is clicked
-        $('.close-reveal-modal').click(function(e) {
-            e.preventDefault();
-            $('#roadblockModal').hide();
-        });
-        // Hide the mobile modal when close is clicked
-        $('.mobilesales-close').click(function(e) {
-            e.preventDefault();
-            $('#roadblockMobile').hide();
-        });
-    }
-    var timeoutID;
-    function showModal() {
-        timeoutID = window.setTimeout(showPanel, 5000);
-    }
-    if (getCookie("Travel-Money") == null) {
-        setCookie("Travel-Money", "modal-viewed");
-        showModal()
-    }
+        function dateCalc() {
+            // Convert the policy departure date to an integer
+            var minutes = 1000 * 60;
+            var hours = minutes * 60;
+            var days = hours * 24;
+            var policyDate = Date.parse("{{PolicyDepartureDate}}");
+            var policyDateInt = Math.round( policyDate / days);
 
-    function setCookie(key, value) {
-        //(3 * 24 * 60 * 60 * 1000) = > day hr min second milliseconds
-        var expires = new Date();
-        var daysExpiresInMilliseconds = (180 * 1000)
-        expires.setTime(expires.getTime() + daysExpiresInMilliseconds);
-        document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
-    };
+            // Convert the current date to an integer
+            var currentDate = new Date();
+            var currentDateInt = Math.round( currentDate / days);
 
-    function getCookie(key) {
-        var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
-        return keyValue ? keyValue[2] : null;
-    };
+            // Compare the dates and only show the modal if the difference is 10 days or less
+            var minDelivery = 10;
+            if ((currentDateInt + minDelivery) <= policyDateInt) {
+                modalCtrl();
+            };
+        };
 
-    $(document).ready(function(){
-        $(function() {
-            $('#roadblockMobile').click(function(){
-                window.location.href = "/tid-travel-money";
+        function modalCtrl() {
+            // Show the modal panels
+            $('.reveal-modal').foundation('reveal', 'open');
+            $('.mobilesales').fadeIn('fast');
+
+            // Hide the modal panels on close
+            $('.close-reveal-modal').click(function() {
+                $('.mobilesales').hide();
             });
+            $('.reveal-modal-bg').click(function() {
+                $('.mobilesales').hide();
+            });
+            $('.mobilesales-close').click(function(e) {
+                e.stopPropagation();
+                $('.reveal-modal').hide();
+                $('.mobilesales').hide();
+                $('.reveal-modal-bg').hide();
+            });
+        };
+
+        function setModalCookie(key, value) {
+            var expires = new Date();
+            // (3 * 24 * 60 * 60 * 1000) = > day hr min second milliseconds
+            var daysExpiresInMilliseconds = (21 * 24 * 60 * 60 * 1000)
+            expires.setTime(expires.getTime() + daysExpiresInMilliseconds);
+            document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+        };
+
+        function getModalCookie(key) {
+            var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+            return keyValue ? keyValue[2] : null;
+        };
+
+        // Only call the modal delay if the user hasn't visited within cookie expire
+        if (getModalCookie("TID-modal") == null) {
+            setModalCookie("TID-modal", "travel-money-release");
+            modalDelay();
+        };
+
+        // Delay showing the modal
+        var timeoutID;
+        function modalDelay() {
+            var loadDelay = 2500;
+            timeoutID = window.setTimeout(dateCalc, loadDelay);
+        };
+
+    });
+
+    // Redirect for click on mobile modal
+    $(document).ready(function(){
+        $('#roadblockMobile').click(function(){
+            window.location.href = "/tid-travel-money";
         });
-    })
+    });
 
 </script>
 

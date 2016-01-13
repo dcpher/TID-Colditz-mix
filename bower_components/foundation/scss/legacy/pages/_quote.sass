@@ -87,7 +87,7 @@ body.quote
       @include grid-column(4)
     .widget-email-quote
       @include grid-column(12)
-    
+
   .widget-email-quote-container
     form
       +clearfix
@@ -166,8 +166,8 @@ body.quote
     @media #{$xxlarge-only}
       margin-bottom: rem-calc(20)
       margin-top: rem-calc(30)
-    
-    
+
+
   h2
     @include grid-column(12)
     color: $color-blue
@@ -185,7 +185,7 @@ body.quote
     margin-bottom: rem-calc(50)
     @media #{$xxlarge-only}
       margin-bottom: rem-calc(60)
-    
+
     .stars
       float: left
       .star
@@ -244,7 +244,7 @@ body.quote
       top: rem-calc(15)
     &.open
       margin-bottom: rem-calc(15)
-  
+
   .trip-summary-bar
     background: rgba(0, 0, 0, 0.3)
     border-top: 1px solid rgba(0, 0, 0, 0.5)
@@ -330,3 +330,89 @@ body.quote
       .widget-email-quote
         padding-left: 0
         margin-bottom: rem-calc(20)
+
+.quote
+  &-sticky
+    .stickyNav-cell
+      white-space: nowrap
+
+    &-price
+      font-size: 30px
+      line-height: 1
+      color: $color-green
+      @media #{$medium-up}
+        font-size: 42px
+
+    .quote-sticky-buyCta
+      padding-right: 0
+      text-align: right
+      @media screen and (min-width: 750px)
+        padding-right: 20px
+        text-align: left
+
+    &-buyButton
+      margin: 0
+      padding: 5px 42px 5px 12px
+      font-size: 16px
+      &:after
+        bottom: 8px
+      @media #{$medium-up}
+        min-width: 250px
+        padding: 8px 16px
+        font-size: 20px
+        &:after
+          bottom: 13px
+      @media screen and (max-width: 820px)
+        min-width: 180px
+      @media screen and (max-width: 440px)
+        min-width: 0
+
+    .quote-sticky-trustPilot
+      display: none
+      @media screen and (min-width: 750px)
+        display: table-cell
+
+    &-trustPilotWidget
+      display: inline-block
+      width: 100%
+      max-width: 300px
+
+  &-sidebar-title
+    margin-bottom: 20px
+    text-align: center
+
+  .quote-quickAnswers
+    margin-bottom: 20px
+    text-align: center
+
+    &-item
+      margin-bottom: 10px
+
+    &-existing
+      background-image: url('http://www.travelinsurancedirect.com.au/Media/Default/click-tips/hh-pregnancy.png')
+
+    &-cruise
+      background-image: url('http://www.travelinsurancedirect.com.au/Media/Default/click-tips/hh-cruise.png')
+
+    &-who
+      background-image: url('http://www.travelinsurancedirect.com.au/Media/Default/click-tips/hh-kids.png')
+
+    &-activities
+      background-image: url('http://www.travelinsurancedirect.com.au/Media/Default/click-tips/hh-sports.png')
+
+    &-gear
+      background-image: url('http://www.travelinsurancedirect.com.au/Media/Default/click-tips/hh-tech.png')
+
+    &-motorbikes
+      background-image: url('http://www.travelinsurancedirect.com.au/Media/Default/click-tips/hh-motorbike.png')
+
+    &-icon
+      display: inline-block
+      width: 62px
+      height: 63px
+      background-size: 62px 63px
+      background-repeat: no-repeat
+
+    &-label
+      display: block
+

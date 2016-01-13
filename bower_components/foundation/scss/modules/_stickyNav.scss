@@ -1,0 +1,53 @@
+
+.stickyNav {
+
+    $stickyNav-height: 73px;
+    $stickyNav-height-small: 46px;
+
+    position: fixed;
+    box-sizing: border-box;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: $stickyNav-height-small;
+    padding: 6px 20px;
+    text-align: center;
+    background-color: $color-light-grey;
+    border-bottom: 1px solid $color-border-grey;
+    transition: top 0.3s ease-in-out;
+    @media screen and (min-width: 640px) {
+        height: $stickyNav-height;
+        padding: 10px 20px;
+    }
+    // Hide stickyNav on smart phones
+    @media screen and (max-width: 414px) and (orientation: portrait), (max-width: 736px) and (orientation: landscape) {
+        display: none;
+    }
+
+    &-is-hidden {
+        top: -$stickyNav-height-small;
+        @media screen and (min-width: 640px) {
+            top: -$stickyNav-height;
+        }
+    }
+
+    &-inner {
+        display: inline-table;
+        width: 100%;
+        height: 100%;
+        max-width: $site-with-max;
+        text-align: left;
+    }
+
+    &-cell {
+        display: table-cell;
+        vertical-align: middle;
+        padding-right: 30px;
+        &:last-child {
+            width: 100%;
+            padding-right: 0;
+            text-align: right;
+        }
+    }
+}
