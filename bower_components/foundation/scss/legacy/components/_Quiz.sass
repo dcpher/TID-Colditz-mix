@@ -48,7 +48,7 @@
                 line-height: 1.1
             @media #{$small-only}
                 margin-right: 0
-                min-height: rem-calc(46)
+                min-height: rem-calc(50)
             @media #{$medium-up}
                 min-height: rem-calc(50)
                 font-size: rem-calc(18)
@@ -96,23 +96,28 @@
     .Quiz-result
         margin-bottom: rem-calc(60)
         list-style: none
-        padding-left: 0
 
         &Item
             display: none;
+            padding: 30px
+            background-color: $color-light-grey
+            border: 1px solid $color-border-grey
+
+        &Title
+            margin-top: 10px
 
         &Image
-            float: right
             width: 100%
+            margin-top: 30px
             max-width: rem-calc(361)
-            margin-left: rem-calc(60)
-            margin-bottom: rem-calc(30)
-            @media (max-width: 730px)
-                max-width: rem-calc(300)
-            @media #{$small-only}
-                float: none
-                margin-left: 0
-                margin-bottom: rem-calc(20)
+
+        &Share
+            margin-top: 20px
+            padding-top: 20px
+            border-top: 1px solid $color-border-grey
+
+            #share-icons
+                margin-top: 20px
 
 .is-opaque
     opacity: 0.5
