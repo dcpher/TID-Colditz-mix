@@ -964,13 +964,13 @@
 
 <script type="text/javascript">
     // Share functions
-    function fb_share(traveller) {
+    function fb_share(traveller, image) {
         // var type = traveller;
         FB.ui( {
             method: 'feed',
             name: "I'm the " + "'" + traveller + "'",
             link: "http://www.travelinsurancedirect.com.au/campaign/what-type-of-traveller-are-you",
-            picture: "http://www.travelinsurancedirect.com.au/Media/Default/main/hero-images/whatwecover_desktop.jpg",
+            picture: "http://www.travelinsurancedirect.com.au/Media/Default/campaigns/socialquiz/share-" + image + ".jpg",
             caption: "What type of traveller are you?",
             description: "Know your travel style? Take our quiz to find if you're really the traveller you think you are (and enter to win $200 flight vouchers with Virgin Australia!)."
         },
@@ -981,22 +981,22 @@
 
     $(document).ready(function(){
         $('#ShareBackpacker').on( 'click', function(){
-            fb_share("Eternal Backpacker");
+            fb_share("Eternal Backpacker", "backpacker");
         });
         $('#ShareJetsetter').on( 'click', function(){
-            fb_share("Jetsetter");
+            fb_share("Jetsetter", "jetsetter");
         });
         $('#ShareLuxury').on( 'click', function(){
-            fb_share("Luxury Traveller");
+            fb_share("Luxury Traveller", "luxury");
         });
         $('#ShareVolunteer').on( 'click', function(){
-            fb_share("Voluntourist");
+            fb_share("Voluntourist", "volunteer");
         });
         $('#ShareFoodie').on( 'click', function(){
-            fb_share("Foodie");
+            fb_share("Foodie", "foodie");
         });
         $('#ShareSeeker').on( 'click', function(){
-            fb_share("Spiritual Seeker");
+            fb_share("Spiritual Seeker", "spiritual");
         });
     });
 </script>
