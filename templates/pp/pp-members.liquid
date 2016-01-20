@@ -35,45 +35,45 @@
 
     <!-- Roadblock Modal -->
     <div id="roadblockModal" class="members-roadblock reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-        <h2 class="members-roadblock-title" id="modalTitle">WIN your share of <br>$26,000 in cash</h2>
-        <div class="members-roadblock-lead">
-            <h4 class="lead">Get your FREE TID Travel Money Card to enter!</h4>
+        <h2 class="members-roadblock-title" id="modalTitle">The smart way to spend and save!</h2>
+        <div class="members-roadblock-content">
+            <h5 class="members-roadblock-subTitle">Get your FREE TID Travel Money Card to enter!</h5>
+            <img class="members-roadblock-card" src="/Media/Default/member-homepage/travelmoney-card-modal.png" alt="Image of the TID Travel Money Card">
+            <ul class="members-roadblock-benefits">
+                <li>
+                    <span class="icon-travelmoney icon-travelmoney--piggy"></span>
+                    <small class="members-roadblock-item">Avoid fees</small>
+                </li>
+                <li>
+                    <span class="icon-travelmoney icon-travelmoney--currency"></span>
+                    <small class="members-roadblock-item">10 currencies</small>
+                </li>
+                <li>
+                    <span class="icon-travelmoney icon-travelmoney--easy"></span>
+                    <small class="members-roadblock-item">Easy to use</small>
+                </li>
+                <li>
+                    <span class="icon-travelmoney icon-travelmoney--safe"></span>
+                    <small class="members-roadblock-item">Safer than cash</small>
+                </li>
+                <li>
+                    <span class="icon-travelmoney icon-travelmoney--online"></span>
+                    <small class="members-roadblock-item">Manage online</small>
+                </li>
+                <li>
+                    <span class="icon-travelmoney icon-travelmoney--claim"></span>
+                    <small class="members-roadblock-item">Use with claims</small>
+                </li>
+            </ul>
+            <div class="members-roadblock-cta">
+                <a href="/tid-travel-money" class="button pink">Get your free card</a>
+            </div>
+            <a href="#" class="close-reveal-modal" aria-label="Close">&#215;</a>
         </div>
-        <img class="members-roadblock-card" src="/Media/Default/member-homepage/travelmoney-card-modal.png" alt="Image of the TID Travel Money Card">
-        <div class="members-roadblock-cta">
-            <a href="/tid-travel-money" class="button pink">Get your free card</a>
-        </div>
-        <ul class="members-roadblock-benefits">
-            <li>
-                <span class="icon-travelmoney icon-travelmoney--piggy"></span>
-                <span class="members-roadblock-item">Avoid fees</span>
-            </li>
-            <li>
-                <span class="icon-travelmoney icon-travelmoney--currency"></span>
-                <span class="members-roadblock-item">10 currencies</span>
-            </li>
-            <li>
-                <span class="icon-travelmoney icon-travelmoney--easy"></span>
-                <span class="members-roadblock-item">Easy to use</span>
-            </li>
-            <li>
-                <span class="icon-travelmoney icon-travelmoney--safe"></span>
-                <span class="members-roadblock-item">Safer than cash</span>
-            </li>
-            <li>
-                <span class="icon-travelmoney icon-travelmoney--online"></span>
-                <span class="members-roadblock-item">Manage online</span>
-            </li>
-            <li>
-                <span class="icon-travelmoney icon-travelmoney--claim"></span>
-                <span class="members-roadblock-item">Use with claims</span>
-            </li>
-        </ul>
-        <a href="#" class="close-reveal-modal" aria-label="Close">&#215;</a>
     </div>
 
     <div id="roadblockMobile" class="members-mobilesales mobilesales">
-        <h2 class="members-mobilesales-title mobilesales-title">WIN your share of $26,000 in cash</h2>
+        <h2 class="members-mobilesales-title mobilesales-title">The smart way to spend and save!</h2>
         <img class="members-mobilesales-card" src="/Media/Default/member-homepage/travelmoney-card-modal.png" alt="Image of the TID Travel Money Card">
         <a class="mobilesales-close" href="#">&#215;</a>
     </div>
@@ -83,81 +83,49 @@
 
 <script>
 
-    $(document).ready(function() {
-
-        function dateCalc() {
-            // Convert the policy departure date to an integer
-            var minutes = 1000 * 60;
-            var hours = minutes * 60;
-            var days = hours * 24;
-            var policyDate = Date.parse("{{PolicyDepartureDate}}");
-            var policyDateInt = Math.round( policyDate / days);
-
-            // Convert the current date to an integer
-            var currentDate = new Date();
-            var currentDateInt = Math.round( currentDate / days);
-
-            // Compare the dates and only show the modal if the difference is 10 days or less
-            var minDelivery = 10;
-            if ((currentDateInt + minDelivery) <= policyDateInt) {
-                modalCtrl();
-            };
-        };
-
-        function modalCtrl() {
-            // Show the modal panels
-            $('.reveal-modal').foundation('reveal', 'open');
-            $('.mobilesales').fadeIn('fast');
-
-            // Hide the modal panels on close
-            $('.close-reveal-modal').click(function() {
-                $('.mobilesales').hide();
-            });
-            $('.reveal-modal-bg').click(function() {
-                $('.mobilesales').hide();
-            });
-            $('.mobilesales-close').click(function(e) {
-                e.stopPropagation();
-                $('.reveal-modal').hide();
-                $('.mobilesales').hide();
-                $('.reveal-modal-bg').hide();
-            });
-        };
-
-        function setModalCookie(key, value) {
-            var expires = new Date();
-            // (3 * 24 * 60 * 60 * 1000) = > day hr min second milliseconds
-            var daysExpiresInMilliseconds = (21 * 24 * 60 * 60 * 1000)
-            expires.setTime(expires.getTime() + daysExpiresInMilliseconds);
-            document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
-        };
-
-        function getModalCookie(key) {
-            var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
-            return keyValue ? keyValue[2] : null;
-        };
-
-        // Only call the modal delay if the user hasn't visited within cookie expire
-        if (getModalCookie("TID-modal") == null) {
-            setModalCookie("TID-modal", "travel-money-release");
-            modalDelay();
-        };
-
-        // Delay showing the modal
-        var timeoutID;
-        function modalDelay() {
-            var loadDelay = 2500;
-            timeoutID = window.setTimeout(dateCalc, loadDelay);
-        };
-
-    });
-
-    // Redirect for click on mobile modal
-    $(document).ready(function(){
-        $('#roadblockMobile').click(function(){
-            window.location.href = "/tid-travel-money";
+    function showPanel() {
+        // Show the modals
+        $('#roadblockModal').foundation('reveal', 'open');
+        $('#roadblockMobile').fadeIn('fast');
+        // Hide the mobile modal when close is clicked
+        $('.close-reveal-modal').click(function(e) {
+            $('#roadblockModal').hide();
+            e.preventDefault();
         });
-    });
+        // Hide the mobile modal when close is clicked
+        $('.mobilesales-close').click(function() {
+            $('#roadblockMobile').hide();
+        });
+    }
+    var timeoutID;
+    function showModal() {
+        timeoutID = window.setTimeout(showPanel, 5000);
+    }
+    if (getCookie("Travel-Money") == null) {
+        setCookie("Travel-Money", "modal-viewed");
+        showModal()
+    }
+
+    function setCookie(key, value) {
+        //(3 * 24 * 60 * 60 * 1000) = > day hr min second milliseconds
+        var expires = new Date();
+        var daysExpiresInMilliseconds = (180 * 1000)
+        expires.setTime(expires.getTime() + daysExpiresInMilliseconds);
+        document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+    };
+
+    function getCookie(key) {
+        var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+        return keyValue ? keyValue[2] : null;
+    };
+
+    $(document).ready(function(){
+        $(function() {
+            $('#roadblockMobile').click(function(){
+                window.location.href = "/tid-travel-money";
+            });
+        });
+    })
 
 </script>
 

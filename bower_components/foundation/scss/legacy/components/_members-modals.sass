@@ -4,32 +4,36 @@
 
     // Roadblocker Modal
     .members-roadblock
-        max-width: 860px
+        max-width: 670px
         overflow: hidden
-        padding: 10px 30px
+        padding: 0
+        min-height: auto
         text-align: center
         @media (max-width:414px)
             display: none !important;
 
         &-title
-            margin-bottom: 16
+            display: inline-block
+            margin-top: 20px
+            margin-bottom: 10px
+            padding: 0 55px
             color: $color-pink
 
-        &-lead
-            min-height: 248px
-            margin-left: -34px
-            margin-right: -34px
-            padding: 20px 20px 0px
+        &-content
+            padding-top: 24px
+            overflow: hidden
             background-color: $color-purple
+            color: $color-white
 
-            .lead
-                color: $color-white
+        &-subTitle
+            margin-bottom: 20px
+            color: $color-white
 
         &-card
             width: 60%
-            max-width: 402px
+            max-width: 260px
             height: auto
-            margin-top: -182px
+            margin-bottom: 20px
 
         &-cta
             margin-top: 10px
@@ -42,8 +46,10 @@
             display: table
             width: 100%
             list-style: none
-            padding-left: 0
+            padding-left: 10px
+            padding-right: 10px
             margin-left: 0
+            margin-bottom: 24px
 
             > li
                 display: table-cell
@@ -56,7 +62,8 @@
         &-item
             display: block;
             line-height: 1.1
-            color: $color-purple
+            font-size: 13px
+            color: $color-white
 
     // Roadblocker Modal - Mobile
     .members-mobilesales
@@ -64,7 +71,7 @@
         cursor: pointer
         &::after
             position: absolute
-            top: 60%
+            top: 40%
             bottom: 0
             left: 0
             right: 0
@@ -83,7 +90,7 @@
         &-card
             position: relative
             z-index: 1
-            width: 80%
+            width: 65%
             pointer-events: none
 
 // Hack to hide modal bg on mobile devices
