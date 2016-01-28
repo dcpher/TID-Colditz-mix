@@ -24,7 +24,7 @@
             <div class="row">
                 <div class="small-12 columns">
                     <h1 class="socialquiz-headerTitle">What type of traveller are you?</h1>
-                    <p class="socialquiz-headerCopy">Know your travel style? Take our quiz to find if you're really the traveller you think you are (and enter to win $200 flight vouchers with Virgin Australia!).</p>
+                    <p class="socialquiz-headerCopy">Know your travel style? Take our quiz to find if you're really the traveller you think you are (and be in the running to win over $5,000 in prizes).</p>
                 </div>
             </div>
         </div>
@@ -767,14 +767,16 @@
             </div>
             <div class="small-12 medium-10 columns">
                 <h2>
-                    Win $200 flight vouchers with Virgin Australia!
+                    Win over $5,000 worth of prizes!
                 </h2>
             </div>
         </div>
         <div class="row">
             <div class="small-12 columns">
-                <p>Now you know what type of traveller you are, it’s time to kick start your next adventure!</p>
-                <p>To be in the running to WIN 1 x 3 $200 flights vouchers with Virgin Australia, tell us in 20 words or less who inspires you to travel.</p>
+                <p><strong>Now you know what type of traveller you are, it’s time to kick start your next adventure!</strong></p>
+                <p>To be in the running to WIN over $5,000 worth of prizes, tell us in 20 words or less who inspires you to travel.</p>
+                <p>Major prize consists on 1x $1,500 Virgin Australia flight voucher, 1x Olympus OMD EM10 camera, 1x 16GB Apple iPad Air2, 1x Bose QC25 Noise Cancelling headphones, 1x Herschel Little America backpack &amp; $500 spending money - valued at over $4,000</p>
+                <p>We are also giving away 5x $200 Virgin Australia flight vouchers.</p>
                 <form class="socialquiz-competitionForm" method="post">
                     <div class="row">
                         <span class="small-12 medium-6 columns">
@@ -965,14 +967,13 @@
 <script type="text/javascript">
     // Share functions
     function fb_share(traveller, image) {
-        // var type = traveller;
         FB.ui( {
             method: 'feed',
             name: "I'm the " + "'" + traveller + "'",
             link: "http://www.travelinsurancedirect.com.au/campaign/what-type-of-traveller-are-you",
             picture: "http://www.travelinsurancedirect.com.au/Media/Default/campaigns/socialquiz/share-" + image + ".jpg",
             caption: "What type of traveller are you?",
-            description: "Know your travel style? Take our quiz to find if you're really the traveller you think you are (and enter to win $200 flight vouchers with Virgin Australia!)."
+            description: "Know your travel style? Find out if you are really the traveller you think you are and be in the running to WIN over $5,000 worth of prizes in the TID Adventure Travel Pack."
         },
         function( response ) {
             // do nothing
@@ -981,22 +982,22 @@
 
     $(document).ready(function(){
         $('#ShareBackpacker').on( 'click', function(){
-            fb_share("Eternal Backpacker", "backpacker");
+            fb_share("Eternal Backpacker", "backpacker-2");
         });
         $('#ShareJetsetter').on( 'click', function(){
-            fb_share("Jetsetter", "jetsetter");
+            fb_share("Jetsetter", "jetsetter-2");
         });
         $('#ShareLuxury').on( 'click', function(){
-            fb_share("Luxury Traveller", "luxury");
+            fb_share("Luxury Traveller", "luxury-2");
         });
         $('#ShareVolunteer').on( 'click', function(){
-            fb_share("Voluntourist", "volunteer");
+            fb_share("Voluntourist", "volunteer-2");
         });
         $('#ShareFoodie').on( 'click', function(){
-            fb_share("Foodie", "foodie");
+            fb_share("Foodie", "foodie-2");
         });
         $('#ShareSeeker').on( 'click', function(){
-            fb_share("Spiritual Seeker", "spiritual");
+            fb_share("Spiritual Seeker", "spiritual-2");
         });
     });
 </script>
