@@ -3,37 +3,6 @@
 {% block body_id %}members{% endblock %}
 {% block content %}
 <section class="members">
-
-    <div class="members-header blue-panel">
-        <div class="row">
-            <h4 class="members-header-title">Members Dashboard</h4>
-            <h1 class="members-header-welcome">You’re Covered</h1>
-            <h3 class="members-header-policy">Your policy number is: {{PolicyNumber}}</h3>
-            <div class="members-header-details">Status: <span class="members-header-status">{{PolicyStatus}}</span> | <a href="{{CurrentPolicyLink}}">View policy</a></div>
-        </div>
-        <nav class="members-header-nav">
-            <div class="row">
-                <a class="members-header-link" href="{{AllPoliciesLink}}">
-                    <span class="icon-members icon-members--policies"></span>
-                    Policies
-                </a>
-                <a class="members-header-link" href="{{ClaimsLink}}">
-                    <span class="icon-members icon-members--claims"></span>
-                    Claims
-                </a>
-                <a class="members-header-link" href="/">
-                    <span class="icon-members icon-members--quote"></span>
-                    Get a Quote
-                </a>
-                <a class="members-header-link" href="{{ProfileLink}}">
-                    <span class="icon-members icon-members--profile"></span>
-                    My Profile
-                </a>
-            </div>
-        </nav>
-    </div>
-
-    <!-- Roadblock Modal -->
     <div id="roadblockModal" class="members-roadblock reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
         <h2 class="members-roadblock-title" id="modalTitle">The smart way to spend and save!</h2>
         <div class="members-roadblock-content">
@@ -71,54 +40,46 @@
             <a href="#" class="close-reveal-modal" aria-label="Close">&#215;</a>
         </div>
     </div>
-
     <div id="roadblockMobile" class="members-mobilesales mobilesales">
         <h2 class="members-mobilesales-title mobilesales-title">The smart way to spend and save!</h2>
         <img class="members-mobilesales-card" src="/Media/Default/member-homepage/travelmoney-card-modal.png" alt="Image of the TID Travel Money Card">
         <a class="mobilesales-close" href="#">&#215;</a>
     </div>
-    <!-- End roadblock modal -->
-
 </section>
 
 <script>
-
     function showPanel() {
-        // Show the modals
         $('#roadblockModal').foundation('reveal', 'open');
         $('#roadblockMobile').fadeIn('fast');
-        // Hide the mobile modal when close is clicked
-        $('.close-reveal-modal').click(function(e) {
+        $('.close-reveal-modal').click(function() {
             $('#roadblockModal').hide();
-            e.preventDefault();
-        });
-        // Hide the mobile modal when close is clicked
-        $('.mobilesales-close').click(function() {
             $('#roadblockMobile').hide();
+        });
+        $('.mobilesales-close').click(function(e) {
+            $('#roadblockModal').hide();
+            $('#roadblockMobile').hide();
+            $('.reveal-modal-bg').hide();
+            e.stopPropagation();
         });
     }
     var timeoutID;
     function showModal() {
         timeoutID = window.setTimeout(showPanel, 5000);
     }
-    if (getCookie("Travel-Money") == null) {
-        setCookie("Travel-Money", "modal-viewed");
+    if (getCookie("TravelMoney") == null) {
+        setCookie("TravelMoney", "viewed");
         showModal()
     }
-
     function setCookie(key, value) {
-        //(3 * 24 * 60 * 60 * 1000) = > day hr min second milliseconds
         var expires = new Date();
         var daysExpiresInMilliseconds = (180 * 1000)
         expires.setTime(expires.getTime() + daysExpiresInMilliseconds);
         document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
     };
-
     function getCookie(key) {
         var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
         return keyValue ? keyValue[2] : null;
     };
-
     $(document).ready(function(){
         $(function() {
             $('#roadblockMobile').click(function(){
@@ -126,7 +87,6 @@
             });
         });
     })
-
 </script>
 
 {% endblock %}
