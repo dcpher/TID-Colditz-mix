@@ -1,0 +1,165 @@
+{% block layout %}/assets/css/easter16.css{% endblock %}
+{% block title %}10% OFF: Hopping out of town this Easter{% endblock %}
+{% block content %}
+
+<section class="easter16">
+    <div class="easter16-hero Hero">
+        <div class="Hero-inner row">
+            <div class="small-12 column">
+                <h1 class="easter16-title Hero-copy">10% Off</h1>
+                <h2 class="easter16-subTitle Hero-copy">Hopping out of town this Easter?</h2>
+            </div>
+        </div>
+    </div>
+    <div id="sharetools-long">
+        <div class="row">
+            <div class="small-12 columns">
+                <div id="socialarea">
+                    <div id="sharedcount">
+                        <div id="total"></div>
+                        <p>Shares</p>
+                    </div>
+                    <div id="share-icons">
+                          <a class="facebook" target="_blank"><span>Share on Facebook</span>&#xf09a;</a>
+                          <a class="twitter" target="_blank"><span>Share on Twitter</span>&#xf099;</a>
+                          <a class="pinterest">&#xf231;</a>
+                          <a class="gplus" target="_blank">&#xf0d5;</a>
+                          <a class="linkedin" target="_blank">&#xf0e1;</a>
+                          <a class="stumbleupon" target="_blank">&#xf1a4;</a>
+                          <a class="plus"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="easter16-content row">
+        <div class="small-12 column">
+            <h3 class="easter16-contentTitle">Grab a quote now and get an “eggs-tra” special 10% off your travel insurance!</h3>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Quote Widget goes here -->
+
+<section class="easter16">
+    <div class="row">
+        <div class="small-12 column">
+            <h4 class="easter16-contentTitle-wrapper easter16-contentTitle">
+                <span class="easter16-contentIcon"> </span>
+                <span>Travel often? Save time and money with <a href="">10% off an annual multi-trip</a> travel insurance policy</span>
+            </h4>
+            <div class="easter16-details">
+                <strong class="easter16-contentCopy">Terms and conditions</strong>
+                <p class="easter16-contentCopy">10% discount offer valid from 29 February 2016 to 11.59pm Thursday 24 March 2016 AEDT. The discount is automatically applied when getting a quote. Discount applies to base premium only. Additional options such as specified items cannot be discounted. These options or cover which can be purchased for an additional premium include cover for pre-existing medical conditions, extra cover for specified items, increased cover for rental vehicle excess, removing the policy excess and charitable donations made.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+jQuery.sharedCount = function(url, fn) {
+ url = encodeURIComponent(url || location.href);
+ var domain = "//free.sharedcount.com/"; /* SET DOMAIN */
+ var apikey = "8e4b7187bcfca463ceeca1577105f710bf47edd1" /*API KEY HERE*/
+ var arg = {
+  data: {
+   url : url,
+   apikey : apikey
+  },
+  url: domain,
+  cache: true,
+  dataType: "json"
+ };
+ if ('withCredentials' in new XMLHttpRequest) {
+  arg.success = fn;
+ }
+ else {
+  var cb = "sc_" + url.replace(/\W/g, '');
+  window[cb] = fn;
+  arg.jsonpCallback = cb;
+  arg.dataType += "p";
+ }
+ return jQuery.ajax(arg);
+};
+
+jQuery(document).ready(function($){
+ var targetUrl = "http://" + location.host + location.pathname;
+
+ $.sharedCount(targetUrl, function(data){
+  var totalShares = data.Twitter + data.Facebook.like_count + data.GooglePlusOne + data.Facebook.share_count + data.Pinterest + data.LinkedIn + data.StumbleUpon;
+  if (totalShares <= 20) {
+   totalShares = 21;
+  }
+  $("#tweetscount").text(data.Twitter);
+  $("#likescount").text(data.Facebook.like_count);
+  $("#facebooksharecount").text(data.Facebook.share_count);
+  $("#plusonescount").text(data.GooglePlusOne);
+  $("#stumbleuponcount").text(data.StumbleUpon);
+  $("#pintrestcount").text(data.Pinterest);
+  $("#linkedincount").text(data.LinkedIn);
+  $("#total").text(totalShares);
+  $("#sharedcount").fadeIn();
+
+ });
+});
+</script>
+
+<script>
+
+  // Build the target srcs for the icons on click.
+  var socialMedialUrl          = window.location;
+
+  var facebookParamU           = "http://www.worldnomads.com/competitions/trip-or-treat";
+
+  var twitterParamText         = "Enter the @WorldNomads competition for a chance to win a spine-tingling trip. http://www.worldnomads.com/competitions/trip-or-treat #triportreat";
+
+  var pinParamDescription      = "Win a Trip or Treat for 2 this Halloween";
+  var pinParamMedia            = "http://www.worldnomads.com/Media/Default/Competitions/trip-or-treat/Share/WN-Trip-or-treat-Pinterest-600x400-share.jpg";
+
+  var linkedParamTitle         = "Win a Trip or Treat for 2 this Halloween";
+  var linkedParamDescription   = "Check out the @WorldNomads #TripOrTreat contest for a chance to win a @Intrepid spine-tingling trip & fly with @BootsnAll. http://www.worldnomads.com/competitions/trip-or-treat";
+
+  $(function() {
+    var $plus = $(".plus");
+    var $toggleableButtons = $(".pinterest, .gplus, .linkedin, .stumbleupon").hide();
+    $plus.on("click", function() {
+      var $this = $(this);
+      $toggleableButtons.toggle();
+      $plus.toggleClass("open");
+    });
+  });
+
+  $(function() {
+    var $si = $(".socialicon");
+    var targetUrl = "";
+    $si.on("click", function() {
+      var $this = $(this);
+      if ($this.hasClass("facebook")) {
+        targetUrl = "http://www.facebook.com/share.php?u=" + facebookParamU;
+        window.open(targetUrl, 'name', 'width=600,height=400');
+      }
+      else if ($this.hasClass("twitter")) {
+        targetUrl = "https://twitter.com/intent/tweet?text=" + twitterParamText;
+        window.open(targetUrl, 'name', 'width=600,height=400');
+      }
+      else if ($this.hasClass("pinterest")) {
+        targetUrl = "http://pinterest.com/pin/create/button?description=" + pinParamDescription + "&media=" + pinParamMedia; + "&url=" + socialMedialUrl;
+        window.open(targetUrl, 'name', 'width=755,height=400,scrollbars=no');
+      }
+      else if ($this.hasClass("gplus")) {
+        targetUrl = "https://plus.google.com/share?url=" + socialMedialUrl;
+        window.open(targetUrl, 'name', 'width=600,height=400');
+      }
+      else if ($this.hasClass("linkedin")) {
+        targetUrl = "https://www.linkedin.com/shareArticle?mini=true&url=" + socialMedialUrl + "&title=" + linkedParamTitle + "&summary=" + linkedParamDescription;
+        window.open(targetUrl, 'name', 'width=600,height=400');
+      }
+      else if ($this.hasClass("stumbleupon")) {
+        targetUrl = "http://www.stumbleupon.com/badge/?url=" + socialMedialUrl;
+        window.open(targetUrl, 'name', 'width=600,height=400');
+      }
+    });
+  });
+</script>
+
+{% endblock %}
