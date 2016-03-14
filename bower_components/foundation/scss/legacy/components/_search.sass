@@ -1,17 +1,17 @@
 // search
 $gsc-input-height: rem-calc(34)
 // search box
-.gsc-search-box-tools 
-  .gsc-search-box 
+.gsc-search-box-tools
+  .gsc-search-box
     .gsc-input
       height: $gsc-input-height !important
       font-size: rem-calc(16)
       line-height: rem-calc(22)
-      
-      table 
+
+      table
         background-color: $color-white
         input
-          .gsc-input 
+          .gsc-input
             background: none !important
             position: relative
             z-index: 100
@@ -33,12 +33,12 @@ $gsc-input-height: rem-calc(34)
 
       input.gsc-input
         padding: 9px 12px 9px 12px !important
-    
+
 // turn off the table content on focus
 .gsc-input-box.gsc-input-box-focus table td:first-child:after
   display: none
-  
-    
+
+
 // Search button
 .gsc-search-button
   display: block
@@ -51,11 +51,11 @@ $gsc-input-height: rem-calc(34)
     +gradient-button($color-blue)
     border: 1px solid darken($color-blue, 10%)
     +border-radius(3px)
-    padding:  rem-calc(9) rem-calc(24) 
+    padding:  rem-calc(9) rem-calc(24)
     display: inline-block
     &:hover
       +gradient-button(darken($color-dark-blue, 10%))
-  
+
 // Autocomplete Styles
 
 .gsc-completion-container
@@ -68,7 +68,7 @@ $gsc-input-height: rem-calc(34)
 
 .gsc-tabsArea
   height: $gsc-input-height!important
-  
+
 .gsc-tabsArea > .gsc-tabHeader
   display: inline-block
   padding: 2px 8px 1px 8px
@@ -85,7 +85,7 @@ $gsc-input-height: rem-calc(34)
 
 .gsc-tabHeader.gsc-tabhInactive
   border-bottom: 1px solid $color-blue!important
-.gsc-selected-option-container 
+.gsc-selected-option-container
   min-width: rem-calc(84)!important
 
 // Results formatting
@@ -118,7 +118,7 @@ $gsc-input-height: rem-calc(34)
         color: darken($color-blue, 20)
 
 td.gsc-search-button
-    padding: 0
+  padding: 0
 
 td.gsc-input
-    padding: 0
+  padding: 0
