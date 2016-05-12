@@ -1,0 +1,22 @@
+// Easter 2016 Campaign landing page
+
+// Dependancies
+@import "../theme/variables";
+@import "../layouts/easter16";
+@import "../modules/Hero";
+
+.easter16-school {
+    .Hero {
+        min-height: 384px;
+        text-align: center;
+        background-image: url(/Media/Default/campaigns/schoolholiday/tid-schoolholiday-herobg.gif);
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        background-size: 703px 301px;
+
+        @media screen and (min-width: 500px) {
+            min-height: 440px;
+            background-size: 880px 377px;
+        }
+    }
+}

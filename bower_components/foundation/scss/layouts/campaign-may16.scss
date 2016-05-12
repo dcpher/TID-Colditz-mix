@@ -1,0 +1,74 @@
+// Easter 2016 Campaign landing page
+
+// Dependancies
+@import "../theme/variables";
+@import "../layouts/landingPg";
+@import "../modules/Hero";
+
+.may16 {
+    &-hero {
+        position: relative;
+        background-image: url('/Media/Default/campaigns/april16/tid-may-16-herobg-main@2x.png');
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        background-size: 300px 119px;
+
+        @media
+            only screen and (max-device-pixel-ratio: 1),
+            only screen and (max--moz-device-pixel-ratio: 1),
+            only screen and (-webkit-max-device-pixel-ratio: 1) {
+                background-image: url('/Media/Default/campaigns/april16/tid-may-16-herobg-main.png');
+        }
+
+        @media screen and (min-width: 500px) {
+            background-size: 642px 255px;
+        }
+
+        &::before,
+        &::after {
+            position: absolute;
+            background-image: url('/Media/Default/campaigns/april16/tid-may-16-herobg-plane.png');
+            background-repeat: no-repeat;
+        }
+
+        &::before {
+            top: 10%;
+            width: 176px;
+            height: 52px;
+            background-size: 176px 52px;
+        }
+
+        &::after {
+            top: 45%;
+            width: 142px;
+            height: 42px;
+            background-size: 142px 42px;
+            transform: scaleX(-1);
+        }
+
+        @media screen and (min-width: 1000px) {
+            &::before,
+            &::after {
+                content: '';
+            }
+
+            &::before {
+                left: 2%;
+            }
+
+            &::after {
+                right: 1%;
+            }
+        }
+
+        @media screen and (min-width: 1150px) {
+            &::before {
+                left: 8%;
+            }
+
+            &::after {
+                right: 6%;
+            }
+        }
+    }
+}

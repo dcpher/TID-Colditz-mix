@@ -1,7 +1,13 @@
 // TID Hero module
+// Note: apply hero background images via page specific layout, not here.
 
 .Hero {
+    min-height: 324px;
     background-color: $color-blue;
+
+    @media screen and (min-width: 500px) {
+        min-height: 440px;
+    }
 
     &-inner {
         padding-top: 20px;

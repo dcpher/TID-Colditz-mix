@@ -5535,11 +5535,117 @@ td.gsc-search-button {
 td.gsc-input {
   padding: 0; }
 
-.is-hidden {
+.Quiz-question {
+  display: block;
+  margin-bottom: 1.875rem; }
+  @media only screen and (max-width: 40em) {
+    .Quiz-question {
+      margin-bottom: 0; } }
+  .Quiz-questionTitle {
+    max-width: 46.25rem;
+    margin-bottom: 1.25rem;
+    font-size: 4.375rem;
+    line-height: 1.1;
+    font-weight: 100;
+    letter-spacing: -0.125rem; }
+    @media only screen and (max-width: 40em) {
+      .Quiz-questionTitle {
+        font-size: 2.5rem;
+        line-height: 1; } }
+.Quiz-answer {
+  margin-bottom: 1.25rem; }
+  .Quiz-answerInner {
+    position: relative;
+    width: 100%;
+    padding: 0.875rem;
+    background-color: #ebebeb;
+    transition: background-color 0.2s ease;
+    cursor: pointer; }
+    .Quiz-answerInner:hover {
+      background-color: #00bae4; }
+      .Quiz-answerInner:hover .Quiz-answerTitle {
+        color: #FFFFFF; }
+  .Quiz-answerImage {
+    width: 100%;
+    margin: 0 0 0.9375rem 0;
+    text-align: center; }
+    .Quiz-answerImage > img {
+      width: 100%;
+      max-width: 16.25rem; }
+  .Quiz-answerTitle {
+    display: block;
+    margin-right: 2.125rem; }
+    @media (max-width: 380px) {
+      .Quiz-answerTitle {
+        font-size: 0.875rem;
+        line-height: 1.1; } }
+    @media only screen and (max-width: 40em) {
+      .Quiz-answerTitle {
+        margin-right: 0;
+        min-height: 3.125rem; } }
+    @media only screen and (min-width:40.063em) {
+      .Quiz-answerTitle {
+        min-height: 3.125rem;
+        font-size: 1.125rem;
+        line-height: 1.5rem; } }
+    @media only screen and (min-width:64.063em) {
+      .Quiz-answerTitle {
+        min-height: 3.25rem;
+        font-size: 1.125rem;
+        line-height: 1.5rem; } }
+  .Quiz-answerCheck {
+    position: absolute;
+    bottom: 0.75rem;
+    right: 0.75rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    background-color: #FFFFFF;
+    border-radius: 0.25rem; }
+    .Quiz-answerCheck::before {
+      display: block;
+      position: absolute;
+      top: 0.0625rem;
+      bottom: 0;
+      left: 0.3125rem;
+      right: 0;
+      opacity: 0;
+      margin: auto;
+      font-size: 1.25rem;
+      color: #777;
+      transition: opacity 0.1s ease-in;
+      content: '\2714'; }
+    @media only screen and (max-width: 40em) {
+      .Quiz-answerCheck {
+        display: none; } }
+    .Quiz-answerCheck > input {
+      display: none; }
+  .Quiz-answer.checked_block .Quiz-answerCheck::before {
+    opacity: 1; }
+.Quiz-check {
   display: none; }
+.Quiz .Quiz-result {
+  margin-bottom: 3.75rem;
+  list-style: none; }
+  .Quiz .Quiz-resultItem {
+    display: none;
+    padding: 30px;
+    background-color: #f8f8f8;
+    border: 1px solid #e8e8e8; }
+  .Quiz .Quiz-resultTitle {
+    margin-top: 10px; }
+  .Quiz .Quiz-resultImage {
+    width: 100%;
+    margin-top: 30px;
+    max-width: 22.5625rem; }
+  .Quiz .Quiz-resultShare {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e8e8e8; }
+    .Quiz .Quiz-resultShare #share-icons {
+      margin-top: 20px; }
 
-.is-shown {
-  display: block; }
+.is-opaque {
+  opacity: 0.5; }
 
 .datepicker {
   background: #fff;
@@ -5802,29 +5908,33 @@ nav.breadcrumb {
     margin-bottom: 10px; }
 
 .members .members-roadblock {
-  max-width: 860px;
+  max-width: 670px;
   overflow: hidden;
-  padding: 10px 30px;
+  padding: 0;
+  min-height: auto;
   text-align: center; }
   @media (max-width: 414px) {
     .members .members-roadblock {
       display: none !important; } }
   .members .members-roadblock-title {
-    margin-bottom: 16;
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 0 55px;
     color: #ea3091; }
-  .members .members-roadblock-lead {
-    min-height: 248px;
-    margin-left: -34px;
-    margin-right: -34px;
-    padding: 20px 20px 0px;
-    background-color: #7961ab; }
-    .members .members-roadblock-lead .lead {
-      color: #FFFFFF; }
+  .members .members-roadblock-content {
+    padding-top: 24px;
+    overflow: hidden;
+    background-color: #7961ab;
+    color: #FFFFFF; }
+  .members .members-roadblock-subTitle {
+    margin-bottom: 20px;
+    color: #FFFFFF; }
   .members .members-roadblock-card {
     width: 60%;
-    max-width: 402px;
+    max-width: 260px;
     height: auto;
-    margin-top: -182px; }
+    margin-bottom: 20px; }
   .members .members-roadblock-cta {
     margin-top: 10px;
     margin-bottom: 10px; }
@@ -5834,8 +5944,10 @@ nav.breadcrumb {
     display: table;
     width: 100%;
     list-style: none;
-    padding-left: 0;
-    margin-left: 0; }
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 0;
+    margin-bottom: 24px; }
     .members .members-roadblock-benefits > li {
       display: table-cell;
       font-size: 16px;
@@ -5845,13 +5957,14 @@ nav.breadcrumb {
   .members .members-roadblock-item {
     display: block;
     line-height: 1.1;
-    color: #7961ab; }
+    font-size: 13px;
+    color: #FFFFFF; }
 .members .members-mobilesales {
   text-align: center;
   cursor: pointer; }
   .members .members-mobilesales::after {
     position: absolute;
-    top: 60%;
+    top: 40%;
     bottom: 0;
     left: 0;
     right: 0;
@@ -5867,7 +5980,7 @@ nav.breadcrumb {
 .members-mobilesales-card {
   position: relative;
   z-index: 1;
-  width: 80%;
+  width: 65%;
   pointer-events: none; }
 
 @media (max-width: 414px) {
@@ -6300,6 +6413,79 @@ body.quote .widget-email-quote-container.bottom {
     body.quote .widget-email-quote-container.bottom .widget-email-quote {
       padding-left: 0;
       margin-bottom: 1.25rem; } }
+
+.quote-sticky .stickyNav-cell {
+  white-space: nowrap; }
+.quote-sticky-price {
+  font-size: 30px;
+  line-height: 1;
+  color: #00a400; }
+  @media only screen and (min-width:40.063em) {
+    .quote-sticky-price {
+      font-size: 42px; } }
+.quote-sticky .quote-sticky-buyCta {
+  padding-right: 0;
+  text-align: right; }
+  @media screen and (min-width: 750px) {
+    .quote-sticky .quote-sticky-buyCta {
+      padding-right: 20px;
+      text-align: left; } }
+.quote-sticky-buyButton {
+  margin: 0;
+  padding: 5px 42px 5px 12px;
+  font-size: 16px; }
+  .quote-sticky-buyButton:after {
+    bottom: 8px; }
+  @media only screen and (min-width:40.063em) {
+    .quote-sticky-buyButton {
+      min-width: 250px;
+      padding: 8px 16px;
+      font-size: 20px; }
+      .quote-sticky-buyButton:after {
+        bottom: 13px; } }
+  @media screen and (max-width: 820px) {
+    .quote-sticky-buyButton {
+      min-width: 180px; } }
+  @media screen and (max-width: 440px) {
+    .quote-sticky-buyButton {
+      min-width: 0; } }
+.quote-sticky .quote-sticky-trustPilot {
+  display: none; }
+  @media screen and (min-width: 750px) {
+    .quote-sticky .quote-sticky-trustPilot {
+      display: table-cell; } }
+.quote-sticky-trustPilotWidget {
+  display: inline-block;
+  width: 100%;
+  max-width: 300px; }
+.quote-sidebar-title {
+  margin-bottom: 20px;
+  text-align: center; }
+.quote .quote-quickAnswers {
+  margin-bottom: 20px;
+  text-align: center; }
+  .quote .quote-quickAnswers-item {
+    margin-bottom: 10px; }
+  .quote .quote-quickAnswers-existing {
+    background-image: url('http://www.travelinsurancedirect.com.au/Media/Default/click-tips/hh-pregnancy.png'); }
+  .quote .quote-quickAnswers-cruise {
+    background-image: url('http://www.travelinsurancedirect.com.au/Media/Default/click-tips/hh-cruise.png'); }
+  .quote .quote-quickAnswers-who {
+    background-image: url('http://www.travelinsurancedirect.com.au/Media/Default/click-tips/hh-kids.png'); }
+  .quote .quote-quickAnswers-activities {
+    background-image: url('http://www.travelinsurancedirect.com.au/Media/Default/click-tips/hh-sports.png'); }
+  .quote .quote-quickAnswers-gear {
+    background-image: url('http://www.travelinsurancedirect.com.au/Media/Default/click-tips/hh-tech.png'); }
+  .quote .quote-quickAnswers-motorbikes {
+    background-image: url('http://www.travelinsurancedirect.com.au/Media/Default/click-tips/hh-motorbike.png'); }
+  .quote .quote-quickAnswers-icon {
+    display: inline-block;
+    width: 62px;
+    height: 63px;
+    background-size: 62px 63px;
+    background-repeat: no-repeat; }
+  .quote .quote-quickAnswers-label {
+    display: block; }
 
 body.options .row {
   margin-top: 1.25rem; }
@@ -7685,26 +7871,76 @@ body.pre-ex .modal-content.pre-ex-remove-modal .cancel {
     .icon-members--profile {
       background-position: -20px -37px; } }
 
-.homepage .header-panel .title {
-  position: relative;
-  overflow: hidden; }
-  @media only screen and (min-width:40.063em) {
-    .homepage .header-panel .title {
-      overflow: initial; } }
-  .homepage .header-panel .title:after {
-    display: block;
-    position: absolute;
-    right: 0;
-    top: -54px;
-    width: 100px;
-    height: 175px;
-    background-image: url('/Media/Default/index/tid-xmas-homepage-bungieguy@2x.png');
-    background-repeat: no-repeat;
-    background-size: 100px 175px;
-    background-position: -2px -2px;
-    content: ''; }
-  @media only screen and (max-width: 40em) {
-    .homepage .header-panel .title:after {
+.socialquiz-headerHero {
+  padding-top: 1.875rem;
+  padding-bottom: 1.875rem;
+  background-image: url('/Media/Default/campaigns/socialquiz/social-quiz-header.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; }
+.socialquiz-headerTitle {
+  max-width: 34.375rem;
+  margin-bottom: 0.625rem;
+  line-height: 1em; }
+.socialquiz-headerCopy {
+  max-width: 46.25rem;
+  margin-bottom: 0; }
+.socialquiz-quiz {
+  margin-top: 2.5rem; }
+.socialquiz-competition {
+  margin-top: 2.5rem;
+  padding-top: 1.875rem;
+  padding-bottom: 1.875rem;
+  background-color: #f8f8f8; }
+  .socialquiz-competitionHeadImage {
+    width: 100%;
+    max-width: 8.9375rem;
+    margin-bottom: 1.25rem; }
+  .socialquiz-competitionForm {
+    margin-top: 2.5rem; }
+.socialquiz-success {
+  display: none;
+  margin: 5rem 0; }
+
+.stickyNav {
+  position: fixed;
+  box-sizing: border-box;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 46px;
+  padding: 6px 20px;
+  text-align: center;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #e8e8e8;
+  transition: top 0.3s ease-in-out; }
+  @media screen and (min-width: 640px) {
+    .stickyNav {
+      height: 73px;
+      padding: 10px 20px; } }
+  @media screen and (max-width: 414px) and (orientation: portrait), (max-width: 736px) and (orientation: landscape) {
+    .stickyNav {
       display: none; } }
-.homepage .benefits-bar.blue {
-  background-color: #00c5f1; }
+  .stickyNav-is-hidden {
+    top: -46px; }
+    @media screen and (min-width: 640px) {
+      .stickyNav-is-hidden {
+        top: -73px; } }
+  .stickyNav-inner {
+    display: inline-table;
+    width: 100%;
+    height: 100%;
+    max-width: 1150px;
+    text-align: left; }
+  .stickyNav-cell {
+    display: table-cell;
+    vertical-align: middle;
+    padding-right: 30px; }
+    .stickyNav-cell:last-child {
+      width: 100%;
+      padding-right: 0;
+      text-align: right; }
+
+.is-hidden {
+  display: none; }

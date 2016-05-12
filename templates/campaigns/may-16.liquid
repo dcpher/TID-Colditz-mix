@@ -1,18 +1,19 @@
-{% block layout %}/assets/css/easter16-main.css{% endblock %}
-{% block title %}10% OFF: Hopping out of town this Easter{% endblock %}
+{% block layout %}/assets/css/campaign-may16.min.css{% endblock %}
+{% block title %}Get 10% off your travel insurance with TID{% endblock %}
 {% block content %}
 
-<meta property="og:url" content="https://www.travelinsurancedirect.com.au/campaigns/easter-discount-offer?campaign=tideaster" />
-<meta property="og:title" content="Hopping out of town this Easter?" />
-<meta property="og:description" content="Get 10% off your travel insurance with TID" />
-<meta property="og:image" content="https://www.travelinsurancedirect.com.au/Media/Default/campaigns/easter16/Easter-Share-Facebook.png" />
+<!-- <link rel="stylesheet" type="text/css" href="/Media/Default/CSS/layouts/campaign-may16.min.css"> -->
+<meta property="og:title" content="Get 10% off your travel insurance with TID" />
+<meta property="og:description" content="Heading away soon? Get 10% off your travel insurance with Travel Insurance Direct" />
+<meta property="og:url" content="https://www.travelinsurancedirect.co.nz/campaigns/save-with-tid?campaign=tidgold16" />
+<meta property="og:image" content="https://www.travelinsurancedirect.co.nz/Media/Default/campaigns/april16/tid-may16-facebookshare.png" />
 
-<section class="easter16 easter16-main">
-    <div class="Hero">
+<section class="may16 landingPg">
+    <div class="may16-hero landingPg-hero Hero">
         <div class="Hero-inner row">
             <div class="small-12 column">
-                <h1 class="easter16-title Hero-copy">10%<span class="easter16-titleDetail">*</span> Off</h1>
-                <h2 class="easter16-subTitle Hero-copy">Hopping out of town this Easter?</h2>
+                <h1 class="landingPg-title Hero-copy">10%<span class="landingPg-titleDetail">*</span> Off</h1>
+                <h2 class="landingPg-subTitle Hero-copy">Go just a TID further with 10% off travel insurance!</h2>
             </div>
         </div>
     </div>
@@ -32,25 +33,21 @@
             </div>
         </div>
     </div>
-    <div class="easter16-content row">
+    <div class="landingPg-content row">
         <div class="small-12 column">
-            <h3 class="easter16-contentTitle">Grab a quote now and get an “eggs-tra” special 10%* off your travel insurance!</h3>
+            <h3 class="landingPg-contentTitle">Grab a quote now and save on your travel insurance!</h3>
         </div>
     </div>
 </section>
 
 <!-- Quick Quote Widget goes here -->
 
-<section class="easter16">
+<section class="may16 landingPg">
     <div class="row">
         <div class="small-12 column">
-            <h4 class="easter16-contentTitle-wrapper easter16-contentTitle">
-                <span class="easter16-contentIcon"> </span>
-                <span>Travel often? Save time and money with <a href="">10%* off an annual multi-trip</a> travel insurance policy</span>
-            </h4>
-            <div class="easter16-details">
-                <strong class="easter16-contentCopy">* Terms and conditions</strong>
-                <p class="easter16-contentCopy">10% discount offer valid from 29 February 2016 to 11.59pm Thursday 24 March 2016 AEDT. The discount is automatically applied when getting a quote. Discount applies to base premium only. Additional options such as specified items cannot be discounted. These options or cover which can be purchased for an additional premium include cover for pre-existing medical conditions, extra cover for specified items, increased cover for rental vehicle excess, removing the policy excess and charitable donations made.</p>
+            <div class="landingPg-details">
+                <strong class="landingPg-contentCopy">* Terms and conditions</strong>
+                <p class="landingPg-contentCopy">10% discount offer valid from 29 February 2016 to 11.59pm Thursday 24 March 2016 AEDT. The discount is automatically applied when getting a quote. Discount applies to base premium only. Additional options such as specified items cannot be discounted. These options or cover which can be purchased for an additional premium include cover for pre-existing medical conditions, extra cover for specified items, increased cover for rental vehicle excess, removing the policy excess and charitable donations made.</p>
             </div>
         </div>
     </div>
@@ -95,8 +92,8 @@
 
 <script type="text/javascript">
   var socialMedialUrl          = window.location;
-  var facebookParamU           = "http://bit.ly/1PybxA0";
-  var twitterParamText         = "Hopping%20out%20of%20town%20this%20Easter?%20Get%2010%25%20off%20your%20travel%20insurance%20with%20%40TIDaustralia%20-%20http%3A//bit.ly/1mBDmNo";
+  var facebookParamU           = "http://bit.ly/1U86ni7";
+  var twitterParamText         = "Heading%20away%20soon?%20Get%2010%25%20off%20your%20travel%20insurance%20with%20TID%20%E2%80%93%20http%3A//bit.ly/1YJZaUp";
 
   $(function() {
     var $si = $(".socialicon");
@@ -116,6 +113,16 @@
       }
     });
   });
+</script>
+
+<script>
+  var url = window.location.href;
+
+  $(document).ready(function() {
+    if (url.indexOf('?campaign=tidgold16') == -1 && url.indexOf('&campaign=tidgold16') == -1){
+      window.location.href += '?campaign=tidgold16';
+    }
+  });
 </script>
 
 {% endblock %}
