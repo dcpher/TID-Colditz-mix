@@ -13,6 +13,7 @@
             <div class="small-12 column">
                 <h1 class="easter16-title Hero-copy">10%<span class="easter16-titleDetail">*</span> Off</h1>
                 <h2 class="easter16-subTitle Hero-copy">Hopping out of town this Easter?</h2>
+                <a class="easter16-discount-link Hero-copy" href="">Click here to apply your TID Easter discount code</a>
             </div>
         </div>
     </div>
@@ -115,6 +116,16 @@
         return;
       }
     });
+  });
+</script>
+
+<script>
+  var url = window.location.href;
+
+  $(document).ready(function() {
+    if (url.indexOf('?campaign=tideaster') == -1 && url.indexOf('&campaign=tideaster') == -1){
+      window.location.href += '?campaign=tideaster';
+    }
   });
 </script>
 

@@ -15,8 +15,8 @@
           manualUpdateSelector: '.manual-update-trigger',                       // The selector for other types of elements that need to auto-POST using AJAX
           indicateAjaxInProgressFn: wng.animations.showWhitewashLoadingIndicator, // Function for indicating that AJAX operation is starting, default adds whitewash and spinner.
           indicateAjaxCompleteFn: wng.animations.removeWhitewashLoadingIndicator, // Function for indicating that AJAX operation has completed, default hides spinner.
-          modifyUrl: function(url) { return url; },                             // Function to modify (e.g. add params) to the AJAX GET/POST URL.
-          showAjaxError: function(errorMessageHtml) { // Function to show failure error message. Default appends to global messages.
+          modifyUrl: function (url) { return url; },                             // Function to modify (e.g. add params) to the AJAX GET/POST URL.
+          showAjaxError: function (errorMessageHtml) { // Function to show failure error message. Default appends to global messages.
             var $messagesPanel = $('#global-messages');
 
             if ($messagesPanel.length > 0) {
@@ -26,13 +26,13 @@
             }
           }
         }, options),
-        
-        indicateAjaxInProgress = function($caller, contentData) {
+
+        indicateAjaxInProgress = function ($caller, contentData) {
           opt.indicateAjaxInProgressFn($caller);
           return $caller;
         },
-        
-        indicateAjaxComplete = function(contentData) {
+
+        indicateAjaxComplete = function (contentData) {
           if (contentData.redirectUrl === undefined) {
             // We only want to indicate completion of AJAX if not redirecting anywhere.
             // Otherwise, the indicator disappears while the redirectUrl loads. Looks odd.
@@ -217,26 +217,30 @@
             var $form, url, formData;
             $self.trigger('beforeGetFormData.contentAjax', [$caller]);
             $form = $caller.parents('form');
-            url = opt.modifyUrl($form.attr('action'));
-            $form.find("input[placeholder]").trigger('submitCheck.placeholder');
-            formData = $form.serialize();
-            // JQuery does not include the submit button in the serialized form, but we need it.
-            formData += '&' + $caller.attr('name') + '=' + $caller.attr('value');
-            $self.trigger('afterGetFormData.contentAjax', [$caller]);
-            indicateAjaxInProgress($caller);
-            $.ajax({
-              type: 'POST',
-              url: url,
-              cache: false,
-              data: formData,
-              dataType: 'json',
-              success: function (contentData) {
-                $self.trigger('ajaxSuccessful.contentAjax', [contentData]);
-              },
-              error: function (contentData) {
-                $self.trigger('ajaxFailed.contentAjax', [contentData]);
-              }
-            });
+            $form.data("isValid", true);
+            $form.trigger("validateQuotePanel");
+            if ($form.data("isValid") === true) {
+              url = opt.modifyUrl($form.attr('action'));
+              $form.find("input[placeholder]").trigger('submitCheck.placeholder');
+              formData = $form.serialize();
+              // JQuery does not include the submit button in the serialized form, but we need it.
+              formData += '&' + $caller.attr('name') + '=' + $caller.attr('value');
+              $self.trigger('afterGetFormData.contentAjax', [$caller]);
+              indicateAjaxInProgress($caller);
+              $.ajax({
+                type: 'POST',
+                url: url,
+                cache: false,
+                data: formData,
+                dataType: 'json',
+                success: function (contentData) {
+                  $self.trigger('ajaxSuccessful.contentAjax', [contentData]);
+                },
+                error: function (contentData) {
+                  $self.trigger('ajaxFailed.contentAjax', [contentData]);
+                }
+              });
+            }
           })
 
           .on('doAjaxGet.contentAjax', function (e, $caller, url) {
