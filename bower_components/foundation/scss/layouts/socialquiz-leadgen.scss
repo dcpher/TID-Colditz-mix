@@ -1,0 +1,161 @@
+// Social Quiz Lead Gen landing page
+
+// Dependancies
+@import "../theme/variables";
+@import "../modules/Hero";
+
+.Hero-inner {
+	display: table;
+	min-height: 430px;
+
+	> div {
+		float: none;
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+
+#socialarea {
+	#share-icons {
+		a.twitter::before, a.facebook::before {
+			font-family: "Museo Sans", Helvetica, Arial, sans-serif;
+		}
+	}
+}
+
+.trustpilot-widget {
+	display: none;
+
+	@media screen and (min-width: 64em) {
+		float: right;
+		display: block;
+		padding-top: 12px;
+	}
+}
+
+.socialquiz-leadgen {
+	&-hero {
+		background-image: url(/Media/Default/campaigns/social-quiz/TID-Social-Quiz-LeadGen-Landing-2x.jpg);
+	  background-repeat: no-repeat;
+	  background-position: bottom center;
+	  background-size: cover;
+	}
+
+	&-subTitle {
+		@media screen and (max-width: 40em) {
+			font-size: 32px;
+		}
+	}
+
+	&-content {
+		&-header {
+			padding-bottom: 30px;
+
+			@media screen and (min-width: 40em) {
+				padding-bottom: 60px;
+			}
+		}
+
+		&-item {
+			padding-left: 80px !important;
+			padding-bottom: 30px;
+
+			@media screen and (min-width: 40em) {
+				padding-right: 50px !important;
+			}
+
+			&::before {
+				position: absolute;
+				left: 0px;
+				display: block;
+				background-image: url(/Media/Default/campaigns/social-quiz/socialquiz-spritesheet.png);
+		    background-repeat: no-repeat;
+		    content: '';
+			}
+
+			&-australian-owned {
+				&::before {
+					width: 55px;
+		    	height: 62px;
+					background-position: -125px -5px;
+				}
+			}
+
+			&-10years {
+				&::before {
+					width: 50px;
+					height: 60px;
+					background-position: -5px -5px;
+				}
+			}
+
+			&-outstanding-value {
+				&::before {
+					width: 54px;
+					height: 54px;
+					background-position: -190px -5px;
+				}
+			}
+
+			&-coverage {
+				&::before {
+					width: 60px;
+			    height: 62px;
+			    background-position: -5px -77px;
+				}
+			}
+
+			&-emergency-assistance {
+				&::before {
+					width: 59px;
+			    height: 49px;
+			    background-position: -75px -77px;
+				}
+			}
+
+			&-tripwise {
+				&::before {
+					width: 60px;
+			    height: 62px;
+			    background-position: -197px -143px;
+				}
+			}
+
+			&-travelmoney-card {
+				&::before {
+					width: 56px;
+			    height: 51px;
+			    background-position: -141px -143px;
+				}
+			}
+
+			&-amt {
+				&::before {
+					width: 50px;
+			    height: 62px;
+			    background-position: -65px -5px;
+				}
+			}
+
+			&-fred-hollows {
+				&::before {
+					width: 56px;
+			    height: 34px;
+			    background-position: -75px -136px;
+				}
+			}
+
+			&-travellers {
+				&::before {
+					width: 60px;
+			    height: 64px;
+			    background-position: -180px -69px;
+				}
+			}
+		}
+	}
+}
+
+.qqw-contained {
+	padding-bottom: 60px;
+}

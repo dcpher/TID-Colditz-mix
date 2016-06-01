@@ -1,0 +1,117 @@
+// Travel Checklist landing page
+
+// Dependancies
+@import "../theme/variables";
+@import "../modules/Hero";
+
+.Hero-inner {
+	display: table;
+	min-height: 430px;
+
+	> div {
+		float: none;
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+
+#socialarea {
+	#share-icons {
+		a.twitter::before, a.facebook::before {
+			font-family: "Museo Sans", Helvetica, Arial, sans-serif;
+		}
+	}
+}
+
+.trustpilot-widget {
+	display: none;
+
+	@media screen and (min-width: 64em) {
+		float: right;
+		display: block;
+		padding-top: 12px;
+	}
+}
+
+.tp-widget-trustscore {
+		display: none;
+	}
+
+.travel-checklist {
+	&-hero {
+		background-image: url(/Media/Default/campaigns/social-quiz/TID-Social-Quiz-LeadGen-Landing-2x.jpg);
+	  background-repeat: no-repeat;
+	  background-position: bottom center;
+	  background-size: cover;
+
+	  .tp-widget-trustscore {
+	  	display: none;
+	  }
+	}
+
+	&-subTitle {
+		@media screen and (max-width: 40em) {
+			font-size: 32px;
+		}
+	}
+
+	&-content {
+		&-item {
+			padding-left: 60px !important;
+			padding-bottom: 30px;
+
+			label {
+				margin-top: 3.2px;
+				margin-left: 0 !important;
+				margin-bottom: 8px;
+				font-family: "Museo Sans", Helvetica, Arial,sans-serif;
+				font-weight: 100;
+				font-style: normal;
+				font-size: 28px;
+				line-height: 1.1;
+				letter-spacing: -1px;
+				text-rendering: optimizeLegibility;
+			}
+
+			input[type="checkbox"] {
+				display: none;
+			}
+
+			input[type="checkbox"]:checked + label:before {
+				position: absolute;
+		    left: 0px;
+		    top: 1px;
+		    display: block;
+		    width: 41px;
+		    height: 35px;
+				background-image: url(/Media/Default/campaigns/social-quiz/checklist-spritesheet.png);
+		    background-repeat: no-repeat;
+		    background-position: -47px -5px;
+		    content: '';
+		    cursor: pointer;
+			}
+
+			@media screen and (min-width: 40em) {
+				padding-right: 50px !important;
+			}
+
+			label::before {
+				position: absolute;
+		    left: 0px;
+		    top: 4px;
+		    display: block;
+		    width: 32px;
+		    height: 32px;
+				background-image: url(/Media/Default/campaigns/social-quiz/checklist-spritesheet.png);
+		    background-repeat: no-repeat;
+		    background-position: -5px -5px;
+		    content: '';
+		    cursor: pointer;
+			}
+		}
+	}
+}
+
+.qqw-contained {
+	padding-bottom: 60px;
+}
