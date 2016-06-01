@@ -1,11 +1,12 @@
 // Easter 2016 Campaign landing page
 
 // Dependancies
-@import "../theme/variables";
-@import "../modules/Hero";
+// @import "../theme/variables";
+// @import "../layouts/easter16";
+// @import "../modules/Hero";
 
-.easter16 {
-    &-hero {
+.easter16-main {
+    .Hero {
         min-height: 384px;
         text-align: center;
         background-image:
@@ -59,62 +60,5 @@
                 132px 185px,
                 762px 228px;
         }
-    }
-
-    &-title {
-        margin-bottom: 0;
-        font-size: 80px;
-        text-shadow: 1px 1px 1px rgba($color-dark-blue, 0.5);
-
-        @media screen and (min-width: 500px) {
-            font-size: 98px;
-        }
-    }
-
-    &-subTitle {
-        margin-bottom: 0;
-        font-size: 32px;
-        letter-spacing: -1.5px;
-    }
-
-    &-content {
-        text-align: center;
-
-        &Title-wrapper {
-            margin-top: 40px;
-
-            span {
-                display: inline-block;
-                vertical-align: middle;
-            }
-        }
-
-        &Icon {
-            display: inline-block;
-            width: 41px;
-            height: 41px;
-            margin-bottom: 8px;
-            background: url(/Media/Default/campaigns/easter16/tid-easter16-content-icon01.png) no-repeat;
-            background-size: 100%;
-        }
-
-        &Title {
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        &Copy {
-            font-size: 16px;
-            text-align: center;
-        }
-    }
-
-    &-details {
-        margin-bottom: 20px;
-        padding-top: 20px;
-        padding-bottom: 10px;
-        border-top: 1px solid $color-border-grey;
-        border-bottom: 1px solid $color-border-grey;
-        text-align: center;
     }
 }

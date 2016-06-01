@@ -1,0 +1,84 @@
+// TID Easter 2016 landing pages layout
+
+.easter16 {
+    &-hero {
+        min-height: 384px;
+        text-align: center;
+        background-repeat: no-repeat;
+
+        @media screen and (min-width: 500px) {
+            min-height: 440px;
+        }
+    }
+
+    &-title {
+        margin-bottom: 0;
+        font-size: 65px;
+        text-shadow: 1px 1px 1px rgba($color-dark-blue, 0.5);
+
+        @media screen and (min-width: 350px) {
+            font-size: 80px;
+        }
+
+        @media screen and (min-width: 500px) {
+            font-size: 98px;
+        }
+    }
+
+    &-titleDetail {
+        vertical-align: super;
+        font-size: 44px;
+        color: $color-white;
+    }
+
+    &-subTitle {
+        margin-bottom: 0;
+        font-size: 28px;
+        letter-spacing: -1.5px;
+
+        @media screen and (min-width: 350px) {
+            font-size: 32px;
+        }
+    }
+
+    &-content {
+        text-align: center;
+
+        &Title-wrapper {
+            margin-top: 40px;
+
+            span {
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+
+        &Icon {
+            display: inline-block;
+            width: 41px;
+            height: 41px;
+            margin-bottom: 8px;
+            background: url(/Media/Default/campaigns/easter16/tid-easter16-content-icon01.png) no-repeat;
+            background-size: 100%;
+        }
+
+        &Title {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        &Copy {
+            font-size: 16px;
+            text-align: center;
+        }
+    }
+
+    &-details {
+        margin-bottom: 20px;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        border-top: 1px solid $color-border-grey;
+        border-bottom: 1px solid $color-border-grey;
+        text-align: center;
+    }
+}

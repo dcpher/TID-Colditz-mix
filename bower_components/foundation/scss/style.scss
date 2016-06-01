@@ -6,9 +6,10 @@
 @import "theme/variables";
 
 // Libraries
-// Legacy
-// Foundation: needs to be re-implmented with an unmodified install0
 @import "legacy/foundation";
+
+// Base
+
 // custom components
 @import "legacy/components/mixins",
         "legacy/components/font",
@@ -23,7 +24,6 @@
         "legacy/components/countdown-box",
         "legacy/components/nav-bar",
         "legacy/components/benefits-bar",
-        "legacy/components/benefitsBarCms",
         "legacy/components/text-with-img",
         "legacy/components/footer",
         "legacy/components/hr",
@@ -34,28 +34,19 @@
         "legacy/components/blog",
         "legacy/components/modals",
         "legacy/components/benefit-table",
-        "legacy/components/search",
-        "legacy/components/Quiz";
+        "legacy/components/search";
+
 // @import components/desk
 @import "legacy/components/cms_responsive_qqc";
-// purchase path pages
-@import "legacy/components/breadcrumb",
-        "legacy/components/mobile-modal",
-        "legacy/components/members-modals",
-        "legacy/pages/quote",
-        "legacy/pages/options",
-        "legacy/pages/details",
-        "legacy/pages/payment",
-        "legacy/pages/pre-ex",
-        "legacy/pages/members",
-        "legacy/pages/socialquiz";
 
-// Base
+// purchase path pages
+@import "legacy/components/breadcrumb";
 
 // Modules
-@import "modules/stickyNav";
+@import "modules/Hero";
 
 //Layouts
+@import "layouts/campaign";
 
 // States
 @import "states/states";

@@ -1,0 +1,154 @@
+.campaign {
+
+    &-hero {
+        margin-bottom: 40px;
+    }
+
+    &-fineprint {
+        margin-top: 16px;
+        text-align: center;
+
+        &-detail {
+            font-size: 13px;
+        }
+    }
+
+    &-testimonials {
+        margin-top: 20px;
+        padding-top: 10px;
+        text-align: center;
+
+        &-title {
+            margin-bottom: 1rem;
+        }
+
+        &-author {
+            display: block;
+            margin-top: 8px;
+            font-size: 13px;
+        }
+
+        &-slider {
+            position: relative;
+
+            &::before,
+            &::after {
+                position: absolute;
+                width: 36px;
+                height: 36px;
+                font-size: 34px;
+                font-family: 'FontAwesome', sans-serif;
+                color: $color-lightish-grey;
+            }
+
+            &::before {
+                top: -40px;
+                left: 0px;
+                content: '\f10d';
+            }
+
+            &::after {
+                top: 65%;
+                right: 0px;
+                content: '\f10e';
+            }
+
+            @media #{$medium-up} {
+                &::before {
+                    top: 0;
+                    left: -40px;
+                }
+
+                &::after {
+                    top: 50%;
+                    right: -40px;
+                }
+
+                @media #{$large-up} {
+                    &::after {
+                        top: 40%;
+                    }
+                }
+            }
+        }
+
+        .orbit-timer,
+        .orbit-slide-number,
+        .orbit-prev,
+        .orbit-next {
+            display: none;
+        }
+    }
+
+    .trustpilot-widget {
+        display: inline-block;
+        margin-top: 8px;
+        margin-bottom: 16px;
+    }
+
+    &-features {
+        margin-top: 20px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: $color-light-grey;
+
+        &-title {
+            text-align: center;
+        }
+
+        &-list {
+            list-style: none;
+
+            > li {
+                position: relative;
+                margin-bottom: 0.5em;
+                padding-left: 36px;
+                font-size: 1.2rem;
+                font-weight: 100;
+                line-height: 1.3em;
+
+                &::before {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    margin-right: 8px;
+                    font-family: 'FontAwesome';
+                    color: $primary-color;
+                    content: '\f00c';
+                }
+
+                @media #{$medium-only} {
+                    font-size: 1.4rem;
+                }
+
+                @media #{$large-up} {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+
+    &-promos {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        text-align: center;
+
+        &-tripwiseImg {
+            width: 100%;
+            max-width: 176px;
+        }
+
+        &-travelmoneyImg {
+            width: 100%;
+            max-width: 336px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+    }
+
+    &-terms {
+        margin-bottom: 40px;
+        line-height: 1.2em;
+        text-align: center;
+    }
+}

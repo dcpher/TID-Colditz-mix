@@ -1,15 +1,63 @@
 // TID Hero module
+// Note: apply hero background images via page specific layout, not here.
 
 .Hero {
     background-color: $color-blue;
+    background-repeat: no-repeat;
 
     &-inner {
+        display: table;
+        width: 100%;
+        min-height: 320px;
+        background-repeat: no-repeat;
+
+        @media #{$medium-only} {
+            min-height: 380px;
+        }
+
+        @media #{$large-up} {
+            min-height: 440px;
+        }
+    }
+
+    &-content {
+        display: table-cell;
+        vertical-align: middle;
         padding-top: 20px;
         padding-bottom: 20px;
+        background-repeat: no-repeat;
 
-        @media screen and (min-width: 500px) {
+        @media #{$medium-up} {
             padding-top: 40px;
             padding-bottom: 40px;
+        }
+    }
+
+    &-title  {
+        margin-bottom: .8rem;
+
+        @media #{$medium-only} {
+            margin-bottom: 2rem;
+            font-size: 4rem;
+        }
+
+        @media #{$large-up} {
+            font-size: 5rem;
+        }
+    }
+
+    &-intro {
+        max-width: 820px;
+        font-size: 1.4rem;
+        font-weight: 100;
+        line-height: 1.3;
+
+        @media #{$medium-only} {
+            font-size: 1.5rem;
+        }
+
+        @media #{$large-up} {
+            font-size: 2rem;
         }
     }
 

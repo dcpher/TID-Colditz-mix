@@ -6,7 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="shortcut icon" href="/favicon.png">
-	{{ "assets/css/style.css" | asset_url | stylesheet_tag }}
+	<!-- {{ "assets/css/style.css" | asset_url | stylesheet_tag }} -->
+  <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="{% block layout %}{% endblock %}">
 
@@ -24,7 +25,7 @@
   <nav class="top-bar" data-topbar role="navigation">
   <ul class="title-area">
     <li class="name">
-      <h1><a href="#"><img class="logo x2" src="/Media/Default/main/tid-logo.png" /></a></h1>
+      <h1><a href="#"><img src="/Media/Default/main/tid-logo.png" /></a></h1>
     </li>
      <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
     <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>

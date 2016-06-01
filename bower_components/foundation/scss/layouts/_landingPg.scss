@@ -1,0 +1,69 @@
+// TID landing page template layout
+
+.landingPg {
+    // Hero section content
+    // Note: apply hero background images via page specific layout, not here.
+    &-hero {
+        text-align: center;
+    }
+
+    &-title {
+        margin-bottom: 0;
+        font-size: 65px;
+        text-shadow: 1px 1px 1px rgba($color-dark-blue, 0.5);
+
+        @media screen and (min-width: 350px) {
+            font-size: 80px;
+        }
+
+        @media screen and (min-width: 500px) {
+            font-size: 98px;
+        }
+    }
+
+    &-titleDetail {
+        vertical-align: super;
+        font-size: 44px;
+        color: $color-white;
+    }
+
+    &-subTitle {
+        margin-bottom: 0;
+        font-size: 28px;
+        letter-spacing: -1.5px;
+
+        @media screen and (min-width: 350px) {
+            font-size: 32px;
+        }
+    }
+
+    // Body content: Can occur before and/or after the QQC
+    &-content {
+        text-align: center;
+
+        &Title-wrapper {
+            margin-top: 40px;
+        }
+
+        &Title {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        &Copy {
+            font-size: 16px;
+            text-align: center;
+        }
+    }
+
+    // Footer T&C's
+    &-details {
+        margin-top: 60px;
+        margin-bottom: 60px;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        border-top: 1px solid $color-border-grey;
+        border-bottom: 1px solid $color-border-grey;
+        text-align: center;
+    }
+}
