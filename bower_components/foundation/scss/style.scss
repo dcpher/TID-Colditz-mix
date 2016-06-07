@@ -43,7 +43,8 @@
 @import "legacy/components/breadcrumb";
 
 // Modules
-@import "modules/Hero";
+@import "modules/Hero",
+        "modules/SubmissionForm";
 
 //Layouts
 @import "layouts/campaign";

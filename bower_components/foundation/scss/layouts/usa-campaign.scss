@@ -1,0 +1,206 @@
+// Social Quiz Lead Gen landing page
+
+// Dependancies
+@import "../theme/variables";
+@import "../legacy/components/mixins";
+@import "../legacy/foundation";
+@import "../modules/Hero";
+@import "../modules/SubmissionForm";
+
+.usa-campaign {
+    &-hero {
+        background: url('/Media/Default/campaigns/usa-campaign/tid-usa-campaign-header.jpg');
+        background-size: cover;
+        background-position: bottom left;
+        position: relative;
+
+        &-ribbon {
+            position: absolute;
+            background: url('/Media/Default/campaigns/usa-campaign/trip-value-ribbon.png');
+            background-size: cover;
+            top: 0;
+            right: 30px;
+            width: 94px;
+            height: 90px;
+            text-align: center;
+            padding-top: 6px;
+
+            &-text {
+                color: #ffffff;
+                font-weight: 400;
+                font-size: 12px;
+
+                @media #{$medium-up} {
+                    font-size: 16px;
+                }
+            }
+
+            &-price {
+                color: #ffffff;
+                font-size: 24px;
+                font-weight: 400;
+            }
+
+            @media #{$medium-only} {
+                width: 126px;
+                height: 120px;
+                padding-top: 20px;
+                right: 80px;
+            }
+
+            @media #{$large-up} {
+                width: 132px;
+                height: 126px;
+                padding-top: 20px;
+                right: 200px;
+            }
+        }
+
+        img {
+            padding: 90px 0;
+
+            @media #{$medium-up} {
+                max-width: 569px;
+            }
+        }
+    }
+
+    &-header {
+        text-align: center;
+        padding-bottom: 20px;
+
+        @media #{$large-up} {
+            padding: 0 100px;
+            padding-bottom: 20px;
+        }
+    }
+
+    &-subheader {
+        text-align: center;
+        padding-bottom: 20px;
+
+        @media #{$large-up} {
+            padding: 0 160px;
+            padding-bottom: 20px;
+        }
+    }
+
+    &-benefit {
+        padding-bottom: 16px;
+        text-align: center;
+
+        @media #{$medium-up} {
+            padding-bottom: 0;
+        }
+    }
+
+    &-benefits {
+        padding-bottom: 60px;
+        text-align: center;
+
+        &-container {
+            text-align: center;
+
+            .small-12 {
+                width: 100%;
+            }
+
+            .medium-2 {
+                @media #{$medium-up} {
+                    width: 20%;
+                }
+            }
+
+            .large-2 {
+                @media #{$large-up} {
+                    width: 20%;
+                }
+            }
+        }
+
+        @media #{$medium-up} {
+            text-align: left;
+        }
+
+        @media #{$large-up} {
+            padding: 0 200px;
+            padding-bottom: 60px;
+        }
+    }
+
+    &-partner {
+        text-align: center;
+        padding-bottom: 24px;
+
+        p {
+            font-size: 12px;
+            margin-bottom: 0;
+        }
+    }
+
+    .Hero-inner {
+        min-height: 270px;
+
+        > div {
+            text-align: center;
+        }
+    }
+
+    .SubmissionForm {
+        @extend .SubmissionForm;
+    }
+}
+
+.usa {
+    &::before {
+        content: '';
+        background-image: url('/Media/Default/campaigns/usa-campaign/spritesheet.png');
+        background-repeat: no-repeat;
+        display: block;
+        margin: auto;
+        margin-bottom: 8px;
+    }
+
+     &.usa-accomodation {
+        &::before {
+            width: 86px;
+            height: 58px;
+            background-position: -5px -5px;
+        }
+    }
+
+    &.usa-camera {
+        &::before {
+            width: 77px;
+            height: 59px;
+            background-position: -101px -5px;
+        }
+    }
+
+    &.usa-plane {
+        &::before {
+            width: 122px;
+            height: 51px;
+            background-position: -188px -5px;
+            margin-top: 7px;
+        }
+    }
+
+    &.usa-travel-money {
+        &::before {
+            width: 78px;
+            height: 49px;
+            background-position: -320px -5px;
+            margin-top: 10px;
+        }
+    }
+
+    &.usa-umbrella {
+        &::before {
+            width: 56px;
+            height: 56px;
+            background-position: -408px -5px;
+            margin-top: 5px;
+        }
+    }
+}

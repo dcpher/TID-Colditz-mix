@@ -1,0 +1,81 @@
+@import '../legacy/components/font-awesome';
+
+.SubmissionForm {
+    margin-top: 60px;
+
+    &-Posted {
+        display: none;
+        text-align: center;
+        padding: 60px 0;
+        margin-bottom: 80px;
+        margin-top: 60px;
+        -webkit-box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.3);
+        box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.3);
+        border-left: 2px solid #e4e4e4;
+        border-top: 2px solid #e4e4e4;
+        border-radius: 3px;
+
+        h2 {
+            padding-bottom: 16px;
+        }
+    }
+
+    fieldset {
+        border: 0;
+    }
+
+    legend {
+        width: 100%;
+        padding-bottom: 16px;
+        border-bottom: 1px solid #d9d9d9;
+        font-size: 24px;
+        font-family: 'Museo Sans', Helvetica, Arial, sans-serif;
+        font-weight: 100;
+        text-transform: none;
+    }
+
+    label {
+        padding-bottom: 12px;
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    input[type="checkbox"] {
+        margin-right: 8px;
+    }
+
+    .button-primary{
+        @include pp-button-green;
+        padding-right: 60px;
+    }
+
+    .required-notice {
+        text-align: right;
+        font-size: 14px;
+        font-weight: bold;
+        padding-top: 8px;
+
+        &::before {
+            content: '*';
+            color: #ec0000;
+        }
+
+        @media #{$medium-up} {
+            float: right;
+        }
+    }
+
+    .required {
+        &::after {
+            content: '*';
+            color: #ec0000;
+        }
+    }
+
+    @media #{$large-up} {
+        padding: 0 200px;
+    }
+}
